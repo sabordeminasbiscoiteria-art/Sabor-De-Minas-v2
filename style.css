@@ -36,13 +36,15 @@ header .container{
 }
 
 .marca img{
-    width:80px;
-    height:auto;
+    width:90px;
+    height:90px;
+    object-fit:contain;
 }
 
 .marca h2{
-    color:#7b1e1e;
-    font-size:24px;
+    color:#8b1e1e;
+    font-size:22px;
+    line-height:1.1;
 }
 
 .marca span{
@@ -51,6 +53,7 @@ header .container{
 
 .marca p{
     font-size:14px;
+    font-style:italic;
 }
 
 /* MENU */
@@ -59,6 +62,15 @@ nav a{
     text-decoration:none;
     color:#7b1e1e;
     font-weight:bold;
+}
+
+/* WHATSAPP */
+.whatsapp-topo{
+    background:#b52b2b;
+    color:white;
+    padding:10px 20px;
+    border-radius:25px;
+    text-decoration:none;
 }
 
 /* BANNER */
@@ -83,7 +95,6 @@ nav a{
     padding:15px 30px;
     border-radius:30px;
     text-decoration:none;
-    font-weight:bold;
 }
 
 /* CATEGORIAS */
@@ -93,7 +104,7 @@ nav a{
 }
 
 .categorias h2{
-    color:#a52a2a;
+    color:#8b1e1e;
 }
 
 .cards{
