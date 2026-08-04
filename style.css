@@ -16,9 +16,10 @@ body{
     margin:auto;
 }
 
+/* CABEÇALHO */
 header{
     background:white;
-    padding:10px 0;
+    padding:15px 0;
 }
 
 header .container{
@@ -27,11 +28,32 @@ header .container{
     justify-content:space-between;
 }
 
-.logo{
-    width:20px;
+/* LOGO + NOME */
+.marca{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.marca img{
+    width:80px;
     height:auto;
 }
 
+.marca h2{
+    color:#7b1e1e;
+    font-size:24px;
+}
+
+.marca span{
+    color:#b52b2b;
+}
+
+.marca p{
+    font-size:14px;
+}
+
+/* MENU */
 nav a{
     margin-left:25px;
     text-decoration:none;
@@ -39,6 +61,7 @@ nav a{
     font-weight:bold;
 }
 
+/* BANNER */
 .banner{
     padding:100px 0;
     background:linear-gradient(to right,#fff1d6,#fffaf3);
@@ -60,11 +83,17 @@ nav a{
     padding:15px 30px;
     border-radius:30px;
     text-decoration:none;
+    font-weight:bold;
 }
 
+/* CATEGORIAS */
 .categorias{
     padding:50px 0;
     text-align:center;
+}
+
+.categorias h2{
+    color:#a52a2a;
 }
 
 .cards{
