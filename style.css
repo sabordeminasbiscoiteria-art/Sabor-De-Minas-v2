@@ -1,1 +1,104 @@
+/* RESET */
 
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#fffaf5;
+    color:#333;
+}
+
+/* CONTAINER */
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+/* HEADER */
+
+.header{
+    background:#ffffff;
+    position:fixed;
+    width:100%;
+    top:0;
+    left:0;
+    z-index:1000;
+    box-shadow:0 2px 15px rgba(0,0,0,.08);
+}
+
+.header .container{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 0;
+}
+
+.logo img{
+    width:90px;
+}
+
+.menu{
+    display:flex;
+    gap:35px;
+}
+
+.menu a{
+    text-decoration:none;
+    color:#5a2d0c;
+    font-weight:600;
+    transition:.3s;
+}
+
+.menu a:hover{
+    color:#d62828;
+}
+
+/* HERO */
+
+.hero{
+    margin-top:120px;
+    height:85vh;
+    background:linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
+    url("../img/banner.jpg") center/cover no-repeat;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color:#fff;
+}
+
+.hero-text{
+    max-width:700px;
+}
+
+.hero h1{
+    font-size:55px;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:22px;
+    margin-bottom:35px;
+}
+
+.btn{
+    display:inline-block;
+    background:#d62828;
+    color:#fff;
+    text-decoration:none;
+    padding:16px 38px;
+    border-radius:40px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.btn:hover{
+    background:#ff9800;
+    transform:scale(1.05);
+}
