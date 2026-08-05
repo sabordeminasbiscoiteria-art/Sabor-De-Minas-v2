@@ -296,24 +296,3 @@ pesquisa.addEventListener("keyup", function () {
 });
 </script>
     
-<script>
-
-const botoes = document.querySelectorAll(".categorias button");
-
-botoes.forEach(botao => {
-
-    botao.addEventListener("click", () => {
-
-        // tira o vermelho de todos
-        botoes.forEach(item => {
-            item.classList.remove("ativo");
-        });
-
-        // coloca vermelho no clicado
-        botao.classList.add("ativo");
-
-    });
-
-});
-
-</script>
