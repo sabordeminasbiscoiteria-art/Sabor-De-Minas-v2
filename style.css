@@ -287,19 +287,22 @@ nav a:hover::after{
     display:flex;
     justify-content:space-between;
     align-items:center;
-    margin-bottom:30px;
-    gap:20px;
+
+    width:100%;
+
+    margin-bottom:35px;
 }
 
 .titulo-produtos{
     display:flex;
     align-items:center;
     gap:10px;
+
     margin:0;
+
     font-size:32px;
     color:#3b2314;
 }
-
 .titulo-produtos i{
     color:#b52b2b;
     font-size:24px;
@@ -309,13 +312,20 @@ nav a:hover::after{
     background:#b52b2b;
     color:#fff;
     text-decoration:none;
+
     padding:12px 22px;
     border-radius:30px;
+
     font-weight:bold;
+    font-size:14px;
+
     display:flex;
     align-items:center;
-    height:45px;
-    white-space:nowrap;
+    gap:8px;
+
+    height:42px;
+
+    margin-top:0;
 }
 
 .btn-ver-produtos:hover{
