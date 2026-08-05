@@ -60,14 +60,27 @@ header .container{
 nav a{
     margin-left:25px;
     text-decoration:none;
-    color:#7b1e1e;
+    color:#222;
     font-weight:bold;
+    transition:0.3s;
 }
+
+
 nav a i{
     margin-right:8px;
+    color:#222;
+    transition:0.3s;
+}
+
+
+nav a:hover{
     color:#b52b2b;
 }
 
+
+nav a:hover i{
+    color:#b52b2b;
+}
 /* WHATSAPP */
 .whatsapp-topo{
     background:#b52b2b;
