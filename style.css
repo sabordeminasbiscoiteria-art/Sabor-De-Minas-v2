@@ -335,10 +335,10 @@ nav a i{
 /* RODAPÉ */
 
 footer{
-    background:#b52b2b;
+    background:#3b2314;
     color:white;
-    margin-top:60px;
-    padding:35px 0 0;
+    margin-top:40px;
+    padding:25px 0 0;
 }
 
 
@@ -346,53 +346,53 @@ footer{
     display:flex;
     justify-content:space-between;
     align-items:center;
-    gap:50px;
+    gap:30px;
 }
 
 
 .footer-marca{
     display:flex;
     align-items:center;
-    gap:15px;
+    gap:12px;
 }
 
 
 .footer-marca img{
-    width:90px;
-    height:90px;
+    width:65px;
+    height:65px;
     object-fit:contain;
 }
 
 
 .footer-marca h3{
-    font-size:22px;
+    font-size:18px;
     line-height:1.1;
     color:white;
 }
 
 
 .footer-marca p{
-    font-size:14px;
-    margin-top:8px;
+    font-size:12px;
+    margin-top:5px;
 }
 
 
 .footer-contato h3,
 .footer-menu h3{
-    font-size:18px;
-    margin-bottom:15px;
+    font-size:15px;
+    margin-bottom:10px;
 }
 
 
 .footer-contato p{
-    margin-bottom:10px;
-    font-size:14px;
+    margin-bottom:6px;
+    font-size:13px;
 }
 
 
 .footer-contato i{
     color:#25d366;
-    margin-right:8px;
+    margin-right:6px;
 }
 
 
@@ -403,17 +403,17 @@ footer{
 
 
 .footer-menu a{
-    color:white;
+    color:#f5e6d0;
     text-decoration:none;
-    font-size:14px;
-    margin-bottom:8px;
+    font-size:13px;
+    margin-bottom:5px;
 }
 
 
 .footer-final{
-    margin-top:30px;
-    padding:15px;
+    margin-top:20px;
+    padding:10px;
     text-align:center;
-    background:#8b1e1e;
-    font-size:13px;
+    background:#2a180d;
+    font-size:11px;
 }
