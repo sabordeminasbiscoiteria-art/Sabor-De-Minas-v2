@@ -241,11 +241,18 @@ nav a:hover::after{
     color:#777;
 }
 .botao{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+
     background:#b52b2b;
     color:white;
+
     padding:15px 30px;
     border-radius:30px;
     text-decoration:none;
+
+    margin-top:25px;
 }
 
 /* CATEGORIAS */
