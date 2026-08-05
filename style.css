@@ -79,18 +79,30 @@ nav a i{
 
 /* BANNER */
 .banner{
-    padding:100px 0;
-    background:linear-gradient(to right,#fff1d6,#fffaf3);
+    padding:60px 0;
+    background:#fffaf3;
 }
 
-.banner h1{
-    font-size:45px;
-    color:#a52a2a;
+.banner-conteudo{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:40px;
 }
 
-.banner p{
-    margin:20px 0;
-    font-size:18px;
+.texto-banner{
+    width:45%;
+}
+
+.imagem-banner{
+    width:55%;
+}
+
+.imagem-banner img{
+    width:100%;
+    height:350px;
+    object-fit:cover;
+    border-radius:20px;
 }
 /* BENEFÍCIOS */
 
