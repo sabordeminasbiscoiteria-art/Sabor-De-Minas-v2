@@ -287,7 +287,8 @@ nav a:hover::after{
     display:flex;
     justify-content:space-between;
     align-items:center;
-    margin-bottom:35px;
+    margin-bottom:30px;
+    gap:20px;
 }
 
 .titulo-produtos{
@@ -311,7 +312,10 @@ nav a:hover::after{
     padding:12px 22px;
     border-radius:30px;
     font-weight:bold;
-    transition:0.3s;
+    display:flex;
+    align-items:center;
+    height:45px;
+    white-space:nowrap;
 }
 
 .btn-ver-produtos:hover{
