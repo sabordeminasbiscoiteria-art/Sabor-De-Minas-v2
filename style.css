@@ -1029,34 +1029,45 @@ footer{
     align-items:flex-start;
     gap:50px;
     flex-wrap:wrap;
+    margin-top:50px;
 }
 
 .info-contato{
     flex:1;
-    min-width:320px;
+    background:#fff;
+    padding:35px;
+    border-radius:20px;
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
 }
 
 .info-contato h2{
-    font-size:34px;
     color:#8b1e1e;
+    font-size:30px;
     margin-bottom:25px;
 }
 
 .info-contato p{
-    font-size:17px;
+    display:flex;
+    align-items:flex-start;
+    gap:15px;
+    margin-bottom:22px;
+    font-size:16px;
     color:#555;
-    line-height:1.7;
-    margin-bottom:20px;
+    line-height:1.6;
 }
 
-.info-contato i{
+.info-contato p i{
     color:#b52b2b;
     font-size:22px;
-    margin-right:10px;
+    width:28px;
+    margin-top:4px;
 }
 
 .info-contato strong{
+    display:block;
     color:#3b2314;
+    font-size:17px;
+    margin-bottom:4px;
 }
 
 .info-contato .botao{
@@ -1067,13 +1078,12 @@ footer{
 
 .mapa{
     flex:1;
-    min-width:350px;
 }
 
 .mapa iframe{
     width:100%;
-    height:420px;
-    border:0;
+    height:500px;
+    border:none;
     border-radius:20px;
-    box-shadow:0 8px 20px rgba(0,0,0,.15);
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
 }
