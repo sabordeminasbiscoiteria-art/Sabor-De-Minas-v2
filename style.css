@@ -718,3 +718,82 @@ footer{
 .botao-produto:hover{
     background:#1eb857;
 }
+/* ===== MELHORIAS VISUAIS ===== */
+
+/* Banner */
+.banner-produtos{
+    background:
+    linear-gradient(to right,
+    rgba(255,255,255,0.15),
+    rgba(255,255,255,0.92) 35%,
+    rgba(255,255,255,1) 50%,
+    rgba(255,255,255,0.92) 65%,
+    rgba(255,255,255,0.15)),
+    url("beijinho.jpeg");
+
+    background-size: cover;
+    background-position: center;
+    padding: 90px 20px;
+    text-align: center;
+}
+
+.banner-produtos h1{
+    font-size: 48px;
+    color: #6b1d1d;
+    margin-bottom: 10px;
+}
+
+.banner-produtos p{
+    font-size: 20px;
+    color: #555;
+}
+
+/* Cards */
+.produto{
+    background: #fff;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0,0,0,.08);
+    transition: .3s;
+}
+
+.produto:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0,0,0,.15);
+}
+
+/* Categorias */
+.categorias button{
+    transition: .3s;
+}
+
+.categorias button:hover{
+    background:#b3262d;
+    color:#fff;
+    transform: translateY(-2px);
+}
+
+/* Botão WhatsApp */
+.botao-produto{
+    transition:.3s;
+}
+
+.botao-produto:hover{
+    transform:scale(1.05);
+}
+
+/* Animação ao abrir */
+@keyframes aparecer{
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+.pagina-produtos{
+    animation:aparecer .8s ease;
+}
