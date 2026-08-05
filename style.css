@@ -335,7 +335,7 @@ nav a i{
 /* RODAPÉ */
 
 footer{
-    background:#3b2314;
+    background:#a83232;
     color:white;
     margin-top:40px;
     padding:25px 0 0;
@@ -403,7 +403,7 @@ footer{
 
 
 .footer-menu a{
-    color:#f5e6d0;
+    color:white;
     text-decoration:none;
     font-size:13px;
     margin-bottom:5px;
@@ -414,6 +414,6 @@ footer{
     margin-top:20px;
     padding:10px;
     text-align:center;
-    background:#2a180d;
+    background:#8b1e1e;
     font-size:11px;
 }
