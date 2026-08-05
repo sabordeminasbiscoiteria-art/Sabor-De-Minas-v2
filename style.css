@@ -803,7 +803,6 @@ footer{
     flex-wrap:nowrap;
 }
 
-
 /* BARRA DE PESQUISA */
 
 .barra-pesquisa{
@@ -825,7 +824,6 @@ footer{
 
 }
 
-
 .barra-pesquisa i{
 
     color:#999;
@@ -835,7 +833,6 @@ footer{
     margin-right:12px;
 
 }
-
 
 .barra-pesquisa input{
 
@@ -851,59 +848,32 @@ footer{
 
 }
 
-
-
-/* ===== BOTÕES DE CATEGORIA ===== */
-
 .filtros-categorias{
-
     display:flex;
-
-    align-items:center;
-
-    justify-content:flex-end;
-
-    gap:12px;
-
+    gap:15px;
     flex-wrap:wrap;
-
 }
 
-
-.filtros-categorias button{
-
-    border:none;
-
+.filtros-categorias a{
     padding:12px 22px;
-
+    background:#f5e6d3;
+    color:#8b1e1e;
+    text-decoration:none;
     border-radius:30px;
-
-    background:#fff;
-
-    cursor:pointer;
-
-    font-size:15px;
-
+    font-family:'Poppins', sans-serif;
     font-weight:600;
-
     transition:.3s;
-
-    box-shadow:
-    0 4px 12px rgba(0,0,0,.08);
-
 }
 
-
-.filtros-categorias button:hover,
-
-.filtros-categorias .ativo{
-
-    background:#b22222;
-
+.filtros-categorias a:hover{
+    background:#b52b2b;
     color:#fff;
-
 }
 
+.filtros-categorias a.ativo{
+    background:#b52b2b;
+    color:#fff;
+}
 /* ==========================
    PÁGINA SOBRE NÓS
 ========================== */
