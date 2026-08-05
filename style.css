@@ -63,6 +63,10 @@ nav a{
     color:#7b1e1e;
     font-weight:bold;
 }
+nav a i{
+    margin-right:8px;
+    color:#b52b2b;
+}
 
 /* WHATSAPP */
 .whatsapp-topo{
