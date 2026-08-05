@@ -143,12 +143,11 @@ nav a:hover i{
 
 /* BENEFÍCIOS */
 .beneficios{
-    background:white;
     display:flex;
     justify-content:space-between;
     align-items:center;
-    gap:30px;
-    padding:25px 60px;
+    padding:25px 40px;
+    background:#fff;
     border-top:1px solid #eee;
     border-bottom:1px solid #eee;
 }
@@ -156,7 +155,7 @@ nav a:hover i{
 .beneficio{
     display:flex;
     align-items:center;
-    gap:10px;
+    gap:12px;
     width:220px;
 }
 
