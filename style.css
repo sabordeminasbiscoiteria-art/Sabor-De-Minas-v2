@@ -646,15 +646,8 @@ footer{
     font-size:15px;
     font-weight:600;
     transition:.3s;
-    box-shadow:0 4px 12px rgba(0,0,0,.08);
 }
 
-/* quando passa o mouse */
-.categorias button:hover{
-    transform:translateY(-2px);
-}
-
-/* botão selecionado */
 .categorias button.ativo{
     background:#b22222;
     color:#fff;
