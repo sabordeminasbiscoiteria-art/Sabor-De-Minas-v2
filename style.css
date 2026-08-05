@@ -289,7 +289,7 @@ nav a i{
 .sobre{
     margin:60px auto;
     max-width:1200px;
-    height:300px;
+    min-height:300px;
     border-radius:20px;
     overflow:hidden;
 
@@ -309,28 +309,29 @@ nav a i{
 
 
 .texto-sobre{
-    width:50%;
-    padding:40px;
+    width:55%;
+    padding:45px;
 }
 
 
 .texto-sobre h2{
     font-size:32px;
     color:#3b2314;
-    margin-bottom:20px;
+    margin-bottom:15px;
 }
 
 
 .texto-sobre p{
     color:#555;
-    line-height:1.6;
-    margin-bottom:15px;
+    line-height:1.5;
+    margin-bottom:10px;
 }
 
 
 .texto-sobre .botao{
     display:inline-block;
-    margin-top:10px;
+    margin-top:15px;
+    padding:12px 25px;
 }
 /* RODAPÉ */
 
