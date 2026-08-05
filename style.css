@@ -739,6 +739,32 @@ footer{
 .botao-produto:hover{
     background:#1eb857;
 }
+/* Alinha todos os cards */
+
+.produto{
+    display:flex;
+    flex-direction:column;
+}
+
+.produto h3{
+    min-height:55px; /* Todos os títulos terão a mesma altura */
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    font-size:22px;
+    color:#3b2314;
+    margin:15px 0 10px;
+}
+
+.produto p{
+    min-height:45px;
+    text-align:center;
+}
+
+.preco-produto{
+    margin-top:auto;
+}
 /* ===== PÁGINA DE PRODUTOS ===== */
 
 .pagina-produtos{
