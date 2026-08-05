@@ -477,17 +477,6 @@ footer{
 .footer-menu a:hover{
     color:#ffd8a8;
 }
-
-/* PARTE FINAL */
-
-.footer-final{
-    margin-top:25px;
-    margin-bottom:0;
-    padding:12px;
-    text-align:center;
-    background:#852626;
-    font-size:12px;
-}
 /* ONDA DO RODAPÉ */
 
 .onda-footer{
