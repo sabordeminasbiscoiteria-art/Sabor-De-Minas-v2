@@ -76,6 +76,10 @@ nav a i{
     border-radius:25px;
     text-decoration:none;
 }
+.whatsapp-topo i{
+    margin-right:8px;
+    font-size:18px;
+}
 
 /* BANNER */
 .banner{
