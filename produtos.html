@@ -250,3 +250,26 @@
     </div>
 
 </footer>
+    
+<script>
+const pesquisa = document.getElementById("pesquisa");
+const produtos = document.querySelectorAll(".item-produto");
+
+pesquisa.addEventListener("keyup", function () {
+
+    const texto = pesquisa.value.toLowerCase();
+
+    produtos.forEach(function(produto){
+
+        const nome = produto.querySelector("h3").textContent.toLowerCase();
+
+        if(nome.includes(texto)){
+            produto.style.display = "block";
+        }else{
+            produto.style.display = "none";
+        }
+
+    });
+
+});
+</script>
