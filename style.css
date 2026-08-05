@@ -335,18 +335,18 @@ nav a i{
 /* RODAPÉ */
 
 footer{
-    background:#3b2314;
+    background:#b52b2b;
     color:white;
     margin-top:60px;
-    padding-top:40px;
+    padding:35px 0 0;
 }
 
 
 .footer-conteudo{
     display:flex;
     justify-content:space-between;
-    gap:40px;
-    padding-bottom:35px;
+    align-items:center;
+    gap:50px;
 }
 
 
@@ -358,38 +358,35 @@ footer{
 
 
 .footer-marca img{
-    width:70px;
-    height:70px;
+    width:90px;
+    height:90px;
     object-fit:contain;
 }
 
 
 .footer-marca h3{
+    font-size:22px;
+    line-height:1.1;
     color:white;
-    font-size:20px;
-}
-
-
-.footer-marca span{
-    color:#e8b36a;
 }
 
 
 .footer-marca p{
     font-size:14px;
-    margin-top:5px;
+    margin-top:8px;
 }
 
 
 .footer-contato h3,
 .footer-menu h3{
+    font-size:18px;
     margin-bottom:15px;
 }
 
 
 .footer-contato p{
     margin-bottom:10px;
-    color:#eee;
+    font-size:14px;
 }
 
 
@@ -406,15 +403,17 @@ footer{
 
 
 .footer-menu a{
-    color:#eee;
+    color:white;
     text-decoration:none;
+    font-size:14px;
     margin-bottom:8px;
 }
 
 
 .footer-final{
-    text-align:center;
+    margin-top:30px;
     padding:15px;
-    background:#2a180d;
+    text-align:center;
+    background:#8b1e1e;
     font-size:13px;
 }
