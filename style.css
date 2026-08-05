@@ -57,7 +57,9 @@ header .container{
 }
 
 /* MENU */
+
 nav a{
+    position:relative;
     margin-left:25px;
     text-decoration:none;
     color:#222;
@@ -65,21 +67,36 @@ nav a{
     transition:0.3s;
 }
 
-
 nav a i{
     margin-right:8px;
     color:#222;
     transition:0.3s;
 }
 
-
 nav a:hover{
     color:#b52b2b;
 }
 
-
 nav a:hover i{
     color:#b52b2b;
+}
+
+/* Linha animada */
+
+nav a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-6px;
+    width:0;
+    height:3px;
+    background:#b52b2b;
+    border-radius:10px;
+    transition:0.3s;
+}
+
+nav a:hover::after{
+    width:100%;
 }
 /* WHATSAPP */
 .whatsapp-topo{
