@@ -155,13 +155,12 @@ nav a:hover i{
 }
 
 
-.beneficio{
+.beneficios{
     display:flex;
-    align-items:center;
-    gap:12px;
-    width:230px;
+    justify-content:center;
+    gap:70px;
+    padding:30px 0;
 }
-
 
 .beneficio i{
     font-size:25px;
