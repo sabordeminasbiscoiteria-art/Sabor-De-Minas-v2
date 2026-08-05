@@ -89,7 +89,7 @@
 
     <a href="doces.html">Doces</a>
 
-    <a href="salgados.html">Sagados</a>
+    <a href="salgados.html">Salgados</a>
 
     <a href="Suspiros.html">Suspiros</a>
 
@@ -570,28 +570,3 @@ pesquisa.addEventListener("keyup", function () {
 
 </footer>
     
-<script>
-const pesquisa = document.getElementById("pesquisa");
-const produtos = document.querySelectorAll(".item-produto");
-
-pesquisa.addEventListener("keyup", function () {
-
-    const texto = pesquisa.value.toLowerCase();
-
-    produtos.forEach(function(produto){
-
-        const nome = produto.querySelector("h3").textContent.toLowerCase();
-
-        if(nome.includes(texto)){
-            produto.style.display = "block";
-        }else{
-            produto.style.display = "none";
-        }
-
-    });
-
-});
-</script>
-    
-    </body>
-</html>
