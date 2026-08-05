@@ -319,6 +319,7 @@ nav a:hover::after{
     background:#b52b2b;
     color:#fff;
     text-decoration:none;
+    
     padding:12px 22px;
     border-radius:30px;
 
