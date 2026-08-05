@@ -145,20 +145,20 @@ nav a:hover i{
 
 .beneficios{
     display:flex;
-    justify-content:center;
+    justify-content:space-evenly;
     align-items:center;
-    gap:45px; /* ajuste entre 40 e 50 se quiser */
-    padding:25px 0;
+    padding:30px 20px;
     background:#fff;
     border-top:1px solid #eee;
     border-bottom:1px solid #eee;
+    gap:25px;
 }
 
 .beneficio{
     display:flex;
     align-items:center;
-    gap:10px;
-    width:190px; /* diminui a largura */
+    gap:14px;
+    width:250px;
 }
 
 .beneficio i{
