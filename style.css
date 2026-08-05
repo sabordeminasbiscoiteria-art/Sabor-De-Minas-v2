@@ -92,7 +92,39 @@ nav a i{
     margin:20px 0;
     font-size:18px;
 }
+/* BENEFÍCIOS */
 
+.beneficios{
+    background:#fff;
+    display:flex;
+    justify-content:center;
+    gap:40px;
+    padding:25px 0;
+    border-top:1px solid #eee;
+    border-bottom:1px solid #eee;
+}
+
+.beneficio{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    width:220px;
+}
+
+.beneficio:first-letter{
+    font-size:30px;
+}
+
+.beneficio h3{
+    font-size:16px;
+    color:#3b2314;
+    margin-bottom:5px;
+}
+
+.beneficio p{
+    font-size:13px;
+    color:#777;
+}
 .botao{
     background:#b52b2b;
     color:white;
