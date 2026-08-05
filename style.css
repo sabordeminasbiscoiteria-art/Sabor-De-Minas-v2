@@ -896,3 +896,37 @@ footer{
     color:#fff;
 
 }
+/* ===== AJUSTES FINAIS ===== */
+
+/* Botão da página inicial */
+.topo-produtos{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    width:100%;
+}
+
+.btn-ver-produtos{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+
+    height:42px;
+    padding:0 22px;
+
+    background:#b52b2b;
+    color:#fff;
+
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+
+/* Produtos - evitar conflito entre páginas */
+.pagina-produtos .produtos-cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(240px,1fr));
+    gap:25px;
+}
