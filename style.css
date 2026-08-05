@@ -142,7 +142,6 @@ nav a:hover i{
 }
 
 /* BENEFÍCIOS */
-
 .beneficios{
     background:white;
     display:flex;
@@ -153,7 +152,6 @@ nav a:hover i{
     border-top:1px solid #eee;
     border-bottom:1px solid #eee;
 }
-
 
 .beneficios{
     display:flex;
