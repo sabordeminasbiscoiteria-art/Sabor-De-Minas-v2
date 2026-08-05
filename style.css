@@ -249,11 +249,10 @@ nav a i{
 
 
 /* PESO + PREÇO */
-
 .preco-produto{
     display:flex;
     align-items:center;
-    gap:15px;
+    justify-content:space-between;
     padding:10px 15px;
 }
 
@@ -270,7 +269,6 @@ nav a i{
     color:#b52b2b;
     font-size:18px;
 }
-
 
 /* BOTÃO */
 
