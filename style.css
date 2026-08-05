@@ -268,7 +268,42 @@ nav a:hover i{
     padding:0 18px;
     min-height:45px;
 }
+/* TOPO DOS PRODUTOS */
 
+.topo-produtos{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:35px;
+}
+
+.titulo-produtos{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin:0;
+    font-size:32px;
+    color:#3b2314;
+}
+
+.titulo-produtos i{
+    color:#b52b2b;
+    font-size:24px;
+}
+
+.btn-ver-produtos{
+    background:#b52b2b;
+    color:#fff;
+    text-decoration:none;
+    padding:12px 22px;
+    border-radius:30px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.btn-ver-produtos:hover{
+    background:#8b1e1e;
+}
 /* PESO + PREÇO */
 .preco-produto{
     display:flex;
