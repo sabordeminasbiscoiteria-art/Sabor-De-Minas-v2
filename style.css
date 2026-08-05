@@ -629,7 +629,6 @@ footer{
 }
 
 /* Categorias */
-
 .categorias{
     display:flex;
     justify-content:center;
@@ -660,6 +659,7 @@ footer{
     background:#b22222;
     color:#fff;
 }
+
 /* ===== CARDS DOS PRODUTOS ===== */
 
 .produtos-cards{
