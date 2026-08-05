@@ -254,8 +254,11 @@ nav a:hover i{
     padding:18px 18px 5px;
 }
 
-
-.produto p{
+.produtos h2 i{
+    color:#b52b2b;
+    font-size:28px;
+    margin-right:10px;
+}
     font-size:14px;
     color:#777;
     padding:0 18px;
