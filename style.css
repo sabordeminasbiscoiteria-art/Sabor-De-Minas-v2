@@ -764,13 +764,14 @@ footer{
 }
 
 /* ===== TOPO DOS FILTROS ===== */
+
 .topo-filtros{
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
     gap: 20px;
-    margin: 25px 0;
-    flex-wrap: nowrap;
+    margin: 15px 0 30px;
+    flex-wrap: wrap;
 }
 
 .barra-pesquisa{
@@ -780,7 +781,6 @@ footer{
 
 .categorias{
     display: flex;
-    align-items: center;
     gap: 12px;
     flex-wrap: wrap;
 }
