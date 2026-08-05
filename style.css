@@ -650,12 +650,13 @@ footer{
     box-shadow:0 4px 12px rgba(0,0,0,.08);
 }
 
+/* quando passa o mouse */
 .categorias button:hover{
-    background:#b22222;
-    color:#fff;
+    transform:translateY(-2px);
 }
 
-.categorias .ativo{
+/* botão selecionado */
+.categorias button.ativo{
     background:#b22222;
     color:#fff;
 }
