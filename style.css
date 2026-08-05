@@ -756,3 +756,23 @@ footer{
     background:#faf7f2;
     padding:60px 20px;
 }
+
+.topo-filtros{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:25px;
+    margin:40px 0;
+    flex-wrap:wrap;
+}
+
+.barra-pesquisa{
+    flex:1;
+    max-width:420px;
+}
+
+.categorias{
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+}
