@@ -113,6 +113,7 @@
 </div>
 
 </section>
+    
 <section class="beneficios">
 
     <div class="beneficio">
@@ -356,3 +357,26 @@
     </div>
 
 </footer>
+<script>
+const slides = document.querySelectorAll(".slide");
+const bolinhas = document.querySelectorAll(".bolinha");
+
+let atual = 0;
+
+function trocarSlide(){
+
+    slides[atual].classList.remove("ativo");
+    bolinhas[atual].classList.remove("ativa");
+
+    atual++;
+
+    if(atual >= slides.length){
+        atual = 0;
+    }
+
+    slides[atual].classList.add("ativo");
+    bolinhas[atual].classList.add("ativa");
+}
+
+setInterval(trocarSlide, 4000);
+</script>
