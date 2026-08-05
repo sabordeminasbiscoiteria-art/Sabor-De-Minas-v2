@@ -246,34 +246,24 @@ nav a i{
     padding:0 15px;
     min-height:45px;
 }
-
-
-.produto strong{
-    display:block;
+.preco-produto{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
     padding:10px 15px;
-    color:#b52b2b;
-    font-size:18px;
 }
 
-
-.botao-produto{
-    display:block;
-    margin:5px 15px 0;
-    background:#1fa83d;
-    color:white;
-    text-align:center;
-    padding:12px;
-    border-radius:10px;
-    text-decoration:none;
-    font-weight:bold;
-}
 .peso{
-    display:inline-block;
     background:#f8e3b8;
     color:#8b5a20;
     padding:5px 12px;
     border-radius:15px;
     font-size:13px;
     font-weight:bold;
-    margin:10px 15px 0;
+}
+
+
+.preco-produto strong{
+    color:#b52b2b;
+    font-size:18px;
 }
