@@ -1229,10 +1229,10 @@ footer{
 
     /* 1. Faz o título e o botão de produtos ficarem um embaixo do outro */
     .topo-produtos {
-        flex-direction: column !important;
-        align-items: center !important;
-        text-align: center !important;
-        gap: 15px !important;
+        flex-direction: column ;
+        align-items: center ;
+        text-align: center;
+        gap: 15px;
     }
 
     /* 2. Força os cards lá do topo a ficarem um embaixo do outro no celular */
@@ -1244,19 +1244,19 @@ footer{
     .cards,
     div[class*="diferencia"],
     div[class*="recurso"] {
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-        width: 100% !important;
-        gap: 20px !important;
+        display: flex ;
+        flex-direction: column ;
+        align-items: center ;
+        width: 100% ;
+        gap: 20px ;
     }
 
     /* 3. Garante que os cards não vão vazar para fora da tela */
     .diferenciais > div,
     .cards-diferenciais > div,
     .recursos > div {
-        width: 100% !important;
-        max-width: 300px !important;
+        width: 100% ;
+        max-width: 300px ;
     }
 }
 /* AJUSTE PERFEITO DA FAIXA DE BENEFÍCIOS NO CELULAR */
