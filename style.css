@@ -820,7 +820,8 @@ footer{
 
     margin:30px 0;
 
-    flex-wrap:nowrap;
+    .topo-filtros{
+    flex-wrap: wrap;
 }
 
 /* BARRA DE PESQUISA */
