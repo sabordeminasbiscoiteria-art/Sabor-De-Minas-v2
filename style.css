@@ -1135,3 +1135,41 @@ footer{
     }
 
 }
+/* ===== BANNER RESPONSIVO ===== */
+@media (max-width:768px){
+
+    .banner-conteudo{
+        flex-direction:column;
+        text-align:center;
+        gap:25px;
+    }
+
+    .texto-banner{
+        width:100%;
+    }
+
+    .texto-banner h1{
+        font-size:30px;
+    }
+
+    .texto-banner h1 span{
+        font-size:52px;
+    }
+
+    .texto-banner p{
+        font-size:18px;
+    }
+
+    .imagem-banner{
+        width:100%;
+    }
+
+    .slider{
+        height:280px;
+    }
+
+    .slide{
+        height:280px;
+    }
+
+}
