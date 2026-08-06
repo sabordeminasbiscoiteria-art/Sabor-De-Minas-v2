@@ -1255,7 +1255,6 @@ footer{
     text-align: left;
     gap: 15px;
 }
-
 /* Ajusta o container dos cards para organizar em grade no computador e empilhar no celular */
 .produtos-cards {
     display: flex;
