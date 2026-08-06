@@ -1235,37 +1235,6 @@ footer{
         gap: 15px;
     }
 
-    /* 2. Força os cards lá do topo a ficarem um embaixo do outro no celular */
-    .diferenciais, 
-    .diferenciais-cards,
-    .cards-diferenciais,
-    .recursos,
-    .recursos-cards,
-    .cards,
-    div[class*="diferencia"],
-    div[class*="recurso"] {
-        display: flex ;
-        flex-direction: column ;
-        align-items: center ;
-        width: 100% ;
-        gap: 20px ;
-    }
-/* 3. Garante que os cards não vão vazar para fora */
-.diferenciais > div,
-.cards-diferenciais > div,
-.recursos > div {
-    width: 100%;
-    max-width: 300px;
-}
-
-/* 3. Garante que os cards não vão vazar para fora */
-.diferenciais > div,
-.cards-diferenciais > div,
-.recursos > div {
-    width: 100%;
-    max-width: 300px;
-}
-
 /* AJUSTE PERFEITO DA FAIXA DE BENEFÍCIOS NO CELULAR */
 .beneficios {
     display: flex;
@@ -1287,4 +1256,32 @@ footer{
     gap: 15px;
 }
 
-} 
+/* Ajusta o container dos cards para organizar em grade no computador e empilhar no celular */
+.produtos-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px;
+}
+
+/* Ajusta o tamanho do card individual para ele não ficar gigante */
+.produto {
+    width: 100%;
+    max-width: 320px; /* Limita o tamanho máximo do card */
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    box-sizing: border-box;
+}
+
+/* Padroniza a imagem dentro do card do produto */
+.produto img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+  }
+
+}
