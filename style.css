@@ -79,7 +79,6 @@ nav a:hover i{
 }
 
 /* Linha animada */
-
 nav a::after{
     content:"";
     position:absolute;
