@@ -1224,10 +1224,10 @@ footer{
         border-radius: 18px; /* Borda um pouco mais delicada para telas menores */
     }
 }
-/* AJUSTE PARA O CELULAR (TELA PEQUENA) */
+/* CORREÇÃO DO LAYOUT NO CELULAR */
 @media (max-width: 768px) {
 
-    /* 1. Organiza a seção "Nossos Produtos" + Botão no celular */
+    /* 1. Faz o título e o botão de produtos ficarem um embaixo do outro */
     .topo-produtos {
         flex-direction: column !important;
         align-items: center !important;
@@ -1235,14 +1235,27 @@ footer{
         gap: 15px !important;
     }
 
-    /* 2. Empilha os 3 diferenciais (Ingredientes, Carinho, Receitas) */
+    /* 2. Força os cards lá do topo a ficarem um embaixo do outro no celular */
     .diferenciais, 
-    .diferenciais-container, 
+    .diferenciais-cards,
     .cards-diferenciais,
-    .recursos { 
+    .recursos,
+    .recursos-cards,
+    .cards,
+    div[class*="diferencia"],
+    div[class*="recurso"] {
+        display: flex !important;
         flex-direction: column !important;
         align-items: center !important;
+        width: 100% !important;
         gap: 20px !important;
     }
 
+    /* 3. Garante que os cards não vão vazar para fora da tela */
+    .diferenciais > div,
+    .cards-diferenciais > div,
+    .recursos > div {
+        width: 100% !important;
+        max-width: 300px !important;
+    }
 }
