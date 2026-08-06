@@ -1224,3 +1224,25 @@ footer{
         border-radius: 18px; /* Borda um pouco mais delicada para telas menores */
     }
 }
+/* AJUSTE PARA O CELULAR (TELA PEQUENA) */
+@media (max-width: 768px) {
+
+    /* 1. Organiza a seção "Nossos Produtos" + Botão no celular */
+    .topo-produtos {
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        gap: 15px !important;
+    }
+
+    /* 2. Empilha os 3 diferenciais (Ingredientes, Carinho, Receitas) */
+    .diferenciais, 
+    .diferenciais-container, 
+    .cards-diferenciais,
+    .recursos { 
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 20px !important;
+    }
+
+}
