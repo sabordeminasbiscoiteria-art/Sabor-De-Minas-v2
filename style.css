@@ -1283,4 +1283,38 @@ footer{
     border-radius: 12px;
   }
 
+/* Ajusta a seção "Sobre" para telas de celular */
+.sobre {
+    padding: 40px 20px; /* Dá um espaçamento interno para não colar nas bordas */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Caixa de texto sobre a imagem de fundo */
+.texto-sobre {
+    background-color: rgba(255, 255, 255, 0.9); /* Fundo branco levemente transparente para o texto destacar */
+    padding: 30px 20px;
+    border-radius: 16px;
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Tamanho do título para não ficar gigante no celular */
+.texto-sobre h2 {
+    font-size: 26px;
+    margin-bottom: 15px;
+    color: #2c1810;
+}
+
+/* Espaçamento dos parágrafos */
+.texto-sobre p {
+    font-size: 15px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+    color: #4a4a4a;
+}
+
 }
