@@ -1179,7 +1179,6 @@ footer{
 /* ==========================
    SLIDER DO BANNER
 ========================== */
-
 .slider{
     position: relative;
     width: 100%;
@@ -1204,7 +1203,6 @@ footer{
 .slide.ativo{
     opacity: 1;
 }
-
 /* BOLINHAS */
 
 .bolinhas{
