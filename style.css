@@ -807,21 +807,15 @@ footer{
     color:#555;
     margin:0;
 }
-
-
 /* ===== BARRA DE PESQUISA + FILTROS ===== */
 
 .topo-filtros{
     display:flex;
     align-items:center;
     justify-content:space-between;
-
     gap:25px;
-
     margin:30px 0;
-   
-   .topo-filtros{
-    flex-wrap: nowrap;
+    flex-wrap:nowrap;
 }
 
 /* BARRA DE PESQUISA */
