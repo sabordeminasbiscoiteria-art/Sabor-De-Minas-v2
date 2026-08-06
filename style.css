@@ -1135,41 +1135,36 @@ footer{
     }
 
 }
-/* ===== BANNER RESPONSIVO ===== */
 @media (max-width:768px){
 
     .banner-conteudo{
-        flex-direction:column;
-        text-align:center;
-        gap:25px;
+        flex-direction: column;
+        text-align: center;
     }
 
-    .texto-banner{
-        width:100%;
-    }
-
-    .texto-banner h1{
-        font-size:30px;
-    }
-
-    .texto-banner h1 span{
-        font-size:52px;
-    }
-
-    .texto-banner p{
-        font-size:18px;
-    }
-
+    .texto-banner,
     .imagem-banner{
         width:100%;
     }
 
     .slider{
-        height:280px;
+        height:300px;
     }
 
     .slide{
-        height:280px;
+        height:300px;
+        object-fit:cover;
     }
 
+    .texto-banner h1{
+        font-size:22px;
+    }
+
+    .texto-banner h1 span{
+        font-size:50px;
+    }
+
+    .texto-banner p{
+        font-size:18px;
+    }
 }
