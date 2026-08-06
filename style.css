@@ -1250,15 +1250,14 @@ footer{
         width: 100% ;
         gap: 20px ;
     }
-
-    /* 3. Garante que os cards não vão vazar para fora da tela */
-    .diferenciais > div,
-    .cards-diferenciais > div,
-    .recursos > div {
-        width: 100% ;
-        max-width: 300px ;
-    }
+/* 3. Garante que os cards não vão vazar para fora */
+.diferenciais > div,
+.cards-diferenciais > div,
+.recursos > div {
+    width: 100%;
+    max-width: 300px;
 }
+
 /* AJUSTE PERFEITO DA FAIXA DE BENEFÍCIOS NO CELULAR */
 .beneficios {
     display: flex;
@@ -1279,3 +1278,5 @@ footer{
     text-align: left;
     gap: 15px;
 }
+
+} 
