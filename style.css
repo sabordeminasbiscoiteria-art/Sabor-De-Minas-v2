@@ -1214,7 +1214,7 @@ footer{
     width: 12px; /* Destaque para a bolinha ativa */
     height: 12px;
 }
-
+    
 }
 /* AJUSTE RESPONSIVO PARA CELULARES */
 @media (max-width: 600px) {
