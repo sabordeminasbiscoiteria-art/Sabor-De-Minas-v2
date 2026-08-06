@@ -1078,16 +1078,43 @@ footer{
     box-shadow:0 8px 25px rgba(0,0,0,.08);
 }
     
-/* ================================= */
-/* TABLETS */
-/* ================================= */
-@media (max-width:992px){
+/* ========================= */
+/* CELULAR (até 768px) */
+/* ========================= */
+
+@media (max-width:768px){
+
+    .container{
+        width:95%;
+    }
+
+    /* Cabeçalho */
 
     header .container{
-        flex-wrap:wrap;
-        justify-content:center;
+        flex-direction:column;
+        align-items:center;
         gap:20px;
     }
+
+    nav{
+        display:flex;
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:15px;
+    }
+
+    nav a{
+        margin:0;
+        font-size:15px;
+    }
+
+    .whatsapp-topo{
+        width:100%;
+        max-width:260px;
+        text-align:center;
+    }
+
+    /* Banner principal */
 
     .banner-conteudo{
         flex-direction:column;
@@ -1099,70 +1126,8 @@ footer{
         text-align:center;
     }
 
-    .beneficios{
-        flex-wrap:wrap;
-        justify-content:center;
-    }
-
-    .historia{
-        flex-direction:column;
-    }
-
-    .contato-box{
-        flex-direction:column;
-    }
-
-}
-
-
-/* ================================= */
-/* CELULARES */
-/* ================================= */
-
-@media (max-width:768px){
-
-    .container{
-        width:95%;
-    }
-
-    header .container{
-        flex-direction:column;
-        text-align:center;
-        gap:20px;
-    }
-
-    nav{
-        display:flex;
-        flex-wrap:wrap;
-        justify-content:center;
-        gap:12px;
-    }
-
-    nav a{
-        margin:0;
-        font-size:15px;
-    }
-
-    .marca img{
-        width:70px;
-        height:70px;
-    }
-
-    .whatsapp-topo{
-        font-size:14px;
-        padding:10px 18px;
-    }
-
-    .texto-banner h1{
-        font-size:24px;
-    }
-
     .texto-banner h1 span{
         font-size:42px;
-    }
-
-    .texto-banner p{
-        font-size:16px;
     }
 
     .slider,
@@ -1170,36 +1135,11 @@ footer{
         height:250px;
     }
 
-    .beneficios{
-        flex-direction:column;
-        gap:18px;
-    }
-
-    .beneficio{
-        width:100%;
-        justify-content:center;
-    }
-
-    .topo-produtos{
-        flex-direction:column;
-        gap:20px;
-    }
-
-    .titulo-produtos{
-        justify-content:center;
-        text-align:center;
-    }
-
-    .produtos-cards{
-        grid-template-columns:1fr;
-    }
-
-    .produto{
-        width:100%;
-    }
+    /* Produtos */
 
     .topo-filtros{
         flex-direction:column;
+        gap:20px;
     }
 
     .barra-pesquisa{
@@ -1211,106 +1151,36 @@ footer{
         justify-content:center;
     }
 
-    .banner-produtos{
-        height:220px;
+    .produtos-cards{
+        grid-template-columns:1fr;
     }
 
-    .banner-conteudo h1{
-        font-size:34px;
-    }
-
-    .banner-conteudo p{
-        font-size:16px;
-    }
-
-    .cards-diferenciais{
-        flex-direction:column;
-        align-items:center;
-    }
-
-    .card-dif{
+    .produto{
         width:100%;
-        max-width:320px;
     }
 
-    .footer-conteudo{
+    /* Sobre */
+
+    .historia{
         flex-direction:column;
-        text-align:center;
-        gap:25px;
     }
 
-    .footer-marca{
-        justify-content:center;
+    /* Contato */
+
+    .contato-box{
+        flex-direction:column;
     }
 
     .mapa iframe{
         height:300px;
     }
 
-}
+    /* Rodapé */
 
-
-/* ================================= */
-/* CELULARES PEQUENOS */
-/* ================================= */
-
-@media (max-width:480px){
-
-    .marca h2{
-        font-size:18px;
-    }
-
-    .texto-banner h1{
-        font-size:20px;
-    }
-
-    .texto-banner h1 span{
-        font-size:34px;
-    }
-
-    .texto-banner p{
-        font-size:15px;
-    }
-
-    .slider,
-    .slide{
-        height:200px;
-    }
-
-    .banner-produtos{
-        height:180px;
-    }
-
-    .banner-conteudo h1{
-        font-size:28px;
-    }
-
-    .banner-conteudo p{
-        font-size:14px;
-    }
-
-    .titulo-pagina h1{
-        font-size:34px;
-    }
-
-    .historia-texto h2,
-    .diferenciais h2,
-    .info-contato h2{
-        font-size:26px;
-    }
-
-    .produto h3{
-        font-size:18px;
-    }
-
-    .preco-produto strong{
-        font-size:18px;
-    }
-
-    .botao,
-    .botao-produto{
-        font-size:14px;
-        padding:12px;
+    .footer-conteudo{
+        flex-direction:column;
+        text-align:center;
+        gap:25px;
     }
 
 }
