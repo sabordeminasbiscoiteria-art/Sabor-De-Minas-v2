@@ -819,9 +819,9 @@ footer{
     gap:25px;
 
     margin:30px 0;
-
-    .topo-filtros{
-    flex-wrap: wrap;
+   
+   .topo-filtros{
+    flex-wrap: nowrap;
 }
 
 /* BARRA DE PESQUISA */
