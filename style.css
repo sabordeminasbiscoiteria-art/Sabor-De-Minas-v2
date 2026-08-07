@@ -1264,10 +1264,11 @@ footer{
     padding: 8px 12px;
     font-size: 13px;
   }
+}
 /* ==========================
        CARROSSEL HORIZONTAL (ARRASTAR PRO LADO)
     ========================== */
-
+    @media (max-width: 768px){
     /* Container que segura os produtos e permite rolar para o lado */
     .produtos-container, .lista-produtos, .produtos-grid {
         display: flex !important;
