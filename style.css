@@ -1294,6 +1294,10 @@ footer{
     border-radius: 0px;
     width: 100%;
 }
+    .produto {
+    min-width: 160px !important;
+    margin-right: 15px !important;
+}
 
 /* Diminui o tamanho do título do produto */
 .produto h3 {
