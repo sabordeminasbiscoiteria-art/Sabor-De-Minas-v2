@@ -1266,11 +1266,11 @@ footer{
   }
 }
 /* ==========================
-       CARROSSEL HORIZONTAL (ARRASTAR PRO LADO)
-    ========================== */
-    @media (max-width: 768px){
-    /* Container que segura os produtos e permite rolar para o lado */
-    .produtos-container, .lista-produtos, .produtos-grid {
+   CARROSSEL HORIZONTAL (ARRASTAR PRO LADO)
+========================== */
+@media (max-width: 768px) {
+    /* 1. Container que segura os produtos (ajuste para a sua estrutura) */
+    .produtos-container, .lista-produtos, .produtos-grid, .produtos {
         display: flex !important;
         flex-direction: row !important;
         overflow-x: auto !important;          /* Permite arrastar para o lado */
@@ -1283,15 +1283,17 @@ footer{
     /* Esconde a barra de rolagem no Chrome, Safari e Edge */
     .produtos-container::-webkit-scrollbar, 
     .lista-produtos::-webkit-scrollbar, 
-    .produtos-grid::-webkit-scrollbar {
+    .produtos-grid::-webkit-scrollbar,
+    .produtos::-webkit-scrollbar {
         display: none !important;
     }
 
-    /* Cada card do produto precisa de uma largura fixa para aparecer um pedaço do próximo */
-    .produto-card, .card-produto {
+    /* 2. Cada card individual (.produto) agora ganha o tamanho fixo para o carrossel */
+    .produto {
         flex: 0 0 75% !important;             /* Cada card ocupa 75% da largura da tela */
+        max-width: none !important;           /* Anula o max-width anterior para o carrossel funcionar */
         scroll-snap-align: center !important; /* Centraliza o produto ao arrastar */
-        margin-bottom: 0 !important;
+        margin: 0 !important;                 /* Remove margens antigas que travavam o flex */
     }
 }
 /* Caixa de texto sobre a imagem de fundo mais compacta */
