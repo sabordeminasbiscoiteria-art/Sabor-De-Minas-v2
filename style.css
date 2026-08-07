@@ -1226,16 +1226,6 @@ footer{
 
 /* Cards mais compactos e profissionais no celular */
 @media (max-width: 768px){
-.produto {
-    width: 100% !important;
-    max-width: 100% !important;
-    margin: 0 auto !important;
-    padding: 12px 12px 18px 12px !important; 
-    box-sizing: border-box !important;
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: space-between !important;
-}
 .produto img {            /* Deixa a foto do biscoito menor na altura */
     height: 150px;       /* Altura ideal para não ocupar a tela toda */
     object-fit: cover;
