@@ -375,27 +375,24 @@ nav a:hover::after{
 }
 
 @media (min-width: 769px) {
-    /* Garante que o container permita posicionar as setas nas bordas */
-    .carrossel-wrapper, .produtos-container, .carrossel-container {
+    .carrossel-wrapper {
         position: relative !important;
     }
 
-    /* Seta da Esquerda colada na ponta esquerda do PC */
-    .carrossel-botao-anterior, .slick-prev, .prev-btn {
+    .seta-esquerda {
         position: absolute !important;
-        left: -20px !important; /* Se quiser colocar um pouco pra fora da borda, ou use 0px para colar na linha */
+        left: -40px !important;
         top: 50% !important;
         transform: translateY(-50%) !important;
-        z-index: 10 !important;
+        z-index: 999 !important;
     }
 
-    /* Seta da Direita colada na ponta direita do PC */
-    .carrossel-botao-proximo, .slick-next, .next-btn {
+    .seta-direita {
         position: absolute !important;
-        right: -20px !important; /* Ajuste para fora ou 0px para alinhar na borda */
+        right: -40px !important;
         top: 50% !important;
         transform: translateY(-50%) !important;
-        z-index: 10 !important;
+        z-index: 999 !important;
     }
 }
 /* PESO E PREÇO */
