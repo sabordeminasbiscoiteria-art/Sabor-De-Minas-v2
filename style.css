@@ -1341,6 +1341,17 @@ footer{
         height: 200px !important;
         object-fit: cover !important;
     }
+    /* Reduz o espaço em cima e embaixo da seção de produtos */
+    .produtos, section.produtos {
+        padding-top: 20px !important;
+        padding-bottom: 20px !important;
+    }
+
+    /* Reduz a margem interna inferior do carrossel */
+    .carrossel-wrapper {
+        margin-bottom: 0 !important;
+        padding-bottom: 10px !important;
+    }
 }
 
 .texto-sobre {
