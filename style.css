@@ -1344,10 +1344,9 @@ footer{
 .produtos-cards::-webkit-scrollbar {
     display: none !important;
 }
-/* --- APENAS PARA O CELULAR (Telas menores que 769px) --- */
     .carrossel-wrapper {
         position: relative !important;
-        padding: 0 35px !important; /* Cria espaço nas laterais para a seta não tampar o produto */
+        padding: 0 35px !important;
         overflow: hidden !important;
     }
 
@@ -1362,7 +1361,6 @@ footer{
         box-shadow: none !important;
         cursor: pointer !important;
         
-        /* Esconde o símbolo antigo */
         color: transparent !important; 
         font-size: 0 !important;
         line-height: 0 !important;
@@ -1372,7 +1370,7 @@ footer{
         padding: 0 !important;
     }
 
-    /* Desenha a seta limpa */
+    /* Desenha a base da seta limpa */
     .seta-esquerda::before, .seta-direita::before {
         content: '' !important;
         position: absolute !important;
@@ -1383,7 +1381,7 @@ footer{
         border-left: 2.5px solid #3b2314 !important;
     }
 
-    /* Posiciona a seta da esquerda no celular */
+    /* Seta da Esquerda */
     .seta-esquerda {
         left: 2px !important;
     }
@@ -1392,15 +1390,14 @@ footer{
         transform: translate(-25%, -50%) rotate(-45deg) !important;
     }
 
-    /* Posiciona a seta da direita no celular */
+    /* Seta da Direita (CORRIGIDA) */
     .seta-direita {
         right: 2px !important;
     }
     .seta-direita::before {
         right: 50% !important;
-        transform: translate(25%, -50%) rotate(135deg) !important;
-        border-left: none !important;
-        border-right: 2.5px solid #3b2314 !important;
+        /* Ajustado para apontar perfeitamente para a direita no celular */
+        transform: translate(25%, -50%) scaleX(-1) rotate(-135deg) !important;
     }
 
     .produtos-cards {
