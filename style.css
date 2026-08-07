@@ -1266,7 +1266,7 @@ footer{
   }
 }
 /* ==========================
-   CARROSSEL HORIZONTAL COM SETAS (CELULAR)
+   CARROSSEL COM SETAS (APENAS NO CELULAR)
 ========================== */
 @media (max-width: 768px) {
     .carrossel-wrapper {
@@ -1276,7 +1276,6 @@ footer{
         align-items: center;
     }
 
-    /* Usa a sua classe exata do HTML: .produtos-cards */
     .produtos-cards {
         display: flex !important;
         flex-direction: row !important;
@@ -1293,7 +1292,6 @@ footer{
         display: none !important;
     }
 
-    /* Cada card do produto (.produto) */
     .produto {
         flex: 0 0 100% !important;
         min-width: 100% !important;
@@ -1302,7 +1300,6 @@ footer{
         margin: 0 !important;
     }
 
-    /* Estilo das setinhas redondas nas laterais */
     .seta-carrossel {
         position: absolute;
         top: 45%;
