@@ -1310,7 +1310,6 @@ footer{
     z-index: 99 !important;
     box-shadow: 0 4px 10px rgba(0,0,0,0.15) !important;
     }
-
     .seta-esquerda {
     left: 0px !important;
     }
@@ -1319,25 +1318,23 @@ footer{
     right: 0px !important;
     }
     .carrossel-wrapper {
-        padding: 0 35px !important;
+        padding: 0 40px !important;
     }
 
-    /* Trava a largura de cada card para não espremer */
+    /* Faz o card ocupar quase a largura inteira da tela do celular */
     .produtos-cards .produto {
-        flex: 0 0 220px !important;
-        min-width: 220px !important;
-        max-width: 220px !important;
-        padding: 12px !important;
+        flex: 0 0 100% !important;
+        min-width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
     }
 
-    /* Deixa a foto do biscoito na altura certa */
+    /* Ajusta a altura da foto para ficar proporcional no celular */
     .produtos-cards .produto img {
-        width: 100% !important;
-        height: 150px !important;
+        height: 220px !important;
         object-fit: cover !important;
-        border-radius: 8px !important;
     }
-}
+ }
 
 .texto-sobre {
     background-color: rgba(255, 255, 255, 0.95); /* Fundo quase sólido para destacar bem */
