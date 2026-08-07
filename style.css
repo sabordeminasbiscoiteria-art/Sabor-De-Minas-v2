@@ -1327,7 +1327,6 @@ footer{
     padding: 0 40px;
     box-sizing: border-box;
 }
-
 .produtos-cards {
     display: flex !important;
     flex-direction: row !important;
@@ -1396,7 +1395,6 @@ footer{
     .seta-direita {
         right: 2px !important;
     }
-}
     .produtos-cards {
         gap: 0 !important;
         justify-content: flex-start !important;
@@ -1470,12 +1468,6 @@ footer{
     margin-bottom: 12px;
     color: #4a4a4a;
 }
-
-/* ==========================
-   RESPONSIVO - RODAPÉ (CELULAR)
-========================== */
-@media (max-width: 768px) {
-/* Rodapé minimalista, super compacto e profissional para celular */
 .footer-conteudo {
     display: flex;
     flex-direction: column;
@@ -1538,5 +1530,4 @@ footer{
         border-top: 1px solid rgba(255, 255, 255, 0.1);
         width: 100%;
     }
-
-} 
+}
