@@ -1318,23 +1318,30 @@ footer{
     right: 0px !important;
     }
     .carrossel-wrapper {
-        padding: 0 40px !important;
+        padding: 0 45px !important;
+        overflow: hidden !important;
     }
 
-    /* Faz o card ocupar quase a largura inteira da tela do celular */
+    .produtos-cards {
+        gap: 0 !important;
+        justify-content: flex-start !important;
+    }
+
+    /* Cada card ocupa exatamente a largura útil da tela do carrossel */
     .produtos-cards .produto {
         flex: 0 0 100% !important;
+        width: 100% !important;
         min-width: 100% !important;
         max-width: 100% !important;
         box-sizing: border-box !important;
+        margin: 0 !important;
     }
 
-    /* Ajusta a altura da foto para ficar proporcional no celular */
     .produtos-cards .produto img {
-        height: 220px !important;
+        height: 200px !important;
         object-fit: cover !important;
     }
- }
+}
 
 .texto-sobre {
     background-color: rgba(255, 255, 255, 0.95); /* Fundo quase sólido para destacar bem */
