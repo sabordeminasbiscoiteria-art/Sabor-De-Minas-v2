@@ -1309,50 +1309,68 @@ footer{
     margin-bottom: 12px;
     color: #4a4a4a;
 }
-/* Rodapé moderno e compacto no celular */
+/* Rodapé minimalista, super compacto e profissional para celular */
 .footer-conteudo {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 12px;
+    padding: 20px 10px;
+}
+
+/* Esconde a logo grandona e deixa apenas os textos/ícones bem enxutos */
+.footer-marca {
+    display: none; /* Oculta no celular para economizar espaço valioso */
+}
+
+/* Links rápidos alinhados lado a lado na horizontal */
+.footer-menu {
+    display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: flex-start;
+    justify-content: center;
     gap: 15px;
-    padding: 30px 15px;
-    text-align: left;
-}
-
-/* Faz os blocos dividirem bem o espaço horizontal */
-.footer-marca, .footer-contato, .footer-menu {
-    flex: 1 1 100px; /* Permite que eles encolham e dividam a linha */
-}
-
-/* Reduz o tamanho da logo */
-.footer-marca img {
-    width: 45px;
     margin-bottom: 5px;
 }
 
-.footer-marca h3 {
-    font-size: 15px;
-    line-height: 1.2;
+.footer-menu h3 {
+    display: none; /* Remove o título "Links rápidos" para limpar a visualização */
 }
 
-.footer-marca p, .footer-contato p, .footer-menu a {
+.footer-menu a {
     font-size: 12px;
+    color: #fff;
+    opacity: 0.9;
 }
 
-.footer-contato h3, .footer-menu h3 {
-    font-size: 14px;
-    margin-bottom: 6px;
-}
-
-.footer-menu {
+/* Contatos organizados em linha ou bem discretos */
+.footer-contato {
     display: flex;
-    flex-direction: column;
-    gap: 3px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
 }
 
+.footer-contato h3 {
+    display: none; /* Remove o título "Contato" para economizar espaço */
+}
+
+.footer-contato p {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 12px;
+    margin: 0;
+}
+
+/* Rodapé final bem discreto */
 .footer-final {
     text-align: center;
-    padding: 10px;
-    font-size: 11px;
+    padding: 5px;
+    font-size: 10px;
+    opacity: 0.8;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    width: 100%;
 }
