@@ -1227,12 +1227,12 @@ footer{
 /* Cards mais compactos e profissionais no celular */
 @media (max-width: 768px){
 .produto {
-    max-width: 280px;    /* Deixa o card bem enxuto na horizontal */
-    margin: 0 auto 15px auto; /* Centraliza e diminui o espaço entre eles */
-    padding: 12px;       /* Reduz o espaço interno */
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+    padding: 15px 15px 25px 15px !important; /* Dá folga embaixo para o botão do WhatsApp */
     border-radius: 12px;
 }
-
 /* Deixa a foto do biscoito menor na altura */
 .produto img {
     height: 150px;       /* Altura ideal para não ocupar a tela toda */
