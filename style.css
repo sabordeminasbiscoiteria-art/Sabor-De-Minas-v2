@@ -1237,8 +1237,8 @@ footer{
 .produto h3 {
     font-size: 16px;
     margin: 6px 0 2px 0;
+   text-align: center !important;
 }
-
 /* Diminui a descrição */
 .produto p {
     font-size: 12px;
