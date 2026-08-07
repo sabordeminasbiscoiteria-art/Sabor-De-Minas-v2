@@ -1269,18 +1269,20 @@ footer{
    CARROSSEL HORIZONTAL (ARRASTAR PRO LADO)
 ========================== */
 @media (max-width: 768px) {
-    /* 1. Container que segura os produtos (ajuste para a sua estrutura) */
+    /* 1. Força o container principal a esticar e aceitar o scroll lateral */
     .produtos-container, .lista-produtos, .produtos-grid, .produtos {
         display: flex !important;
         flex-direction: row !important;
-        overflow-x: auto !important;          /* Permite arrastar para o lado */
+        overflow-x: auto !important;          
+        scroll-snap-type: x mandatory !important; 
+        scrollbar-width: none !important;     
         gap: 15px !important;
         padding: 10px 15px 20px 15px !important;
-        scroll-snap-type: x mandatory !important; /* Trava o card certinho na tela */
-        scrollbar-width: none !important;     /* Esconde a barra de rolagem no Firefox */
+        width: 100% !important;
+        box-sizing: border-box !important;
     }
 
-    /* Esconde a barra de rolagem no Chrome, Safari e Edge */
+    /* Esconde a barra de rolagem */
     .produtos-container::-webkit-scrollbar, 
     .lista-produtos::-webkit-scrollbar, 
     .produtos-grid::-webkit-scrollbar,
@@ -1288,12 +1290,13 @@ footer{
         display: none !important;
     }
 
-    /* 2. Cada card individual (.produto) agora ganha o tamanho fixo para o carrossel */
+    /* 2. Cada card do produto fica com tamanho ideal e centralizado */
     .produto {
-        flex: 0 0 75% !important;             /* Cada card ocupa 75% da largura da tela */
-        max-width: none !important;           /* Anula o max-width anterior para o carrossel funcionar */
-        scroll-snap-align: center !important; /* Centraliza o produto ao arrastar */
-        margin: 0 !important;                 /* Remove margens antigas que travavam o flex */
+        flex: 0 0 78% !important;             /* Ocupa 78% da tela, mostrando um pedaço do próximo */
+        min-width: 78% !important;
+        max-width: none !important;           
+        scroll-snap-align: center !important; /* Centraliza perfeitamente ao arrastar */
+        margin: 0 !important;                 
     }
 }
 /* Caixa de texto sobre a imagem de fundo mais compacta */
