@@ -1335,7 +1335,7 @@ footer{
     scroll-behavior: smooth;
     scrollbar-width: none; /* Some com a barra no Firefox */
     width: 100%;
-    gap: 15px;
+    gap: 30px;
     padding: 10px 0;
 }
     .carrossel-wrapper {
