@@ -1265,35 +1265,29 @@ footer{
     font-size: 13px;
   }
 }
-
 /* ==========================
-   CARROSSEL PERFEITO NO CELULAR
+   CARROSSEL MOBILE BLINDADO
 ========================== */
 @media (max-width: 768px) {
     .carrossel-wrapper {
-        padding: 0 35px;
-        overflow: hidden;
+        position: relative;
+        width: 100%;
+        padding: 0 40px;
+        box-sizing: border-box;
     }
 
     .produtos-cards {
         display: flex !important;
-        flex-direction: row !important; /* Força ficar em linha (lado a lado) */
+        flex-wrap: nowrap !important; /* Impede que o produto pule para a linha de baixo */
         overflow-x: auto !important;
-        scroll-snap-type: x mandatory; /* Ajuda a travar no card certinho ao arrastar */
-        gap: 15px;
+        gap: 15px !important;
+        width: 100% !important;
     }
 
     .produtos-cards .produto {
-        flex: 0 0 82% !important;
-        min-width: 82% !important;
-        max-width: 82% !important;
-        scroll-snap-align: center;
-    }
-
-    .seta-carrossel {
-        width: 32px;
-        height: 32px;
-        font-size: 14px;
+        flex: 0 0 80% !important;
+        min-width: 80% !important;
+        max-width: 80% !important;
     }
 }
 .texto-sobre {
