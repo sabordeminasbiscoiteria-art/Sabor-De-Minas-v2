@@ -1344,7 +1344,7 @@ footer{
     /* --- Ajustes dos Cards --- */
     .produto {
         flex: 0 0 92% !important; /* Ocupa 85% da tela para mostrar um pedacinho do próximo */
-        max-width: 92% !important;
+        max-width: 100% !important;
         box-sizing: border-box !important;
         margin: 0 !important;
         padding: 15px !important;
