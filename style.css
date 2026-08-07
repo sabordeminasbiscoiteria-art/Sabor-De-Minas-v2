@@ -374,6 +374,30 @@ nav a:hover::after{
     min-height:45px;
 }
 
+@media (min-width: 769px) {
+    /* Garante que o container permita posicionar as setas nas bordas */
+    .carrossel-wrapper, .produtos-container, .carrossel-container {
+        position: relative !important;
+    }
+
+    /* Seta da Esquerda colada na ponta esquerda do PC */
+    .carrossel-botao-anterior, .slick-prev, .prev-btn {
+        position: absolute !important;
+        left: -20px !important; /* Se quiser colocar um pouco pra fora da borda, ou use 0px para colar na linha */
+        top: 50% !important;
+        transform: translateY(-50%) !important;
+        z-index: 10 !important;
+    }
+
+    /* Seta da Direita colada na ponta direita do PC */
+    .carrossel-botao-proximo, .slick-next, .next-btn {
+        position: absolute !important;
+        right: -20px !important; /* Ajuste para fora ou 0px para alinhar na borda */
+        top: 50% !important;
+        transform: translateY(-50%) !important;
+        z-index: 10 !important;
+    }
+}
 /* PESO E PREÇO */
 .preco-produto{
     display:flex;
@@ -1456,27 +1480,3 @@ footer{
     }
 
 } 
-@media (min-width: 769px) {
-    /* Garante que o container permita posicionar as setas nas bordas */
-    .carrossel-wrapper, .produtos-container, .carrossel-container {
-        position: relative !important;
-    }
-
-    /* Seta da Esquerda colada na ponta esquerda do PC */
-    .carrossel-botao-anterior, .slick-prev, .prev-btn {
-        position: absolute !important;
-        left: -20px !important; /* Se quiser colocar um pouco pra fora da borda, ou use 0px para colar na linha */
-        top: 50% !important;
-        transform: translateY(-50%) !important;
-        z-index: 10 !important;
-    }
-
-    /* Seta da Direita colada na ponta direita do PC */
-    .carrossel-botao-proximo, .slick-next, .next-btn {
-        position: absolute !important;
-        right: -20px !important; /* Ajuste para fora ou 0px para alinhar na borda */
-        top: 50% !important;
-        transform: translateY(-50%) !important;
-        z-index: 10 !important;
-    }
-}
