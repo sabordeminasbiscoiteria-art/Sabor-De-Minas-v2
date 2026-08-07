@@ -375,24 +375,77 @@ nav a:hover::after{
 }
 
 @media (min-width: 769px) {
+    /* Garante o posicionamento nas pontas */
     .carrossel-wrapper {
         position: relative !important;
     }
 
-    .seta-esquerda {
+    /* --- ESTILO DO BOTÃO (CÍRCULO PROFISSIONAL) --- */
+    .seta-esquerda, .seta-direita {
+        background-color: rgba(255, 255, 255, 0.95) !important;
+        border: none !important;
+        border-radius: 50% !important;
+        width: 44px !important;
+        height: 44px !important;
+        cursor: pointer !important;
+        transition: all 0.3s ease-in-out !important;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.15) !important;
+        padding: 0 !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        /* Mantém o posicionamento absoluto que definimos anteriormente */
         position: absolute !important;
-        left: -40px !important;
         top: 50% !important;
         transform: translateY(-50%) !important;
-        z-index: 999 !important;
+        z-index: 1000 !important;
+    }
+
+    /* Efeito Hover (quando passa o mouse) */
+    .seta-esquerda:hover, .seta-direita:hover {
+        background-color: #ffffff !important;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.2) !important;
+        transform: translateY(-50%) scale(1.05) !important;
+    }
+
+    /* --- DESENHO DA SETA (Vetor CSS) --- */
+    .seta-esquerda::after,
+    .seta-direita::after {
+        content: '' !important;
+        display: block !important;
+        width: 12px !important;
+        height: 12px !important;
+        border-top: 2px solid #3b2314 !important; /* Cor do seu tema */
+        position: absolute !important;
+        top: 15px !important;
+        transition: border-color 0.3s ease !important;
+    }
+
+    /* Efeito Hover na cor da seta */
+    .seta-esquerda:hover::after,
+    .seta-direita:hover::after {
+        border-color: #22130b !important; /* Leve escurecida no hover */
+    }
+
+    /* Ajustes específicos para cada lado */
+    .seta-esquerda {
+        left: -55px !important; /* Distância para fora do carrossel */
+    }
+    
+    .seta-esquerda::after {
+        border-left: 2px solid #3b2314 !important;
+        transform: rotate(-45deg) !important;
+        left: 16px !important;
     }
 
     .seta-direita {
-        position: absolute !important;
-        right: -40px !important;
-        top: 50% !important;
-        transform: translateY(-50%) !important;
-        z-index: 999 !important;
+        right: -55px !important;
+    }
+
+    .seta-direita::after {
+        border-right: 2px solid #3b2314 !important;
+        transform: rotate(45deg) !important;
+        right: 16px !important;
     }
 }
 /* PESO E PREÇO */
