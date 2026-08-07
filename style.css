@@ -1313,59 +1313,64 @@ footer{
     padding: 20px 10px;
 }
 
-/* Esconde a logo grandona e deixa apenas os textos/ícones bem enxutos */
-@media (max-width: 768px){
-.footer-marca {
-    display: none; /* Oculta no celular para economizar espaço valioso */
-}
+/* ==========================
+   RESPONSIVO - RODAPÉ (CELULAR)
+========================== */
+@media (max-width: 768px) {
 
-/* Links rápidos alinhados lado a lado na horizontal */
-.footer-menu {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-    margin-bottom: 5px;
-}
+    .footer-marca {
+        display: none; /* Oculta no celular para economizar espaço valioso */
+    }
 
-.footer-menu h3 {
-    display: none; /* Remove o título "Links rápidos" para limpar a visualização */
-}
+    /* Links rápidos alinhados lado a lado na horizontal */
+    .footer-menu {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        margin-bottom: 5px;
+    }
 
-.footer-menu a {
-    font-size: 12px;
-    color: #fff;
-    opacity: 0.9;
-}
-/* Contatos organizados em linha ou bem discretos */
-.footer-contato {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 12px;
-}
+    .footer-menu h3 {
+        display: none; /* Remove o título "Links rápidos" para limpar a visualização */
+    }
 
-.footer-contato h3 {
-    display: none; /* Remove o título "Contato" para economizar espaço */
-}
+    .footer-menu a {
+        font-size: 12px;
+        color: #fff;
+        opacity: 0.9;
+    }
 
-.footer-contato p {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    font-size: 12px;
-    margin: 0;
-}
+    /* Contatos organizados em linha ou bem discretos */
+    .footer-contato {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
 
-/* Rodapé final bem discreto */
-.footer-final {
-    text-align: center;
-    padding: 5px;
-    font-size: 10px;
-    opacity: 0.8;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    width: 100%;
-  }
-}
+    .footer-contato h3 {
+        display: none; /* Remove o título "Contato" para economizar espaço */
+    }
+
+    .footer-contato p {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        font-size: 12px;
+        margin: 0;
+    }
+
+    /* Rodapé final bem discreto */
+    .footer-final {
+        text-align: center;
+        padding: 5px;
+        font-size: 10px;
+        opacity: 0.8;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        width: 100%;
+    }
+
+} /* <--- ESSA CHAVE AQUI É A MAIS IMPORTANTE: Fecha o @media e protege o computador! */
