@@ -373,58 +373,56 @@ nav a:hover::after{
     padding:0 18px;
     min-height:45px;
 }
-
 @media (min-width: 769px) {
-    /* --- ESTILO DO BOTÃO (Remove o círculo antigo e zera o texto) --- */
+    /* Garante o posicionamento */
     .seta-esquerda, .seta-direita {
-        background: transparent !important;
-        border: none !important;
-        box-shadow: none !important;
-        cursor: pointer !important;
-        transition: transform 0.2s ease-in-out !important;
-        padding: 0 !important;
-        /* Esconde o texto antigo */
-        color: transparent !important;
-        font-size: 0 !important;
-        line-height: 0 !important;
-        /* Posicionamento nas pontas */
         position: absolute !important;
         top: 50% !important;
         transform: translateY(-50%) !important;
         z-index: 1000 !important;
-        /* Tamanho do botão invisível */
-        width: 50px !important;
-        height: 50px !important;
-        /* Usa a imagem como fundo do botão */
-        background-repeat: no-repeat !important;
-        background-position: center !important;
-        background-size: 35px auto !important; /* Tamanho do ícone dentro do botão */
+        
+        /* Zera o botão para ficar invisível */
+        background: transparent !important;
+        border: none !important;
+        cursor: pointer !important;
+        color: transparent !important; /* Esconde o símbolo antigo */
+        font-size: 0 !important;
+        width: 40px !important;
+        height: 40px !important;
+        padding: 0 !important;
     }
 
-    /* Efeito Hover (dá uma leve flutuada) */
-    .seta-esquerda:hover {
-        transform: translateY(-50%) translateX(-5px) !important;
-        opacity: 0.8 !important;
-    }
-    .seta-direita:hover {
-        transform: translateY(-50%) translateX(5px) !important;
-        opacity: 0.8 !important;
+    /* Desenha a seta */
+    .seta-esquerda::before, .seta-direita::before {
+        content: '' !important;
+        display: block !important;
+        width: 20px !important;
+        height: 20px !important;
+        border-top: 3px solid #3b2314 !important; /* Cor e espessura */
+        border-right: 3px solid #3b2314 !important;
+        position: absolute !important;
+        top: 10px !important;
     }
 
-    /* --- CONFIGURAÇÃO ESPECÍFICA --- */
-    
-    /* Seta da Esquerda (Coloca a imagem da esquerda) */
+    /* Posiciona e gira a seta da ESQUERDA */
     .seta-esquerda {
-        left: -70px !important; /* Distância para fora */
-        background-image: url('seta-esq.png') !important;
+        left: -50px !important;
+    }
+    .seta-esquerda::before {
+        transform: rotate(-135deg) !important;
+        left: 10px !important;
     }
 
-    /* Seta da Direita (Coloca a imagem da direita) */
+    /* Posiciona e gira a seta da DIREITA */
     .seta-direita {
-        right: -70px !important;
-        background-image: url('seta-dir.png') !important;
+        right: -50px !important;
+    }
+    .seta-direita::before {
+        transform: rotate(45deg) !important;
+        right: 10px !important;
     }
 }
+
 /* PESO E PREÇO */
 .preco-produto{
     display:flex;
