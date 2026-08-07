@@ -1344,34 +1344,63 @@ footer{
 .produtos-cards::-webkit-scrollbar {
     display: none !important;
 }
-/* Estilo das setas flutuantes */
-.seta-carrossel {
-    position: absolute !important;
-    top: 50% !important;
-    transform: translateY(-50%) !important;
-    background-color: #ffffff !important;
-    color: #b32d2d !important;
-    border: 2px solid #e0e0e0 !important;
-    width: 40px !important;
-    height: 40px !important;
-    border-radius: 50% !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    cursor: pointer !important;
-    z-index: 99 !important;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15) !important;
-    }
-    .seta-esquerda {
-    left: 0px !important;
+/* --- APENAS PARA O CELULAR (Telas menores que 769px) --- */
+    .carrossel-wrapper {
+        position: relative !important;
+        padding: 0 35px !important; /* Cria espaço nas laterais para a seta não tampar o produto */
+        overflow: hidden !important;
     }
 
-    .seta-direita {
-    right: 0px !important;
+    .seta-esquerda, .seta-direita {
+        position: absolute !important;
+        top: 50% !important;
+        transform: translateY(-50%) !important;
+        z-index: 1000 !important;
+        
+        background: transparent !important;
+        border: none !important;
+        box-shadow: none !important;
+        cursor: pointer !important;
+        
+        /* Esconde o símbolo antigo */
+        color: transparent !important; 
+        font-size: 0 !important;
+        line-height: 0 !important;
+        
+        width: 35px !important;
+        height: 35px !important;
+        padding: 0 !important;
     }
-    .carrossel-wrapper {
-        padding: 0 45px !important;
-        overflow: hidden !important;
+
+    /* Desenha a seta limpa */
+    .seta-esquerda::before, .seta-direita::before {
+        content: '' !important;
+        position: absolute !important;
+        top: 50% !important;
+        width: 10px !important;
+        height: 10px !important;
+        border-top: 2.5px solid #3b2314 !important;
+        border-left: 2.5px solid #3b2314 !important;
+    }
+
+    /* Posiciona a seta da esquerda no celular */
+    .seta-esquerda {
+        left: 2px !important;
+    }
+    .seta-esquerda::before {
+        left: 50% !important;
+        transform: translate(-25%, -50%) rotate(-45deg) !important;
+    }
+
+    /* Posiciona a seta da direita no celular */
+    .seta-direita {
+        right: 2px !important;
+    }
+    .seta-direita::before {
+        right: 50% !important;
+        transform: translate(25%, -50%) rotate(135deg) !important;
+        border-left: none !important;
+        border-right: 2.5px solid #3b2314 !important;
     }
 
     .produtos-cards {
