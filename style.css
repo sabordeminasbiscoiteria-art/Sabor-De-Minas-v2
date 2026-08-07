@@ -1302,13 +1302,13 @@ footer{
 /* Diminui o tamanho do título do produto */
 .produto h3 {
     font-size: 16px;
-    margin: 6px 0 2px 0;
+    margin: 4px 0 2px 0;
    text-align: center !important;
 }
 /* Diminui a descrição */
 .produto p {
     font-size: 12px;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
     text-align: center !important;
 }
 /* Deixa a caixa de preço e peso compacta */
