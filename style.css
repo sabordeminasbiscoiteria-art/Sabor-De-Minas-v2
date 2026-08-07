@@ -1234,7 +1234,7 @@ footer{
         text-align: center;
         gap: 15px;
     }
-
+}
 /* AJUSTE PERFEITO DA FAIXA DE BENEFÍCIOS NO CELULAR */
 .beneficios {
     display: flex;
@@ -1310,4 +1310,50 @@ footer{
     color: #4a4a4a;
 }
 
+/* Ajustes do rodapé para telas de celular */
+@media (max-width: 768px) {
+    /* Empilha as colunas do rodapé uma embaixo da outra */
+    .footer-conteudo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 30px;
+        padding: 40px 20px;
+    }
+
+    /* Organiza a parte da marca e logo */
+    .footer-marca {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-marca img {
+        width: 80px; /* Controla o tamanho da logo para não ficar gigante */
+        margin-bottom: 10px;
+    }
+
+    /* Alinha os ícones de contato centralizados */
+    .footer-contato p {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 8px;
+    }
+
+    /* Organiza os links rápidos em coluna */
+    .footer-menu {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    /* Centraliza a linha de direitos reservados no final */
+    .footer-final {
+        text-align: center;
+        padding: 15px 10px;
+        font-size: 13px;
+    }
 }
