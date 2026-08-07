@@ -1321,6 +1321,21 @@ footer{
     padding: 8px 12px;
     font-size: 13px;
  }
+ /* Organiza o título em cima e o botão de produtos.html embaixo */
+    .topo-produtos {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 12px !important;
+        margin-bottom: 20px !important;
+    }
+
+    /* Deixa o título perfeitamente ajustado na linha */
+    .titulo-produtos {
+        font-size: 26px !important;
+        white-space: nowrap !important;
+        margin: 0 !important;
+    }
     .carrossel-wrapper {
         width: 100% !important;
         overflow: hidden !important;
