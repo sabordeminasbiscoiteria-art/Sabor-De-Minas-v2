@@ -1225,25 +1225,35 @@ footer{
 }
 /* AJUSTE PERFEITO DA FAIXA DE BENEFÍCIOS NO CELULAR */
 @media (max-width: 768px){
-.beneficios {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    width: 100%;
-    padding: 20px 10px;
-}
+/* Transforma a lista de benefícios em 2 colunas no celular */
+    .beneficios, .container-beneficios, .features {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Cria duas colunas iguais */
+        gap: 15px;                             /* Espaçamento entre os cards */
+        padding: 0 10px;
+    }
 
-.beneficio {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    width: 100%;
-    max-width: 320px;
-    text-align: left;
-    gap: 15px;
-  }
+    /* Ajusta cada item individualmente para ficar compacto */
+    .beneficio-item, .feature-box {
+        text-align: center;
+        padding: 10px;
+        background: #fff;                      /* Fundo branco opcional para destacar */
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+    
+    .beneficio-item img, .beneficio-item i {
+        font-size: 24px;                       /* Ícones menores proporcionais */
+        margin-bottom: 5px;
+    }
+
+    .beneficio-item h4 {
+        font-size: 13px;                       /* Título compacto */
+    }
+
+    .beneficio-item p {
+        font-size: 11px;                       /* Texto descritivo menor */
+    }
 }
 
 /* Cards mais compactos e profissionais no celular */
