@@ -1111,6 +1111,11 @@ footer{
         margin: 0;
         font-size: 13px;
     }
+    
+    /* Esconde o número de telefone no celular */
+    .whatsapp-topo {
+        display: none !important;
+    }
 }
 /* ==========================
    RESPONSIVO - BANNER
