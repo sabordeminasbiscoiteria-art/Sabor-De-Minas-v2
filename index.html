@@ -415,8 +415,17 @@ function trocarSlide(){
 setInterval(trocarSlide, 4000);
 
 
+function rolarCarrossel(direcao) {
+    const container = document.querySelector('.produtos-cards');
+    if (container) {
+        const larguraItem = container.querySelector('.produto').offsetWidth + 15;
+        container.scrollBy({
+            left: direcao * larguraItem,
+            behavior: 'smooth'
+        });
+    }
+}
 </script>
-
 
 </body>  
 </html>
