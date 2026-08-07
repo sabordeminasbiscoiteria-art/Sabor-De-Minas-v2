@@ -1367,14 +1367,13 @@ footer{
 
     /* --- Ajustes dos Cards --- */
     .produto {
-        flex: 0 0 92% !important; /* Ocupa 85% da tela para mostrar um pedacinho do próximo */
+        flex: 0 0 100% !important;        /* Ocupa 100% da largura útil */
         max-width: 100% !important;
         box-sizing: border-box !important;
-        margin: 0 !important;
+        margin: 0 auto !important;        /* Centraliza o card perfeitamente */
         padding: 15px !important;
         height: auto !important;
     }
-
     .produto img {
         height: 180px !important;
         object-fit: cover !important;
