@@ -375,72 +375,54 @@ nav a:hover::after{
 }
 
 @media (min-width: 769px) {
-    /* --- ZERA O ESTILO DO BOTÃO (Remove o círculo) --- */
+    /* --- ESTILO DO BOTÃO (Remove o círculo antigo e zera o texto) --- */
     .seta-esquerda, .seta-direita {
-        background: transparent !important; /* Fundo transparente */
-        border: none !important; /* Sem borda */
-        border-radius: 0 !important;
-        box-shadow: none !important; /* Sem sombra */
-        width: 44px !important;
-        height: 44px !important;
+        background: transparent !important;
+        border: none !important;
+        box-shadow: none !important;
         cursor: pointer !important;
-        transition: transform 0.3s ease !important;
+        transition: transform 0.2s ease-in-out !important;
         padding: 0 !important;
-        /* Esconde o texto antigo (o símbolo estranho) */
+        /* Esconde o texto antigo */
         color: transparent !important;
         font-size: 0 !important;
-        /* Mantém o posicionamento nas pontas */
+        line-height: 0 !important;
+        /* Posicionamento nas pontas */
         position: absolute !important;
         top: 50% !important;
         transform: translateY(-50%) !important;
         z-index: 1000 !important;
+        /* Tamanho do botão invisível */
+        width: 50px !important;
+        height: 50px !important;
+        /* Usa a imagem como fundo do botão */
+        background-repeat: no-repeat !important;
+        background-position: center !important;
+        background-size: 35px auto !important; /* Tamanho do ícone dentro do botão */
     }
 
-    /* Efeito Hover (a seta dá uma leve "puxada" pro lado) */
+    /* Efeito Hover (dá uma leve flutuada) */
     .seta-esquerda:hover {
-        transform: translateY(-50%) translateX(-3px) !important;
+        transform: translateY(-50%) translateX(-5px) !important;
+        opacity: 0.8 !important;
     }
     .seta-direita:hover {
-        transform: translateY(-50%) translateX(3px) !important;
+        transform: translateY(-50%) translateX(5px) !important;
+        opacity: 0.8 !important;
     }
 
-    /* --- DESENHO DA SETA (Vetor CSS Limpo) --- */
-    .seta-esquerda::before,
-    .seta-direita::before {
-        content: '' !important;
-        display: block !important;
-        width: 14px !important;
-        height: 14px !important;
-        border-top: 2.5px solid #3b2314 !important; /* Cor do seu tema */
-        position: absolute !important;
-        top: 15px !important;
-        transition: border-color 0.3s ease !important;
-    }
-
-    /* Seta da Esquerda */
+    /* --- CONFIGURAÇÃO ESPECÍFICA --- */
+    
+    /* Seta da Esquerda (Coloca a imagem da esquerda) */
     .seta-esquerda {
-        left: -55px !important;
-    }
-    .seta-esquerda::before {
-        border-left: 2.5px solid #3b2314 !important;
-        transform: rotate(-45deg) !important;
-        left: 15px !important;
+        left: -70px !important; /* Distância para fora */
+        background-image: url('seta-esq.png') !important;
     }
 
-    /* Seta da Direita */
+    /* Seta da Direita (Coloca a imagem da direita) */
     .seta-direita {
-        right: -55px !important;
-    }
-    .seta-direita::before {
-        border-right: 2.5px solid #3b2314 !important;
-        transform: rotate(45deg) !important;
-        right: 15px !important;
-    }
-
-    /* Cor do ícone no hover */
-    .seta-esquerda:hover::before,
-    .seta-direita:hover::before {
-        border-color: #22130b !important; /* Escurece levemente no hover */
+        right: -70px !important;
+        background-image: url('seta-dir.png') !important;
     }
 }
 /* PESO E PREÇO */
