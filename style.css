@@ -1265,67 +1265,23 @@ footer{
     font-size: 13px;
   }
 }
-/* ==========================
-   CARROSSEL COM SETAS (APENAS NO CELULAR)
-========================== */
 @media (max-width: 768px) {
-    .carrossel-wrapper {
-        position: relative;
-        width: 100%;
-        display: flex;
-        align-items: center;
-    }
-
     .produtos-cards {
         display: flex !important;
         flex-direction: row !important;
-        overflow-x: auto !important;
-        scroll-snap-type: x mandatory !important;
-        scrollbar-width: none !important;
+        overflow-x: scroll !important;
+        -webkit-overflow-scrolling: touch !important;
         gap: 15px !important;
-        padding: 10px 35px 20px 35px !important;
+        padding: 10px !important;
         width: 100% !important;
-        scroll-behavior: smooth;
+        box-sizing: border-box !important;
     }
 
-    .produtos-cards::-webkit-scrollbar {
-        display: none !important;
-    }
-
-    .produto {
-        flex: 0 0 100% !important;
-        min-width: 100% !important;
-        max-width: none !important;
-        scroll-snap-align: center !important;
+    .produtos-cards .produto {
+        flex: 0 0 85% !important;
+        min-width: 85% !important;
+        max-width: 85% !important;
         margin: 0 !important;
-    }
-
-    .seta-carrossel {
-        position: absolute;
-        top: 45%;
-        transform: translateY(-50%);
-        background-color: #fff;
-        color: #b32d2d;
-        border: 2px solid #ddd;
-        width: 32px;
-        height: 32px;
-        border-radius: 50%;
-        font-size: 14px;
-        font-weight: bold;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        z-index: 10;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    }
-
-    .seta-esquerda {
-        left: 2px;
-    }
-
-    .seta-direita {
-        right: 2px;
     }
 }
 .texto-sobre {
