@@ -1229,7 +1229,7 @@ footer{
 .produto img {            /* Deixa a foto do biscoito menor na altura */
     height: 150px;       /* Altura ideal para não ocupar a tela toda */
     object-fit: cover;
-    border-radius: 8px;
+    border-radius: 0px;
     width: 100%;
 }
 
@@ -1243,18 +1243,13 @@ footer{
 .produto p {
     font-size: 12px;
     margin-bottom: 8px;
+    text-align: center !important;
 }
 /* Deixa a caixa de preço e peso compacta */
 .produto .preco-produto {
     font-size: 14px;
     margin-bottom: 10px;
 }
-/* Reduz o espaço acima da seção de produtos */
-.produtos, section.produtos {
-    margin-top: -30px !important;
-    padding-top: 10px !important;
-}
-
 /* Ajusta o botão do WhatsApp para ficar proporcional */
 .produto .botao-produto {
     padding: 8px 12px;
