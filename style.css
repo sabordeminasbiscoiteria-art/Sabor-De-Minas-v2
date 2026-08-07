@@ -1252,11 +1252,15 @@ footer{
     font-size: 12px;
     margin-bottom: 8px;
 }
-
 /* Deixa a caixa de preço e peso compacta */
 .produto .preco-produto {
     font-size: 14px;
     margin-bottom: 10px;
+}
+/* Reduz o espaço acima da seção de produtos */
+.produtos, section.produtos {
+    margin-top: -30px !important;
+    padding-top: 10px !important;
 }
 
 /* Ajusta o botão do WhatsApp para ficar proporcional */
@@ -1340,19 +1344,6 @@ footer{
     .produtos-cards .produto img {
         height: 200px !important;
         object-fit: cover !important;
-    }
-}
-    @media (max-width: 768px){
-    /* Reduz o espaço em cima e embaixo da seção de produtos */
-    .produtos, section.produtos {
-        padding-top: 20px !important;
-        padding-bottom: 20px !important;
-    }
-
-    /* Reduz a margem interna inferior do carrossel */
-    .carrossel-wrapper {
-        margin-bottom: 0 !important;
-        padding-bottom: 10px !important;
     }
 }
 
