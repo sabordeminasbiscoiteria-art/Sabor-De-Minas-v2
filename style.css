@@ -1230,11 +1230,13 @@ footer{
     width: 100% !important;
     max-width: 100% !important;
     margin: 0 auto !important;
-    padding: 15px 15px 25px 15px !important; /* Dá folga embaixo para o botão do WhatsApp */
-    border-radius: 12px;
+    padding: 12px 12px 18px 12px !important; 
+    box-sizing: border-box !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
 }
-/* Deixa a foto do biscoito menor na altura */
-.produto img {
+.produto img {            /* Deixa a foto do biscoito menor na altura */
     height: 150px;       /* Altura ideal para não ocupar a tela toda */
     object-fit: cover;
     border-radius: 8px;
