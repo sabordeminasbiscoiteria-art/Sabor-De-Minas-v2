@@ -1163,30 +1163,23 @@ footer{
 /* ==========================
    SLIDER DO BANNER
 ========================== */
+/* Torna o slider compacto e elegante no celular */
 .slider {
     position: relative;
     width: 100%;
-    aspect-ratio: 16 / 9;
-    overflow: hidden;
-    border-radius: 25px;
-    background: #fff;
+    max-width: 400px;  /* Limita a largura máxima do banner */
+    height: 220px;     /* Define uma altura menor para a foto não esticar */
+    margin: 15px auto; /* Centraliza o slide e dá respiro nas margens */
+    border-radius: 12px;
+    overflow: hidden;  /* Esconde o que passar da bordinha arredondada */
 }
 
-.slide {
-    position: absolute;
-    top: 0;
-    left: 0;
+/* Faz as imagens se ajustarem perfeitamente à altura do slider */
+.slider img.slide {
     width: 100%;
     height: 100%;
-    /* 'cover' faz a foto preencher bem o espaço do card */
-    object-fit: cover; 
-    background: #fff;
-    opacity: 0;
-    transition: opacity 1s ease;
-}
-
-.slide.ativo {
-    opacity: 1;
+    object-fit: cover; /* Recorta a imagem na medida certa sem distorcer */
+    border-radius: 12px;
 }
 
 /* BOLINHAS DO SLIDER */
@@ -1208,31 +1201,12 @@ footer{
     cursor: pointer;
     transition: 0.3s;
 }
-
+}
 .bolinha.ativa {
     background: #b52b2b;
     width: 12px; /* Destaque para a bolinha ativa */
     height: 12px;
-}
-    
-}
-/* Ajusta o banner de fotos (slide) para ficar compacto no celular */
-
-/* Seleciona o container principal do slide. Pode ser .slide-container, .swiper-slide, etc. 
-   Vamos usar uma classe genérica .meu-slide como exemplo, substitua pela sua. */
-.meu-slide {
-    height: 250px;       /* Define uma altura fixa menor para todo o bloco do slide */
-    margin-top: 20px;    /* Diminui o espaço acima do slide */
-    margin-bottom: 20px; /* Diminui o espaço abaixo do slide */
-}
-
-/* Seleciona a imagem dentro do slide */
-.meu-slide img {
-    width: 100%;         /* Garante que a imagem ocupe toda a largura */
-    height: 100%;        /* Faz a imagem preencher a altura definida acima */
-    object-fit: cover;   /* Corta a imagem para preencher o espaço sem distorcer */
-    border-radius: 16px; /* Mantém as bordas arredondadas */
-}
+}   
 /* AJUSTE PERFEITO DA FAIXA DE BENEFÍCIOS NO CELULAR */
 .beneficios {
     display: flex;
