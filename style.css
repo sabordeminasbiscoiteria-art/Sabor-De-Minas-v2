@@ -1337,7 +1337,7 @@ footer{
         scrollbar-width: none;
         width: 100%;
         padding: 10px 0;
-        gap: 15px !important; /* AQUI ESTÁ O ESPAÇAMENTO ENTRE PRODUTOS */
+        gap: 0px !important; /* AQUI ESTÁ O ESPAÇAMENTO ENTRE PRODUTOS */
         justify-content: flex-start !important;
     }
 
