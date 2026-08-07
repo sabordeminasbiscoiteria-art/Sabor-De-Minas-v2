@@ -1309,48 +1309,46 @@ footer{
     margin-bottom: 12px;
     color: #4a4a4a;
 }
-/* Rodapé compacto e profissional no celular */
+/* Rodapé moderno e compacto no celular */
 .footer-conteudo {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: flex-start;
-    gap: 20px;
+    gap: 15px;
     padding: 30px 15px;
     text-align: left;
 }
 
-/* Deixa a marca e os contatos compactos */
+/* Faz os blocos dividirem bem o espaço horizontal */
 .footer-marca, .footer-contato, .footer-menu {
-    flex: 1;
-    min-width: 140px;
+    flex: 1 1 100px; /* Permite que eles encolham e dividam a linha */
 }
 
-/* Reduz o tamanho da logo para acompanhar o rodapé menor */
+/* Reduz o tamanho da logo */
 .footer-marca img {
-    width: 50px;
+    width: 45px;
     margin-bottom: 5px;
 }
 
 .footer-marca h3 {
-    font-size: 16px;
+    font-size: 15px;
     line-height: 1.2;
 }
 
 .footer-marca p, .footer-contato p, .footer-menu a {
-    font-size: 13px;
+    font-size: 12px;
 }
 
-/* Títulos menores das seções do rodapé */
 .footer-contato h3, .footer-menu h3 {
-    font-size: 15px;
-    margin-bottom: 8px;
+    font-size: 14px;
+    margin-bottom: 6px;
 }
 
 .footer-menu {
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: 3px;
 }
 
 .footer-final {
