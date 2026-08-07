@@ -395,7 +395,28 @@ nav a:hover::after{
     color:#b52b2b;
     font-size:18px;
 }
+/* Posiciona as setas nas extremidades do carrossel no PC */
+.carrossel-wrapper, .produtos-container, .carrossel-container {
+    position: relative !important;
+}
 
+/* Seta da Esquerda colada na ponta esquerda */
+.carrossel-botao-anterior, .slick-prev, .prev-btn {
+    position: absolute !important;
+    left: 0px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    z-index: 10 !important;
+}
+
+/* Seta da Direita colada na ponta direita */
+.carrossel-botao-proximo, .slick-next, .next-btn {
+    position: absolute !important;
+    right: 0px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    z-index: 10 !important;
+}
 /* BOTÃO */
 
 .botao-produto{
