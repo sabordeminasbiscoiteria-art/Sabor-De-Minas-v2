@@ -1285,81 +1285,31 @@ footer{
     }
 }
 /* ==========================
-   ESTILO CARROSSEL PROFISSIONAL (PC E CELULAR)
+   AJUSTE RESPONSIVO PARA CELULAR
 ========================== */
-.carrossel-wrapper {
-    position: relative;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-}
-
-.produtos-cards {
-    display: flex;
-    gap: 20px;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    scrollbar-width: none; /* Esconde barra no Firefox */
-    width: 100%;
-    padding: 10px 5px;
-}
-
-.produtos-cards::-webkit-scrollbar {
-    display: none; /* Esconde barra no Chrome/Safari */
-}
-
-/* Estilo das Setas Profissionais nas Laterais */
-.seta-carrossel {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: #ffffff;
-    color: #b32d2d; /* Cor do tema da biscoitaria */
-    border: 1px solid #e0e0e0;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    font-size: 16px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    z-index: 10;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    transition: background 0.3s, color 0.3s;
-}
-
-.seta-carrossel:hover {
-    background-color: #b32d2d;
-    color: #ffffff;
-}
-
-.seta-esquerda {
-    left: -20px; /* Joga um pouco para fora da vitrine, igual da Cacau Show */
-}
-
-.seta-direita {
-    right: -20px; /* Joga um pouco para fora da vitrine */
-}
-
-/* Responsivo para Celular */
 @media (max-width: 768px) {
+    .carrossel-wrapper {
+        padding: 0 35px; /* Mantém espaço pras setas discretas no celular */
+    }
+
     .seta-carrossel {
-        width: 32px;
-        height: 32px;
+        width: 34px;
+        height: 34px;
         font-size: 14px;
     }
+
     .seta-esquerda {
-        left: -5px;
+        left: -2px;
     }
+
     .seta-direita {
-        right: -5px;
+        right: -2px;
     }
+
     .produtos-cards .produto {
-        flex: 0 0 80%;
-        min-width: 80%;
+        flex: 0 0 82% !important; /* Cada card ocupa 82% da tela do celular */
+        min-width: 82% !important;
+        max-width: 82% !important;
     }
 }
 .texto-sobre {
