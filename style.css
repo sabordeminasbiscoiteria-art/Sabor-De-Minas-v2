@@ -1321,55 +1321,65 @@ footer{
     padding: 8px 12px;
     font-size: 13px;
  }
-   .carrossel-wrapper {
-    position: relative;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    padding: 0 40px;
-    box-sizing: border-box;
-}
-.produtos-cards {
-    display: flex !important;
-    flex-direction: row !important;
-    flex-wrap: nowrap !important;
-    overflow-x: auto !important;
-    scroll-behavior: smooth;
-    scrollbar-width: none; /* Some com a barra no Firefox */
-    width: 100%;
-    gap: 30px;
-    padding: 10px 0;
-}
     .carrossel-wrapper {
-        position: relative !important;
-        padding: 0 35px !important;
+        width: 100% !important;
         overflow: hidden !important;
+        position: relative !important;
+        padding: 0 !important;
     }
 
+    .produtos-cards {
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        overflow-x: auto !important;
+        scroll-behavior: smooth;
+        scrollbar-width: none;
+        width: 100%;
+        padding: 10px 0;
+        gap: 15px !important; /* AQUI ESTÁ O ESPAÇAMENTO ENTRE PRODUTOS */
+        justify-content: flex-start !important;
+    }
+
+    /* --- Ajustes dos Cards --- */
+    .produto {
+        flex: 0 0 85% !important; /* Ocupa 85% da tela para mostrar um pedacinho do próximo */
+        max-width: 85% !important;
+        box-sizing: border-box !important;
+        margin: 0 !important;
+        padding: 15px !important;
+        height: auto !important;
+    }
+
+    .produto img {
+        height: 180px !important;
+        object-fit: cover !important;
+        width: 100%;
+        border-radius: 0px;
+    }
+
+    .produto h3 { font-size: 16px; margin: 6px 0 2px 0; text-align: center !important; }
+    .produto p { font-size: 12px; margin-bottom: 8px; text-align: center !important; }
+    .produto .preco-produto { font-size: 14px; margin-bottom: 10px; }
+    .produto .botao-produto { padding: 8px 12px; font-size: 13px; }
+
+    /* --- Setas (CSS Vector) --- */
     .seta-esquerda, .seta-direita {
         position: absolute !important;
         top: 50% !important;
         transform: translateY(-50%) !important;
         z-index: 1000 !important;
-        
         background: transparent !important;
         border: none !important;
-        box-shadow: none !important;
         cursor: pointer !important;
-        
         color: transparent !important; 
         font-size: 0 !important;
-        line-height: 0 !important;
-        
         width: 35px !important;
         height: 35px !important;
         padding: 0 !important;
     }
 
-    /* Seta da Esquerda */
-    .seta-esquerda::before {
+    .seta-esquerda::before, .seta-direita::before {
         content: '' !important;
         position: absolute !important;
         top: 50% !important;
@@ -1377,161 +1387,18 @@ footer{
         width: 10px !important;
         height: 10px !important;
         border-top: 2.5px solid #3b2314 !important;
-        border-left: 2.5px solid #3b2314 !important;
-        transform: translate(-50%, -50%) rotate(-45deg) !important;
-    }
-    .seta-esquerda {
-        left: 2px !important;
     }
 
-    /* Seta da Direita (COM ROTAÇÃO INVERTIDA EXATA) */
-    .seta-direita::before {
-        content: '' !important;
-        position: absolute !important;
-        top: 50% !important;
-        left: 50% !important;
-        width: 10px !important;
-        height: 10px !important;
-        border-top: 2.5px solid #3b2314 !important;
-        border-right: 2.5px solid #3b2314 !important;
-        transform: translate(-50%, -50%) rotate(45deg) !important;
-    }
-    .seta-direita {
-        right: 2px !important;
-    }
-    .produtos-cards {
-        gap: 0 !important;
-        justify-content: flex-start !important;
-    }
+    .seta-esquerda { left: 2px !important; }
+    .seta-esquerda::before { border-left: 2.5px solid #3b2314 !important; transform: translate(-50%, -50%) rotate(-45deg) !important; }
+    
+    .seta-direita { right: 2px !important; }
+    .seta-direita::before { border-right: 2.5px solid #3b2314 !important; transform: translate(-50%, -50%) rotate(45deg) !important; }
 
-    /* Cada card ocupa exatamente a largura útil da tela do carrossel */
-    .produtos-cards .produto {
-        flex: 0 0 100% !important;
-        width: 100% !important;
-        min-width: 100% !important;
-        max-width: 100% !important;
-        box-sizing: border-box !important;
-        margin: 0 !important;
-    }
-
-    .produtos-cards .produto img {
-        height: 200px !important;
-        object-fit: cover !important;
-    }
-    /* Garante que o container limite a visão apenas ao card atual */
-    .carrossel-wrapper {
-        width: 100% !important;
-        overflow: hidden !important;
-        position: relative !important;
-        padding: 0 !important;
-    }
-
-    /* Esconde a prévia lateral e trava a largura total */
-    .carrossel-wrapper, .produtos-container, .carrossel-container {
-        width: 100% !important;
-        max-width: 100% !important;
-        overflow: hidden !important;
-        padding-left: 0 !important;
-        padding-right: 0 !important;
-    }
-
-    /* O card ocupa 100% da tela sem sobras nas laterais */
-    .produto {
-        width: 100% !important;
-        max-width: 100% !important;
-        box-sizing: border-box !important;
-        margin-left: 0 !important;
-        margin-right: 0 !important;
-        margin-bottom: 20px !important;
-        padding: 15px 15px 35px 15px !important;
-        height: auto !important;
-    }
-
-.texto-sobre {
-    background-color: rgba(255, 255, 255, 0.95); /* Fundo quase sólido para destacar bem */
-    padding: 20px 15px; /* Reduz o espaço interno para encurtar o bloco */
-    border-radius: 16px;
-    text-align: center;
-    width: 90%;          /* Ocupa 90% da largura da tela do celular */
-    max-width: 500px;    /* Limita o tamanho máximo para telas maiores */
-    margin: 0 auto;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-}
-
-/* Título menor e mais proporcional */
-.texto-sobre h2 {
-    font-size: 22px;      /* Reduzido para caber melhor */
-    margin-bottom: 10px;
-    color: #2c1810;
-}
-
-/* Parágrafos mais compactos */
-.texto-sobre p {
-    font-size: 14px;      /* Letra um pouco mais compacta */
-    line-height: 1.4;
-    margin-bottom: 12px;
-    color: #4a4a4a;
-}
-.footer-conteudo {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 12px;
-    padding: 20px 10px;
-}
-    .footer-marca {
-        display: none; /* Oculta no celular para economizar espaço valioso */
-    }
-
-    /* Links rápidos alinhados lado a lado na horizontal */
-    .footer-menu {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 15px;
-        margin-bottom: 5px;
-    }
-
-    .footer-menu h3 {
-        display: none; /* Remove o título "Links rápidos" para limpar a visualização */
-    }
-
-    .footer-menu a {
-        font-size: 12px;
-        color: #fff;
-        opacity: 0.9;
-    }
-
-    /* Contatos organizados em linha ou bem discretos */
-    .footer-contato {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 12px;
-    }
-
-    .footer-contato h3 {
-        display: none; /* Remove o título "Contato" para economizar espaço */
-    }
-
-    .footer-contato p {
-        display: flex;
-        align-items: center;
-        gap: 5px;
-        font-size: 12px;
-        margin: 0;
-    }
-
-    /* Rodapé final bem discreto */
-    .footer-final {
-        text-align: center;
-        padding: 5px;
-        font-size: 10px;
-        opacity: 0.8;
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
-        width: 100%;
-    }
+    /* --- Demais elementos (Sobre e Footer) --- */
+    .texto-sobre { width: 90%; margin: 0 auto; padding: 20px 15px; }
+    .footer-conteudo { flex-direction: column; gap: 12px; padding: 20px 10px; }
+    .footer-marca { display: none; }
+    .footer-menu, .footer-contato { flex-direction: row; gap: 15px; justify-content: center; }
+    .footer-menu h3, .footer-contato h3 { display: none; }
 }
