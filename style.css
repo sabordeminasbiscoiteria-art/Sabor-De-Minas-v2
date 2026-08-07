@@ -1264,26 +1264,60 @@ footer{
     padding: 8px 12px;
     font-size: 13px;
   }
-    .carrossel-wrapper {
-        position: relative;
-        width: 100%;
-        padding: 0 40px;
-        box-sizing: border-box;
-    }
+   .carrossel-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    padding: 0 40px;
+    box-sizing: border-box;
+}
 
-    .produtos-cards {
-        display: flex !important;
-        flex-wrap: nowrap !important; /* Impede que o produto pule para a linha de baixo */
-        overflow-x: auto !important;
-        gap: 15px !important;
-        width: 100% !important;
-    }
+.produtos-cards {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    scroll-behavior: smooth;
+    scrollbar-width: none; /* Some com a barra no Firefox */
+    width: 100%;
+    gap: 15px;
+    padding: 10px 0;
+}
 
-    .produtos-cards .produto {
-        flex: 0 0 80% !important;
-        min-width: 80% !important;
-        max-width: 80% !important;
-    }
+/* Some com a barra de rolagem feia no Chrome/Safari */
+.produtos-cards::-webkit-scrollbar {
+    display: none !important;
+}
+
+/* Estilo das setas flutuantes */
+.seta-carrossel {
+    position: absolute !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    background-color: #ffffff !important;
+    color: #b32d2d !important;
+    border: 2px solid #e0e0e0 !important;
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    cursor: pointer !important;
+    z-index: 99 !important;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15) !important;
+}
+
+.seta-esquerda {
+    left: 0px !important;
+}
+
+.seta-direita {
+    right: 0px !important;
+  }
 }
 
 .texto-sobre {
