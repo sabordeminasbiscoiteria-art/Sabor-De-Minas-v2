@@ -1285,31 +1285,33 @@ footer{
     }
 }
 /* ==========================
-   AJUSTE RESPONSIVO PARA CELULAR
+   CARROSSEL PERFEITO NO CELULAR
 ========================== */
 @media (max-width: 768px) {
     .carrossel-wrapper {
-        padding: 0 35px; /* Mantém espaço pras setas discretas no celular */
+        padding: 0 35px;
+        overflow: hidden;
     }
 
-    .seta-carrossel {
-        width: 34px;
-        height: 34px;
-        font-size: 14px;
-    }
-
-    .seta-esquerda {
-        left: -2px;
-    }
-
-    .seta-direita {
-        right: -2px;
+    .produtos-cards {
+        display: flex !important;
+        flex-direction: row !important; /* Força ficar em linha (lado a lado) */
+        overflow-x: auto !important;
+        scroll-snap-type: x mandatory; /* Ajuda a travar no card certinho ao arrastar */
+        gap: 15px;
     }
 
     .produtos-cards .produto {
-        flex: 0 0 82% !important; /* Cada card ocupa 82% da tela do celular */
+        flex: 0 0 82% !important;
         min-width: 82% !important;
         max-width: 82% !important;
+        scroll-snap-align: center;
+    }
+
+    .seta-carrossel {
+        width: 32px;
+        height: 32px;
+        font-size: 14px;
     }
 }
 .texto-sobre {
