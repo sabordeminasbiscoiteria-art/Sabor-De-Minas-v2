@@ -1266,37 +1266,69 @@ footer{
   }
 }
 /* ==========================
-   CARROSSEL HORIZONTAL (ARRASTAR PRO LADO)
+   CARROSSEL HORIZONTAL COM SETAS (CELULAR)
 ========================== */
 @media (max-width: 768px) {
-    /* 1. Força o container principal a esticar e aceitar o scroll lateral */
-    .produtos-container, .lista-produtos, .produtos-grid, .produtos {
-        display: flex !important;
-        flex-direction: row !important;
-        overflow-x: auto !important;          
-        scroll-snap-type: x mandatory !important; 
-        scrollbar-width: none !important;     
-        gap: 15px !important;
-        padding: 10px 15px 20px 15px !important;
-        width: 100% !important;
-        box-sizing: border-box !important;
+    .carrossel-wrapper {
+        position: relative;
+        width: 100%;
+        display: flex;
+        align-items: center;
     }
 
-    /* Esconde a barra de rolagem */
-    .produtos-container::-webkit-scrollbar, 
-    .lista-produtos::-webkit-scrollbar, 
-    .produtos-grid::-webkit-scrollbar,
-    .produtos::-webkit-scrollbar {
+    /* Usa a sua classe exata do HTML: .produtos-cards */
+    .produtos-cards {
+        display: flex !important;
+        flex-direction: row !important;
+        overflow-x: auto !important;
+        scroll-snap-type: x mandatory !important;
+        scrollbar-width: none !important;
+        gap: 15px !important;
+        padding: 10px 35px 20px 35px !important;
+        width: 100% !important;
+        scroll-behavior: smooth;
+    }
+
+    .produtos-cards::-webkit-scrollbar {
         display: none !important;
     }
 
-    /* 2. Cada card do produto fica com tamanho ideal e centralizado */
+    /* Cada card do produto (.produto) */
     .produto {
-        flex: 0 0 78% !important;             /* Ocupa 78% da tela, mostrando um pedaço do próximo */
-        min-width: 78% !important;
-        max-width: none !important;           
-        scroll-snap-align: center !important; /* Centraliza perfeitamente ao arrastar */
-        margin: 0 !important;                 
+        flex: 0 0 100% !important;
+        min-width: 100% !important;
+        max-width: none !important;
+        scroll-snap-align: center !important;
+        margin: 0 !important;
+    }
+
+    /* Estilo das setinhas redondas nas laterais */
+    .seta-carrossel {
+        position: absolute;
+        top: 45%;
+        transform: translateY(-50%);
+        background-color: #fff;
+        color: #b32d2d;
+        border: 2px solid #ddd;
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        font-size: 14px;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        z-index: 10;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+
+    .seta-esquerda {
+        left: 2px;
+    }
+
+    .seta-direita {
+        right: 2px;
     }
 }
 /* Caixa de texto sobre a imagem de fundo mais compacta */
