@@ -374,12 +374,12 @@ nav a:hover::after{
     min-height:45px;
 }
 @media (min-width: 769px) {
-    /* Container que garante o posicionamento absoluto */
+    /* --- Container Pai (Garanta que o position: relative esteja aqui) --- */
     .carrossel-wrapper {
         position: relative !important;
     }
 
-    /* Estilo limpo: posiciona o botão, remove fundo/borda e ESCONDE o que tem dentro */
+    /* --- Estilo Base Comum (Ambos os lados) --- */
     .seta-esquerda, .seta-direita {
         position: absolute !important;
         top: 50% !important;
@@ -390,45 +390,50 @@ nav a:hover::after{
         border: none !important;
         cursor: pointer !important;
         
-        /* O segredo para sumir com o símbolo antigo: */
+        /* Garante que o símbolo antigo esteja escondido */
         color: transparent !important; 
         font-size: 0 !important;
+        line-height: 0 !important;
         
         width: 50px !important;
         height: 50px !important;
         padding: 0 !important;
+        transition: opacity 0.3s ease !important;
     }
 
-    /* Desenha a nova seta limpa e profissional */
+    /* Efeito Hover */
+    .seta-esquerda:hover, .seta-direita:hover {
+        opacity: 0.7 !important;
+    }
+
+    /* --- Desenho da Nova Seta (Vetor CSS) --- */
     .seta-esquerda::before, .seta-direita::before {
         content: '' !important;
         position: absolute !important;
         top: 50% !important;
         width: 15px !important;
         height: 15px !important;
-        border-top: 3px solid #3b2314 !important;
+        border-top: 3px solid #3b2314 !important; /* Cor do seu tema */
         border-left: 3px solid #3b2314 !important;
-        transition: opacity 0.3s ease !important;
     }
 
-    /* Ajuste da seta da esquerda */
+    /* --- ESQUERDA: Ajuste fino (mantém como estava) --- */
     .seta-esquerda {
-        left: -50px !important;
+        left: -55px !important;
     }
     .seta-esquerda::before {
         left: 50% !important;
-        transform: translate(-25%, -50%) rotate(-45deg) !important;
+        transform: translate(-25%, -50%) rotate(-45deg) !important; /* Aponta p/ esquerda */
     }
 
-    /* Ajuste da seta da direita */
+    /* --- DIREITA: CORREÇÃO DO ÂNGULO --- */
     .seta-direita {
-        right: -50px !important;
+        right: -55px !important;
     }
     .seta-direita::before {
         right: 50% !important;
-        transform: translate(25%, -50%) rotate(135deg) !important;
-        border-left: none !important;
-        border-right: 3px solid #3b2314 !important;
+        /* CORRIGIDO: Gira para apontar perfeitamente para a direita */
+        transform: translate(25%, -50%) rotate(135deg) !important; 
     }
 }
 
