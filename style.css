@@ -1158,11 +1158,12 @@ footer{
     }
 
     /* Garante que a caixa da imagem centralize o slider */
-    .imagem-banner{
-        width: 100%;
-        display: flex;
-        justify-content: center;
-    }
+.imagem-banner {
+    width: 100%;         /* Ocupa toda a largura */
+    display: flex;       
+    justify-content: center; /* Alinha o conteúdo (o slider) no centro */
+    margin-top: 20px;    /* Dá um respiro em cima */
+}
 
     /* ==========================
        SLIDER DO BANNER
