@@ -1328,8 +1328,6 @@ footer{
         right: 2px;
     }
 }
-/* Caixa de texto sobre a imagem de fundo mais compacta */
-
 .texto-sobre {
     background-color: rgba(255, 255, 255, 0.95); /* Fundo quase sólido para destacar bem */
     padding: 20px 15px; /* Reduz o espaço interno para encurtar o bloco */
