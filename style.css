@@ -1340,16 +1340,11 @@ footer{
     padding: 10px 0;
 }
 
-/* Some com a barra de rolagem feia no Chrome/Safari */
-.produtos-cards::-webkit-scrollbar {
-    display: none !important;
-}
+/* --- Container Pai (Garanta que o position: relative esteja aqui) --- */
     .carrossel-wrapper {
         position: relative !important;
-        padding: 0 35px !important;
-        overflow: hidden !important;
     }
-
+    /* --- Estilo Base Comum (Ambos os lados) --- */
     .seta-esquerda, .seta-direita {
         position: absolute !important;
         top: 50% !important;
@@ -1358,48 +1353,53 @@ footer{
         
         background: transparent !important;
         border: none !important;
-        box-shadow: none !important;
         cursor: pointer !important;
         
+        /* Garante que o símbolo antigo esteja escondido */
         color: transparent !important; 
         font-size: 0 !important;
         line-height: 0 !important;
         
-        width: 35px !important;
-        height: 35px !important;
+        width: 50px !important;
+        height: 50px !important;
         padding: 0 !important;
+        transition: opacity 0.3s ease !important;
     }
 
-    /* Desenha a base da seta limpa */
+    /* Efeito Hover */
+    .seta-esquerda:hover, .seta-direita:hover {
+        opacity: 0.7 !important;
+    }
+
+    /* --- Desenho da Nova Seta (Vetor CSS) --- */
     .seta-esquerda::before, .seta-direita::before {
         content: '' !important;
         position: absolute !important;
         top: 50% !important;
-        width: 10px !important;
-        height: 10px !important;
-        border-top: 2.5px solid #3b2314 !important;
-        border-left: 2.5px solid #3b2314 !important;
+        width: 15px !important;
+        height: 15px !important;
+        border-top: 3px solid #3b2314 !important; /* Cor do seu tema */
+        border-left: 3px solid #3b2314 !important;
     }
 
-    /* Seta da Esquerda */
+    /* --- ESQUERDA: Ajuste fino (mantém como estava) --- */
     .seta-esquerda {
-        left: 2px !important;
+        left: -55px !important;
     }
     .seta-esquerda::before {
         left: 50% !important;
-        transform: translate(-25%, -50%) rotate(-45deg) !important;
+        transform: translate(-25%, -50%) rotate(-45deg) !important; /* Aponta p/ esquerda */
     }
 
-    /* Seta da Direita (CORRIGIDA) */
+    /* --- DIREITA: CORREÇÃO DO ÂNGULO --- */
     .seta-direita {
-        right: 2px !important;
+        right: -55px !important;
     }
     .seta-direita::before {
         right: 50% !important;
-        /* Ajustado para apontar perfeitamente para a direita no celular */
-        transform: translate(25%, -50%) scaleX(-1) rotate(-135deg) !important;
+        /* CORRIGIDO: Gira para apontar perfeitamente para a direita */
+        transform: translate(25%, -50%) rotate(135deg) !important; 
     }
-
     .produtos-cards {
         gap: 0 !important;
         justify-content: flex-start !important;
