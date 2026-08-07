@@ -1341,6 +1341,8 @@ footer{
         height: 200px !important;
         object-fit: cover !important;
     }
+}
+    @media (max-width: 768px){
     /* Reduz o espaço em cima e embaixo da seção de produtos */
     .produtos, section.produtos {
         padding-top: 20px !important;
