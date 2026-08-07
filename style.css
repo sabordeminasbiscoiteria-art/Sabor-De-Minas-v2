@@ -1117,7 +1117,7 @@ footer{
 /* ==========================
    RESPONSIVO - BANNER
 ========================== */
-@media (max-width:768px){
+@media (max-width: 768px){
 
     .banner{
         padding:30px 0;
@@ -1157,56 +1157,59 @@ footer{
         font-size:15px;
     }
 
+    /* Garante que a caixa da imagem centralize o slider */
     .imagem-banner{
-        width:100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
     }
-/* ==========================
-   SLIDER DO BANNER
-========================== */
-/* Torna o slider compacto e elegante no celular */
-.slider {
-    position: relative;
-    width: 100%;
-    max-width: 400px;  /* Limita a largura máxima do banner */
-    height: 220px;     /* Define uma altura menor para a foto não esticar */
-    margin: 15px auto; /* Centraliza o slide e dá respiro nas margens */
-    border-radius: 12px;
-    overflow: hidden;  /* Esconde o que passar da bordinha arredondada */
-}
 
-/* Faz as imagens se ajustarem perfeitamente à altura do slider */
-.slider img.slide {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Recorta a imagem na medida certa sem distorcer */
-    border-radius: 12px;
-}
+    /* ==========================
+       SLIDER DO BANNER
+    ========================== */
+    .slider {
+        position: relative;
+        width: 90%;          /* Ocupa 90% da largura com margem segura */
+        max-width: 350px;    /* Tamanho compacto e elegante */
+        height: 220px;     
+        margin: 15px auto; 
+        border-radius: 12px;
+        overflow: hidden;  
+    }
 
-/* BOLINHAS DO SLIDER */
-.bolinhas {
-    position: absolute;
-    bottom: 12px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 8px;
-    z-index: 2; /* Garante que as bolinhas fiquem na frente da foto */
-}
+    .slider img.slide {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; 
+        border-radius: 12px;
+    }
 
-.bolinha {
-    width: 10px;
-    height: 10px;
-    background: rgba(255, 255, 255, 0.7);
-    border-radius: 50%;
-    cursor: pointer;
-    transition: 0.3s;
+    /* BOLINHAS DO SLIDER */
+    .bolinhas {
+        position: absolute;
+        bottom: 12px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 8px;
+        z-index: 2; 
+    }
+
+    .bolinha {
+        width: 8px;
+        height: 8px;
+        background: rgba(255, 255, 255, 0.7);
+        border-radius: 50%;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .bolinha.ativa {
+        background: #b52b2b;
+        width: 10px; 
+        height: 10px;
+    }
 }
-}
-.bolinha.ativa {
-    background: #b52b2b;
-    width: 12px; /* Destaque para a bolinha ativa */
-    height: 12px;
-}   
 /* AJUSTE PERFEITO DA FAIXA DE BENEFÍCIOS NO CELULAR */
 .beneficios {
     display: flex;
