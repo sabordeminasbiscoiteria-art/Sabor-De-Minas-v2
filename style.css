@@ -1058,10 +1058,10 @@ footer{
            RESPONSIVO
 ========================== */
 @media (max-width:768px){
-    /* HEADER */
+   /* HEADER - Logo ao lado do nome, menu e botão organizados */
 
     header{
-        padding: 15px 0;
+        padding: 15px 10px;
     }
 
     header .container{
@@ -1073,39 +1073,51 @@ footer{
         text-align: center;
     }
 
+    /* Agrupa a logo e o nome lado a lado */
     .marca{
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 5px;
+        flex-direction: row;          /* Coloca lado a lado */
+        align-items: center;          /* Alinha verticalmente no centro */
+        justify-content: center;
+        gap: 12px;                    /* Espaço entre a logo e o texto */
+        text-align: left;             /* Alinha o texto da marca à esquerda */
     }
 
     .marca img{
-        width: 55px; /* Diminui um pouco a logo */
-        height: 55px;
+        width: 45px;                  /* Logo menorzinha e proporcional */
+        height: 45px;
     }
 
     .marca h2{
-        font-size: 20px; /* Reduziu de 28px para 20px */
+        font-size: 17px;              /* Nome compacto */
         line-height: 1.1;
+        margin: 0;
     }
 
     .marca p{
-        font-size: 13px; /* Reduziu o subtítulo */
+        font-size: 11px;              /* Subtítulo discreto */
+        margin: 0;
     }
 
+    /* Menu horizontal do jeito que ficou bom */
     nav{
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 12px; /* Diminui o espaço entre os links para caberem lado a lado */
+        gap: 12px;
     }
 
     nav a{
         margin: 0;
-        font-size: 13px; /* Reduziu os links do menu para ficarem delicados */
+        font-size: 13px;
     }
 
+    /* Botão do WhatsApp logo abaixo do menu */
+    .whatsapp-topo{
+        padding: 6px 14px;
+        font-size: 13px;
+        border-radius: 14px;
+    } 
     .whatsapp-topo{
         padding: 8px 15px;
         font-size: 14px;
