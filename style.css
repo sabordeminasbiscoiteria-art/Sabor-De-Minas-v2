@@ -1111,18 +1111,6 @@ footer{
         margin: 0;
         font-size: 13px;
     }
-
-    /* Botão do WhatsApp logo abaixo do menu */
-    .whatsapp-topo{
-        padding: 6px 14px;
-        font-size: 13px;
-        border-radius: 14px;
-    } 
-    .whatsapp-topo{
-        padding: 8px 15px;
-        font-size: 14px;
-        border-radius: 16px;
-    }
 }
 /* ==========================
    RESPONSIVO - BANNER
