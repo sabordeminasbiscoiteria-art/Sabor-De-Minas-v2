@@ -1216,24 +1216,22 @@ footer{
 }
     
 }
-/* AJUSTE RESPONSIVO PARA CELULARES */
-@media (max-width: 600px) {
-    .slider {
-        /* Proporção 4/3 deixa a foto ligeiramente mais compacta na vertical no celular */
-        aspect-ratio: 4 / 3; 
-        border-radius: 18px; /* Borda um pouco mais delicada para telas menores */
-    }
-}
-/* CORREÇÃO DO LAYOUT NO CELULAR */
-@media (max-width: 768px) {
+/* Ajusta o banner de fotos (slide) para ficar compacto no celular */
 
-    /* 1. Faz o título e o botão de produtos ficarem um embaixo do outro */
-    .topo-produtos {
-        flex-direction: column ;
-        align-items: center ;
-        text-align: center;
-        gap: 15px;
-    }
+/* Seleciona o container principal do slide. Pode ser .slide-container, .swiper-slide, etc. 
+   Vamos usar uma classe genérica .meu-slide como exemplo, substitua pela sua. */
+.meu-slide {
+    height: 250px;       /* Define uma altura fixa menor para todo o bloco do slide */
+    margin-top: 20px;    /* Diminui o espaço acima do slide */
+    margin-bottom: 20px; /* Diminui o espaço abaixo do slide */
+}
+
+/* Seleciona a imagem dentro do slide */
+.meu-slide img {
+    width: 100%;         /* Garante que a imagem ocupe toda a largura */
+    height: 100%;        /* Faz a imagem preencher a altura definida acima */
+    object-fit: cover;   /* Corta a imagem para preencher o espaço sem distorcer */
+    border-radius: 16px; /* Mantém as bordas arredondadas */
 }
 /* AJUSTE PERFEITO DA FAIXA DE BENEFÍCIOS NO CELULAR */
 .beneficios {
