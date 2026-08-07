@@ -1116,7 +1116,6 @@ footer{
    RESPONSIVO - BANNER
 ========================== */
 @media (max-width: 768px){
-
     .banner{
         padding:30px 0;
     }
@@ -1154,7 +1153,7 @@ footer{
         padding:12px 24px;
         font-size:15px;
     }
-
+}
     /* Garante que a caixa da imagem centralize o slider */
 .imagem-banner {
     width: 100%;         /* Ocupa toda a largura */
@@ -1166,7 +1165,9 @@ footer{
     /* ==========================
        SLIDER DO BANNER
     ========================== */
+    @media (max-width: 768px){
     .slider {
+    
         position: relative;
         width: 90%;          /* Ocupa 90% da largura com margem segura */
         max-width: 350px;    /* Tamanho compacto e elegante */
@@ -1209,7 +1210,9 @@ footer{
         height: 10px;
     }
 }
+
 /* AJUSTE PERFEITO DA FAIXA DE BENEFÍCIOS NO CELULAR */
+@media (max-width: 768px){
 .beneficios {
     display: flex;
     flex-direction: column;
@@ -1228,8 +1231,11 @@ footer{
     max-width: 320px;
     text-align: left;
     gap: 15px;
+  }
 }
+
 /* Cards mais compactos e profissionais no celular */
+@media (max-width: 768px){
 .produto {
     max-width: 280px;    /* Deixa o card bem enxuto na horizontal */
     margin: 0 auto 15px auto; /* Centraliza e diminui o espaço entre eles */
@@ -1267,8 +1273,11 @@ footer{
 .produto .botao-produto {
     padding: 8px 12px;
     font-size: 13px;
+  }
 }
+
 /* Caixa de texto sobre a imagem de fundo mais compacta */
+
 .texto-sobre {
     background-color: rgba(255, 255, 255, 0.95); /* Fundo quase sólido para destacar bem */
     padding: 20px 15px; /* Reduz o espaço interno para encurtar o bloco */
@@ -1305,6 +1314,7 @@ footer{
 }
 
 /* Esconde a logo grandona e deixa apenas os textos/ícones bem enxutos */
+@media (max-width: 768px){
 .footer-marca {
     display: none; /* Oculta no celular para economizar espaço valioso */
 }
@@ -1358,4 +1368,5 @@ footer{
     opacity: 0.8;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     width: 100%;
+  }
 }
