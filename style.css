@@ -1265,25 +1265,7 @@ footer{
     font-size: 13px;
   }
 }
-@media (max-width: 768px) {
-    .produtos-cards {
-        display: flex !important;
-        flex-direction: row !important;
-        overflow-x: scroll !important;
-        -webkit-overflow-scrolling: touch !important;
-        gap: 15px !important;
-        padding: 10px !important;
-        width: 100% !important;
-        box-sizing: border-box !important;
-    }
 
-    .produtos-cards .produto {
-        flex: 0 0 85% !important;
-        min-width: 85% !important;
-        max-width: 85% !important;
-        margin: 0 !important;
-    }
-}
 /* ==========================
    CARROSSEL PERFEITO NO CELULAR
 ========================== */
