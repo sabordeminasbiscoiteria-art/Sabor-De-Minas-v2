@@ -1303,6 +1303,8 @@ footer{
     margin-bottom: 12px;
     color: #4a4a4a;
 }
+@media (max-width: 768px) {
+
 /* Rodapé minimalista, super compacto e profissional para celular */
 .footer-conteudo {
     display: flex;
@@ -1312,7 +1314,7 @@ footer{
     gap: 12px;
     padding: 20px 10px;
 }
-
+}
 /* ==========================
    RESPONSIVO - RODAPÉ (CELULAR)
 ========================== */
