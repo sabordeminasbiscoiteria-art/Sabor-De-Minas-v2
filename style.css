@@ -1254,7 +1254,7 @@ footer{
 .produto .botao-produto {
     padding: 8px 12px;
     font-size: 13px;
-  }
+ }
    .carrossel-wrapper {
     position: relative;
     width: 100%;
@@ -1282,7 +1282,6 @@ footer{
 .produtos-cards::-webkit-scrollbar {
     display: none !important;
 }
-
 /* Estilo das setas flutuantes */
 .seta-carrossel {
     position: absolute !important;
@@ -1340,21 +1339,25 @@ footer{
         padding: 0 !important;
     }
 
-    /* O pai dos cards deve ser flexível e sem folgas laterais */
-    .produtos-cards {
-        display: flex !important;
-        transition: transform 0.3s ease-in-out !important;
+    /* Esconde a prévia lateral e trava a largura total */
+    .carrossel-wrapper, .produtos-container, .carrossel-container {
         width: 100% !important;
-        gap: 0 !important;
+        max-width: 100% !important;
+        overflow: hidden !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
     }
 
-    /* Cada card precisa ter exatamente 100% da largura da tela */
+    /* O card ocupa 100% da tela sem sobras nas laterais */
     .produto {
-        flex: 0 0 100% !important;
+        width: 100% !important;
         max-width: 100% !important;
         box-sizing: border-box !important;
-        margin: 0 !important;
-        padding: 20px !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        margin-bottom: 20px !important;
+        padding: 15px 15px 35px 15px !important;
+        height: auto !important;
     }
 }
 
