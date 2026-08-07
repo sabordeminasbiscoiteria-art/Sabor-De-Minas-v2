@@ -1225,42 +1225,44 @@ footer{
 }
 /* AJUSTE PERFEITO DA FAIXA DE BENEFÍCIOS NO CELULAR */
 @media (max-width: 768px){
-    /* Benefícios um embaixo do outro, limpos e elegantes no celular */
+/* Deixa os dois benefícios lado a lado, com ícone em cima e texto embaixo */
     .beneficios, .container-beneficios, .features {
         display: flex;
-        flex-direction: column;         /* Um embaixo do outro */
-        gap: 12px;                      /* Espaço equilibrado entre eles */
+        flex-direction: row;            /* Ícones e textos lado a lado */
+        justify-content: center;        /* Centraliza os dois itens no meio da tela */
+        gap: 30px;                      /* Bastante espaço entre os dois itens */
         padding: 0 15px;
-        margin: 15px 0;
+        margin: 20px 0;
     }
 
     .beneficio-item, .feature-box {
         display: flex;
-        flex-direction: row;            /* Ícone ao lado do texto */
-        align-items: center;
-        gap: 12px;
-        background: #fff;
-        padding: 10px 14px;
-        border-radius: 10px;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        flex-direction: column;         /* Ícone em cima, texto embaixo */
+        align-items: center;            /* Alinha tudo ao centro da coluna */
+        text-align: center;
+        background: transparent;        /* Fundo transparente para ficar clean */
+        padding: 0;
+        box-shadow: none;               /* Remove a sombra para ficar mais leve */
+        width: 45%;                     /* Define uma largura para cada item não encostar */
     }
     
     .beneficio-item img, .beneficio-item i {
-        font-size: 22px;
-        width: 22px;
-        height: 22px;
+        font-size: 36px;                /* Ícones grandes e bonitos */
+        width: 36px;
+        height: 36px;
+        margin-bottom: 10px;            /* Espaço do ícone para o texto */
     }
 
     .beneficio-item h4 {
-        font-size: 13px;
+        font-size: 13px;                /* Título compacto */
         line-height: 1.2;
         margin: 0;
     }
 
     .beneficio-item p {
-        font-size: 11px;
+        font-size: 11px;                /* Texto descritivo pequeno */
         line-height: 1.2;
-        margin: 0;
+        margin: 5px 0 0 0;
         opacity: 0.8;
     }
 }
