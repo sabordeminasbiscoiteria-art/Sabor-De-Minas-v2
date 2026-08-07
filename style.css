@@ -1223,49 +1223,6 @@ footer{
     height: 10px;
  }
 }
-/* AJUSTE PERFEITO DA FAIXA DE BENEFÍCIOS NO CELULAR */
-@media (max-width: 768px){
-/* Deixa os dois benefícios lado a lado, com ícone em cima e texto embaixo */
-    .beneficios, .container-beneficios, .features {
-        display: flex;
-        flex-direction: row;            /* Ícones e textos lado a lado */
-        justify-content: center;        /* Centraliza os dois itens no meio da tela */
-        gap: 30px;                      /* Bastante espaço entre os dois itens */
-        padding: 0 15px;
-        margin: 20px 0;
-    }
-
-    .beneficio-item, .feature-box {
-        display: flex;
-        flex-direction: column;         /* Ícone em cima, texto embaixo */
-        align-items: center;            /* Alinha tudo ao centro da coluna */
-        text-align: center;
-        background: transparent;        /* Fundo transparente para ficar clean */
-        padding: 0;
-        box-shadow: none;               /* Remove a sombra para ficar mais leve */
-        width: 45%;                     /* Define uma largura para cada item não encostar */
-    }
-    
-    .beneficio-item img, .beneficio-item i {
-        font-size: 36px;                /* Ícones grandes e bonitos */
-        width: 36px;
-        height: 36px;
-        margin-bottom: 10px;            /* Espaço do ícone para o texto */
-    }
-
-    .beneficio-item h4 {
-        font-size: 13px;                /* Título compacto */
-        line-height: 1.2;
-        margin: 0;
-    }
-
-    .beneficio-item p {
-        font-size: 11px;                /* Texto descritivo pequeno */
-        line-height: 1.2;
-        margin: 5px 0 0 0;
-        opacity: 0.8;
-    }
-}
 
 /* Cards mais compactos e profissionais no celular */
 @media (max-width: 768px){
@@ -1307,8 +1264,35 @@ footer{
     padding: 8px 12px;
     font-size: 13px;
   }
-}
+/* ==========================
+       CARROSSEL HORIZONTAL (ARRASTAR PRO LADO)
+    ========================== */
 
+    /* Container que segura os produtos e permite rolar para o lado */
+    .produtos-container, .lista-produtos, .produtos-grid {
+        display: flex !important;
+        flex-direction: row !important;
+        overflow-x: auto !important;          /* Permite arrastar para o lado */
+        gap: 15px !important;
+        padding: 10px 15px 20px 15px !important;
+        scroll-snap-type: x mandatory !important; /* Trava o card certinho na tela */
+        scrollbar-width: none !important;     /* Esconde a barra de rolagem no Firefox */
+    }
+
+    /* Esconde a barra de rolagem no Chrome, Safari e Edge */
+    .produtos-container::-webkit-scrollbar, 
+    .lista-produtos::-webkit-scrollbar, 
+    .produtos-grid::-webkit-scrollbar {
+        display: none !important;
+    }
+
+    /* Cada card do produto precisa de uma largura fixa para aparecer um pedaço do próximo */
+    .produto-card, .card-produto {
+        flex: 0 0 75% !important;             /* Cada card ocupa 75% da largura da tela */
+        scroll-snap-align: center !important; /* Centraliza o produto ao arrastar */
+        margin-bottom: 0 !important;
+    }
+}
 /* Caixa de texto sobre a imagem de fundo mais compacta */
 
 .texto-sobre {
