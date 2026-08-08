@@ -1553,20 +1553,13 @@ footer{
     .barra-pesquisa {
         margin-bottom: 0 !important;
     }
+}
 /* ==========================================
-   CORREÇÃO DEFINITIVA: 2 COLUNAS NA PÁGINA DE PRODUTOS
+   FORÇAR 2 COLUNAS COMPACTAS NA PÁGINA DE PRODUTOS
    ========================================== */
-    /* 1. Restaura o container na página de produtos */
-    body.pagina-produtos .container {
-        width: 100% !important;
-        max-width: 100% !important;
-        padding-left: 10px !important;
-        padding-right: 10px !important;
-        box-sizing: border-box !important;
-        margin: 0 auto !important;
-    }
+@media (max-width: 768px) {
 
-    /* 2. Força o container dos cards a alinhar lado a lado */
+    /* Anula o carrossel antigo e força o grid horizontal */
     body.pagina-produtos .produtos-cards {
         display: flex !important;
         flex-direction: row !important;
@@ -1575,67 +1568,72 @@ footer{
         align-items: stretch !important;
         width: 100% !important;
         max-width: 100% !important;
-        padding: 0 !important;
+        padding: 5px !important;
         margin: 0 !important;
-        overflow-x: visible !important;
+        overflow: visible !important;
     }
 
-    /* 3. Cada card ocupa exatamente 48.5% (duas colunas perfeitas) */
-    body.pagina-produtos .produto,
-    body.pagina-produtos .item-produto {
-        flex: 0 0 48.5% !important;
-        width: 48.5% !important;
-        max-width: 48.5% !important;
+    /* Força o card a ter exatamente 48% da largura (dois por linha) e tamanho compacto */
+    body.pagina-produtos .produtos-cards .produto,
+    body.pagina-produtos .produtos-cards .item-produto {
+        flex: 0 0 48% !important;
+        width: 48% !important;
+        max-width: 48% !important;
+        min-width: 0 !important;
         box-sizing: border-box !important;
-        margin-bottom: 12px !important;
-        margin-left: 0 !important;
-        margin-right: 0 !important;
+        margin: 0 0 10px 0 !important;
         padding: 8px !important;
         display: flex !important;
         flex-direction: column !important;
         justify-content: space-between !important;
         background: #ffffff !important;
-        border-radius: 12px !important;
-        box-shadow: 0 2px 6px rgba(0,0,0,0.05) !important;
+        border-radius: 10px !important;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.05) !important;
     }
 
-    /* 4. Ajustes internos proporcionais para caber lado a lado */
-    body.pagina-produtos .produto img,
-    body.pagina-produtos .item-produto img {
+    /* Imagem compacta para caber perfeitamente no card menor */
+    body.pagina-produtos .produtos-cards .produto img,
+    body.pagina-produtos .produtos-cards .item-produto img {
         width: 100% !important;
-        height: 95px !important;
+        height: 85px !important;
         object-fit: cover !important;
-        border-radius: 8px !important;
+        border-radius: 6px !important;
     }
 
-    body.pagina-produtos .produto h3,
-    body.pagina-produtos .item-produto h3 {
-        font-size: 13px !important;
-        margin: 6px 0 2px 0 !important;
-        text-align: center !important;
-    }
-
-    body.pagina-produtos .produto p,
-    body.pagina-produtos .item-produto p {
-        font-size: 10px !important;
-        margin-bottom: 6px !important;
-        text-align: center !important;
-    }
-
-    body.pagina-produtos .produto .preco-produto,
-    body.pagina-produtos .item-produto .preco-produto {
+    /* Textos e botões proporcionais e menores */
+    body.pagina-produtos .produtos-cards .produto h3,
+    body.pagina-produtos .produtos-cards .item-produto h3 {
         font-size: 12px !important;
+        margin: 4px 0 2px 0 !important;
         text-align: center !important;
-        margin-bottom: 6px !important;
+        white-space: nowrap !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
     }
 
-    body.pagina-produtos .produto .botao-produto,
-    body.pagina-produtos .item-produto .botao-produto {
-        padding: 6px 4px !important;
-        font-size: 10px !important;
+    body.pagina-produtos .produtos-cards .produto p,
+    body.pagina-produtos .produtos-cards .item-produto p {
+        font-size: 9px !important;
+        margin-bottom: 4px !important;
+        text-align: center !important;
+    }
+
+    body.pagina-produtos .produtos-cards .produto .preco-produto,
+    body.pagina-produtos .produtos-cards .item-produto .preco-produto,
+    body.pagina-produtos .produtos-cards .produto span,
+    body.pagina-produtos .produtos-cards .item-produto span {
+        font-size: 11px !important;
+        text-align: center !important;
+        margin-bottom: 4px !important;
+    }
+
+    body.pagina-produtos .produtos-cards .produto .botao-produto,
+    body.pagina-produtos .produtos-cards .item-produto .botao-produto {
+        padding: 5px 2px !important;
+        font-size: 9px !important;
         width: 100% !important;
         box-sizing: border-box !important;
         text-align: center !important;
-        border-radius: 6px !important;
+        border-radius: 5px !important;
     }
 }
