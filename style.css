@@ -1613,26 +1613,6 @@ footer{
         line-height: 1.1 !important;
         color: #666 !important;
     }
-
-    /* Preço compacto */
-    section.pagina-produtos .produtos-cards .produto .preco-produto,
-    section.pagina-produtos .produtos-cards .item-produto .preco-produto {
-        font-size: 10px !important;
-        text-align: center !important;
-        margin: 2px 0 !important;
-    }
-
-    /* Botão enxuto */
-    section.pagina-produtos .produtos-cards .produto .botao-produto,
-    section.pagina-produtos .produtos-cards .item-produto .botao-produto {
-        padding: 4px 2px !important;
-        font-size: 9px !important;
-        width: 100% !important;
-        margin-top: 2px !important;
-        box-sizing: border-box !important;
-        text-align: center !important;
-        border-radius: 4px !important;
-    }
 }
 @media (max-width: 768px) {
     section.pagina-produtos .produtos-cards .produto,
