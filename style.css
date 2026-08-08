@@ -1555,29 +1555,26 @@ footer{
     }
 }
 /* ==========================================
-   GRADE DE 2 COLUNAS (USANDO GRID - DEFINITIVO)
+   AJUSTE PROFISSIONAL: CARDS COMPACTOS EM 2 COLUNAS
    ========================================== */
 @media (max-width: 768px) {
     
-    /* O segredo: GRID! Ele obriga o navegador a criar 2 colunas exatas, sem choro */
     section.pagina-produtos .produtos-cards {
         display: grid !important;
-        grid-template-columns: repeat(2, 1fr) !important; /* Cria 2 colunas de tamanhos iguais */
-        gap: 10px !important; /* Espaço entre os cards */
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 8px !important;
         width: 100% !important;
         max-width: 100% !important;
-        padding: 10px !important;
-        margin: 0 !important;
+        padding: 8px !important;
         box-sizing: border-box !important;
     }
 
-    /* Como o Grid já definiu o tamanho, o card só precisa preencher o espaço dele */
+    /* Deixa o card compacto e alinhado */
     section.pagina-produtos .produtos-cards .produto,
     section.pagina-produtos .produtos-cards .item-produto {
         width: 100% !important;
         max-width: 100% !important;
-        margin: 0 !important; /* Tiramos a margem pra não quebrar a grade */
-        box-sizing: border-box !important;
+        margin: 0 !important;
         padding: 8px !important;
         display: flex !important;
         flex-direction: column !important;
@@ -1585,45 +1582,56 @@ footer{
         background: #ffffff !important;
         border-radius: 10px !important;
         box-shadow: 0 2px 5px rgba(0,0,0,0.05) !important;
+        box-sizing: border-box !important;
     }
 
-    /* --- Daqui pra baixo é o visual interno (pode manter como estava) --- */
+    /* Imagem menor e elegante */
     section.pagina-produtos .produtos-cards .produto img,
     section.pagina-produtos .produtos-cards .item-produto img {
         width: 100% !important;
-        height: 85px !important;
+        height: 100px !important;
         object-fit: cover !important;
-        border-radius: 6px !important;
+        border-radius: 8px !important;
     }
 
+    /* Título proporcional */
     section.pagina-produtos .produtos-cards .produto h3,
     section.pagina-produtos .produtos-cards .item-produto h3 {
-        font-size: 12px !important;
-        margin: 4px 0 2px 0 !important;
+        font-size: 13px !important;
+        margin: 6px 0 2px 0 !important;
         text-align: center !important;
+        font-weight: bold !important;
     }
 
+    /* Descrição menor */
     section.pagina-produtos .produtos-cards .produto p,
     section.pagina-produtos .produtos-cards .item-produto p {
-        font-size: 9px !important;
-        margin-bottom: 4px !important;
+        font-size: 10px !important;
+        margin-bottom: 6px !important;
         text-align: center !important;
+        color: #666 !important;
     }
 
+    /* Bloco de preço e peso compacto */
     section.pagina-produtos .produtos-cards .produto .preco-produto,
     section.pagina-produtos .produtos-cards .item-produto .preco-produto {
         font-size: 11px !important;
         text-align: center !important;
-        margin-bottom: 4px !important;
+        margin-bottom: 8px !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        gap: 6px !important;
     }
 
+    /* Botão do WhatsApp proporcional */
     section.pagina-produtos .produtos-cards .produto .botao-produto,
     section.pagina-produtos .produtos-cards .item-produto .botao-produto {
-        padding: 5px 2px !important;
-        font-size: 9px !important;
+        padding: 6px 4px !important;
+        font-size: 10px !important;
         width: 100% !important;
         box-sizing: border-box !important;
         text-align: center !important;
-        border-radius: 5px !important;
+        border-radius: 6px !important;
     }
 }
