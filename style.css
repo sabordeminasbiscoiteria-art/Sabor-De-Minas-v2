@@ -1624,23 +1624,19 @@ footer{
         padding-right: 8px !important;
         margin: 0 !important;
     }
-
-    /* Garante o preenchimento total do grid de produtos */
-    .pagina-produtos .produtos-cards {
-        width: 100% !important;
-        max-width: 100% !important;
+    html body.pagina-produtos .produtos-cards {
         display: flex !important;
+        flex-direction: row !important;
         flex-wrap: wrap !important;
         justify-content: space-between !important;
-        padding: 0 !important;
+        width: 100% !important;
     }
 
-    /* Reduz a largura para 48.5% para caberem dois perfeitamente lado a lado */
-    .pagina-produtos .produto,
-    .pagina-produtos .item-produto {
-        flex: 0 0 48.5% !important;
-        width: 48.5% !important;
-        max-width: 48.5% !important;
+    html body.pagina-produtos .produto,
+    html body.pagina-produtos .item-produto {
+        flex: 0 0 48% !important;
+        width: 48% !important;
+        max-width: 48% !important;
         margin-bottom: 10px !important;
         box-sizing: border-box !important;
     }
