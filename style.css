@@ -1555,32 +1555,29 @@ footer{
     }
 }
 /* ==========================================
-   GRADE DE 2 COLUNAS NA PÁGINA DE PRODUTOS (DEFINITIVO)
+   GRADE DE 2 COLUNAS (USANDO GRID - DEFINITIVO)
    ========================================== */
 @media (max-width: 768px) {
     
-    /* Faz a caixa de cards aceitar os itens lado a lado */
+    /* O segredo: GRID! Ele obriga o navegador a criar 2 colunas exatas, sem choro */
     section.pagina-produtos .produtos-cards {
-        display: flex !important;
-        flex-direction: row !important;
-        flex-wrap: wrap !important;
-        justify-content: space-between !important;
-        align-items: stretch !important;
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important; /* Cria 2 colunas de tamanhos iguais */
+        gap: 10px !important; /* Espaço entre os cards */
         width: 100% !important;
         max-width: 100% !important;
-        padding: 5px !important;
+        padding: 10px !important;
         margin: 0 !important;
-        overflow: visible !important;
+        box-sizing: border-box !important;
     }
 
-    /* Força cada card a ocupar exatamente 48% (dois por linha) */
+    /* Como o Grid já definiu o tamanho, o card só precisa preencher o espaço dele */
     section.pagina-produtos .produtos-cards .produto,
     section.pagina-produtos .produtos-cards .item-produto {
-        flex: 0 0 48% !important;
-        width: 48% !important;
-        max-width: 48% !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important; /* Tiramos a margem pra não quebrar a grade */
         box-sizing: border-box !important;
-        margin: 0 0 10px 0 !important;
         padding: 8px !important;
         display: flex !important;
         flex-direction: column !important;
@@ -1590,7 +1587,7 @@ footer{
         box-shadow: 0 2px 5px rgba(0,0,0,0.05) !important;
     }
 
-    /* Imagem compacta para caber perfeitamente no card menor */
+    /* --- Daqui pra baixo é o visual interno (pode manter como estava) --- */
     section.pagina-produtos .produtos-cards .produto img,
     section.pagina-produtos .produtos-cards .item-produto img {
         width: 100% !important;
@@ -1599,7 +1596,6 @@ footer{
         border-radius: 6px !important;
     }
 
-    /* Textos e botões proporcionais */
     section.pagina-produtos .produtos-cards .produto h3,
     section.pagina-produtos .produtos-cards .item-produto h3 {
         font-size: 12px !important;
