@@ -1633,13 +1633,24 @@ footer{
         text-align: center !important;
         border-radius: 4px !important;
     }
-    .preco-produto {
-    display: flex !important;
-    flex-direction: row !important;
-    align-items: center !important;
-    justify-content: center !important;
-    gap: 10px !important;
-    width: 100% !important;
-    margin: 6px 0 !important;
+}
+@media (max-width: 768px) {
+    section.pagina-produtos .produtos-cards .preco-produto {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 8px !important;
+        width: 100% !important;
+        margin: 6px auto !important;
+        text-align: center !important;
+    }
+
+    /* Garante que os textos internos não fiquem quebrados */
+    section.pagina-produtos .produtos-cards .preco-produto span,
+    section.pagina-produtos .produtos-cards .preco-produto strong {
+        display: inline-block !important;
+        margin: 0 !important;
+        text-align: center !important;
     }
 }
