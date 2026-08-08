@@ -1555,81 +1555,83 @@ footer{
     }
 }
 /* ==========================================
-   REDUÇÃO MÁXIMA DE ESPAÇOS VERTICAIS
+   AJUSTE PROFISSIONAL: CARDS COMPACTOS EM 2 COLUNAS
    ========================================== */
 @media (max-width: 768px) {
     
     section.pagina-produtos .produtos-cards {
         display: grid !important;
         grid-template-columns: repeat(2, 1fr) !important;
-        gap: 6px !important;       /* Diminui o espaço entre os cards (tanto lado quanto altura) */
-        row-gap: 6px !important;   
+        gap: 8px !important;
         width: 100% !important;
         max-width: 100% !important;
-        padding: 6px !important;
+        padding: 8px !important;
         box-sizing: border-box !important;
     }
 
+    /* Deixa o card compacto e alinhado */
     section.pagina-produtos .produtos-cards .produto,
     section.pagina-produtos .produtos-cards .item-produto {
         width: 100% !important;
         max-width: 100% !important;
         margin: 0 !important;
-        padding: 4px !important;    /* Padding mínimo para o card ficar baixinho */
+        padding: 8px !important;
         display: flex !important;
         flex-direction: column !important;
         justify-content: space-between !important;
         background: #ffffff !important;
-        border-radius: 8px !important;
-        box-shadow: 0 1px 3px rgba(0,0,0,0.05) !important;
+        border-radius: 10px !important;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.05) !important;
         box-sizing: border-box !important;
     }
 
-    /* Imagem compacta */
+    /* Imagem menor e elegante */
     section.pagina-produtos .produtos-cards .produto img,
     section.pagina-produtos .produtos-cards .item-produto img {
         width: 100% !important;
-        height: 120px !important;    /* Altura reduzida da foto */
+        height: 100px !important;
         object-fit: cover !important;
-        border-radius: 6px !important;
-        margin-bottom: 2px !important;
+        border-radius: 8px !important;
     }
 
-    /* Título com margem zero ou quase zero */
+    /* Título proporcional */
     section.pagina-produtos .produtos-cards .produto h3,
     section.pagina-produtos .produtos-cards .item-produto h3 {
-        font-size: 11px !important;
-        margin: 0px 0 !important;
+        font-size: 13px !important;
+        margin: 6px 0 2px 0 !important;
         text-align: center !important;
-        line-height: 1.2 !important;
+        font-weight: bold !important;
     }
 
-    /* Parágrafo (descrição) bem coladinho */
+    /* Descrição menor */
     section.pagina-produtos .produtos-cards .produto p,
     section.pagina-produtos .produtos-cards .item-produto p {
-        font-size: 9px !important;
-        margin: 0 0 0px 0 !important;
+        font-size: 10px !important;
+        margin-bottom: 6px !important;
         text-align: center !important;
-        line-height: 1.1 !important;
         color: #666 !important;
     }
-}
-@media (max-width: 768px) {
-    section.pagina-produtos .produtos-cards .produto,
-    section.pagina-produtos .produtos-cards .item-produto {
+
+    /* Bloco de preço e peso compacto */
+    section.pagina-produtos .produtos-cards .produto .preco-produto,
+    section.pagina-produtos .produtos-cards .item-produto .preco-produto {
+        font-size: 11px !important;
+        text-align: center !important;
+        margin-bottom: 8px !important;
         display: flex !important;
-        flex-direction: column !important;
-        justify-content: space-between !important;
-        height: 100% !important;
-        box-sizing: border-box !important;
+        justify-content: center !important;
+        align-items: center !important;
+        gap: 6px !important;
     }
 
-    section.pagina-produtos .produtos-cards .botao-produto {
-        display: flex !important;
-        align-items: center !important;
-        justify-content: center !important;
+    /* Botão do WhatsApp proporcional */
+    section.pagina-produtos .produtos-cards .produto .botao-produto,
+    section.pagina-produtos .produtos-cards .item-produto .botao-produto {
+        padding: 6px 4px !important;
+        font-size: 10px !important;
         width: 100% !important;
-        margin-top: auto !important;
         box-sizing: border-box !important;
+        text-align: center !important;
+        border-radius: 6px !important;
     }
 }
