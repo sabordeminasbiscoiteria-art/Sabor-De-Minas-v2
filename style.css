@@ -1555,12 +1555,12 @@ footer{
     }
 }
 /* ==========================================
-   FORÇAR 2 COLUNAS COMPACTAS NA PÁGINA DE PRODUTOS
+   GRADE DE 2 COLUNAS NA PÁGINA DE PRODUTOS (DEFINITIVO)
    ========================================== */
 @media (max-width: 768px) {
-
-    /* Anula o carrossel antigo e força o grid horizontal */
-    body.pagina-produtos .produtos-cards {
+    
+    /* Faz a caixa de cards aceitar os itens lado a lado */
+    section.pagina-produtos .produtos-cards {
         display: flex !important;
         flex-direction: row !important;
         flex-wrap: wrap !important;
@@ -1573,13 +1573,12 @@ footer{
         overflow: visible !important;
     }
 
-    /* Força o card a ter exatamente 48% da largura (dois por linha) e tamanho compacto */
-    body.pagina-produtos .produtos-cards .produto,
-    body.pagina-produtos .produtos-cards .item-produto {
+    /* Força cada card a ocupar exatamente 48% (dois por linha) */
+    section.pagina-produtos .produtos-cards .produto,
+    section.pagina-produtos .produtos-cards .item-produto {
         flex: 0 0 48% !important;
         width: 48% !important;
         max-width: 48% !important;
-        min-width: 0 !important;
         box-sizing: border-box !important;
         margin: 0 0 10px 0 !important;
         padding: 8px !important;
@@ -1592,43 +1591,38 @@ footer{
     }
 
     /* Imagem compacta para caber perfeitamente no card menor */
-    body.pagina-produtos .produtos-cards .produto img,
-    body.pagina-produtos .produtos-cards .item-produto img {
+    section.pagina-produtos .produtos-cards .produto img,
+    section.pagina-produtos .produtos-cards .item-produto img {
         width: 100% !important;
         height: 85px !important;
         object-fit: cover !important;
         border-radius: 6px !important;
     }
 
-    /* Textos e botões proporcionais e menores */
-    body.pagina-produtos .produtos-cards .produto h3,
-    body.pagina-produtos .produtos-cards .item-produto h3 {
+    /* Textos e botões proporcionais */
+    section.pagina-produtos .produtos-cards .produto h3,
+    section.pagina-produtos .produtos-cards .item-produto h3 {
         font-size: 12px !important;
         margin: 4px 0 2px 0 !important;
         text-align: center !important;
-        white-space: nowrap !important;
-        overflow: hidden !important;
-        text-overflow: ellipsis !important;
     }
 
-    body.pagina-produtos .produtos-cards .produto p,
-    body.pagina-produtos .produtos-cards .item-produto p {
+    section.pagina-produtos .produtos-cards .produto p,
+    section.pagina-produtos .produtos-cards .item-produto p {
         font-size: 9px !important;
         margin-bottom: 4px !important;
         text-align: center !important;
     }
 
-    body.pagina-produtos .produtos-cards .produto .preco-produto,
-    body.pagina-produtos .produtos-cards .item-produto .preco-produto,
-    body.pagina-produtos .produtos-cards .produto span,
-    body.pagina-produtos .produtos-cards .item-produto span {
+    section.pagina-produtos .produtos-cards .produto .preco-produto,
+    section.pagina-produtos .produtos-cards .item-produto .preco-produto {
         font-size: 11px !important;
         text-align: center !important;
         margin-bottom: 4px !important;
     }
 
-    body.pagina-produtos .produtos-cards .produto .botao-produto,
-    body.pagina-produtos .produtos-cards .item-produto .botao-produto {
+    section.pagina-produtos .produtos-cards .produto .botao-produto,
+    section.pagina-produtos .produtos-cards .item-produto .botao-produto {
         padding: 5px 2px !important;
         font-size: 9px !important;
         width: 100% !important;
