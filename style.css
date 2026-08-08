@@ -1553,4 +1553,19 @@ footer{
         margin-bottom: 0 !important;
     }
 
+    /* --- Grade de 2 colunas apenas na página de produtos --- */
+.pagina-produtos .produtos-cards {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: space-between !important;
+    gap: 10px !important;
+    padding: 15px !important;
+    overflow-x: visible !important;
+}
+
+.pagina-produtos .produto {
+    flex: 0 0 calc(50% - 5px) !important;
+    max-width: calc(50% - 5px) !important;
+    margin: 0 0 10px 0 !important;
+   }
 }
