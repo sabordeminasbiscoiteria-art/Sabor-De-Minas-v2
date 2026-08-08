@@ -1552,67 +1552,75 @@ footer{
     .barra-pesquisa {
         margin-bottom: 0 !important;
     }
-
-   /* --- Grade Profissional de 2 Colunas para Produtos.html --- */
-    /* Organiza o container dos cards em grade de 2 colunas */
+    
+/* --- Grade Profissional de 2 Colunas para Produtos.html (FORÇADO) --- */
+    /* Garante que o container pai ocupe toda a largura disponível */
     .pagina-produtos .produtos-cards {
         display: flex !important;
         flex-wrap: wrap !important;
         justify-content: space-between !important;
-        gap: 12px !important;
-        padding: 10px 15px !important;
+        gap: 10px !important;
+        padding: 10px !important;
+        width: 100% !important;      /* Força a ocupar 100% da tela */
+        max-width: none !important;  /* Remove qualquer limite de largura */
         overflow-x: visible !important;
+        margin: 0 !important;
     }
 
-    /* Cada card ocupa exatamente metade da tela menos o espaço do espaço entre eles */
+    /* Define o tamanho exato para 2 itens por linha */
     .pagina-produtos .produto {
-        flex: 0 0 calc(50% - 6px) !important;
-        max-width: calc(50% - 6px) !important;
+        flex: 0 0 calc(50% - 5px) !important; /* Exatamente metade menos o espaço do gap */
+        max-width: calc(50% - 5px) !important;
         box-sizing: border-box !important;
-        margin: 0 0 12px 0 !important;
-        padding: 10px !important;
-        height: auto !important;
+        margin-bottom: 10px !important;
+        padding: 8px !important;
         display: flex !important;
         flex-direction: column !important;
         justify-content: space-between !important;
+        height: auto !important;
     }
 
-    /* Redimensiona a imagem do card para ficar proporcional */
+    /* --- Ajustes internos para caber tudo --- */
     .pagina-produtos .produto img {
-        height: 110px !important;
+        height: 100px !important; /* Altura um pouco menor para caber tudo */
         object-fit: cover !important;
         width: 100% !important;
         border-radius: 6px !important;
+        margin-bottom: 4px !important;
     }
 
-    /* Ajusta os textos para não estourarem o card */
     .pagina-produtos .produto h3 {
-        font-size: 14px !important;
-        margin: 6px 0 2px 0 !important;
-        text-align: center !important;
+        font-size: 13px !important;
+        margin: 2px 0 !important;
     }
 
     .pagina-produtos .produto p {
-        font-size: 11px !important;
-        margin-bottom: 8px !important;
-        text-align: center !important;
+        font-size: 10px !important;
+        margin-bottom: 4px !important;
     }
 
-    /* Alinha o preço e o peso de forma compacta */
+    /* Agrupa o peso e o preço */
+    .pagina-produtos .produto .preco-peso-container {
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        margin-bottom: 6px !important;
+        width: 100% !important;
+    }
+
     .pagina-produtos .produto .preco-produto,
     .pagina-produtos .produto span {
-        font-size: 13px !important;
-        margin-bottom: 8px !important;
-        text-align: center !important;
+        font-size: 12px !important;
+        margin: 0 !important;
     }
 
-    /* Deixa o botão do WhatsApp proporcional ao card */
+    /* Botão do WhatsApp compacto */
     .pagina-produtos .produto .botao-produto,
     .pagina-produtos .produto a[class*="botao"] {
-        padding: 6px 8px !important;
-        font-size: 11px !important;
+        padding: 6px !important;
+        font-size: 10px !important;
         width: 100% !important;
-        box-sizing: border-box !important;
-        text-align: center !important;
+        margin-top: auto !important;
     }
 }
+  
