@@ -1448,10 +1448,11 @@ footer{
     .footer-marca { display: none; }
     .footer-menu, .footer-contato { flex-direction: row; gap: 15px; justify-content: center; }
     .footer-menu h3, .footer-contato h3 { display: none; }
+}
 /* ==========================
   PAGINA DOS PRODUTOS.HTML
 ========================== */
-/* Transforma o banner em uma faixa compacta */
+@media (max-width: 768px){
     .banner-produtos {
         height: 120px !important;        /* Altura menor de faixa */
         min-height: 120px !important;
