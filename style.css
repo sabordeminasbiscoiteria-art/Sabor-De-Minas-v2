@@ -1589,7 +1589,7 @@ footer{
     section.pagina-produtos .produtos-cards .produto img,
     section.pagina-produtos .produtos-cards .item-produto img {
         width: 100% !important;
-        height: 70px !important;    /* Altura reduzida da foto */
+        height: 120px !important;    /* Altura reduzida da foto */
         object-fit: cover !important;
         border-radius: 6px !important;
         margin-bottom: 2px !important;
@@ -1599,7 +1599,7 @@ footer{
     section.pagina-produtos .produtos-cards .produto h3,
     section.pagina-produtos .produtos-cards .item-produto h3 {
         font-size: 11px !important;
-        margin: 2px 0 !important;
+        margin: 0px 0 !important;
         text-align: center !important;
         line-height: 1.2 !important;
     }
@@ -1608,7 +1608,7 @@ footer{
     section.pagina-produtos .produtos-cards .produto p,
     section.pagina-produtos .produtos-cards .item-produto p {
         font-size: 9px !important;
-        margin: 0 0 2px 0 !important;
+        margin: 0 0 0px 0 !important;
         text-align: center !important;
         line-height: 1.1 !important;
         color: #666 !important;
