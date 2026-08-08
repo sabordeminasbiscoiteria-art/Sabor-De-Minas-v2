@@ -1555,83 +1555,82 @@ footer{
     }
 }
 /* ==========================================
-   AJUSTE DE ALTURA: COMPACTANDO O CARD VERTICALMENTE
+   REDUÇÃO MÁXIMA DE ESPAÇOS VERTICAIS
    ========================================== */
 @media (max-width: 768px) {
     
     section.pagina-produtos .produtos-cards {
         display: grid !important;
         grid-template-columns: repeat(2, 1fr) !important;
-        gap: 8px !important;
+        gap: 6px !important;       /* Diminui o espaço entre os cards (tanto lado quanto altura) */
+        row-gap: 6px !important;   
         width: 100% !important;
         max-width: 100% !important;
-        padding: 8px !important;
+        padding: 6px !important;
         box-sizing: border-box !important;
     }
 
-    /* Reduz o espaçamento interno (padding) do card para ele encolher na altura */
     section.pagina-produtos .produtos-cards .produto,
     section.pagina-produtos .produtos-cards .item-produto {
         width: 100% !important;
         max-width: 100% !important;
         margin: 0 !important;
-        padding: 6px !important; /* Diminuído para compactar */
+        padding: 4px !important;    /* Padding mínimo para o card ficar baixinho */
         display: flex !important;
         flex-direction: column !important;
         justify-content: space-between !important;
         background: #ffffff !important;
-        border-radius: 10px !important;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.05) !important;
+        border-radius: 8px !important;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.05) !important;
         box-sizing: border-box !important;
     }
 
-    /* Diminui a altura da foto para o card ficar mais curto */
+    /* Imagem compacta */
     section.pagina-produtos .produtos-cards .produto img,
     section.pagina-produtos .produtos-cards .item-produto img {
         width: 100% !important;
-        height: 75px !important; /* Altura menor e ideal para celular */
+        height: 70px !important;    /* Altura reduzida da foto */
         object-fit: cover !important;
         border-radius: 6px !important;
+        margin-bottom: 2px !important;
     }
 
-    /* Título menor e sem folgas */
+    /* Título com margem zero ou quase zero */
     section.pagina-produtos .produtos-cards .produto h3,
     section.pagina-produtos .produtos-cards .item-produto h3 {
-        font-size: 12px !important;
-        margin: 4px 0 2px 0 !important;
+        font-size: 11px !important;
+        margin: 2px 0 !important;
         text-align: center !important;
-        font-weight: bold !important;
+        line-height: 1.2 !important;
     }
 
-    /* Descrição mais curta */
+    /* Parágrafo (descrição) bem coladinho */
     section.pagina-produtos .produtos-cards .produto p,
     section.pagina-produtos .produtos-cards .item-produto p {
         font-size: 9px !important;
-        margin-bottom: 4px !important;
+        margin: 0 0 2px 0 !important;
         text-align: center !important;
+        line-height: 1.1 !important;
         color: #666 !important;
     }
 
-    /* Preço e peso compactos na mesma linha ou mais juntos */
+    /* Preço compacto */
     section.pagina-produtos .produtos-cards .produto .preco-produto,
     section.pagina-produtos .produtos-cards .item-produto .preco-produto {
-        font-size: 11px !important;
+        font-size: 10px !important;
         text-align: center !important;
-        margin-bottom: 4px !important;
-        display: flex !important;
-        justify-content: center !important;
-        align-items: center !important;
-        gap: 4px !important;
+        margin: 2px 0 !important;
     }
 
-    /* Botão do WhatsApp compacto */
+    /* Botão enxuto */
     section.pagina-produtos .produtos-cards .produto .botao-produto,
     section.pagina-produtos .produtos-cards .item-produto .botao-produto {
-        padding: 5px 2px !important;
+        padding: 4px 2px !important;
         font-size: 9px !important;
         width: 100% !important;
+        margin-top: 2px !important;
         box-sizing: border-box !important;
         text-align: center !important;
-        border-radius: 5px !important;
+        border-radius: 4px !important;
     }
 }
