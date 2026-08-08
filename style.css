@@ -1553,11 +1553,9 @@ footer{
         margin-bottom: 0 !important;
     }
 
-/* --- Correção Definitiva: 2 Colunas Lado a Lado no Celular --- */
-    /* Força o container principal a esticar e aceitar os elementos lado a lado */
-    body.pagina-produtos .produtos-cards,
-    .pagina-produtos .produtos-cards,
-    section.pagina-produtos .produtos-cards {
+/* --- Correção exata para as 2 colunas lado a lado --- */
+    /* Libera o container geral dos cards para aceitar os itens em grade */
+    .pagina-produtos .produtos-cards {
         display: flex !important;
         flex-direction: row !important;
         flex-wrap: wrap !important;
@@ -1570,10 +1568,10 @@ footer{
         overflow-x: hidden !important;
     }
 
-    /* Força cada card a ocupar exatamente a metade da tela (2 por linha) */
-    body.pagina-produtos .produto,
-    .pagina-produtos .produto,
-    section.pagina-produtos .produto {
+    /* Força cada card (produto e item-produto) a ocupar exatamente 48% (duas colunas) */
+    .pagina-produtos .produto.item-produto,
+    .pagina-produtos .item-produto,
+    .pagina-produtos .produto {
         flex: 0 0 48% !important;
         width: 48% !important;
         max-width: 48% !important;
@@ -1585,46 +1583,40 @@ footer{
         display: flex !important;
         flex-direction: column !important;
         justify-content: space-between !important;
-        background: #ffffff !important; /* Garante fundo limpo se precisar */
+        background: #ffffff !important;
         border-radius: 12px !important;
         box-shadow: 0 2px 6px rgba(0,0,0,0.05) !important;
     }
 
-    /* Redimensiona perfeitamente a imagem para o formato menor de 2 colunas */
-    .pagina-produtos .produto img {
+    /* Ajuste da imagem para o formato compacto de 2 colunas */
+    .pagina-produtos .item-produto img {
         width: 100% !important;
         height: 95px !important;
         object-fit: cover !important;
         border-radius: 8px !important;
     }
 
-    /* Ajusta textos e elementos internos para encaixar perfeitamente */
-    .pagina-produtos .produto h3 {
+    /* Títulos e textos proporcionais */
+    .pagina-produtos .item-produto h3 {
         font-size: 13px !important;
         margin: 6px 0 2px 0 !important;
         text-align: center !important;
-        white-space: nowrap !important;
-        overflow: hidden !important;
-        text-overflow: ellipsis !important;
     }
 
-    .pagina-produtos .produto p {
+    .pagina-produtos .item-produto p {
         font-size: 10px !important;
         margin-bottom: 6px !important;
         text-align: center !important;
-        line-height: 1.2 !important;
     }
 
-    /* Organiza peso, preço e botão proporcionalmente */
-    .pagina-produtos .produto span, 
-    .pagina-produtos .produto .preco-produto {
+    /* Preço e Botão do WhatsApp */
+    .pagina-produtos .item-produto .preco-produto {
         font-size: 12px !important;
         text-align: center !important;
         margin-bottom: 6px !important;
     }
 
-    .pagina-produtos .produto a.botao-produto,
-    .pagina-produtos .produto .botao-produto {
+    .pagina-produtos .item-produto .botao-produto {
         padding: 6px 4px !important;
         font-size: 10px !important;
         width: 100% !important;
