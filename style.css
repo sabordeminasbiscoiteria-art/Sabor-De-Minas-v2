@@ -1616,4 +1616,32 @@ footer{
         text-align: center !important;
         border-radius: 6px !important;
     }
+    /* Força o container principal a usar 100% da largura da tela sem centralizar em bloco único */
+    .pagina-produtos .container {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding-left: 8px !important;
+        padding-right: 8px !important;
+        margin: 0 !important;
+    }
+
+    /* Garante o preenchimento total do grid de produtos */
+    .pagina-produtos .produtos-cards {
+        width: 100% !important;
+        max-width: 100% !important;
+        display: flex !important;
+        flex-wrap: wrap !important;
+        justify-content: space-between !important;
+        padding: 0 !important;
+    }
+
+    /* Reduz a largura para 48.5% para caberem dois perfeitamente lado a lado */
+    .pagina-produtos .produto,
+    .pagina-produtos .item-produto {
+        flex: 0 0 48.5% !important;
+        width: 48.5% !important;
+        max-width: 48.5% !important;
+        margin-bottom: 10px !important;
+        box-sizing: border-box !important;
+    }
 }
