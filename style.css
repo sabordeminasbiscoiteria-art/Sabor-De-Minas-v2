@@ -1483,3 +1483,44 @@ footer{
         font-size: 13px !important;
         margin: 0 !important;
     }
+    /* Organiza o bloco principal dos filtros empilhado: barra em cima ou embaixo */
+    .topo-filtros {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 12px !important;
+        width: 100% !important;
+        padding: 0 15px !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Coloca todas as categorias em uma única linha com rolagem lateral */
+    .filtros-categorias {
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        overflow-x: auto !important;
+        width: 100% !important;
+        gap: 8px !important;
+        padding-bottom: 5px !important;
+        scrollbar-width: none; /* Esconde a barra de rolagem no Firefox */
+    }
+
+    /* Deixa os botões de categoria com tamanho ideal para caber na linha */
+    .filtros-categorias a, 
+    .filtros-categorias button {
+        flex: 0 0 auto !important;
+        white-space: nowrap !important;
+        padding: 8px 16px !important;
+    }
+
+    /* Posiciona a barra de pesquisa logo abaixo */
+    .barra-pesquisa {
+        width: 100% !important;
+        display: flex !important;
+        justify-content: center !important;
+    }
+
+    .barra-pesquisa input {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
