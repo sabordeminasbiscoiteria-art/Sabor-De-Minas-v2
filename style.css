@@ -1482,14 +1482,18 @@ footer{
         font-size: 13px !important;
         margin: 0 !important;
     }
-    /* Organiza o bloco principal dos filtros empilhado: barra em cima ou embaixo */
+    /* Aproxima a barra de pesquisa logo abaixo do banner */
     .topo-filtros {
+        margin-top: -10px !important; /* Puxa o bloco de filtros para cima */
+        padding-top: 0 !important;
         display: flex !important;
         flex-direction: column !important;
-        gap: 12px !important;
-        width: 100% !important;
-        padding: 0 15px !important;
-        box-sizing: border-box !important;
+        gap: 8px !important; /* Reduz o espaço entre a barra de pesquisa e as categorias */
+    }
+
+    /* Diminui a margem inferior do banner para colar o conteúdo de baixo */
+    .banner-produtos {
+        margin-bottom: 5px !important;
     }
 
     /* Força os botões de categoria a ficarem juntos em uma linha compacta */
@@ -1522,8 +1526,9 @@ footer{
         justify-content: center !important;
     }
 
-    .barra-pesquisa input {
-        width: 100% !important;
-        max-width: 100% !important;
+    /* Deixa o input de pesquisa mais compacto e próximo */
+    .barra-pesquisa {
+        margin-bottom: 0 !important;
     }
+
 }
