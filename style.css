@@ -1641,3 +1641,91 @@ footer{
         box-sizing: border-box !important;
     }
 }
+/* ==========================================
+   CORREÇÃO DEFINITIVA: 2 COLUNAS NA PÁGINA DE PRODUTOS
+   ========================================== */
+@media (max-width: 768px) {
+
+    /* 1. Restaura o container na página de produtos para ter um respiro nas laterais */
+    body.pagina-produtos .container {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding-left: 12px !important;
+        padding-right: 12px !important;
+        box-sizing: border-box !important;
+        margin: 0 auto !important;
+    }
+
+    /* 2. Força o container dos cards a aceitar os itens lado a lado perfeitamente */
+    body.pagina-produtos .produtos-cards {
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: wrap !important;
+        justify-content: space-between !important;
+        align-items: stretch !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        overflow-x: visible !important;
+    }
+
+    /* 3. Garante que cada card ocupe exatamente 48% (duas colunas exatas) */
+    body.pagina-produtos .produto,
+    body.pagina-produtos .item-produto {
+        flex: 0 0 48.5% !important;
+        width: 48.5% !important;
+        max-width: 48.5% !important;
+        box-sizing: border-box !important;
+        margin-bottom: 12px !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        padding: 8px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: space-between !important;
+        background: #ffffff !important;
+        border-radius: 12px !important;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.05) !important;
+    }
+
+    /* 4. Ajustes finos internos dos cards para encaixar perfeitamente */
+    body.pagina-produtos .produto img,
+    body.pagina-produtos .item-produto img {
+        width: 100% !important;
+        height: 95px !important;
+        object-fit: cover !important;
+        border-radius: 8px !important;
+    }
+
+    body.pagina-produtos .produto h3,
+    body.pagina-produtos .item-produto h3 {
+        font-size: 13px !important;
+        margin: 6px 0 2px 0 !important;
+        text-align: center !important;
+    }
+
+    body.pagina-produtos .produto p,
+    body.pagina-produtos .item-produto p {
+        font-size: 10px !important;
+        margin-bottom: 6px !important;
+        text-align: center !important;
+    }
+
+    body.pagina-produtos .produto .preco-produto,
+    body.pagina-produtos .item-produto .preco-produto {
+        font-size: 12px !important;
+        text-align: center !important;
+        margin-bottom: 6px !important;
+    }
+
+    body.pagina-produtos .produto .botao-produto,
+    body.pagina-produtos .item-produto .botao-produto {
+        padding: 6px 4px !important;
+        font-size: 10px !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+        text-align: center !important;
+        border-radius: 6px !important;
+    }
+}
