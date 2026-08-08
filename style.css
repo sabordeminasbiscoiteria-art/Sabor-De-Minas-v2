@@ -1555,7 +1555,7 @@ footer{
     }
 }
 /* ==========================================
-   AJUSTE PROFISSIONAL: CARDS COMPACTOS EM 2 COLUNAS
+   AJUSTE DE ALTURA: COMPACTANDO O CARD VERTICALMENTE
    ========================================== */
 @media (max-width: 768px) {
     
@@ -1569,13 +1569,13 @@ footer{
         box-sizing: border-box !important;
     }
 
-    /* Deixa o card compacto e alinhado */
+    /* Reduz o espaçamento interno (padding) do card para ele encolher na altura */
     section.pagina-produtos .produtos-cards .produto,
     section.pagina-produtos .produtos-cards .item-produto {
         width: 100% !important;
         max-width: 100% !important;
         margin: 0 !important;
-        padding: 8px !important;
+        padding: 6px !important; /* Diminuído para compactar */
         display: flex !important;
         flex-direction: column !important;
         justify-content: space-between !important;
@@ -1585,53 +1585,53 @@ footer{
         box-sizing: border-box !important;
     }
 
-    /* Imagem menor e elegante */
+    /* Diminui a altura da foto para o card ficar mais curto */
     section.pagina-produtos .produtos-cards .produto img,
     section.pagina-produtos .produtos-cards .item-produto img {
         width: 100% !important;
-        height: 100px !important;
+        height: 75px !important; /* Altura menor e ideal para celular */
         object-fit: cover !important;
-        border-radius: 8px !important;
+        border-radius: 6px !important;
     }
 
-    /* Título proporcional */
+    /* Título menor e sem folgas */
     section.pagina-produtos .produtos-cards .produto h3,
     section.pagina-produtos .produtos-cards .item-produto h3 {
-        font-size: 13px !important;
-        margin: 6px 0 2px 0 !important;
+        font-size: 12px !important;
+        margin: 4px 0 2px 0 !important;
         text-align: center !important;
         font-weight: bold !important;
     }
 
-    /* Descrição menor */
+    /* Descrição mais curta */
     section.pagina-produtos .produtos-cards .produto p,
     section.pagina-produtos .produtos-cards .item-produto p {
-        font-size: 10px !important;
-        margin-bottom: 6px !important;
+        font-size: 9px !important;
+        margin-bottom: 4px !important;
         text-align: center !important;
         color: #666 !important;
     }
 
-    /* Bloco de preço e peso compacto */
+    /* Preço e peso compactos na mesma linha ou mais juntos */
     section.pagina-produtos .produtos-cards .produto .preco-produto,
     section.pagina-produtos .produtos-cards .item-produto .preco-produto {
         font-size: 11px !important;
         text-align: center !important;
-        margin-bottom: 8px !important;
+        margin-bottom: 4px !important;
         display: flex !important;
         justify-content: center !important;
         align-items: center !important;
-        gap: 6px !important;
+        gap: 4px !important;
     }
 
-    /* Botão do WhatsApp proporcional */
+    /* Botão do WhatsApp compacto */
     section.pagina-produtos .produtos-cards .produto .botao-produto,
     section.pagina-produtos .produtos-cards .item-produto .botao-produto {
-        padding: 6px 4px !important;
-        font-size: 10px !important;
+        padding: 5px 2px !important;
+        font-size: 9px !important;
         width: 100% !important;
         box-sizing: border-box !important;
         text-align: center !important;
-        border-radius: 6px !important;
+        border-radius: 5px !important;
     }
 }
