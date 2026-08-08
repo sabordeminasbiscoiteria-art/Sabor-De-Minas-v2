@@ -1495,6 +1495,28 @@ footer{
     .banner-produtos {
         margin-bottom: 5px !important;
     }
+    /* Força a seção pai a perder o limite se necessário */
+    .pagina-produtos {
+        padding: 0 !important;
+    }
+
+    /* Faz o container ignorar as margens laterais apenas para o banner */
+    .container {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        max-width: 100% !important;
+    }
+
+    /* Estica o banner de ponta a ponta da tela */
+    .banner-produtos {
+        width: 100vw !important;
+        position: relative !important;
+        left: 50% !important;
+        right: 50% !important;
+        margin-left: -50vw !important;
+        margin-right: -50vw !important;
+        border-radius: 0 !important; /* Remove bordas arredondadas se quiser que encoste seco nas bordas */
+    }
 
     /* Força os botões de categoria a ficarem juntos em uma linha compacta */
     .filtros-categorias {
