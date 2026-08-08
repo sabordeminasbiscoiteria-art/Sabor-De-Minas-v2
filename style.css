@@ -1552,75 +1552,85 @@ footer{
     .barra-pesquisa {
         margin-bottom: 0 !important;
     }
-    
-/* --- Grade Profissional de 2 Colunas para Produtos.html (FORÇADO) --- */
-    /* Garante que o container pai ocupe toda a largura disponível */
-    .pagina-produtos .produtos-cards {
+
+/* --- Correção Definitiva: 2 Colunas Lado a Lado no Celular --- */
+    /* Força o container principal a esticar e aceitar os elementos lado a lado */
+    body.pagina-produtos .produtos-cards,
+    .pagina-produtos .produtos-cards,
+    section.pagina-produtos .produtos-cards {
         display: flex !important;
+        flex-direction: row !important;
         flex-wrap: wrap !important;
         justify-content: space-between !important;
-        gap: 10px !important;
-        padding: 10px !important;
-        width: 100% !important;      /* Força a ocupar 100% da tela */
-        max-width: none !important;  /* Remove qualquer limite de largura */
-        overflow-x: visible !important;
-        margin: 0 !important;
+        align-items: stretch !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 8px !important;
+        box-sizing: border-box !important;
+        overflow-x: hidden !important;
     }
 
-    /* Define o tamanho exato para 2 itens por linha */
-    .pagina-produtos .produto {
-        flex: 0 0 calc(50% - 5px) !important; /* Exatamente metade menos o espaço do gap */
-        max-width: calc(50% - 5px) !important;
+    /* Força cada card a ocupar exatamente a metade da tela (2 por linha) */
+    body.pagina-produtos .produto,
+    .pagina-produtos .produto,
+    section.pagina-produtos .produto {
+        flex: 0 0 48% !important;
+        width: 48% !important;
+        max-width: 48% !important;
         box-sizing: border-box !important;
-        margin-bottom: 10px !important;
+        margin-bottom: 12px !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
         padding: 8px !important;
         display: flex !important;
         flex-direction: column !important;
         justify-content: space-between !important;
-        height: auto !important;
+        background: #ffffff !important; /* Garante fundo limpo se precisar */
+        border-radius: 12px !important;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.05) !important;
     }
 
-    /* --- Ajustes internos para caber tudo --- */
+    /* Redimensiona perfeitamente a imagem para o formato menor de 2 colunas */
     .pagina-produtos .produto img {
-        height: 100px !important; /* Altura um pouco menor para caber tudo */
-        object-fit: cover !important;
         width: 100% !important;
-        border-radius: 6px !important;
-        margin-bottom: 4px !important;
+        height: 95px !important;
+        object-fit: cover !important;
+        border-radius: 8px !important;
     }
 
+    /* Ajusta textos e elementos internos para encaixar perfeitamente */
     .pagina-produtos .produto h3 {
         font-size: 13px !important;
-        margin: 2px 0 !important;
+        margin: 6px 0 2px 0 !important;
+        text-align: center !important;
+        white-space: nowrap !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
     }
 
     .pagina-produtos .produto p {
         font-size: 10px !important;
-        margin-bottom: 4px !important;
-    }
-
-    /* Agrupa o peso e o preço */
-    .pagina-produtos .produto .preco-peso-container {
-        display: flex !important;
-        justify-content: space-between !important;
-        align-items: center !important;
         margin-bottom: 6px !important;
-        width: 100% !important;
+        text-align: center !important;
+        line-height: 1.2 !important;
     }
 
-    .pagina-produtos .produto .preco-produto,
-    .pagina-produtos .produto span {
+    /* Organiza peso, preço e botão proporcionalmente */
+    .pagina-produtos .produto span, 
+    .pagina-produtos .produto .preco-produto {
         font-size: 12px !important;
-        margin: 0 !important;
+        text-align: center !important;
+        margin-bottom: 6px !important;
     }
 
-    /* Botão do WhatsApp compacto */
-    .pagina-produtos .produto .botao-produto,
-    .pagina-produtos .produto a[class*="botao"] {
-        padding: 6px !important;
+    .pagina-produtos .produto a.botao-produto,
+    .pagina-produtos .produto .botao-produto {
+        padding: 6px 4px !important;
         font-size: 10px !important;
         width: 100% !important;
-        margin-top: auto !important;
+        box-sizing: border-box !important;
+        text-align: center !important;
+        border-radius: 6px !important;
     }
 }
   
