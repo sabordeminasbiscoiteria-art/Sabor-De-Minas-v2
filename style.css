@@ -1448,7 +1448,6 @@ footer{
     .footer-marca { display: none; }
     .footer-menu, .footer-contato { flex-direction: row; gap: 15px; justify-content: center; }
     .footer-menu h3, .footer-contato h3 { display: none; }
-}
 /* ==========================
   PAGINA DOS PRODUTOS
 ========================== */
@@ -1524,3 +1523,4 @@ footer{
         width: 100% !important;
         max-width: 100% !important;
     }
+}
