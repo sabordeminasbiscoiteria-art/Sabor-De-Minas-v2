@@ -1449,3 +1449,37 @@ footer{
     .footer-menu, .footer-contato { flex-direction: row; gap: 15px; justify-content: center; }
     .footer-menu h3, .footer-contato h3 { display: none; }
 }
+/* ==========================
+  PAGINA DOS PRODUTOS
+========================== */
+/* Transforma o banner em uma faixa compacta */
+    .banner-produtos {
+        height: 120px !important;        /* Altura menor de faixa */
+        min-height: 120px !important;
+        max-height: 120px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        padding: 10px 15px !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+        overflow: hidden !important;
+    }
+
+    /* Organiza o conteúdo de texto dentro da faixa */
+    .banner-conteudo {
+        text-align: center !important;
+        width: 100% !important;
+    }
+
+    /* Ajusta o título para caber perfeitamente na faixa */
+    .banner-conteudo h1 {
+        font-size: 22px !important;
+        margin: 0 0 4px 0 !important;
+    }
+
+    /* Ajusta o subtítulo */
+    .banner-conteudo p {
+        font-size: 13px !important;
+        margin: 0 !important;
+    }
