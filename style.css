@@ -1518,21 +1518,39 @@ footer{
         margin-right: -50vw !important;
         border-radius: 0 !important; /* Remove bordas arredondadas se quiser que encoste seco nas bordas */
     }
-}
-@media (max-width: 768px) {
-    .topo-filtros {
+/* Força os botões de categoria a ficarem juntos em uma linha compacta */
+    .filtros-categorias {
         display: flex !important;
-        flex-direction: column !important;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        overflow-x: auto !important;
         width: 100% !important;
+        gap: 6px !important;
+        padding: 4px 10px !important;
+        box-sizing: border-box !important;
+        justify-content: flex-start !important;
     }
+
+    /* Diminui o tamanho dos botões para caberem mais itens na tela */
+    .filtros-categorias a, 
+    .filtros-categorias button {
+        flex: 0 0 auto !important;
+        white-space: nowrap !important;
+        font-size: 13px !important;
+        padding: 6px 12px !important;
+        min-height: auto !important;
+    }
+    
+    /* Posiciona a barra de pesquisa logo abaixo */
     .barra-pesquisa {
         width: 100% !important;
-        margin-bottom: 10px !important;
-        z-index: 10 !important;
+        display: flex !important;
+        justify-content: center !important;
     }
-    .barra-pesquisa input {
-        width: 100% !important;
-        pointer-events: auto !important;
+
+    /* Deixa o input de pesquisa mais compacto e próximo */
+    .barra-pesquisa {
+        margin-bottom: 0 !important;
     }
 }
 /* ==========================================
