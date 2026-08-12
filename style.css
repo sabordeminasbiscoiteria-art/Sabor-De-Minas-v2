@@ -1673,28 +1673,38 @@ footer{
     }
 }
 @media (max-width: 768px) {
-    /* Reduz o espaço superior da seção "Sobre Nós" */
-    .sobre-pagina {
-        padding-top: 15px !important;
-        padding-bottom: 10px !important;
+    /* Reseta o flexbox no contêiner pai */
+    .historia {
+        display: block !important; /* Tira o flex e deixa empilhado */
+        position: relative !important;
     }
 
-    /* Puxa o título e o subtítulo mais para cima */
-    .titulo-pagina {
-        margin-top: 0 !important;
-        margin-bottom: 10px !important;
-        padding-top: 0 !important;
-    }
-
-    /* Aproxima e sobe a foto dos biscoitos */
+    /* A imagem agora flutua e o texto flui ao redor */
     .historia-img {
-        margin-top: 5px !important;
-        margin-bottom: 15px !important;
+        float: left !important; /* Faz o texto rodear a imagem */
+        width: 45% !important; /* Ajusta o tamanho da imagem (pode diminuir se quiser) */
+        margin-right: 15px !important; /* Espaço entre a imagem e o texto */
+        margin-bottom: 10px !important; /* Espaço embaixo */
+        margin-top: 5px !important; /* Ajuste fino pra alinhar com o H2 */
+        clear: none !important; /* Garante que o próximo elemento possa ficar ao lado */
+    }
+
+    /* Garante que a imagem dentro da div tenha o tamanho correto */
+    .historia-img img {
+        max-width: 100% !important;
+        height: auto !important;
+        border-radius: 15px !important; /* Mantém as bordas arredondadas */
+    }
+
+    /* O texto agora vai ocupar o espaço restante ao lado da imagem */
+    .historia-texto {
+        width: 100% !important;
+        padding: 0 !important;
     }
     
-    .historia-img img {
-        width: 90% !important;
-        max-height: 220px !important;
-        object-fit: cover !important;
+    /* Ajuste fino: Centraliza o título "Nossa História" para ficar sobre a foto e o texto */
+    .historia-texto h2 {
+        text-align: center !important;
+        margin-bottom: 15px !important;
     }
 }
