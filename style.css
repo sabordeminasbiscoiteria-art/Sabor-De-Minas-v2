@@ -1675,36 +1675,37 @@ footer{
 @media (max-width: 768px) {
     /* Reseta o flexbox no contêiner pai */
     .historia {
-        display: block !important; /* Tira o flex e deixa empilhado */
+        display: block !important;
         position: relative !important;
     }
 
-    /* A imagem agora flutua e o texto flui ao redor */
+    /* A imagem flutua e o texto flui ao redor */
     .historia-img {
-        float: left !important; /* Faz o texto rodear a imagem */
-        width: 45% !important; /* Ajusta o tamanho da imagem (pode diminuir se quiser) */
-        margin-right: 15px !important; /* Espaço entre a imagem e o texto */
-        margin-bottom: 10px !important; /* Espaço embaixo */
-        margin-top: 5px !important; /* Ajuste fino pra alinhar com o H2 */
-        clear: none !important; /* Garante que o próximo elemento possa ficar ao lado */
+        float: left !important;
+        width: 45% !important;
+        margin-right: 15px !important;
+        margin-bottom: 10px !important;
+        margin-top: 5px !important;
+        clear: none !important;
     }
 
-    /* Garante que a imagem dentro da div tenha o tamanho correto */
+    /* Garante que a imagem tenha o tamanho correto e bordas arredondadas */
     .historia-img img {
         max-width: 100% !important;
         height: auto !important;
-        border-radius: 15px !important; /* Mantém as bordas arredondadas */
+        border-radius: 15px !important;
     }
 
-    /* O texto agora vai ocupar o espaço restante ao lado da imagem */
+    /* O texto ocupa o espaço restante ao lado da imagem */
     .historia-texto {
         width: 100% !important;
         padding: 0 !important;
     }
-    /* Puxa o título "Nossa História" bem para cima para alinhar com a foto */
+    
+    /* Sobe e alinha o título "Nossa História" perfeitamente ao lado da foto */
     .historia-texto h2 {
-        margin-top: -15px !important; /* Puxa o título para cima */
-        padding-top: 0 !important;
-        text-align: left !important; /* Deixa alinhado com o texto ao lado */
+        text-align: left !important;
+        margin-top: -30px !important;
+        margin-bottom: 10px !important;
     }
 }
