@@ -1725,3 +1725,56 @@ footer{
         margin-bottom: 5px !important;
     }
 }
+@media (max-width: 768px) {
+    /* === PÁGINA SOBRE NÓS: TOPO E ESPAÇAMENTO === */
+    .sobre-pagina {
+        padding-top: 35px !important; 
+    }
+
+    .titulo-pagina {
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+    }
+
+    /* === SEÇÃO NOSSA HISTÓRIA (FOTO E TEXTO LADO A LADO) === */
+    .historia {
+        display: block !important;
+        position: relative !important;
+    }
+
+    .historia-img {
+        float: left !important;
+        width: 45% !important;
+        margin-right: 15px !important;
+        margin-bottom: 10px !important;
+        margin-top: 5px !important;
+        clear: none !important;
+    }
+
+    .historia-img img {
+        max-width: 100% !important;
+        height: auto !important;
+        border-radius: 15px !important;
+    }
+
+    .historia-texto {
+        width: 100% !important;
+        padding: 0 !important;
+    }
+    
+    .historia-texto h2 {
+        text-align: left !important;
+        margin-top: -30px !important;
+        margin-bottom: 10px !important;
+    }
+
+    /* === PÁGINA CONTATO: MESMA ALTURA DE TOPO === */
+    .contato-pagina {
+        padding-top: 35px !important; 
+    }
+
+    .contato-pagina .titulo-pagina {
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+    }
+}
