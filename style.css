@@ -1701,10 +1701,10 @@ footer{
         width: 100% !important;
         padding: 0 !important;
     }
-    
-    /* Ajuste fino: Centraliza o título "Nossa História" para ficar sobre a foto e o texto */
+    /* Puxa o título "Nossa História" bem para cima para alinhar com a foto */
     .historia-texto h2 {
-        text-align: center !important;
-        margin-bottom: 15px !important;
+        margin-top: -15px !important; /* Puxa o título para cima */
+        padding-top: 0 !important;
+        text-align: left !important; /* Deixa alinhado com o texto ao lado */
     }
 }
