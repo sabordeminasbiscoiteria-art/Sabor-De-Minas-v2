@@ -1635,3 +1635,19 @@ footer{
         border-radius: 6px !important;
     }
 }
+/* ==========================================
+   FORÇA O BOTÃO A OCUPAR 100% DA LARGURA DO CARD
+   ========================================== */
+@media (max-width: 768px) {
+    section.pagina-produtos .produtos-cards .produto .botao-produto,
+    section.pagina-produtos .produtos-cards .item-produto .botao-produto {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        box-sizing: border-box !important;
+    }
+}
