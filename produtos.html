@@ -85,7 +85,7 @@
 
   <div class="filtros-categorias">
 
-    <a href="todos.html">Todos</a>
+    <a href="produtos.html">Todos</a>
 
     <a href="doces.html">Doces</a>
 
@@ -286,7 +286,7 @@ pesquisa.addEventListener("keyup", function () {
         const nome = produto.querySelector("h3").textContent.toLowerCase();
 
         if(nome.includes(texto)){
-            produto.style.display = "block";
+            produto.style.display = "flex";
         }else{
             produto.style.display = "none";
         }
