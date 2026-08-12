@@ -1712,7 +1712,7 @@ footer{
 @media (max-width: 768px) {
     /* Puxa a seção inteira e o título "Sobre Nós" para cima */
     .sobre-pagina {
-        padding-top: 5px !important;
+        padding-top: 35px !important;
     }
 
     .titulo-pagina {
