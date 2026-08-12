@@ -429,22 +429,25 @@ function rolarCarrossel(direcao) {
     }
 }
 
-document.getElementById('pesquisa').addEventListener('input', function() {
-    const termo = this.value.toLowerCase().trim();
-    const cards = document.querySelectorAll('.produto');
+const inputBusca = document.querySelector(".barra-pesquisa input") || document.querySelector("input[type='search']") || document.querySelector("input[type='text']");
 
-    cards.forEach(card => {
-        const titulo = card.querySelector('h3').textContent.toLowerCase();
-        const descricao = card.querySelector('p') ? card.querySelector('p').textContent.toLowerCase() : '';
+if (inputBusca) {
+    inputBusca.addEventListener('input', function () {
+        const termo = this.value.toLowerCase().trim();
+        const cards = document.querySelectorAll('.produto');
 
-        // Se o título ou a descrição contiverem o texto digitado, mostra o card; senão, esconde
-        if (titulo.includes(termo) || descricao.includes(termo)) {
-            card.style.display = 'flex';
-        } else {
-            card.style.display = 'none';
-        }
+        cards.forEach(card => {
+            const titulo = card.querySelector('h3') ? card.querySelector('h3').textContent.toLowerCase() : '';
+            const descricao = card.querySelector('p') ? card.querySelector('p').textContent.toLowerCase() : '';
+
+            if (titulo.includes(termo) || descricao.includes(termo)) {
+                card.style.display = 'flex';
+            } else {
+                card.style.display = 'none';
+            }
+        });
     });
-});
+}
 
 </script>
 
