@@ -1650,3 +1650,26 @@ footer{
         box-sizing: border-box !important;
     }
 }
+/* ==========================================
+   FORÇA PESO E PREÇO LADO A LADO PERFEITAMENTE
+   ========================================== */
+@media (max-width: 768px) {
+    section.pagina-produtos .produtos-cards .preco-produto {
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 8px !important;
+        width: 100% !important;
+        margin: 8px 0 !important;
+    }
+
+    section.pagina-produtos .produtos-cards .preco-produto span,
+    section.pagina-produtos .produtos-cards .preco-produto strong {
+        display: inline-block !important;
+        width: auto !important;
+        margin: 0 !important;
+        white-space: nowrap !important;
+    }
+}
