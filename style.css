@@ -1673,31 +1673,28 @@ footer{
     }
 }
 @media (max-width: 768px) {
-    /* Deixa a seção da história empilhada no celular */
-    .historia {
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-        text-align: center !important;
+    /* Reduz o espaço superior da seção "Sobre Nós" */
+    .sobre-pagina {
+        padding-top: 15px !important;
+        padding-bottom: 10px !important;
     }
 
-    /* Faz a imagem ocupar o tamanho certo e centralizar */
+    /* Puxa o título e o subtítulo mais para cima */
+    .titulo-pagina {
+        margin-top: 0 !important;
+        margin-bottom: 10px !important;
+        padding-top: 0 !important;
+    }
+
+    /* Aproxima e sobe a foto dos biscoitos */
     .historia-img {
-        width: 100% !important;
-        display: flex !important;
-        justify-content: center !important;
-        margin-bottom: 20px !important;
+        margin-top: 5px !important;
+        margin-bottom: 15px !important;
     }
-
+    
     .historia-img img {
-        max-width: 100% !important;
-        height: auto !important;
-    }
-
-    /* Ajusta o texto para centralizar e não apertar nas bordas */
-    .historia-texto {
-        width: 100% !important;
-        padding: 0 15px !important;
-        box-sizing: border-box !important;
+        width: 90% !important;
+        max-height: 220px !important;
+        object-fit: cover !important;
     }
 }
