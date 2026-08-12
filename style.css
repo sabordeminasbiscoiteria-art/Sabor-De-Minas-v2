@@ -1591,7 +1591,7 @@ footer{
         width: 100% !important;
         height: 100px !important;
         object-fit: cover !important;
-        border-radius: 8px !important;
+        border-radius: 4px !important;
     }
 
     /* Título proporcional */
