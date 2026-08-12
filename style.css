@@ -1611,6 +1611,28 @@ footer{
         text-align: center !important;
         color: #666 !important;
     }
+    /* Bloco de preço e peso compacto */
+    section.pagina-produtos .produtos-cards .produto .preco-produto,
+    section.pagina-produtos .produtos-cards .item-produto .preco-produto {
+        font-size: 11px !important;
+        text-align: center !important;
+        margin-bottom: 8px !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        gap: 6px !important;
+    }
+
+    /* Botão do WhatsApp proporcional */
+    section.pagina-produtos .produtos-cards .produto .botao-produto,
+    section.pagina-produtos .produtos-cards .item-produto .botao-produto {
+        padding: 6px 4px !important;
+        font-size: 10px !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+        text-align: center !important;
+        border-radius: 6px !important;
+    }
 }
 /* ==========================================
    FORÇA O BOTÃO A OCUPAR 100% DA LARGURA DO CARD
