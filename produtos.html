@@ -268,19 +268,17 @@
     </div>
 
     <div class="footer-final">
-        © 2026 Biscoiteria Sabor de Minas - Todos os direitos reservados
-    </div>
+            &copy; 2026 Biscoiteria Sabor de Minas - Todos os direitos reservados
+        </div>
+    </footer>
 
-</footer>
-
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-    const inputBusca = document.getElementById('pesquisa') || document.querySelector(".barra-pesquisa input");
-    const cards = document.querySelectorAll(".produtos-cards .produto, .produtos-cards .item-produto");
+    <script src="script.js">document.addEventListener("DOMContentLoaded", function () {
+    const inputBusca = document.getElementById("pesquisa") || document.querySelector(".barra-pesquisa input");
+    const cards = document.querySelectorAll(".produto, .item-produto");
 
     if (inputBusca) {
-        inputBusca.addEventListener("input", function () {
-            const termo = this.value.toLowerCase().trim();
+        inputBusca.addEventListener("input", function (e) {
+            const termo = e.target.value.toLowerCase().trim();
 
             cards.forEach(card => {
                 const titulo = card.querySelector("h3") ? card.querySelector("h3").textContent.toLowerCase() : "";
@@ -294,5 +292,6 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         });
     }
-});
-</script>
+});</script>
+</body>
+</html>
