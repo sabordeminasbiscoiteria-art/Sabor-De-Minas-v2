@@ -79,9 +79,8 @@
   <div class="topo-filtros">
 
     <div class="barra-pesquisa">
-        <i class="fa-solid fa-magnifying-glass"></i>
-        <input id="pesquisa" type="text" placeholder="Pesquisar produtos...">
-        <button onclick="buscarNoCelular()" style="padding: 10px; margin-left: 5px;">Buscar</button>
+    <input id="pesquisa" type="text" placeholder="Pesquisar produtos...">
+    <button onclick="buscarNoCelular()" style="padding: 10px 15px; margin-left: 5px; cursor: pointer;">Buscar</button>
 </div>
 
   <div class="filtros-categorias">
@@ -279,6 +278,9 @@
         const cards = document.querySelectorAll(".produto");
         const termo = inputBusca.value.toLowerCase().trim();
 
+        // Fecha o teclado virtual do celular para liberar a tela
+        inputBusca.blur();
+
         cards.forEach(card => {
             const titulo = card.querySelector("h3") ? card.querySelector("h3").textContent.toLowerCase() : "";
             const descricao = card.querySelector("p") ? card.querySelector("p").textContent.toLowerCase() : "";
@@ -290,6 +292,18 @@
             }
         });
     }
+
+    // Permite buscar também apertando "Enter" no teclado do celular
+    document.addEventListener("DOMContentLoaded", function () {
+        const inputBusca = document.getElementById("pesquisa");
+        if (inputBusca) {
+            inputBusca.addEventListener("keypress", function(event) {
+                if (event.key === "Enter") {
+                    buscarNoCelular();
+                }
+            });
+        }
+    });
 </script>
 </body>
 </html>
