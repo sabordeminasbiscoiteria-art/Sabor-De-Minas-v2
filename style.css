@@ -1821,4 +1821,18 @@ footer{
         border-radius: 15px !important;
     }
 }
+@media (max-width: 768px) {
+    /* Remove qualquer espaçamento da onda decorativa no rodapé */
+    .onda-footer {
+        line-height: 0 !important;
+        font-size: 0 !important;
+        margin-bottom: 0 !important;
+        padding-bottom: 0 !important;
+    }
+
+    .onda-footer svg {
+        display: block !important;
+        margin-bottom: -5px !important; /* Corrige a brecha natural de imagens/SVGs */
+    }
+}
     
