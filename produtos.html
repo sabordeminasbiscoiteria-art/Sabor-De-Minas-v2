@@ -272,9 +272,10 @@
         </div>
     </footer>
 
-    <script src="script.js">document.addEventListener("DOMContentLoaded", function () {
+    <script>
+document.addEventListener("DOMContentLoaded", function () {
     const inputBusca = document.getElementById("pesquisa") || document.querySelector(".barra-pesquisa input");
-    const cards = document.querySelectorAll(".produto, .item-produto");
+    const cards = document.querySelectorAll(".produto-card, .produto, .item-produto, .card");
 
     if (inputBusca) {
         inputBusca.addEventListener("input", function (e) {
@@ -285,13 +286,14 @@
                 const descricao = card.querySelector("p") ? card.querySelector("p").textContent.toLowerCase() : "";
 
                 if (titulo.includes(termo) || descricao.includes(termo)) {
-                    card.style.display = "flex";
+                    card.style.display = ""; // Deixa o CSS original controlar (evita quebrar grid/flex)
                 } else {
                     card.style.display = "none";
                 }
             });
         });
     }
-});</script>
+});
+</script>
 </body>
 </html>
