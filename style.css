@@ -1540,18 +1540,29 @@ footer{
         padding: 6px 12px !important;
         min-height: auto !important;
     }
-    
-    /* Posiciona a barra de pesquisa logo abaixo */
-    .barra-pesquisa {
-        width: 100% !important;
-        display: flex !important;
-        justify-content: center !important;
-    }
+   /* Posiciona e formata a barra de pesquisa perfeitamente no celular */
+.barra-pesquisa {
+    width: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    margin-bottom: 0 !important;
+    position: relative !important;
+    z-index: 9999 !important;
+    pointer-events: auto !important;
+}
 
-    /* Deixa o input de pesquisa mais compacto e próximo */
-    .barra-pesquisa {
-        margin-bottom: 0 !important;
-    }
+/* Garante que o campo de texto aceite o toque e digite no celular */
+.barra-pesquisa input {
+    width: 90% !important;
+    max-width: 100% !important;
+    pointer-events: auto !important;
+    touch-action: manipulation !important;
+    -webkit-appearance: none !important;
+    appearance: none !important;
+    position: relative !important;
+    z-index: 10000 !important;
+   }
 }
 /* ==========================================
    AJUSTE PROFISSIONAL: CARDS COMPACTOS EM 2 COLUNAS
@@ -1838,19 +1849,4 @@ footer{
 
 footer {
     margin-top: 20px !important;
-}
-@media (max-width: 768px) {
-    /* Garante que a barra de pesquisa receba o toque e clique no celular */
-    .barra-pesquisa {
-        position: relative !important;
-        z-index: 9999 !important;
-        pointer-events: auto !important;
-    }
-
-    .barra-pesquisa input {
-        position: relative !important;
-        z-index: 10000 !important;
-        pointer-events: auto !important;
-        touch-action: manipulation !important;
-    }
 }
