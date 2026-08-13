@@ -1767,8 +1767,9 @@ footer{
         margin-top: -30px !important;
         margin-bottom: 10px !important;
     }
-
-    /* === PÁGINA CONTATO: MESMA ALTURA DE TOPO === */
+}
+@media (max-width: 768px) {
+    /* === PÁGINA CONTATO: TOPO E ALINHAMENTO === */
     .contato-pagina {
         padding-top: 35px !important; 
     }
@@ -1776,5 +1777,48 @@ footer{
     .contato-pagina .titulo-pagina {
         margin-top: 0 !important;
         padding-top: 0 !important;
+        text-align: center !important;
+    }
+
+    /* Centraliza o card de informações e alinha os itens corretamente */
+    .contato-box {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        padding: 15px !important;
+    }
+
+    .info-contato {
+        width: 100% !important;
+        max-width: 100% !important;
+        text-align: left !important;
+        padding: 10px !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Ajusta os botões de ação para ficarem centralizados e proporcionais */
+    .info-contato a {
+        display: block !important;
+        width: 90% !important;
+        margin: 10px auto !important;
+        text-align: center !important;
+    }
+
+    /* === MAPA: PROPORCIONAL E BONITO === */
+    .mapa {
+        width: 100% !important;
+        display: flex !important;
+        justify-content: center !important;
+        margin-top: 20px !important;
+        padding: 0 10px !important;
+        box-sizing: border-box !important;
+    }
+
+    .mapa iframe {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: 280px !important; /* Altura fixa ideal para celular não ficar gigante */
+        border-radius: 15px !important;
     }
 }
+    
