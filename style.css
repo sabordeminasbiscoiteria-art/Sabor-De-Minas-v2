@@ -1851,7 +1851,3 @@ footer{
 footer {
     margin-top: 20px !important;
 }
-/* Classe limpa para esconder o produto sem conflito no celular */
-.produto.escondido {
-    display: none !important;
-}
