@@ -1563,10 +1563,6 @@ footer{
     position: relative !important;
     z-index: 10000 !important;
    }
-   /* Classe utilitária para o JS esconder o produto sem brigar com o grid */
-.produto.escondido {
-    display: none !important;
-   }
 }
 
 /* ==========================================
