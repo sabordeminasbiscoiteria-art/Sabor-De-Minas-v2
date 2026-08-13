@@ -272,25 +272,29 @@
         </div>
     </footer>
 
-    <script>
+   <script>
 document.addEventListener("DOMContentLoaded", function () {
     const inputBusca = document.getElementById("pesquisa");
-    const containerProdutos = document.querySelector(".produtos-cards");
+    const cards = document.querySelectorAll(".produto");
 
-    if (inputBusca && containerProdutos) {
-        inputBusca.addEventListener("input", function (e) {
-            const termo = e.target.value.toLowerCase().trim();
-            const cards = containerProdutos.children; // Pega todos os itens dentro da div pai
+    if (inputBusca && cards.length > 0) {
+        function filtrar() {
+            const termo = inputBusca.value.toLowerCase().trim();
 
-            for (let card of cards) {
-                const texto = card.textContent.toLowerCase();
-                if (texto.includes(termo)) {
-                    card.style.display = ""; // Mostra
+            cards.forEach(card => {
+                const titulo = card.querySelector("h3") ? card.querySelector("h3").textContent.toLowerCase() : "";
+                const descricao = card.querySelector("p") ? card.querySelector("p").textContent.toLowerCase() : "";
+
+                if (titulo.includes(termo) || descricao.includes(termo)) {
+                    card.style.display = "flex"; // Mantém o flex que o seu card usa originalmente
                 } else {
                     card.style.display = "none"; // Esconde
                 }
-            }
-        });
+            });
+        }
+
+        inputBusca.addEventListener("input", filtrar);
+        inputBusca.addEventListener("keyup", filtrar);
     }
 });
 </script>
