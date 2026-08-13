@@ -279,24 +279,26 @@
         const termo = inputBusca.value.toLowerCase().trim();
 
         // Fecha o teclado virtual do celular para liberar a tela
-        inputBusca.blur();
+        if (inputBusca) inputBusca.blur();
 
         cards.forEach(card => {
             const titulo = card.querySelector("h3") ? card.querySelector("h3").textContent.toLowerCase() : "";
             const descricao = card.querySelector("p") ? card.querySelector("p").textContent.toLowerCase() : "";
             
+            // Se achar o termo, remove a classe que esconde. Se não, adiciona.
             if (titulo.includes(termo) || descricao.includes(termo)) {
-                card.style.display = ""; 
+                card.classList.remove("escondido");
             } else {
-                card.style.display = "none";
+                card.classList.add("escondido");
             }
         });
     }
 
-    // Permite buscar também apertando "Enter" no teclado do celular
+    // Aciona a busca tanto ao digitar quanto ao apertar Enter ou clicar no botão
     document.addEventListener("DOMContentLoaded", function () {
         const inputBusca = document.getElementById("pesquisa");
         if (inputBusca) {
+            inputBusca.addEventListener("input", buscarNoCelular);
             inputBusca.addEventListener("keypress", function(event) {
                 if (event.key === "Enter") {
                     buscarNoCelular();
