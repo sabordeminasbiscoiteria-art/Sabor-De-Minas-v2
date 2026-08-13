@@ -81,7 +81,8 @@
     <div class="barra-pesquisa">
         <i class="fa-solid fa-magnifying-glass"></i>
         <input id="pesquisa" type="text" placeholder="Pesquisar produtos...">
-    </div>
+        <button onclick="buscarNoCelular()" style="padding: 10px; margin-left: 5px;">Buscar</button>
+</div>
 
   <div class="filtros-categorias">
 
@@ -273,28 +274,22 @@
     </footer>
 
 <script>
-    document.addEventListener("DOMContentLoaded", function () {
+    function buscarNoCelular() {
         const inputBusca = document.getElementById("pesquisa");
         const cards = document.querySelectorAll(".produto");
+        const termo = inputBusca.value.toLowerCase().trim();
 
-        if (inputBusca) {
-            inputBusca.addEventListener("input", function() {
-                const termo = inputBusca.value.toLowerCase().trim();
-                
-                cards.forEach(card => {
-                    const titulo = card.querySelector("h3") ? card.querySelector("h3").textContent.toLowerCase() : "";
-                    const descricao = card.querySelector("p") ? card.querySelector("p").textContent.toLowerCase() : "";
-                    
-                    // Se o termo bater, removemos o display none para o grid assumir. Se não, escondemos.
-                    if (titulo.includes(termo) || descricao.includes(termo)) {
-                        card.style.display = ""; 
-                    } else {
-                        card.style.display = "none";
-                    }
-                });
-            });
-        }
-    });
+        cards.forEach(card => {
+            const titulo = card.querySelector("h3") ? card.querySelector("h3").textContent.toLowerCase() : "";
+            const descricao = card.querySelector("p") ? card.querySelector("p").textContent.toLowerCase() : "";
+            
+            if (titulo.includes(termo) || descricao.includes(termo)) {
+                card.style.display = ""; 
+            } else {
+                card.style.display = "none";
+            }
+        });
+    }
 </script>
 </body>
 </html>
