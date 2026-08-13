@@ -273,20 +273,21 @@
     </footer>
 
 <script>
-    // 1. Testa se o JS está rodando
     document.addEventListener("DOMContentLoaded", function () {
-        document.querySelector("h1").style.color = "red"; // Se ficar vermelho, o JS funciona!
-        
         const inputBusca = document.getElementById("pesquisa");
         const cards = document.querySelectorAll(".produto");
 
         if (inputBusca) {
             inputBusca.addEventListener("input", function() {
                 const termo = inputBusca.value.toLowerCase().trim();
+                
                 cards.forEach(card => {
                     const titulo = card.querySelector("h3") ? card.querySelector("h3").textContent.toLowerCase() : "";
-                    if (titulo.includes(termo)) {
-                        card.style.display = "block"; // Força o display
+                    const descricao = card.querySelector("p") ? card.querySelector("p").textContent.toLowerCase() : "";
+                    
+                    // Se o termo bater, removemos o display none para o grid assumir. Se não, escondemos.
+                    if (titulo.includes(termo) || descricao.includes(termo)) {
+                        card.style.display = ""; 
                     } else {
                         card.style.display = "none";
                     }
