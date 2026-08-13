@@ -277,23 +277,18 @@
         const inputBusca = document.getElementById("pesquisa");
         const cards = document.querySelectorAll(".produto");
 
-        // TESTE PARA VER SE ENCONTROU OS CARDS
-        console.log("Total de produtos encontrados:", cards.length);
-
         if (inputBusca) {
             inputBusca.addEventListener("input", function (e) {
                 const termo = e.target.value.toLowerCase().trim();
-                console.log("Termo digitado:", termo);
 
                 cards.forEach(card => {
-                    const h3 = card.querySelector("h3");
-                    const titulo = h3 ? h3.textContent.toLowerCase() : "";
-                    console.log("Título do produto lido:", titulo);
+                    const titulo = card.querySelector("h3") ? card.querySelector("h3").textContent.toLowerCase() : "";
+                    const descricao = card.querySelector("p") ? card.querySelector("p").textContent.toLowerCase() : "";
                     
-                    if (titulo.includes(termo)) {
-                        card.classList.remove("escondido");
+                    if (titulo.includes(termo) || descricao.includes(termo)) {
+                        card.style.display = ""; // Reseta para o padrão do grid
                     } else {
-                        card.classList.add("escondido");
+                        card.style.display = "none"; // Força o sumiço direto no elemento
                     }
                 });
             });
