@@ -273,12 +273,12 @@
     </footer>
 
    <script>
-document.addEventListener("DOMContentLoaded", function () {
+window.addEventListener("load", function () {
     const inputBusca = document.getElementById("pesquisa");
     const cards = document.querySelectorAll(".produto");
 
-    if (inputBusca && cards.length > 0) {
-        function filtrar() {
+    if (inputBusca) {
+        function executarBusca() {
             const termo = inputBusca.value.toLowerCase().trim();
 
             cards.forEach(card => {
@@ -286,15 +286,18 @@ document.addEventListener("DOMContentLoaded", function () {
                 const descricao = card.querySelector("p") ? card.querySelector("p").textContent.toLowerCase() : "";
 
                 if (titulo.includes(termo) || descricao.includes(termo)) {
-                    card.style.display = "flex"; // Mantém o flex que o seu card usa originalmente
+                    card.style.display = "flex";
                 } else {
-                    card.style.display = "none"; // Esconde
+                    card.style.display = "none";
                 }
             });
         }
 
-        inputBusca.addEventListener("input", filtrar);
-        inputBusca.addEventListener("keyup", filtrar);
+        // Eventos múltiplos para garantir compatibilidade com Android e iOS
+        inputBusca.addEventListener("input", executarBusca);
+        inputBusca.addEventListener("keyup", executarBusca);
+        inputBusca.addEventListener("search", executarBusca);
+        inputBusca.addEventListener("change", executarBusca);
     }
 });
 </script>
