@@ -1553,21 +1553,6 @@ footer{
         margin-bottom: 0 !important;
     }
 }
-@media (max-width: 768px) {
-    /* Garante que a barra de pesquisa receba o toque e clique no celular */
-    .barra-pesquisa {
-        position: relative !important;
-        z-index: 9999 !important;
-        pointer-events: auto !important;
-    }
-
-    .barra-pesquisa input {
-        position: relative !important;
-        z-index: 10000 !important;
-        pointer-events: auto !important;
-        touch-action: manipulation !important;
-    }
-}
 /* ==========================================
    AJUSTE PROFISSIONAL: CARDS COMPACTOS EM 2 COLUNAS
    ========================================== */
@@ -1853,4 +1838,19 @@ footer{
 
 footer {
     margin-top: 20px !important;
+}
+@media (max-width: 768px) {
+    /* Garante que a barra de pesquisa receba o toque e clique no celular */
+    .barra-pesquisa {
+        position: relative !important;
+        z-index: 9999 !important;
+        pointer-events: auto !important;
+    }
+
+    .barra-pesquisa input {
+        position: relative !important;
+        z-index: 10000 !important;
+        pointer-events: auto !important;
+        touch-action: manipulation !important;
+    }
 }
