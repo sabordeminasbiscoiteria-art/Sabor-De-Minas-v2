@@ -277,28 +277,30 @@ document.addEventListener("DOMContentLoaded", function () {
     const inputBusca = document.getElementById("pesquisa");
     const cards = document.querySelectorAll(".produto, .item-produto");
 
-    inputBusca.addEventListener("input", function() {
-        const termo = this.value.toLowerCase().trim();
+    function filtrar() {
+        const termo = inputBusca.value.toLowerCase().trim();
         
         cards.forEach(card => {
             const texto = card.innerText.toLowerCase();
             
             if (termo === "" || texto.includes(termo)) {
-                // Remove qualquer trava que o CSS possa ter colocado
+                // Mostra o card usando o padrão do seu CSS (vazio faz o grid assumir)
+                card.style.display = ""; 
                 card.style.visibility = "visible";
                 card.style.opacity = "1";
-                card.style.height = "auto";
-                card.style.marginTop = "10px";
             } else {
-                // Esconde de forma que nenhum CSS mobile consiga mostrar
+                // Esconde totalmente e remove o espaço da tela para não deixar buracos
+                card.style.display = "none"; 
                 card.style.visibility = "hidden";
                 card.style.opacity = "0";
-                card.style.height = "0";
-                card.style.marginTop = "0";
-                card.style.overflow = "hidden";
             }
         });
-    });
+    }
+
+    if (inputBusca) {
+        inputBusca.addEventListener("input", filtrar);
+        inputBusca.addEventListener("keyup", filtrar);
+    }
 });
 </script>
 </body>
