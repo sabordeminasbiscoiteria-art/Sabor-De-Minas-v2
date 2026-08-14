@@ -280,16 +280,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function filtrar() {
         const termo = inputBusca.value.toLowerCase().trim();
-        let contadorVisiveis = 0;
         
         cards.forEach(card => {
             const texto = card.innerText.toLowerCase();
             
             if (termo === "" || texto.includes(termo)) {
-                card.style.display = ""; 
+                card.style.display = "flex"; 
                 card.style.visibility = "visible";
                 card.style.opacity = "1";
-                contadorVisiveis++;
+                card.style.minWidth = "150px";
             } else {
                 card.style.display = "none"; 
                 card.style.visibility = "hidden";
@@ -297,17 +296,19 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
 
-        // Se o usuário digitou algo, força o container a aceitar o grid de 2 colunas lado a lado
+        // Anula o carrossel do CSS mobile durante a busca e organiza em grade perfeita
         if (containerCards) {
             if (termo !== "") {
-                containerCards.style.display = "grid";
-                containerCards.style.gridTemplateColumns = "repeat(2, 1fr)";
-                containerCards.style.gap = "15px";
+                containerCards.style.setProperty("display", "grid", "important");
+                containerCards.style.setProperty("grid-template-columns", "repeat(2, 1fr)", "important");
+                containerCards.style.setProperty("gap", "12px", "important");
+                containerCards.style.setProperty("overflow-x", "visible", "important");
             } else {
-                // Se apagar a busca, volta exatamente ao grid original do seu site
-                containerCards.style.display = "";
-                containerCards.style.gridTemplateColumns = "";
-                containerCards.style.gap = "";
+                // Restaura o layout original do celular quando apagar a busca
+                containerCards.style.removeProperty("display");
+                containerCards.style.removeProperty("grid-template-columns");
+                containerCards.style.removeProperty("gap");
+                containerCards.style.removeProperty("overflow-x");
             }
         }
     }
