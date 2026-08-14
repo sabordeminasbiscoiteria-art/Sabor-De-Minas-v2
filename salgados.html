@@ -269,24 +269,32 @@
     
 <script>
 document.addEventListener("DOMContentLoaded", function () {
-    const inputBusca = document.getElementById('pesquisa') || document.querySelector(".barra-pesquisa input");
-    const cards = document.querySelectorAll(".produtos-cards .produto, .produtos-cards .item-produto");
+    const inputBusca = document.getElementById("pesquisa");
+    // Pega qualquer elemento que tenha a classe produto ou item-produto em qualquer lugar da página
+    const cards = document.querySelectorAll(".produto, .item-produto");
 
     if (inputBusca) {
-        inputBusca.addEventListener("input", function () {
-            const termo = this.value.toLowerCase().trim();
+        // Usamos tanto 'input' quanto 'keyup' para garantir que o celular capture o toque
+        inputBusca.addEventListener("input", executarBusca);
+        inputBusca.addEventListener("keyup", executarBusca);
+
+        function executarBusca() {
+            const termo = inputBusca.value.toLowerCase().trim();
 
             cards.forEach(card => {
-                const titulo = card.querySelector("h3") ? card.querySelector("h3").textContent.toLowerCase() : "";
-                const descricao = card.querySelector("p") ? card.querySelector("p").textContent.toLowerCase() : "";
+                const tituloElem = card.querySelector("h3") || card.querySelector("h2") || card.querySelector(".titulo-produto");
+                const descElem = card.querySelector("p") || card.querySelector(".descricao");
 
-                if (titulo.includes(termo) || descricao.includes(termo)) {
-                    card.style.display = "flex";
+                const titulo = tituloElem ? tituloElem.textContent.toLowerCase() : "";
+                const descricao = descElem ? descElem.textContent.toLowerCase() : "";
+
+                if (termo === "" || titulo.includes(termo) || descricao.includes(termo)) {
+                    card.style.display = ""; // Deixa o CSS original mandar
                 } else {
-                    card.style.display = "none";
+                    card.style.display = "none"; // Esconde
                 }
             });
-        });
+        }
     }
 });
 </script>
