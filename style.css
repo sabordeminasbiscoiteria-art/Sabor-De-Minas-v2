@@ -1563,63 +1563,6 @@ footer{
     position: relative !important;
     z-index: 10000 !important;
    }
-
-/* Container da barra de pesquisa profissional */
-.barra-pesquisa {
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    gap: 12px !important;
-    max-width: 600px !important;
-    margin: 0 auto 15px auto !important;
-    padding: 0 15px !important;
-}
-
-/* Campo de input com cara de aplicativo moderno */
-.barra-pesquisa input {
-    flex: 1 !important;
-    width: 100% !important;
-    padding: 14px 20px !important;
-    background-color: #ffffff !important;
-    border: 2px solid #eaeaea !important;
-    border-radius: 50px !important;
-    font-size: 15px !important;
-    color: #333333 !important;
-    outline: none !important;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03) !important;
-    transition: all 0.3s ease !important;
-}
-
-/* Efeito ao clicar para digitar */
-.barra-pesquisa input:focus {
-    border-color: #d4a373 !important;
-    box-shadow: 0 4px 15px rgba(212, 163, 115, 0.25) !important;
-}
-
-/* Botão Buscar com acabamento profissional */
-.barra-pesquisa button {
-    flex-shrink: 0 !important;
-    padding: 14px 28px !important;
-    background: linear-gradient(135deg, #d4a373, #bc8a5f) !important;
-    color: #ffffff !important;
-    border: none !important;
-    border-radius: 50px !important;
-    font-size: 15px !important;
-    font-weight: 600 !important;
-    cursor: pointer !important;
-    box-shadow: 0 4px 12px rgba(212, 163, 115, 0.3) !important;
-    transition: all 0.3s ease !important;
-}
-
-/* Efeito ao passar o mouse ou tocar no botão */
-.barra-pesquisa button:hover {
-    transform: translateY(-1px) !important;
-    box-shadow: 0 6px 16px rgba(212, 163, 115, 0.4) !important;
-}
-
-.barra-pesquisa button:active {
-    transform: translateY(1px) !important;
-}
 }
 /* ==========================================
    AJUSTE PROFISSIONAL: CARDS COMPACTOS EM 2 COLUNAS
