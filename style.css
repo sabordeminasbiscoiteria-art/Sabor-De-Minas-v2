@@ -1563,6 +1563,26 @@ footer{
     position: relative !important;
     z-index: 10000 !important;
    }
+   /* Deixa a barra e o botão delicados e proporcionais no celular */
+.barra-pesquisa {
+    max-width: 420px !important;
+    margin: 0 auto 10px auto !important;
+    padding: 0 10px !important;
+}
+
+.barra-pesquisa input {
+    height: 38px !important;
+    padding: 0 12px 0 35px !important; /* Espaço para a lupa */
+    font-size: 13px !important;
+    border-radius: 20px !important;
+}
+
+.barra-pesquisa button {
+    height: 38px !important;
+    padding: 0 16px !important;
+    font-size: 13px !important;
+    border-radius: 20px !important;
+  }
 }
 /* ==========================================
    AJUSTE PROFISSIONAL: CARDS COMPACTOS EM 2 COLUNAS
