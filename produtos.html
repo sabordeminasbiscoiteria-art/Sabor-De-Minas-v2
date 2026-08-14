@@ -275,38 +275,27 @@
 <script>
 document.addEventListener("DOMContentLoaded", function () {
     const inputBusca = document.getElementById("pesquisa");
-    const cards = document.querySelectorAll(".produto, .item-produto");
-    // Pega o container pai que segura todos os produtos (ajuste a classe se necessário)
-    const containerCards = document.querySelector(".produtos-cards") || cards[0].parentElement;
+    const cards = document.querySelectorAll(".produtos-cards .produto, .produtos-cards .item-produto, .produto, .item-produto");
 
     function filtrar() {
         const termo = inputBusca.value.toLowerCase().trim();
-        let encontrados = 0;
         
         cards.forEach(card => {
             const texto = card.innerText.toLowerCase();
             
             if (termo === "" || texto.includes(termo)) {
-                card.style.display = "block";
-                card.style.width = "48%"; // Divide a largura para caberem dois lado a lado
-                card.style.margin = "1%";
-                encontrados++;
+                // Deixa o card visível e limpa o estilo inline para o grid do CSS mandar
+                card.style.display = ""; 
+                card.style.visibility = "visible";
+                card.style.opacity = "1";
+                card.style.width = "";
             } else {
-                card.style.display = "none";
+                // Esconde o card totalmente
+                card.style.display = "none"; 
+                card.style.visibility = "hidden";
+                card.style.opacity = "0";
             }
         });
-
-        // Se houver busca ativa, força o container a aceitar os itens lado a lado
-        if (containerCards && termo !== "") {
-            containerCards.style.display = "flex";
-            containerCards.style.flexWrap = "wrap";
-            containerCards.style.justifyContent = "space-between";
-        } else if (containerCards) {
-            // Se limpar a busca, volta ao layout original do seu site
-            containerCards.style.display = "";
-            containerCards.style.flexWrap = "";
-            containerCards.style.justifyContent = "";
-        }
     }
 
     if (inputBusca) {
