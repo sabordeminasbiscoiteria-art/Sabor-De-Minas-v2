@@ -272,23 +272,25 @@ document.addEventListener("DOMContentLoaded", function () {
     const inputBusca = document.getElementById("pesquisa");
     const cards = document.querySelectorAll(".produto, .item-produto");
 
-    inputBusca.addEventListener("input", function() {
+    function filtrarProdutos() {
         const termo = inputBusca.value.toLowerCase().trim();
-        
+
         cards.forEach(card => {
-            const titulo = card.querySelector("h3") ? card.querySelector("h3").textContent.toLowerCase() : "";
-            
-            // Em vez de mudar o display, vamos usar opacidade e visibilidade
-            if (titulo.includes(termo)) {
-                card.style.opacity = "1";
-                card.style.pointerEvents = "auto";
-                card.style.position = "relative";
+            // Pega todo o texto de dentro do card de uma vez só
+            const textoCard = card.innerText.toLowerCase();
+
+            // Se o termo estiver vazio ou o card contiver o texto digitado
+            if (termo === "" || textoCard.includes(termo)) {
+                card.style.display = ""; // Mostra o card
             } else {
-                card.style.opacity = "0";
-                card.style.pointerEvents = "none";
-                card.style.position = "absolute"; // Tira o espaço dele na tela
+                card.style.display = "none"; // Esconde o card que não tem relação
             }
         });
-    });
+    }
+
+    if (inputBusca) {
+        inputBusca.addEventListener("input", filtrarProdutos);
+        inputBusca.addEventListener("keyup", filtrarProdutos);
+    }
 });
 </script>
