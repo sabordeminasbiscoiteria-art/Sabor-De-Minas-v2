@@ -1563,6 +1563,56 @@ footer{
     position: relative !important;
     z-index: 10000 !important;
    }
+/* Container da barra de pesquisa minimalista e profissional */
+.barra-pesquisa {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 10px !important;
+    max-width: 580px !important;
+    margin: 0 auto 20px auto !important;
+    padding: 0 15px !important;
+}
+
+/* Campo de input limpo, estilo portal corporativo */
+.barra-pesquisa input {
+    flex: 1 !important;
+    width: 100% !important;
+    padding: 12px 18px !important;
+    background-color: #f8f9fa !important; /* Fundo cinza bem claro e neutro */
+    border: 1px solid #ced4da !important; /* Borda fina e discreta */
+    border-radius: 8px !important; /* Cantos levemente arredondados (estilo moderno tech) */
+    font-size: 14px !important;
+    color: #495057 !important;
+    outline: none !important;
+    transition: all 0.2s ease !important;
+}
+
+/* Foco sutil, apenas escurecendo a borda sem chamar atenção */
+.barra-pesquisa input:focus {
+    background-color: #ffffff !important;
+    border-color: #6c757d !important;
+    box-shadow: 0 0 0 3px rgba(108, 117, 125, 0.1) !important;
+}
+
+/* Botão discreto, fosco e sóbrio */
+.barra-pesquisa button {
+    flex-shrink: 0 !important;
+    padding: 12px 22px !important;
+    background-color: #343a40 !important; /* Cinza chumbo escuro / quase preto profissional */
+    color: #ffffff !important;
+    border: 1px solid #343a40 !important;
+    border-radius: 8px !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    cursor: pointer !important;
+    transition: background-color 0.2s ease !important;
+}
+
+/* Efeito leve ao passar o mouse */
+.barra-pesquisa button:hover {
+    background-color: #212529 !important;
+}
 }
 /* ==========================================
    AJUSTE PROFISSIONAL: CARDS COMPACTOS EM 2 COLUNAS
