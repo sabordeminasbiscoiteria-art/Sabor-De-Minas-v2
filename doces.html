@@ -78,10 +78,11 @@
 
   <div class="topo-filtros">
 
-    <div class="barra-pesquisa">
-        <i class="fa-solid fa-magnifying-glass"></i>
-        <input id="pesquisa" type="text" placeholder="Pesquisar produtos...">
-    </div>
+    div class="barra-pesquisa">
+    <input id="pesquisa" type="text" placeholder="Pesquisar produtos...">
+    <button onclick="buscarNoCelular()" style="padding: 10px 15px; margin-left: 5px; cursor: pointer;">Buscar</button>
+</div>
+
 
    <div class="filtros-categorias">
 
@@ -269,24 +270,52 @@
     
 <script>
 document.addEventListener("DOMContentLoaded", function () {
-    const inputBusca = document.getElementById('pesquisa') || document.querySelector(".barra-pesquisa input");
-    const cards = document.querySelectorAll(".produtos-cards .produto, .produtos-cards .item-produto");
+    const inputBusca = document.getElementById("pesquisa");
+    const cards = document.querySelectorAll(".produto, .item-produto");
+
+    function puxarProduto() {
+        const termo = inputBusca.value.toLowerCase().trim();
+        
+        if (termo === "") return; // Se apagar a busca, não faz nada
+
+        cards.forEach(card => {
+            const texto = card.innerText.toLowerCase();
+            
+            // Remove destaque anterior de todos
+            card.style.border = "";
+            card.style.boxShadow = "";
+            card.style.transform = "";
+
+            // Se o card contém o que você digitou
+            if (texto.includes(termo)) {
+                // Rrola a tela suavemente até o produto exato
+                card.scrollIntoView({ behavior: "smooth", block: "center" });
+                
+                // Dá um destaque visual profissional (borda e brilho) no produto encontrado
+                card.style.border = "2px solid #d4a373";
+                card.style.boxShadow = "0 0 15px rgba(212, 163, 115, 0.8)";
+                card.style.transition = "all 0.3s ease";
+            }
+        });
+    }
 
     if (inputBusca) {
-        inputBusca.addEventListener("input", function () {
-            const termo = this.value.toLowerCase().trim();
+        inputBusca.addEventListener("keyup", function(event) {
+            if (event.key === "Enter") {
+                puxarProduto();
+            }
+        });
+    }
 
-            cards.forEach(card => {
-                const titulo = card.querySelector("h3") ? card.querySelector("h3").textContent.toLowerCase() : "";
-                const descricao = card.querySelector("p") ? card.querySelector("p").textContent.toLowerCase() : "";
-
-                if (titulo.includes(termo) || descricao.includes(termo)) {
-                    card.style.display = "flex";
-                } else {
-                    card.style.display = "none";
-                }
-            });
+    // Se tiver o botão "Buscar", vincula ele também
+    const botaoBuscar = document.querySelector("button");
+    if (botaoBuscar) {
+        botaoBuscar.addEventListener("click", function(e) {
+            e.preventDefault();
+            puxarProduto();
         });
     }
 });
 </script>
+</body>
+</html>
