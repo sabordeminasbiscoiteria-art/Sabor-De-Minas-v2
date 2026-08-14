@@ -270,31 +270,25 @@
 <script>
 document.addEventListener("DOMContentLoaded", function () {
     const inputBusca = document.getElementById("pesquisa");
-    // Pega qualquer elemento que tenha a classe produto ou item-produto em qualquer lugar da página
     const cards = document.querySelectorAll(".produto, .item-produto");
 
-    if (inputBusca) {
-        // Usamos tanto 'input' quanto 'keyup' para garantir que o celular capture o toque
-        inputBusca.addEventListener("input", executarBusca);
-        inputBusca.addEventListener("keyup", executarBusca);
-
-        function executarBusca() {
-            const termo = inputBusca.value.toLowerCase().trim();
-
-            cards.forEach(card => {
-                const tituloElem = card.querySelector("h3") || card.querySelector("h2") || card.querySelector(".titulo-produto");
-                const descElem = card.querySelector("p") || card.querySelector(".descricao");
-
-                const titulo = tituloElem ? tituloElem.textContent.toLowerCase() : "";
-                const descricao = descElem ? descElem.textContent.toLowerCase() : "";
-
-                if (termo === "" || titulo.includes(termo) || descricao.includes(termo)) {
-                    card.style.display = ""; // Deixa o CSS original mandar
-                } else {
-                    card.style.display = "none"; // Esconde
-                }
-            });
-        }
-    }
+    inputBusca.addEventListener("input", function() {
+        const termo = inputBusca.value.toLowerCase().trim();
+        
+        cards.forEach(card => {
+            const titulo = card.querySelector("h3") ? card.querySelector("h3").textContent.toLowerCase() : "";
+            
+            // Em vez de mudar o display, vamos usar opacidade e visibilidade
+            if (titulo.includes(termo)) {
+                card.style.opacity = "1";
+                card.style.pointerEvents = "auto";
+                card.style.position = "relative";
+            } else {
+                card.style.opacity = "0";
+                card.style.pointerEvents = "none";
+                card.style.position = "absolute"; // Tira o espaço dele na tela
+            }
+        });
+    });
 });
 </script>
