@@ -1554,61 +1554,44 @@ footer{
     padding: 0 10px !important;
 }
 
-/* Cria a lupa preta profissional em vetor */
-.barra-pesquisa::before {
-    content: "";
-    position: absolute;
-    left: 22px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 12px;
-    height: 12px;
-    border: 2px solid #333333;
-    border-radius: 50%;
-    pointer-events: none;
-    z-index: 10001;
+/* Container da barra de pesquisa */
+.barra-pesquisa {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 8px !important;
+    max-width: 400px !important;
+    margin: 20px auto 15px auto !important;
+    padding: 0 10px !important;
 }
 
-.barra-pesquisa::after {
-    content: "";
-    position: absolute;
-    left: 31px;
-    top: calc(50% + 4px);
-    width: 5px;
-    height: 2px;
-    background-color: #333333;
-    transform: rotate(45deg);
-    pointer-events: none;
-    z-index: 10001;
-}
-
-/* Garante que o campo de texto aceite o toque e fique delicado */
+/* Caixa de texto fina, delicada e alinhada */
 .barra-pesquisa input {
-    width: 90% !important;
-    max-width: 100% !important;
+    flex: 1 !important;
     height: 38px !important;
-    padding: 0 15px 0 38px !important; /* Espaço exato para a lupa não colar no texto */
+    padding: 0 15px !important;
     font-size: 13px !important;
+    border: 1px solid #dcdcdc !important;
     border-radius: 20px !important;
-    background-image: none !important;
-    pointer-events: auto !important;
-    touch-action: manipulation !important;
-    -webkit-appearance: none !important;
-    appearance: none !important;
-    position: relative !important;
-    z-index: 10000 !important;
-    border: 1px solid #ced4da !important;
+    background-color: #ffffff !important;
     outline: none !important;
 }
 
-/* Botão proporcional e delicado */
+.barra-pesquisa input:focus {
+    border-color: #d4a373 !important;
+}
+
+/* Botão Buscar delicado e proporcional */
 .barra-pesquisa button {
     height: 38px !important;
     padding: 0 16px !important;
     font-size: 13px !important;
+    font-weight: 500 !important;
+    background-color: #d4a373 !important;
+    color: #ffffff !important;
+    border: none !important;
     border-radius: 20px !important;
     cursor: pointer !important;
-    border: none !important;
   }
 }
 /* ==========================================
