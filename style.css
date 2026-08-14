@@ -1540,32 +1540,22 @@ footer{
         padding: 6px 12px !important;
         min-height: auto !important;
     }
-   /* Posiciona e formata a barra de pesquisa perfeitamente no celular */
+   /* Container da barra de pesquisa - Ocupa a largura toda */
 .barra-pesquisa {
-    width: 100% !important;
     display: flex !important;
-    justify-content: center !important;
     align-items: center !important;
+    justify-content: space-between !important;
+    gap: 8px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 20px 0 15px 0 !important;
+    padding: 0 15px !important;
+    box-sizing: border-box !important;
     position: relative !important;
     z-index: 9999 !important;
-    pointer-events: auto !important;
-    max-width: 420px !important;
-    margin: 25px auto 20px auto !important;
-    padding: 0 10px !important;
 }
 
-/* Container da barra de pesquisa */
-.barra-pesquisa {
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    gap: 8px !important;
-    max-width: 400px !important;
-    margin: 20px auto 15px auto !important;
-    padding: 0 10px !important;
-}
-
-/* Caixa de texto fina, delicada e alinhada */
+/* Caixa de texto */
 .barra-pesquisa input {
     flex: 1 !important;
     height: 38px !important;
@@ -1575,13 +1565,14 @@ footer{
     border-radius: 20px !important;
     background-color: #ffffff !important;
     outline: none !important;
+    min-width: 0 !important; /* Importante para não quebrar o layout */
 }
 
 .barra-pesquisa input:focus {
     border-color: #d4a373 !important;
 }
 
-/* Botão Buscar delicado e proporcional */
+/* Botão Buscar */
 .barra-pesquisa button {
     height: 38px !important;
     padding: 0 16px !important;
@@ -1592,6 +1583,7 @@ footer{
     border: none !important;
     border-radius: 20px !important;
     cursor: pointer !important;
+    flex-shrink: 0 !important; /* Garante que o botão não encolha */
   }
 }
 /* ==========================================
