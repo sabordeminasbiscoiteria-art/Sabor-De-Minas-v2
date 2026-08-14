@@ -1546,57 +1546,70 @@ footer{
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
-    margin-bottom: 0 !important;
     position: relative !important;
     z-index: 9999 !important;
     pointer-events: auto !important;
+    max-width: 420px !important;
+    margin: 25px auto 20px auto !important;
+    padding: 0 10px !important;
 }
 
-/* Garante que o campo de texto aceite o toque e digite no celular */
+/* Cria a lupa preta profissional em vetor */
+.barra-pesquisa::before {
+    content: "";
+    position: absolute;
+    left: 22px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 12px;
+    height: 12px;
+    border: 2px solid #333333;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 10001;
+}
+
+.barra-pesquisa::after {
+    content: "";
+    position: absolute;
+    left: 31px;
+    top: calc(50% + 4px);
+    width: 5px;
+    height: 2px;
+    background-color: #333333;
+    transform: rotate(45deg);
+    pointer-events: none;
+    z-index: 10001;
+}
+
+/* Garante que o campo de texto aceite o toque e fique delicado */
 .barra-pesquisa input {
     width: 90% !important;
     max-width: 100% !important;
+    height: 38px !important;
+    padding: 0 15px 0 38px !important; /* Espaço exato para a lupa não colar no texto */
+    font-size: 13px !important;
+    border-radius: 20px !important;
+    background-image: none !important;
     pointer-events: auto !important;
     touch-action: manipulation !important;
     -webkit-appearance: none !important;
     appearance: none !important;
     position: relative !important;
     z-index: 10000 !important;
-   }
-   /* Deixa a barra e o botão delicados e proporcionais no celular */
-.barra-pesquisa {
-    max-width: 420px !important;
-    margin: 0 auto 10px auto !important;
-    padding: 0 10px !important;
+    border: 1px solid #ced4da !important;
+    outline: none !important;
 }
 
-.barra-pesquisa input {
-    height: 38px !important;
-    padding: 0 15px !important; /* Remove o espaço excessivo */
-    font-size: 13px !important;
-    border-radius: 20px !important;
-    /* Remove qualquer ícone nativo indesejado do navegador */
-    background-image: none !important; 
-}
+/* Botão proporcional e delicado */
 .barra-pesquisa button {
     height: 38px !important;
     padding: 0 16px !important;
     font-size: 13px !important;
     border-radius: 20px !important;
+    cursor: pointer !important;
+    border: none !important;
   }
-  /* Afasta a barra para baixo, deixando mais espaçada do título */
-.barra-pesquisa {
-    margin-top: 25px !important;
-    margin-bottom: 20px !important;
-}
-.barra-pesquisa input {
-    height: 38px !important;
-    padding: 0 15px !important; /* Remove o espaço excessivo */
-    font-size: 13px !important;
-    border-radius: 20px !important;
-    /* Remove qualquer ícone nativo indesejado do navegador */
-    background-image: none !important; 
-}
 }
 /* ==========================================
    AJUSTE PROFISSIONAL: CARDS COMPACTOS EM 2 COLUNAS
