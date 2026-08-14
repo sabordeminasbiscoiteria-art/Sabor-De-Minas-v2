@@ -277,22 +277,28 @@ document.addEventListener("DOMContentLoaded", function () {
     const inputBusca = document.getElementById("pesquisa");
     const cards = document.querySelectorAll(".produto, .item-produto");
 
-    function filtrarProdutos() {
-        const termo = inputBusca.value.toLowerCase().trim();
+    inputBusca.addEventListener("input", function() {
+        const termo = this.value.toLowerCase().trim();
         
         cards.forEach(card => {
-            const textoCard = card.innerText.toLowerCase();
-            card.style.display = (termo === "" || textoCard.includes(termo)) ? "" : "none";
+            const texto = card.innerText.toLowerCase();
+            
+            if (termo === "" || texto.includes(termo)) {
+                // Remove qualquer trava que o CSS possa ter colocado
+                card.style.visibility = "visible";
+                card.style.opacity = "1";
+                card.style.height = "auto";
+                card.style.marginTop = "10px";
+            } else {
+                // Esconde de forma que nenhum CSS mobile consiga mostrar
+                card.style.visibility = "hidden";
+                card.style.opacity = "0";
+                card.style.height = "0";
+                card.style.marginTop = "0";
+                card.style.overflow = "hidden";
+            }
         });
-    }
-
-    // 1. Mantém o listener de input para computadores
-    inputBusca.addEventListener("input", filtrarProdutos);
-    
-    // 2. O SEGREDO PARA CELULAR: setInterval
-    // Ele checa a barra de pesquisa a cada 300 milissegundos
-    // Não importa o que o teclado fizer, o script vai "ler" o que está escrito
-    setInterval(filtrarProdutos, 300);
+    });
 });
 </script>
 </body>
