@@ -1572,11 +1572,12 @@ footer{
 
 .barra-pesquisa input {
     height: 38px !important;
-    padding: 0 12px 0 35px !important; /* Espaço para a lupa */
+    padding: 0 15px !important; /* Remove o espaço excessivo */
     font-size: 13px !important;
     border-radius: 20px !important;
+    /* Remove qualquer ícone nativo indesejado do navegador */
+    background-image: none !important; 
 }
-
 .barra-pesquisa button {
     height: 38px !important;
     padding: 0 16px !important;
@@ -1587,6 +1588,14 @@ footer{
 .barra-pesquisa {
     margin-top: 25px !important;
     margin-bottom: 20px !important;
+}
+.barra-pesquisa input {
+    height: 38px !important;
+    padding: 0 15px !important; /* Remove o espaço excessivo */
+    font-size: 13px !important;
+    border-radius: 20px !important;
+    /* Remove qualquer ícone nativo indesejado do navegador */
+    background-image: none !important; 
 }
 }
 /* ==========================================
