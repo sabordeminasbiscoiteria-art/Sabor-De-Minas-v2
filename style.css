@@ -1583,6 +1583,11 @@ footer{
     font-size: 13px !important;
     border-radius: 20px !important;
   }
+  /* Afasta a barra para baixo, deixando mais espaçada do título */
+.barra-pesquisa {
+    margin-top: 25px !important;
+    margin-bottom: 20px !important;
+}
 }
 /* ==========================================
    AJUSTE PROFISSIONAL: CARDS COMPACTOS EM 2 COLUNAS
