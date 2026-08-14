@@ -284,14 +284,18 @@ document.addEventListener("DOMContentLoaded", function () {
             const texto = card.innerText.toLowerCase();
             
             if (termo === "" || texto.includes(termo)) {
-                // Forçamos o display correto para o grid não quebrar
-                card.style.display = "flex"; // ou "block", dependendo do seu card
+                // Exibe o card e força o comportamento de linha/bloco correto
+                card.style.display = "inline-block"; 
                 card.style.visibility = "visible";
                 card.style.opacity = "1";
+                card.style.width = "47%;"; // Garante que caibam dois por linha no celular
+                card.style.margin = "1.5%";
             } else {
                 card.style.display = "none"; 
                 card.style.visibility = "hidden";
                 card.style.opacity = "0";
+                card.style.width = "0";
+                card.style.margin = "0";
             }
         });
     }
