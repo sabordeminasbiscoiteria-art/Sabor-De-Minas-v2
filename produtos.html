@@ -275,27 +275,41 @@
 <script>
 document.addEventListener("DOMContentLoaded", function () {
     const inputBusca = document.getElementById("pesquisa");
-    const cards = document.querySelectorAll(".produtos-cards .produto, .produtos-cards .item-produto, .produto, .item-produto");
+    const cards = document.querySelectorAll(".produto, .item-produto");
+    const containerCards = document.querySelector(".produtos-cards");
 
     function filtrar() {
         const termo = inputBusca.value.toLowerCase().trim();
+        let contadorVisiveis = 0;
         
         cards.forEach(card => {
             const texto = card.innerText.toLowerCase();
             
             if (termo === "" || texto.includes(termo)) {
-                // Deixa o card visível e limpa o estilo inline para o grid do CSS mandar
                 card.style.display = ""; 
                 card.style.visibility = "visible";
                 card.style.opacity = "1";
-                card.style.width = "";
+                contadorVisiveis++;
             } else {
-                // Esconde o card totalmente
                 card.style.display = "none"; 
                 card.style.visibility = "hidden";
                 card.style.opacity = "0";
             }
         });
+
+        // Se o usuário digitou algo, força o container a aceitar o grid de 2 colunas lado a lado
+        if (containerCards) {
+            if (termo !== "") {
+                containerCards.style.display = "grid";
+                containerCards.style.gridTemplateColumns = "repeat(2, 1fr)";
+                containerCards.style.gap = "15px";
+            } else {
+                // Se apagar a busca, volta exatamente ao grid original do seu site
+                containerCards.style.display = "";
+                containerCards.style.gridTemplateColumns = "";
+                containerCards.style.gap = "";
+            }
+        }
     }
 
     if (inputBusca) {
