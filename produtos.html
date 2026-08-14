@@ -284,12 +284,11 @@ document.addEventListener("DOMContentLoaded", function () {
             const texto = card.innerText.toLowerCase();
             
             if (termo === "" || texto.includes(termo)) {
-                // Mostra o card usando o padrão do seu CSS (vazio faz o grid assumir)
-                card.style.display = ""; 
+                // Forçamos o display correto para o grid não quebrar
+                card.style.display = "flex"; // ou "block", dependendo do seu card
                 card.style.visibility = "visible";
                 card.style.opacity = "1";
             } else {
-                // Esconde totalmente e remove o espaço da tela para não deixar buracos
                 card.style.display = "none"; 
                 card.style.visibility = "hidden";
                 card.style.opacity = "0";
