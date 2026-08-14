@@ -1563,8 +1563,44 @@ footer{
     position: relative !important;
     z-index: 10000 !important;
    }
+
+/* Ajuste moderno para a barra e o botão ficarem proporcionais */
+.barra-pesquisa {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 8px !important;
+    padding: 0 10px !important;
 }
 
+.barra-pesquisa input {
+    width: 65% !important;
+    padding: 10px 15px !important;
+    border: 2px solid #e0e0e0 !important;
+    border-radius: 25px !important;
+    font-size: 15px !important;
+    outline: none !important;
+}
+
+.barra-pesquisa input:focus {
+    border-color: #d4a373 !important;
+}
+
+.barra-pesquisa button {
+    width: 30% !important;
+    padding: 10px !important;
+    background-color: #d4a373 !important;
+    color: white !important;
+    border: none !important;
+    border-radius: 25px !important;
+    font-weight: bold !important;
+    cursor: pointer !important;
+}
+
+.barra-pesquisa button:hover {
+    background-color: #bc8a5f !important;
+  }
+}
 /* ==========================================
    AJUSTE PROFISSIONAL: CARDS COMPACTOS EM 2 COLUNAS
    ========================================== */
