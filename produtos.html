@@ -276,46 +276,48 @@
 document.addEventListener("DOMContentLoaded", function () {
     const inputBusca = document.getElementById("pesquisa");
     const cards = document.querySelectorAll(".produto, .item-produto");
-    const containerCards = document.querySelector(".produtos-cards");
 
-    function filtrar() {
+    function puxarProduto() {
         const termo = inputBusca.value.toLowerCase().trim();
         
+        if (termo === "") return; // Se apagar a busca, não faz nada
+
         cards.forEach(card => {
             const texto = card.innerText.toLowerCase();
             
-            if (termo === "" || texto.includes(termo)) {
-                card.style.display = "flex"; 
-                card.style.visibility = "visible";
-                card.style.opacity = "1";
-                card.style.minWidth = "150px";
-            } else {
-                card.style.display = "none"; 
-                card.style.visibility = "hidden";
-                card.style.opacity = "0";
+            // Remove destaque anterior de todos
+            card.style.border = "";
+            card.style.boxShadow = "";
+            card.style.transform = "";
+
+            // Se o card contém o que você digitou
+            if (texto.includes(termo)) {
+                // Rrola a tela suavemente até o produto exato
+                card.scrollIntoView({ behavior: "smooth", block: "center" });
+                
+                // Dá um destaque visual profissional (borda e brilho) no produto encontrado
+                card.style.border = "2px solid #d4a373";
+                card.style.boxShadow = "0 0 15px rgba(212, 163, 115, 0.8)";
+                card.style.transition = "all 0.3s ease";
             }
         });
-
-        // Anula o carrossel do CSS mobile durante a busca e organiza em grade perfeita
-        if (containerCards) {
-            if (termo !== "") {
-                containerCards.style.setProperty("display", "grid", "important");
-                containerCards.style.setProperty("grid-template-columns", "repeat(2, 1fr)", "important");
-                containerCards.style.setProperty("gap", "12px", "important");
-                containerCards.style.setProperty("overflow-x", "visible", "important");
-            } else {
-                // Restaura o layout original do celular quando apagar a busca
-                containerCards.style.removeProperty("display");
-                containerCards.style.removeProperty("grid-template-columns");
-                containerCards.style.removeProperty("gap");
-                containerCards.style.removeProperty("overflow-x");
-            }
-        }
     }
 
     if (inputBusca) {
-        inputBusca.addEventListener("input", filtrar);
-        inputBusca.addEventListener("keyup", filtrar);
+        inputBusca.addEventListener("keyup", function(event) {
+            if (event.key === "Enter") {
+                puxarProduto();
+            }
+        });
+    }
+
+    // Se tiver o botão "Buscar", vincula ele também
+    const botaoBuscar = document.querySelector("button");
+    if (botaoBuscar) {
+        botaoBuscar.addEventListener("click", function(e) {
+            e.preventDefault();
+            puxarProduto();
+        });
     }
 });
 </script>
