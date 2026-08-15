@@ -1710,6 +1710,17 @@ section.sobre {
         text-align: center !important;
         border-radius: 6px !important;
     }
+    /* Puxa a lista de produtos para cima, aproximando dos filtros */
+      section.pagina-produtos .produtos-cards,
+      .produtos-cards {
+    margin-top: -10px !important;
+    padding-top: 0 !important;
+    }
+
+    /* Se houver um container geral logo abaixo dos filtros, tira a margem dele */
+     .topo-filtros, .topo-filtro {
+    margin-bottom: 5px !important;
+    }
 }
 /* ==========================================
    FORÇA PESO E PREÇO LADO A LADO PERFEITAMENTE
