@@ -1445,47 +1445,48 @@ footer{
     section.produtos .seta-esquerda { left: 2px !important; }
     section.produtos .seta-direita { right: 2px !important; }
     /* ==========================================
-       SEÇÃO SOBRE (Compacta e Proporcional)
+       SEÇÃO SOBRE (Super Compacta para Celular)
        ========================================== */
     section.sobre {
         width: 100% !important;
         max-width: 100% !important;
-        min-height: auto !important;
-        padding: 25px 20px !important;
+        padding: 20px 16px !important;
         box-sizing: border-box !important;
         background-size: cover !important;
         background-position: center !important;
-        display: flex !important;
-        flex-direction: column !important;
-        justify-content: center !important;
     }
 
     section.sobre .container {
         width: 100% !important;
         max-width: 100% !important;
-        padding: 0 !important;
+        padding: 15px !important;
         margin: 0 !important;
+        background: rgba(255, 255, 255, 0.85) !important; /* Fundo leve para destacar o texto sobre a imagem */
+        border-radius: 12px !important;
+        box-sizing: border-box !important;
     }
 
-    section.sobre h2, 
-    section.sobre .titulo-sobre {
-        font-size: 22px !important;
-        line-height: 1.1 !important;
-        margin-bottom: 10px !important;
+    section.sobre .texto-sobre h2,
+    section.sobre h2 {
+        font-size: 18px !important;
+        line-height: 1.2 !important;
+        margin-bottom: 8px !important;
+        color: #222 !important;
     }
 
-    section.sobre p, 
-    section.sobre .texto-sobre {
-        font-size: 13px !important;
+    section.sobre .texto-sobre p,
+    section.sobre p {
+        font-size: 12px !important;
         line-height: 1.4 !important;
         margin-bottom: 8px !important;
+        color: #555 !important;
     }
 
     section.sobre .botao-sobre,
     section.sobre a.btn {
         display: inline-block !important;
-        padding: 8px 16px !important;
-        font-size: 13px !important;
+        padding: 6px 14px !important;
+        font-size: 12px !important;
         margin-top: 5px !important;
         border-radius: 20px !important;
     }
