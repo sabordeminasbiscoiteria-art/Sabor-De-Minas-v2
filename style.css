@@ -1505,6 +1505,75 @@ footer{
         text-decoration: none !important;
     }
 }
+/* ==========================================
+       RODAPÉ HORIZONTAL E SEM LINKS RÁPIDOS NO CELULAR
+       ========================================== */
+    @media (max-width: 768px) {
+        /* Esconde os links rápidos no celular */
+        footer .links-rapidos, 
+        footer ul:has(a[href*="inicio"]),
+        footer div:has(> h3:contains("Links rápidos")),
+        footer .footer-links {
+            display: none !important;
+        }
+
+        /* Coloca a logo e os contatos lado a lado de forma organizada */
+        footer,
+        footer .footer-conteudo, 
+        footer .container.footer-conteudo {
+            display: flex !important;
+            flex-direction: row !important;
+            flex-wrap: nowrap !important;
+            justify-content: space-between !important;
+            align-items: flex-start !important;
+            gap: 10px !important;
+            padding: 20px 10px !important;
+            box-sizing: border-box !important;
+            width: 100% !important;
+        }
+
+        /* Ajusta o bloco da esquerda (Logo) */
+        footer .logo-footer,
+        footer .footer-info,
+        footer .footer-conteudo > div:first-child {
+            flex: 0 0 45% !important;
+            max-width: 45% !important;
+            text-align: left !important;
+            align-items: flex-start !important;
+        }
+
+        /* Ajusta o bloco do meio (Contatos) */
+        footer .contato-footer,
+        footer .footer-contatos,
+        footer .footer-conteudo > div:nth-child(2) {
+            flex: 0 0 52% !important;
+            max-width: 52% !important;
+            text-align: left !important;
+            align-items: flex-start !important;
+        }
+
+        /* Garante que os textos e ícones fiquem alinhados */
+        footer p, 
+        footer a {
+            font-size: 11px !important;
+            display: flex !important;
+            align-items: center !important;
+            gap: 5px !important;
+            margin: 2px 0 !important;
+            white-space: normal !important;
+        }
+
+        /* Mantém o copyright embaixo ocupando a largura toda */
+        footer .footer-final {
+            width: 100% !important;
+            flex-basis: 100% !important;
+            text-align: center !important;
+            font-size: 9px !important;
+            margin-top: 10px !important;
+            border-top: 1px solid rgba(255,255,255,0.2) !important;
+            padding-top: 6px !important;
+        }
+    }
 /* ==========================
   PAGINA DOS PRODUTOS.HTML
 ========================== */
