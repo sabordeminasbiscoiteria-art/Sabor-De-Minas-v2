@@ -1356,20 +1356,16 @@ section.sobre {
         max-width: 100% !important;
         box-sizing: border-box !important;
         gap: 16px !important;
-        padding: 10px 16px !important; /* Respiro lateral igualzinho ao padrão de e-commerce */
+        padding: 10px 16px !important; 
         margin: 0 !important;
-    }
-    
-    section.produtos .produtos-cards::-webkit-scrollbar {
-        display: none !important;
     }
 
     section.produtos .produtos-cards .produto, 
     section.produtos .produtos-cards .item-produto {
-        flex: 0 0 85% !important; /* 85% garante o card principal e deixa a fatia do próximo bem visível */
-        min-width: 85% !important;
-        max-width: 85% !important;
-        scroll-snap-align: start !important; /* Trava perfeitamente no início ao deslizar */
+        flex: 0 0 75% !important; /* Reduz para 75% para sobrar espaço e revelar o próximo card na lateral */
+        min-width: 75% !important;
+        max-width: 75% !important;
+        scroll-snap-align: start !important;
         background: #ffffff !important;
         border: 1px solid #eaeaea !important;
         border-radius: 16px !important;
