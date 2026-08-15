@@ -1567,6 +1567,17 @@ footer{
         padding-top: 8px !important;
     }
 }
+/* ==========================================
+       OCULTAR LINKS RÁPIDOS APENAS NO CELULAR
+       ========================================== */
+    @media (max-width: 768px) {
+        footer .links-rapidos, 
+        footer ul:has(a[href*="inicio"]),
+        footer div:has(> h3:contains("Links rápidos")),
+        footer .footer-links {
+            display: none !important;
+        }
+    }
 /* ==========================
   PAGINA DOS PRODUTOS.HTML
 ========================== */
