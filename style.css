@@ -1505,59 +1505,50 @@ footer{
         text-decoration: none !important;
     }
 /* ==========================================
-       RODAPÉ (Compacto, Lado a Lado e sem Links Rápidos)
+       RODAPÉ (Removendo Links Rápidos e Compactando)
        ========================================== */
     footer,
     footer .footer-conteudo, 
     footer .container.footer-conteudo {
         width: 100% !important;
         max-width: 100% !important;
-        display: flex !important;
-        flex-direction: row !important; /* Coloca os elementos lado a lado */
-        flex-wrap: wrap !important;
-        justify-content: space-around !important;
-        align-items: center !important;
-        padding: 20px 10px !important;
+        padding: 20px 15px !important;
         box-sizing: border-box !important;
-        gap: 15px !important;
-    }
-
-    /* Oculta os links rápidos caso queira garantir que sumam */
-    footer .links-rapidos, 
-    footer ul:has(a[href*="inicio"]),
-    footer .footer-links {
-        display: none !important;
-    }
-
-    /* Bloco da Logo / Título */
-    footer .logo-footer,
-    footer .footer-info {
         display: flex !important;
         flex-direction: column !important;
         align-items: center !important;
         text-align: center !important;
-        max-width: 150px !important;
+        gap: 15px !important;
     }
 
-    /* Bloco dos Contatos */
-    footer .contato-footer,
-    footer .footer-contatos {
+    /* FORÇA A EXCLUSÃO DOS LINKS RÁPIDOS */
+    footer div:has(> h3:contains("Links rápidos")),
+    footer .links-rapidos, 
+    footer ul, 
+    footer h3:has-text("Links rápidos"),
+    footer div:nth-child(3) {
+        display: none !important;
+    }
+
+    /* Organiza o topo do rodapé (Logo e Contatos emparelhados ou limpos) */
+    footer .footer-conteudo > div {
+        width: 100% !important;
         display: flex !important;
         flex-direction: column !important;
-        align-items: flex-start !important;
-        gap: 6px !important;
+        align-items: center !important;
+        margin: 0 !important;
     }
 
-    footer .footer-contatos p,
-    footer .footer-contatos a {
+    footer p, 
+    footer a {
+        font-size: 12px !important;
+        color: #fff !important;
+        margin: 3px 0 !important;
+        text-decoration: none !important;
         display: flex !important;
         align-items: center !important;
+        justify-content: center !important;
         gap: 8px !important;
-        font-size: 11px !important; /* Texto compactado para caber perfeitamente */
-        color: #fff !important;
-        margin: 0 !important;
-        text-decoration: none !important;
-        white-space: nowrap !important;
     }
 
     footer img, 
@@ -1567,14 +1558,13 @@ footer{
         flex-shrink: 0 !important;
     }
 
-    /* Faixa de copyright embaixo */
     footer .footer-final {
         width: 100% !important;
-        text-align: center !important;
         font-size: 10px !important;
+        text-align: center !important;
         margin-top: 5px !important;
-        padding-top: 8px !important;
         border-top: 1px solid rgba(255,255,255,0.2) !important;
+        padding-top: 8px !important;
     }
 }
 /* ==========================
