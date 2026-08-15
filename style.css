@@ -1541,34 +1541,7 @@ footer{
         min-height: auto !important;
     }
 }
- /* Ajuste exclusivo para Computador - Corrige a barra e o botão */
-@media (min-width: 768px) {
-    .barra-pesquisa {
-        display: flex !important;
-        align-items: center !important;
-        justify-content: center !important;
-        gap: 10px !important;
-        background-color: transparent !important;
-        border: none !important;
-    }
-
-    .barra-pesquisa input {
-        border-radius: 25px !important;
-        border: 1px solid #dcdcdc !important;
-        height: 40px !important;
-        padding: 0 15px !important;
-    }
-
-    .barra-pesquisa button {
-        border-radius: 25px !important;
-        background-color: #d4a373 !important;
-        color: #ffffff !important;
-        border: none !important;
-        height: 40px !important;
-        padding: 0 20px !important;
-        cursor: pointer !important;
-    }
-}
+ 
 /* ==========================================
    AJUSTE PROFISSIONAL: CARDS COMPACTOS EM 2 COLUNAS
    ========================================== */
