@@ -1444,51 +1444,65 @@ footer{
 
     section.produtos .seta-esquerda { left: 2px !important; }
     section.produtos .seta-direita { right: 2px !important; }
+    
     /* ==========================================
-       SEÇÃO SOBRE (Super Compacta para Celular)
+       SEÇÃO SOBRE (Estilo Card Compacto para Celular)
        ========================================== */
     section.sobre {
         width: 100% !important;
         max-width: 100% !important;
-        padding: 20px 16px !important;
+        padding: 20px 15px !important;
         box-sizing: border-box !important;
+        background-color: #fcf8f2 !important; /* Cor de fundo suave caso a imagem não carregue */
         background-size: cover !important;
         background-position: center !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
     }
 
-    section.sobre .container {
+    section.sobre .container,
+    section.sobre .texto-sobre {
         width: 100% !important;
         max-width: 100% !important;
-        padding: 15px !important;
-        margin: 0 !important;
-        background: rgba(255, 255, 255, 0.85) !important; /* Fundo leve para destacar o texto sobre a imagem */
-        border-radius: 12px !important;
+        background: rgba(255, 255, 255, 0.92) !important; /* O card branco translúcido igualzinho à sua foto */
+        padding: 20px 16px !important;
+        border-radius: 16px !important;
+        box-shadow: 0 4px 15px rgba(0, 0,0, 0.08) !important;
         box-sizing: border-box !important;
+        margin: 0 !important;
+        text-align: left !important;
     }
 
-    section.sobre .texto-sobre h2,
-    section.sobre h2 {
-        font-size: 18px !important;
+    section.sobre h2, 
+    section.sobre .titulo-sobre {
+        font-size: 20px !important;
         line-height: 1.2 !important;
-        margin-bottom: 8px !important;
-        color: #222 !important;
+        color: #2b1d11 !important;
+        margin-bottom: 12px !important;
     }
 
-    section.sobre .texto-sobre p,
-    section.sobre p {
-        font-size: 12px !important;
-        line-height: 1.4 !important;
-        margin-bottom: 8px !important;
+    section.sobre p, 
+    section.sobre .texto-sobre p {
+        font-size: 13px !important;
+        line-height: 1.5 !important;
         color: #555 !important;
+        margin-bottom: 10px !important;
     }
 
     section.sobre .botao-sobre,
     section.sobre a.btn {
         display: inline-block !important;
-        padding: 6px 14px !important;
-        font-size: 12px !important;
-        margin-top: 5px !important;
-        border-radius: 20px !important;
+        width: auto !important;
+        padding: 10px 22px !important;
+        background-color: #b82d2d !important;
+        color: #fff !important;
+        font-size: 13px !important;
+        font-weight: bold !important;
+        border-radius: 25px !important;
+        text-align: center !important;
+        margin-top: 12px !important;
+        text-decoration: none !important;
     }
 }
 /* ==========================
