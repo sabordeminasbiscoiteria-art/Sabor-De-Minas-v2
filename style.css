@@ -1631,14 +1631,15 @@ section.sobre {
 }
 @media (max-width: 768px) {
     
-    /* Garante o grid compacto */
-    section.pagina-produtos .produtos-cards,
-    .produtos-cards {
+    /* Afeta APENAS a página de produtos */
+    section.pagina-produtos .produtos-cards {
         display: grid !important;
         grid-template-columns: repeat(2, 1fr) !important;
         gap: 6px !important;
         padding: 6px !important;
         align-items: start !important;
+        margin-top: -10px !important;
+        padding-top: 0 !important;
     }
 
     section.pagina-produtos .produtos-cards .produto,
@@ -1664,13 +1665,13 @@ section.sobre {
         margin: 0 !important;
     }
 
-    /* TÍTULO: Força a ficar em uma linha só e ajusta o tamanho da letra para não quebrar */
+    /* TÍTULO: Força a ficar em uma linha só */
     section.pagina-produtos .produtos-cards .produto h3,
     section.pagina-produtos .produtos-cards .produto .titulo-produto {
-        font-size: 11.5px !important; /* Letra ligeiramente menor para caber tudo na horizontal */
-        white-space: nowrap !important; /* IMPEDE QUE O TEXTO QUEBRE LINHA */
+        font-size: 11.5px !important;
+        white-space: nowrap !important;
         overflow: hidden !important;
-        text-overflow: ellipsis !important; /* Se for muito grande, coloca reticências */
+        text-overflow: ellipsis !important;
         text-align: center !important;
         margin: 6px 4px 2px 4px !important;
     }
@@ -1692,14 +1693,24 @@ section.sobre {
     section.pagina-produtos .produtos-cards .produto .container-preco {
         font-size: 11px !important;
         display: flex !important;
-        justify-content: center !important;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
         align-items: center !important;
+        justify-content: center !important;
         gap: 5px !important;
-        margin: 0 auto 6px auto !important;
         width: 100% !important;
+        margin: 8px 0 !important;
     }
 
-    /* BOTÃO DO WHATSAPP: Perfeito e alinhado na base */
+    section.pagina-produtos .produtos-cards .preco-produto span,
+    section.pagina-produtos .produtos-cards .preco-produto strong {
+        display: inline-block !important;
+        width: auto !important;
+        margin: 0 !important;
+        white-space: nowrap !important;
+    }
+
+    /* BOTÃO DO WHATSAPP */
     section.pagina-produtos .produtos-cards .produto .botao-produto,
     section.pagina-produtos .produtos-cards .produto a.botao,
     section.pagina-produtos .produtos-cards .produto button {
@@ -1715,49 +1726,21 @@ section.sobre {
         align-items: center !important;
         text-align: center !important;
     }
-    /* Puxa a lista de produtos para cima, aproximando dos filtros */
-      section.pagina-produtos .produtos-cards,
-      .produtos-cards {
-    margin-top: -10px !important;
-    padding-top: 0 !important;
-    }
 
-    /* Se houver um container geral logo abaixo dos filtros, tira a margem dele */
-     .topo-filtros, .topo-filtro {
-    margin-bottom: 5px !important;
+    /* Filtros da página de produtos */
+    section.pagina-produtos .topo-filtros, 
+    section.pagina-produtos .topo-filtro {
+        margin-bottom: 5px !important;
     }
 }
-/* ==========================================
-   FORÇA PESO E PREÇO LADO A LADO PERFEITAMENTE
-   ========================================== */
-@media (max-width: 768px) {
-    section.pagina-produtos .produtos-cards .preco-produto {
-        display: flex !important;
-        flex-direction: row !important;
-        flex-wrap: nowrap !important;
-        align-items: center !important;
-        justify-content: center !important;
-        gap: 8px !important;
-        width: 100% !important;
-        margin: 8px 0 !important;
-    }
 
-    section.pagina-produtos .produtos-cards .preco-produto span,
-    section.pagina-produtos .produtos-cards .preco-produto strong {
-        display: inline-block !important;
-        width: auto !important;
-        margin: 0 !important;
-        white-space: nowrap !important;
-    }
-}
 @media (max-width: 768px) {
-    /* Reseta o flexbox no contêiner pai */
+    /* Ajustes da seção de História (mantidos seguros) */
     .historia {
         display: block !important;
         position: relative !important;
     }
 
-    /* A imagem flutua e o texto flui ao redor */
     .historia-img {
         float: left !important;
         width: 45% !important;
@@ -1767,20 +1750,17 @@ section.sobre {
         clear: none !important;
     }
 
-    /* Garante que a imagem tenha o tamanho correto e bordas arredondadas */
     .historia-img img {
         max-width: 100% !important;
         height: auto !important;
         border-radius: 15px !important;
     }
 
-    /* O texto ocupa o espaço restante ao lado da imagem */
     .historia-texto {
         width: 100% !important;
         padding: 0 !important;
     }
     
-    /* Sobe e alinha o título "Nossa História" perfeitamente ao lado da foto */
     .historia-texto h2 {
         text-align: left !important;
         margin-top: -30px !important;
