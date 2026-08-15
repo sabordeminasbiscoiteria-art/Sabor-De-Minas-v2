@@ -1356,20 +1356,16 @@ section.sobre {
         max-width: 100% !important;
         box-sizing: border-box !important;
         gap: 15px !important;
-        /* Força margem esquerda para o primeiro card centralizar e mostrar a ponta do próximo */
-        padding: 10px 15px 10px calc((100% - 78%) / 2) !important; 
+        /* Padding esquerdo calcula o espaço para centralizar o card de 72% */
+        padding: 10px 15px 10px calc((100% - 72%) / 2) !important; 
         margin: 0 !important;
-    }
-    
-    section.produtos .produtos-cards::-webkit-scrollbar {
-        display: none !important;
     }
 
     section.produtos .produtos-cards .produto, 
     section.produtos .produtos-cards .item-produto {
-        flex: 0 0 78% !important; 
-        min-width: 78% !important;
-        max-width: 78% !important;
+        flex: 0 0 72% !important; 
+        min-width: 72% !important;
+        max-width: 72% !important;
         scroll-snap-align: center !important;
         background: #ffffff !important;
         border: 1px solid #eaeaea !important;
@@ -1379,7 +1375,8 @@ section.sobre {
         flex-direction: column !important;
         box-sizing: border-box !important;
         overflow: hidden !important;
-        margin: 0 !important;}
+        margin: 0 !important;
+    }
 
     section.produtos .produtos-cards .produto h3 {
         font-size: 16px !important;
