@@ -1444,7 +1444,7 @@ footer{
 
     section.produtos .seta-esquerda { left: 2px !important; }
     section.produtos .seta-direita { right: 2px !important; }
-    
+
     /* ==========================================
        SEÇÃO SOBRE (Estilo Card Compacto para Celular)
        ========================================== */
@@ -1503,6 +1503,32 @@ footer{
         text-align: center !important;
         margin-top: 12px !important;
         text-decoration: none !important;
+    }
+/* ==========================================
+       CORREÇÃO DO RODAPÉ (Alinhamento dos Contatos)
+       ========================================== */
+    footer .footer-conteudo, 
+    footer .container.footer-conteudo {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 15px !important;
+    }
+
+    footer .footer-conteudo div, 
+    footer .footer-conteudo p,
+    footer .footer-conteudo a {
+        display: flex !important;
+        align-items: center !important;
+        gap: 10px !important;
+        margin: 0 !important;
+    }
+
+    footer .footer-conteudo img, 
+    footer .footer-conteudo svg {
+        flex-shrink: 0 !important;
+        width: 18px !important;
+        height: 18px !important;
+        display: inline-block !important;
     }
 }
 /* ==========================
