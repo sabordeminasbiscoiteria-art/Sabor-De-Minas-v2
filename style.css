@@ -910,16 +910,21 @@ footer{
     font-size:15px;
 
 }
-/* Estilo dos filtros - Pílula Clean com Borda */
+/* Container dos filtros */
 .filtros {
     display: flex !important;
     flex-wrap: wrap !important;
     justify-content: center !important;
+    align-items: center !important;
     gap: 12px !important;
     margin: 20px 0 !important;
 }
 
-.filtros button {
+/* Aplica o estilo de pílula tanto em BOTÕES quanto em LINKS */
+.filtros button, 
+.filtros a, 
+.filtros span,
+.filtros div {
     background-color: transparent !important;
     border: 1px solid #d4a373 !important;
     color: #5d4037 !important;
@@ -927,13 +932,18 @@ footer{
     border-radius: 20px !important;
     font-size: 14px !important;
     font-weight: 500 !important;
+    text-decoration: none !important; /* Remove o sublinhado se for link */
     cursor: pointer !important;
+    display: inline-block !important;
     transition: all 0.3s ease !important;
 }
 
-/* Efeito ao passar o mouse ou quando o botão estiver ativo */
+/* Efeito ao passar o mouse */
 .filtros button:hover, 
-.filtros button.ativo {
+.filtros a:hover, 
+.filtros span:hover,
+.filtros div:hover,
+.filtros .ativo {
     background-color: #d4a373 !important;
     color: #ffffff !important;
 }
