@@ -1325,7 +1325,7 @@ section.sobre {
 }
 @media (max-width: 768px) {
 /* ==========================================
-       2. PÁGINA INICIAL / INDEX (Carrossel Horizontal de Esteira Isolado)
+       2. PÁGINA INICIAL / INDEX (Carrossel Horizontal Estilo Cacau Show)
        ========================================== */
     section.produtos {
         width: 100% !important;
@@ -1343,7 +1343,7 @@ section.sobre {
         box-sizing: border-box !important;
     }
 
-   section.produtos .produtos-cards {
+    section.produtos .produtos-cards {
         display: flex !important;
         flex-direction: row !important;
         flex-wrap: nowrap !important;
@@ -1355,18 +1355,21 @@ section.sobre {
         width: 100% !important;
         max-width: 100% !important;
         box-sizing: border-box !important;
-        gap: 15px !important;
-        /* Padding esquerdo calcula o espaço para centralizar o card de 72% */
-        padding: 10px 15px 10px calc((100% - 72%) / 2) !important; 
+        gap: 16px !important;
+        padding: 10px 16px !important; /* Respiro lateral igualzinho ao padrão de e-commerce */
         margin: 0 !important;
+    }
+    
+    section.produtos .produtos-cards::-webkit-scrollbar {
+        display: none !important;
     }
 
     section.produtos .produtos-cards .produto, 
     section.produtos .produtos-cards .item-produto {
-        flex: 0 0 72% !important; 
-        min-width: 72% !important;
-        max-width: 72% !important;
-        scroll-snap-align: center !important;
+        flex: 0 0 85% !important; /* 85% garante o card principal e deixa a fatia do próximo bem visível */
+        min-width: 85% !important;
+        max-width: 85% !important;
+        scroll-snap-align: start !important; /* Trava perfeitamente no início ao deslizar */
         background: #ffffff !important;
         border: 1px solid #eaeaea !important;
         border-radius: 16px !important;
@@ -1377,6 +1380,15 @@ section.sobre {
         overflow: hidden !important;
         margin: 0 !important;
     }
+
+    section.produtos .produtos-cards .produto img {
+        width: 100% !important;
+        height: 220px !important;
+        object-fit: cover !important;
+        border-radius: 16px 16px 0 0 !important;
+        display: block !important;
+    }
+
     section.produtos .produtos-cards .produto h3 {
         font-size: 16px !important;
         font-weight: 700 !important;
