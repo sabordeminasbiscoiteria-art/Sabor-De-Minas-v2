@@ -1324,145 +1324,32 @@ section.sobre {
     padding-top: 20px !important; /* Ajuste se quiser um respiro interno */
 }
 
-/* Cards mais compactos e profissionais no celular */
-@media (max-width: 768px){
-.produto img {            /* Deixa a foto do biscoito menor na altura */
-    height: 150px;       /* Altura ideal para não ocupar a tela toda */
-    object-fit: cover;
-    border-radius: 0px;
-    width: 100%;
-}
-    .produto {
-    min-width: 160px !important;
-    margin-right: 15px !important;
-}
-
-/* Diminui o tamanho do título do produto */
-.produto h3 {
-    font-size: 16px;
-    margin: 4px 0 2px 0;
-   text-align: center !important;
-}
-/* Diminui a descrição */
-.produto p {
-    font-size: 12px;
-    margin-bottom: 6px;
-    text-align: center !important;
-}
-/* Deixa a caixa de preço e peso compacta */
-.produto .preco-produto {
-    font-size: 14px;
-    margin-bottom: 10px;
-}
-/* Ajusta o botão do WhatsApp para ficar proporcional */
-.produto .botao-produto {
-    padding: 8px 12px;
-    font-size: 13px;
- }
- /* Trava o card e a imagem para não se moverem ao interagir */
-    .produto:hover,
-    .produto img:hover {
-        transform: none !important;
-        transition: none !important;
-    }
- /* Organiza o título em cima, o botão embaixo e centraliza tudo */
-    .topo-produtos {
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important; /* Centraliza o título e o botão */
-        justify-content: center !important;
-        text-align: center !important;
-        gap: 12px !important;
-        margin-bottom: 6px !important;
-    }
-
-    /* Garante o tamanho ideal e centralizado do título */
-    .titulo-produtos {
-        font-size: 26px !important;
-        white-space: nowrap !important;
-        margin: 0 !important;
-        text-align: center !important;
-    }
-    .carrossel-wrapper {
-        width: 100% !important;
-        overflow: hidden !important;
-        position: relative !important;
-        padding: 0 !important;
-    }
-
+/* --- Ajuste Focado em Coluna Única --- */
     .produtos-cards {
         display: flex !important;
-        flex-direction: row !important;
-        flex-wrap: nowrap !important;
-        overflow-x: auto !important;
-        scroll-behavior: smooth;
-        scrollbar-width: none;
-        width: 100%;
-        padding: 10px 0;
-        gap: 15px !important; /* AQUI ESTÁ O ESPAÇAMENTO ENTRE PRODUTOS */
-        justify-content: flex-start !important;
+        flex-direction: column !important; /* FORÇA UM ABAIXO DO OUTRO */
+        width: 100% !important;
+        padding: 10px 5px !important;
+        gap: 20px !important;            /* Espaço entre um card e outro */
+        overflow-x: hidden !important;   /* Impede rolar para os lados */
     }
 
-    /* --- Ajustes dos Cards --- */
     .produto {
-        flex: 0 0 100% !important;        /* Ocupa 100% da largura útil */
-        max-width: 100% !important;
-        box-sizing: border-box !important;
-        margin: 0 auto !important;        /* Centraliza o card perfeitamente */
-        padding: 15px !important;
+        flex: 0 0 auto !important;
+        width: 95% !important;           /* Ocupa quase a largura toda */
+        margin: 0 auto !important;       /* Centraliza na tela */
+        padding: 10px !important;
         height: auto !important;
+        border: 1px solid #eee;          /* Opcional: para ver a caixa */
+        border-radius: 12px;
     }
+
     .produto img {
-        height: 180px !important;
+        height: 200px !important;        /* Ajuste a altura como preferir */
+        width: 100% !important;
         object-fit: cover !important;
-        width: 100%;
-        border-radius: 0px;
+        border-radius: 8px !important;
     }
-
-    .produto h3 { font-size: 16px; margin: 6px 0 2px 0; text-align: center !important; }
-    .produto p { font-size: 12px; margin-bottom: 8px; text-align: center !important; }
-    .produto .preco-produto { font-size: 14px; margin-bottom: 10px; }
-    .produto .botao-produto { padding: 8px 12px; font-size: 13px; }
-
-    /* --- Setas (CSS Vector) --- */
-    .seta-esquerda, .seta-direita {
-        position: absolute !important;
-        top: 50% !important;
-        transform: translateY(-50%) !important;
-        z-index: 1000 !important;
-        background: transparent !important;
-        border: none !important;
-        cursor: pointer !important;
-        color: transparent !important; 
-        font-size: 0 !important;
-        width: 35px !important;
-        height: 35px !important;
-        padding: 0 !important;
-    }
-
-    .seta-esquerda::before, .seta-direita::before {
-        content: '' !important;
-        position: absolute !important;
-        top: 50% !important;
-        left: 50% !important;
-        width: 10px !important;
-        height: 10px !important;
-        border-top: 2.5px solid #3b2314 !important;
-    }
-
-    .seta-esquerda { left: 2px !important; }
-    .seta-esquerda::before { border-left: 2.5px solid #3b2314 !important; transform: translate(-50%, -50%) rotate(-45deg) !important; }
-    
-    .seta-direita { right: 2px !important; }
-    .seta-direita::before { border-right: 2.5px solid #3b2314 !important; transform: translate(-50%, -50%) rotate(45deg) !important; }
-
-    /* --- Demais elementos (Sobre e Footer) --- */
-    .texto-sobre { width: 90%; margin: 0 auto; padding: 20px 15px; }
-    .footer-conteudo { flex-direction: column; gap: 12px; padding: 20px 10px; }
-    .footer-marca { display: none; }
-    .footer-menu, .footer-contato { flex-direction: row; gap: 15px; justify-content: center; }
-    .footer-menu h3, .footer-contato h3 { display: none; }
-}
 /* ==========================
   PAGINA DOS PRODUTOS.HTML
 ========================== */
