@@ -1550,9 +1550,9 @@ footer{
     max-width: 400px !important;
     margin: 20px auto 15px auto !important;
     padding: 0 10px !important;
-    background-color: transparent !important; /* Remove o fundo branco */
-    border: none !important; /* Remove qualquer borda */
-    box-shadow: none !important; /* Remove sombras indesejadas */
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
     position: relative !important;
     z-index: 9999 !important;
     pointer-events: auto !important;
@@ -1594,7 +1594,29 @@ footer{
     border: none !important;
     border-radius: 20px !important;
     cursor: pointer !important;
-  }
+    }
+}
+
+/* Estilo aplicado EXCLUSIVAMENTE no Computador */
+@media (min-width: 768px) {
+    .barra-pesquisa {
+        max-width: 600px !important;
+        margin: 30px auto 20px auto !important;
+    }
+
+    .barra-pesquisa input {
+        height: 44px !important;
+        font-size: 15px !important;
+        background-position: 14px center !important;
+        background-size: 16px 16px !important;
+        padding: 0 15px 0 42px !important;
+    }
+
+    .barra-pesquisa button {
+        height: 44px !important;
+        padding: 0 22px !important;
+        font-size: 15px !important;
+    }
 }
 /* ==========================================
    AJUSTE PROFISSIONAL: CARDS COMPACTOS EM 2 COLUNAS
