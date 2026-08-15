@@ -1540,29 +1540,23 @@ footer{
         padding: 6px 12px !important;
         min-height: auto !important;
     }
-  /* Posiciona e formata a barra de pesquisa perfeitamente no celular */
-.barra-pesquisa {
-    width: 100% !important;
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    position: relative !important;
-    z-index: 9999 !important;
-    pointer-events: auto !important;
-    max-width: 420px !important;
-    margin: 25px auto 20px auto !important;
-    padding: 0 10px !important;
-}
-
-/* Container da barra de pesquisa */
+  /* Posiciona e formata a barra de pesquisa perfeitamente */
 .barra-pesquisa {
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
     gap: 8px !important;
+    width: 100% !important;
     max-width: 400px !important;
     margin: 20px auto 15px auto !important;
     padding: 0 10px !important;
+    background-color: transparent !important; /* Remove o fundo branco */
+    border: none !important; /* Remove qualquer borda */
+    box-shadow: none !important; /* Remove sombras indesejadas */
+    position: relative !important;
+    z-index: 9999 !important;
+    pointer-events: auto !important;
+    box-sizing: border-box !important;
 }
 
 /* Caixa de texto com a lupa preta profissional nativa */
