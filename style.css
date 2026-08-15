@@ -1378,6 +1378,31 @@ section.sobre {
         width: 100% !important;
         display: block !important;
     }
+    @media (max-width: 768px) {
+    /* Força o grid de produtos a ser sempre 1 coluna só, 
+       não importa em qual página ele esteja */
+    .produtos-cards {
+        display: flex !important;
+        flex-direction: column !important; /* EMPILHA TUDO */
+        width: 100% !important;
+        margin: 0 auto !important;
+        padding: 10px !important;
+        gap: 20px !important;
+    }
+
+    /* Ocupa a largura total da tela */
+    .produto, .item-produto {
+        width: 95% !important; 
+        margin: 0 auto !important; /* Centraliza */
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
+    /* Esconde as setas que estragam o layout vertical */
+    .seta-carrossel, .seta-esquerda, .seta-direita {
+        display: none !important;
+    }
+}
 
     /* 7. Ajustes do Título da Seção */
     .titulo-produtos { font-size: 22px !important; margin-bottom: 10px !important; }
