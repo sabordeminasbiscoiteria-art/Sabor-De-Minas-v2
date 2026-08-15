@@ -1422,8 +1422,6 @@ section.sobre {
     section.pagina-produtos .topo-filtro {
         margin-bottom: 5px !important;
     }
-
-
     /* ==========================================
        2. PÁGINA INICIAL / INDEX (Carrossel Horizontal de 1 em 1)
        ========================================== */
@@ -1446,17 +1444,20 @@ section.sobre {
     }
 
     section.produtos .produtos-cards {
-        display: flex !important;
-        flex-direction: row !important;
-        flex-wrap: nowrap !important;
-        overflow-x: auto !important;
-        scroll-snap-type: x mandatory !important;
-        -webkit-overflow-scrolling: touch !important;
-        scroll-behavior: smooth !important;
-        scrollbar-width: none !important;
-        width: 100% !important;
-        gap: 0 !important;
-        padding: 10px 0 !important;
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    scroll-snap-type: x mandatory !important;
+    -webkit-overflow-scrolling: touch !important;
+    scroll-behavior: smooth !important;
+    scrollbar-width: none !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    gap: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
     }
     
     section.produtos .produtos-cards::-webkit-scrollbar {
