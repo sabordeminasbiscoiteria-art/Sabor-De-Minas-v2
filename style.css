@@ -1654,16 +1654,17 @@ section.sobre {
         box-shadow: 0 2px 5px rgba(0,0,0,0.05) !important;
         box-sizing: border-box !important;
     }
-
-    /* Imagem menor e elegante */
-    section.pagina-produtos .produtos-cards .produto img,
-    section.pagina-produtos .produtos-cards .item-produto img {
-        width: 100% !important;
-        height: 100px !important;
-        object-fit: cover !important;
-        border-radius: 4px !important;
-    }
-
+   /* Imagem maior, elegante e preenchendo o espaço */
+section.pagina-produtos .produtos-cards .produto img,
+section.pagina-produtos .produtos-cards .item-produto img {
+    width: 100% !important;  /* Mantém a largura total do card */
+    height: 180px !important; /* Aumentei de 100px para 180px - Ajuste aqui se quiser maior/menor */
+    object-fit: cover !important;  /* O CORAÇÃO DO TRUQUE: Preenche a área sem distorcer */
+    object-position: center !important; /* Garante que o centro da imagem fique visível */
+    border-radius: 10px 10px 0 0 !important; /* Arredonda só em cima para combinar com o card */
+    display: block !important; /* Remove espaços em branco abaixo da imagem */
+    margin-bottom: 10px !important; /* Pequeno respiro antes do título */
+}
     /* Título proporcional */
     section.pagina-produtos .produtos-cards .produto h3,
     section.pagina-produtos .produtos-cards .item-produto h3 {
