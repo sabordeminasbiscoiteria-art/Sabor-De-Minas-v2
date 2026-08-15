@@ -1324,32 +1324,77 @@ section.sobre {
     padding-top: 20px !important; /* Ajuste se quiser um respiro interno */
 }
 
-/* --- Ajuste Focado em Coluna Única --- */
+@media (max-width: 768px) {
+    /* 1. Esconde as setas que ficavam dos lados */
+    .seta-esquerda, .seta-direita {
+        display: none !important;
+    }
+
+    /* 2. Container geral: força uma coluna única e centralizada */
     .produtos-cards {
         display: flex !important;
-        flex-direction: column !important; /* FORÇA UM ABAIXO DO OUTRO */
+        flex-direction: column !important; /* Empilha os cards */
         width: 100% !important;
-        padding: 10px 5px !important;
-        gap: 20px !important;            /* Espaço entre um card e outro */
-        overflow-x: hidden !important;   /* Impede rolar para os lados */
+        padding: 10px 0 !important;
+        gap: 20px !important;
+        overflow-x: hidden !important; /* Corta qualquer tentativa de rolar pro lado */
     }
 
+    /* 3. Ajuste do Card individual */
     .produto {
         flex: 0 0 auto !important;
-        width: 95% !important;           /* Ocupa quase a largura toda */
-        margin: 0 auto !important;       /* Centraliza na tela */
-        padding: 10px !important;
+        width: 90% !important; /* Largura um pouco menor que a tela pra dar respiro */
+        margin: 0 auto !important; /* Centraliza o card na tela */
+        padding: 15px !important;
+        background: #ffffff !important;
+        border-radius: 12px !important;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1) !important;
         height: auto !important;
-        border: 1px solid #eee;          /* Opcional: para ver a caixa */
-        border-radius: 12px;
     }
 
+    /* 4. Imagem do produto */
     .produto img {
-        height: 200px !important;        /* Ajuste a altura como preferir */
+        height: 200px !important;
         width: 100% !important;
         object-fit: cover !important;
         border-radius: 8px !important;
     }
+
+    /* 5. Textos centralizados */
+    .produto h3 { font-size: 16px; margin: 10px 0 5px 0; text-align: center !important; }
+    .produto p { font-size: 12px; margin-bottom: 10px; text-align: center !important; }
+    
+    .produto .preco-produto { 
+        font-size: 16px; 
+        margin-bottom: 15px; 
+        text-align: center !important; 
+        display: block !important; 
+    }
+
+    /* 6. Botão WhatsApp */
+    .produto .botao-produto { 
+        padding: 10px 0 !important; 
+        font-size: 14px !important; 
+        width: 100% !important;
+        display: block !important;
+    }
+
+    /* 7. Ajustes do Título da Seção */
+    .titulo-produtos { font-size: 22px !important; margin-bottom: 10px !important; }
+    
+    .topo-produtos {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 10px !important;
+        margin-bottom: 10px !important;
+    }
+
+    /* 8. Rodapé (Footer) */
+    .footer-conteudo { flex-direction: column; gap: 12px; padding: 20px 10px; }
+    .footer-marca { display: none; }
+    .footer-menu, .footer-contato { flex-direction: row; gap: 15px; justify-content: center; }
+}
 /* ==========================
   PAGINA DOS PRODUTOS.HTML
 ========================== */
