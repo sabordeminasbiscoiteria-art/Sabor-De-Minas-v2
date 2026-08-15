@@ -1422,13 +1422,13 @@ section.sobre {
     section.pagina-produtos .topo-filtro {
         margin-bottom: 5px !important;
     }
-    /* ==========================================
-       2. PÁGINA INICIAL / INDEX (Carrossel Horizontal de 1 em 1)
+/* ==========================================
+       2. PÁGINA INICIAL / INDEX (Carrossel Horizontal de Esteira)
        ========================================== */
     section.produtos {
         width: 100% !important;
         overflow: hidden !important;
-        padding: 10px 15 !important;
+        padding: 10px 0 !important;
     }
 
     section.produtos .carrossel-wrapper {
@@ -1444,20 +1444,20 @@ section.sobre {
     }
 
     section.produtos .produtos-cards {
-    display: flex !important;
-    flex-direction: row !important;
-    flex-wrap: nowrap !important;
-    overflow-x: auto !important;
-    scroll-snap-type: x mandatory !important;
-    -webkit-overflow-scrolling: touch !important;
-    scroll-behavior: smooth !important;
-    scrollbar-width: none !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    box-sizing: border-box !important;
-    gap: 0 !important;
-    padding: 0 !important;
-    margin: 0 !important;
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        overflow-x: auto !important;
+        scroll-snap-type: x mandatory !important;
+        -webkit-overflow-scrolling: touch !important;
+        scroll-behavior: smooth !important;
+        scrollbar-width: none !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+        gap: 15px !important; /* Espaço entre os cards para mostrar a esteira */
+        padding: 10px 20px !important; /* Respiro nas pontas esquerda e direita */
+        margin: 0 !important;
     }
     
     section.produtos .produtos-cards::-webkit-scrollbar {
@@ -1466,10 +1466,10 @@ section.sobre {
 
     section.produtos .produtos-cards .produto, 
     section.produtos .produtos-cards .item-produto {
-        flex: 0 0 100vw !important;
-        min-width: 100vw !important;
-        max-width: 100vw !important;
-        scroll-snap-align: center !important;
+        flex: 0 0 85% !important; /* Deixa com 85% para mostrar a bordinha do próximo */
+        min-width: 85% !important;
+        max-width: 85% !important;
+        scroll-snap-align: start !important; /* Trava no começo de cada card perfeitamente */
         background: #ffffff !important;
         border: 1px solid #eaeaea !important;
         border-radius: 16px !important;
@@ -1553,8 +1553,6 @@ section.sobre {
 
     section.produtos .seta-esquerda { left: 2px !important; }
     section.produtos .seta-direita { right: 2px !important; }
-
-
     /* ==========================================
        3. SEÇÃO HISTÓRIA E RODAPÉ
        ========================================== */
