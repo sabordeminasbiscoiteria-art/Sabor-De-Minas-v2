@@ -1626,17 +1626,16 @@ section.sobre {
 }
 @media (max-width: 768px) {
     
-    /* Grade dos cards compacta */
+    /* Garante o grid compacto */
     section.pagina-produtos .produtos-cards,
     .produtos-cards {
         display: grid !important;
         grid-template-columns: repeat(2, 1fr) !important;
-        gap: 8px !important;
-        padding: 8px !important;
-        align-items: start !important; /* Faz cada card ter a sua altura natural sem esticar à toa */
+        gap: 6px !important;
+        padding: 6px !important;
+        align-items: start !important;
     }
 
-    /* Card individual */
     section.pagina-produtos .produtos-cards .produto,
     section.pagina-produtos .produtos-cards .item-produto {
         width: 100% !important;
@@ -1645,65 +1644,71 @@ section.sobre {
         display: flex !important;
         flex-direction: column !important;
         background: #ffffff !important;
-        border-radius: 10px !important;
+        border-radius: 8px !important;
         overflow: hidden !important;
         box-shadow: 0 2px 4px rgba(0,0,0,0.05) !important;
     }
 
-    /* Imagem compacta */
+    /* Imagem menorzinha para economizar espaço */
     section.pagina-produtos .produtos-cards .produto img,
     section.pagina-produtos .produtos-cards .item-produto img {
         width: 100% !important;
-        height: 110px !important;
+        height: 100px !important;
         object-fit: cover !important;
         display: block !important;
         margin: 0 !important;
     }
 
-    /* Zera margens extras dos textos para eliminar o espaço em branco */
+    /* TÍTULO: Força a ficar em uma linha só e ajusta o tamanho da letra para não quebrar */
     section.pagina-produtos .produtos-cards .produto h3,
-    section.pagina-produtos .produtos-cards .produto p,
-    section.pagina-produtos .produtos-cards .produto .preco-produto {
-        margin: 4px 6px !important;
+    section.pagina-produtos .produtos-cards .produto .titulo-produto {
+        font-size: 11.5px !important; /* Letra ligeiramente menor para caber tudo na horizontal */
+        white-space: nowrap !important; /* IMPEDE QUE O TEXTO QUEBRE LINHA */
+        overflow: hidden !important;
+        text-overflow: ellipsis !important; /* Se for muito grande, coloca reticências */
         text-align: center !important;
+        margin: 6px 4px 2px 4px !important;
     }
 
-    section.pagina-produtos .produtos-cards .produto h3 {
-        font-size: 13px !important;
-    }
-
-    section.pagina-produtos .produtos-cards .produto p {
-        font-size: 10px !important;
+    /* Descrição enxuta */
+    section.pagina-produtos .produtos-cards .produto p,
+    section.pagina-produtos .produtos-cards .produto .descricao-produto {
+        font-size: 9.5px !important;
         color: #666 !important;
+        text-align: center !important;
+        margin: 0 4px 6px 4px !important;
+        white-space: nowrap !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
     }
 
-    /* Linha do Preço e Peso centralizada */
-    section.pagina-produtos .produtos-cards .produto .preco-produto {
-        font-size: 12px !important;
+    /* PESO E PREÇO: Centralizados lado a lado bem compactos */
+    section.pagina-produtos .produtos-cards .produto .preco-produto,
+    section.pagina-produtos .produtos-cards .produto .container-preco {
+        font-size: 11px !important;
         display: flex !important;
         justify-content: center !important;
         align-items: center !important;
-        gap: 4px !important;
-        margin-bottom: 8px !important;
+        gap: 5px !important;
+        margin: 0 auto 6px auto !important;
         width: 100% !important;
     }
 
-    /* BOTÃO DO WHATSAPP: 100% alinhado, centralizado e sem ficar torto */
+    /* BOTÃO DO WHATSAPP: Perfeito e alinhado na base */
     section.pagina-produtos .produtos-cards .produto .botao-produto,
     section.pagina-produtos .produtos-cards .produto a.botao,
     section.pagina-produtos .produtos-cards .produto button {
         width: 100% !important;
         max-width: 100% !important;
         margin: 0 !important;
-        padding: 6px 0 !important;
-        font-size: 10px !important;
-        border-radius: 0 0 10px 10px !important;
+        padding: 5px 0 !important;
+        font-size: 9.5px !important;
+        border-radius: 0 0 8px 8px !important;
         box-sizing: border-box !important;
         display: flex !important;
         justify-content: center !important;
         align-items: center !important;
         text-align: center !important;
-        align-self: stretch !important;
     }
     /* Puxa a lista de produtos para cima, aproximando dos filtros */
       section.pagina-produtos .produtos-cards,
