@@ -1554,6 +1554,20 @@ section.sobre {
         padding: 6px 12px !important;
         min-height: auto !important;
     }
+    /* Puxa o bloco de filtros para perto da barra de pesquisa */
+.topo-filtros, .topo-filtro {
+    margin-top: -10px !important;
+    margin-bottom: 15px !important;
+}
+
+/* Garante que a barra de pesquisa e os botões fiquem compactos e alinhados */
+.barra-pesquisa {
+    margin-bottom: 12px !important;
+}
+
+.filtros-categorias {
+    margin-top: 0 !important;
+}
 /* Posiciona e formata a barra de pesquisa perfeitamente */
 .barra-pesquisa {
     display: flex !important;
