@@ -1325,83 +1325,130 @@ section.sobre {
 }
 
 @media (max-width: 768px) {
-    /* 1. Esconde as setas que ficavam dos lados */
-    .seta-esquerda, .seta-direita {
-        display: none !important;
-    }
-
-    /* 2. Container geral: força uma coluna única e centralizada */
-    .produtos-cards {
-        display: flex !important;
-        flex-direction: column !important; /* Empilha os cards */
+    
+    /* 1. Container geral da seção de produtos */
+    section.pagina-produtos, section.produtos {
         width: 100% !important;
         padding: 10px 0 !important;
-        gap: 20px !important;
-        overflow-x: hidden !important; /* Corta qualquer tentativa de rolar pro lado */
+        overflow: hidden !important;
     }
 
-    /* 3. Ajuste do Card individual */
-    .produto {
-        flex: 0 0 auto !important;
-        width: 90% !important; /* Largura um pouco menor que a tela pra dar respiro */
-        margin: 0 auto !important; /* Centraliza o card na tela */
-        padding: 15px !important;
-        background: #ffffff !important;
-        border-radius: 12px !important;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.1) !important;
-        height: auto !important;
-    }
-
-    /* 4. Imagem do produto */
-    .produto img {
-        height: 200px !important;
+    /* 2. O Carrossel Wrapper (MANTÉM HORIZONTAL) */
+    .carrossel-wrapper {
+        position: relative !important;
         width: 100% !important;
-        object-fit: cover !important;
-        border-radius: 8px !important;
+        max-width: 100% !important;
+        display: flex !important;
+        align-items: center !important;
+        overflow: hidden !important;
+        padding: 0 5px !important;
+        box-sizing: border-box !important;
     }
 
-    /* 5. Textos centralizados */
-    .produto h3 { font-size: 16px; margin: 10px 0 5px 0; text-align: center !important; }
-    .produto p { font-size: 12px; margin-bottom: 10px; text-align: center !important; }
-    
-    .produto .preco-produto { 
-        font-size: 16px; 
-        margin-bottom: 15px; 
-        text-align: center !important; 
-        display: block !important; 
-    }
-
-    /* 6. Botão WhatsApp */
-    .produto .botao-produto { 
-        padding: 10px 0 !important; 
-        font-size: 14px !important; 
-        width: 100% !important;
-        display: block !important;
-    }
-    @media (max-width: 768px) {
-    /* Força o grid de produtos a ser sempre 1 coluna só, 
-       não importa em qual página ele esteja */
+    /* 3. A Lista de Cards (Desliza para o lado) */
     .produtos-cards {
         display: flex !important;
-        flex-direction: column !important; /* EMPILHA TUDO */
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        overflow-x: auto !important;
+        scroll-behavior: smooth !important;
+        scrollbar-width: none !important; /* Remove barra de rolagem no Firefox */
         width: 100% !important;
-        margin: 0 auto !important;
-        padding: 10px !important;
-        gap: 20px !important;
+        gap: 15px !important;
+        padding: 10px 5px !important;
+    }
+    
+    .produtos-cards::-webkit-scrollbar {
+        display: none !important; /* Remove barra de rolagem no Chrome/Safari */
     }
 
-    /* Ocupa a largura total da tela */
+    /* 4. O Card Individual (Estilo Lojão Profissional) */
     .produto, .item-produto {
-        width: 95% !important; 
-        margin: 0 auto !important; /* Centraliza */
+        flex: 0 0 88% !important; /* Ocupa 88% da tela, deixando ver um pedacinho do próximo card */
+        max-width: 88% !important;
+        background: #ffffff !important;
+        border: 1px solid #eaeaea !important;
+        border-radius: 16px !important;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.06) !important;
         display: flex !important;
         flex-direction: column !important;
+        box-sizing: border-box !important;
+        overflow: hidden !important;
+        margin: 0 auto !important;
     }
 
-    /* Esconde as setas que estragam o layout vertical */
-    .seta-carrossel, .seta-esquerda, .seta-direita {
-        display: none !important;
+    /* 5. A Imagem em Destaque */
+    .produto img, .item-produto img {
+        width: 100% !important;
+        height: 220px !important; /* Altura ideal para dar destaque ao produto */
+        object-fit: cover !important;
+        border-radius: 16px 16px 0 0 !important;
+        display: block !important;
     }
+
+    /* 6. Textos Alinhados e Proporcionais */
+    .produto h3 {
+        font-size: 16px !important;
+        font-weight: 700 !important;
+        color: #222 !important;
+        margin: 12px 15px 4px 15px !important;
+        text-align: left !important;
+    }
+
+    .produto p {
+        font-size: 13px !important;
+        color: #666 !important;
+        margin: 0 15px 12px 15px !important;
+        text-align: left !important;
+    }
+
+    /* 7. Bloco de Preço e Peso */
+    .produto .preco-produto {
+        font-size: 16px !important;
+        margin: 0 15px 12px 15px !important;
+        display: flex !important;
+        align-items: center !important;
+        gap: 8px !important;
+        text-align: left !important;
+    }
+    /* 8. Botão do WhatsApp Estilo Padrão de E-commerce */
+    .produto .botao-produto {
+        width: calc(100% - 30px) !important;
+        margin: 0 15px 15px 15px !important;
+        padding: 12px 0 !important;
+        background-color: #25d366 !important;
+        color: #fff !important;
+        font-size: 14px !important;
+        font-weight: bold !important;
+        border-radius: 8px !important;
+        text-align: center !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        box-sizing: border-box !important;
+    }
+    /* 9. Setas de Navegação Laterais Estilizadas */
+    .seta-esquerda, .seta-direita {
+        position: absolute !important;
+        top: 45% !important;
+        transform: translateY(-50%) !important;
+        z-index: 10 !important;
+        background: #ffffff !important;
+        border: 1px solid #ddd !important;
+        border-radius: 50% !important;
+        width: 36px !important;
+        height: 36px !important;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.15) !important;
+        cursor: pointer !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        color: #3b2314 !important;
+        font-size: 16px !important;
+    }
+
+    .seta-esquerda { left: 2px !important; }
+    .seta-direita { right: 2px !important; }
 }
 
     /* 7. Ajustes do Título da Seção */
@@ -1419,7 +1466,6 @@ section.sobre {
     .footer-conteudo { flex-direction: column; gap: 12px; padding: 20px 10px; }
     .footer-marca { display: none; }
     .footer-menu, .footer-contato { flex-direction: row; gap: 15px; justify-content: center; }
-}
 /* ==========================
   PAGINA DOS PRODUTOS.HTML
 ========================== */
