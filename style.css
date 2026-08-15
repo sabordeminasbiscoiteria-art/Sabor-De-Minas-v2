@@ -1506,7 +1506,7 @@ footer{
     }
 }
 /* ==========================================
-       RODAPÉ HORIZONTAL E SEM LINKS RÁPIDOS NO CELULAR
+       RODAPÉ COMPACTO E ORGANIZADO (CELULAR)
        ========================================== */
     @media (max-width: 768px) {
         /* Esconde os links rápidos no celular */
@@ -1517,59 +1517,108 @@ footer{
             display: none !important;
         }
 
-        /* Coloca a logo e os contatos lado a lado de forma organizada */
+        /* Estrutura principal do rodapé */
         footer,
         footer .footer-conteudo, 
         footer .container.footer-conteudo {
             display: flex !important;
             flex-direction: row !important;
-            flex-wrap: nowrap !important;
+            flex-wrap: wrap !important;
             justify-content: space-between !important;
-            align-items: flex-start !important;
-            gap: 10px !important;
-            padding: 20px 10px !important;
+            align-items: center !important;
+            padding: 15px 10px !important;
             box-sizing: border-box !important;
             width: 100% !important;
+            gap: 10px !important;
         }
 
-        /* Ajusta o bloco da esquerda (Logo) */
+        /* Bloco da Logo (bem compacto) */
         footer .logo-footer,
         footer .footer-info,
         footer .footer-conteudo > div:first-child {
-            flex: 0 0 45% !important;
-            max-width: 45% !important;
-            text-align: left !important;
-            align-items: flex-start !important;
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: center !important;
+            text-align: center !important;
+            flex: 0 0 38% !important;
+            max-width: 38% !important;
         }
 
-        /* Ajusta o bloco do meio (Contatos) */
+        /* Diminui o tamanho da logo */
+        footer .logo-footer img,
+        footer .footer-info img,
+        footer .footer-conteudo > div:first-child img {
+            width: 45px !important;
+            height: 45px !important;
+            object-fit: contain !important;
+            margin-bottom: 4px !important;
+        }
+
+        /* Título da marca menor para caber */
+        footer .logo-footer h3,
+        footer .footer-info h3,
+        footer .footer-conteudo > div:first-child h3,
+        footer .logo-footer h4 {
+            font-size: 11px !important;
+            line-height: 1.1 !important;
+            margin: 0 !important;
+        }
+
+        footer .logo-footer p,
+        footer .footer-info p {
+            font-size: 9px !important;
+            margin: 2px 0 0 0 !important;
+        }
+
+        /* Bloco dos Contatos (ao lado da logo) */
         footer .contato-footer,
         footer .footer-contatos,
         footer .footer-conteudo > div:nth-child(2) {
-            flex: 0 0 52% !important;
-            max-width: 52% !important;
-            text-align: left !important;
+            display: flex !important;
+            flex-direction: column !important;
             align-items: flex-start !important;
+            text-align: left !important;
+            flex: 0 0 58% !important;
+            max-width: 58% !important;
         }
 
-        /* Garante que os textos e ícones fiquem alinhados */
-        footer p, 
-        footer a {
-            font-size: 11px !important;
+        /* Título "Contato" menor */
+        footer .contato-footer h3,
+        footer .footer-contatos h3 {
+            font-size: 12px !important;
+            margin-bottom: 4px !important;
+        }
+
+        /* Alinhamento dos itens de contato */
+        footer .contato-footer p,
+        footer .contato-footer a,
+        footer .footer-contatos p,
+        footer .footer-contatos a {
+            font-size: 10px !important;
             display: flex !important;
             align-items: center !important;
             gap: 5px !important;
             margin: 2px 0 !important;
-            white-space: normal !important;
+            white-space: nowrap !important;
+            color: #fff !important;
+            text-decoration: none !important;
         }
 
-        /* Mantém o copyright embaixo ocupando a largura toda */
+        /* Ícones pequenininhos e alinhados */
+        footer img, 
+        footer svg {
+            width: 12px !important;
+            height: 12px !important;
+            flex-shrink: 0 !important;
+        }
+
+        /* Copyright embaixo ocupando tudo */
         footer .footer-final {
             width: 100% !important;
             flex-basis: 100% !important;
             text-align: center !important;
             font-size: 9px !important;
-            margin-top: 10px !important;
+            margin-top: 5px !important;
             border-top: 1px solid rgba(255,255,255,0.2) !important;
             padding-top: 6px !important;
         }
