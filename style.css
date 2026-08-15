@@ -1540,41 +1540,34 @@ footer{
         padding: 6px 12px !important;
         min-height: auto !important;
     }
-  /* Container da barra - Transparente e centralizado */
-.barra-pesquisa {
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    gap: 10px !important;
-    width: 100% !important;
-    max-width: 500px !important;
-    margin: 20px auto !important;
-    background-color: transparent !important;
-    border: none !important;
 }
+ /* Ajuste exclusivo para Computador - Corrige a barra e o botão */
+@media (min-width: 768px) {
+    .barra-pesquisa {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 10px !important;
+        background-color: transparent !important;
+        border: none !important;
+    }
 
-/* Caixa de texto - Arredondada e limpa */
-.barra-pesquisa input {
-    flex: 1 !important;
-    height: 40px !important;
-    padding: 0 15px !important;
-    border: 1px solid #dcdcdc !important;
-    border-radius: 25px !important; /* Esse valor deixa bem arredondado */
-    background-color: #ffffff !important;
-    outline: none !important;
-}
+    .barra-pesquisa input {
+        border-radius: 25px !important;
+        border: 1px solid #dcdcdc !important;
+        height: 40px !important;
+        padding: 0 15px !important;
+    }
 
-/* Botão Buscar - Laranja e arredondado */
-.barra-pesquisa button {
-    height: 40px !important;
-    padding: 0 20px !important;
-    background-color: #d4a373 !important; /* Cor laranja */
-    color: #ffffff !important;
-    border: none !important;
-    border-radius: 25px !important; /* Mesma curvatura do input */
-    cursor: pointer !important;
-    font-weight: bold !important;
-  }
+    .barra-pesquisa button {
+        border-radius: 25px !important;
+        background-color: #d4a373 !important;
+        color: #ffffff !important;
+        border: none !important;
+        height: 40px !important;
+        padding: 0 20px !important;
+        cursor: pointer !important;
+    }
 }
 /* ==========================================
    AJUSTE PROFISSIONAL: CARDS COMPACTOS EM 2 COLUNAS
