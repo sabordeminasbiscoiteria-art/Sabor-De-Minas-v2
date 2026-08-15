@@ -1541,7 +1541,6 @@ footer{
         min-height: auto !important;
     }
 }
- 
 /* ==========================================
    AJUSTE PROFISSIONAL: CARDS COMPACTOS EM 2 COLUNAS
    ========================================== */
@@ -1826,4 +1825,34 @@ footer{
 
 footer {
     margin-top: 20px !important;
+}
+/* Estilo EXCLUSIVO para Computador (telas grandes) */
+@media screen and (min-width: 768px) {
+    .barra-pesquisa {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        justify-content: center !important;
+        background: transparent !important;
+        border: none !important;
+        box-shadow: none !important;
+    }
+
+    .barra-pesquisa input {
+        border-radius: 25px 0 0 25px !important;
+        border: 1px solid #dcdcdc !important;
+        border-right: none !important;
+        height: 42px !important;
+        background-color: #ffffff !important;
+    }
+
+    .barra-pesquisa button {
+        border-radius: 0 25px 25px 0 !important;
+        background-color: #d4a373 !important;
+        color: #ffffff !important;
+        border: none !important;
+        height: 42px !important;
+        padding: 0 25px !important;
+        cursor: pointer !important;
+    }
 }
