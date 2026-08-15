@@ -1705,7 +1705,6 @@ section.sobre {
         text-align: center !important;
         align-self: stretch !important;
     }
-}
     /* Puxa a lista de produtos para cima, aproximando dos filtros */
       section.pagina-produtos .produtos-cards,
       .produtos-cards {
