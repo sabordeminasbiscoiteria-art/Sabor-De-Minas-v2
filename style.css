@@ -1483,21 +1483,6 @@ footer{
         font-size: 14px !important;
         margin-top: 10px !important;
     }
-    .footer-conteudo { 
-        flex-direction: column !important; 
-        gap: 12px !important; 
-        padding: 20px 10px !important; 
-    }
-    
-    .footer-marca { 
-        display: none !important; 
-    }
-    
-    .footer-menu, .footer-contato { 
-        flex-direction: row !important; 
-        gap: 15px !important; 
-        justify-content: center !important; 
-    }
 }
 /* ==========================
   PAGINA DOS PRODUTOS.HTML
