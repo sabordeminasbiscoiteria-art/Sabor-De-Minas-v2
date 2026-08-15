@@ -1312,25 +1312,16 @@ footer{
         text-align: left !important;
         margin: 0 !important;
     }
-    /* Tira a sobra e o espaço em branco no final da seção de produtos */
-section.produtos {
-    margin-bottom: 0 !important;
-    padding-bottom: 0 !important;
-}
-
-/* Faz a seção "sobre" colar perfeitamente na de cima */
-section.sobre {
-    margin-top: 0 !important;
-    padding-top: 20px !important; /* Ajuste se quiser um respiro interno */
-}
-@media (max-width: 768px) {
-/* ==========================================
-       2. PÁGINA INICIAL / INDEX (Carrossel Horizontal Estilo Cacau Show)
+     @media (max-width: 768px) {
+    /* ==========================================
+       2. PÁGINA INICIAL / INDEX (Carrossel Horizontal Blindado - Estilo Esteira)
        ========================================== */
     section.produtos {
         width: 100% !important;
+        max-width: 100% !important;
         overflow: hidden !important;
-        padding: 10px 0 !important;
+        padding: 15px 0 !important;
+        box-sizing: border-box !important;
     }
 
     section.produtos .carrossel-wrapper {
@@ -1344,9 +1335,10 @@ section.sobre {
     }
 
     section.produtos .produtos-cards {
-        display: flex !important;
-        flex-direction: row !important;
-        flex-wrap: nowrap !important;
+        display: grid !important;
+        grid-auto-flow: column !important;
+        grid-auto-columns: 78% !important; /* Força cada card a ocupar exatamente 78% da largura da tela */
+        gap: 16px !important;
         overflow-x: auto !important;
         scroll-snap-type: x mandatory !important;
         -webkit-overflow-scrolling: touch !important;
@@ -1354,17 +1346,20 @@ section.sobre {
         scrollbar-width: none !important;
         width: 100% !important;
         max-width: 100% !important;
-        box-sizing: border-box !important;
-        gap: 16px !important;
-        padding: 10px 16px !important; 
+        padding: 10px 16px !important;
         margin: 0 !important;
+        box-sizing: border-box !important;
+    }
+    
+    section.produtos .produtos-cards::-webkit-scrollbar {
+        display: none !important;
     }
 
     section.produtos .produtos-cards .produto, 
     section.produtos .produtos-cards .item-produto {
-        flex: 0 0 75% !important; /* Reduz para 75% para sobrar espaço e revelar o próximo card na lateral */
-        min-width: 75% !important;
-        max-width: 75% !important;
+        width: 100% !important;
+        min-width: 100% !important;
+        max-width: 100% !important;
         scroll-snap-align: start !important;
         background: #ffffff !important;
         border: 1px solid #eaeaea !important;
