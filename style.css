@@ -1325,7 +1325,7 @@ section.sobre {
 }
 @media (max-width: 768px) {
     
-    /* Afeta APENAS a página de produtos */
+    /* Afeta APENAS a página de produtos (Grid de 2 colunas compacto) */
     section.pagina-produtos .produtos-cards {
         display: grid !important;
         grid-template-columns: repeat(2, 1fr) !important;
@@ -1426,10 +1426,8 @@ section.sobre {
     section.pagina-produtos .topo-filtro {
         margin-bottom: 5px !important;
     }
-}
 
-@media (max-width: 768px) {
-    /* Ajustes da seção de História (mantidos seguros) */
+    /* Ajustes da seção de História */
     .historia {
         display: block !important;
         position: relative !important;
@@ -1460,9 +1458,12 @@ section.sobre {
         margin-top: -30px !important;
         margin-bottom: 10px !important;
     }
-}
-    /* 7. Ajustes do Título da Seção */
-    .titulo-produtos { font-size: 22px !important; margin-bottom: 10px !important; }
+
+    /* Ajustes Gerais de Títulos e Rodapé */
+    .titulo-produtos { 
+        font-size: 22px !important; 
+        margin-bottom: 10px !important; 
+    }
     
     .topo-produtos {
         display: flex !important;
@@ -1472,10 +1473,22 @@ section.sobre {
         margin-bottom: 10px !important;
     }
 
-    /* 8. Rodapé (Footer) */
-    .footer-conteudo { flex-direction: column; gap: 12px; padding: 20px 10px; }
-    .footer-marca { display: none; }
-    .footer-menu, .footer-contato { flex-direction: row; gap: 15px; justify-content: center; }
+    .footer-conteudo { 
+        flex-direction: column !important; 
+        gap: 12px !important; 
+        padding: 20px 10px !important; 
+    }
+    
+    .footer-marca { 
+        display: none !important; 
+    }
+    
+    .footer-menu, .footer-contato { 
+        flex-direction: row !important; 
+        gap: 15px !important; 
+        justify-content: center !important; 
+    }
+}
 /* ==========================
   PAGINA DOS PRODUTOS.HTML
 ========================== */
