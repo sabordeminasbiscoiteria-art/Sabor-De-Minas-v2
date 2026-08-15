@@ -1505,30 +1505,52 @@ footer{
         text-decoration: none !important;
     }
 /* ==========================================
-       CORREÇÃO DO RODAPÉ (Alinhamento dos Contatos)
+       RODAPÉ (Layout Vertical para Celular)
        ========================================== */
+    footer,
     footer .footer-conteudo, 
     footer .container.footer-conteudo {
+        width: 100% !important;
+        max-width: 100% !important;
         display: flex !important;
         flex-direction: column !important;
-        gap: 15px !important;
+        align-items: center !important;
+        text-align: center !important;
+        gap: 20px !important;
+        padding: 30px 16px !important;
+        box-sizing: border-box !important;
     }
 
-    footer .footer-conteudo div, 
+    footer .footer-conteudo > div,
+    footer .footer-conteudo > ul {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        list-style: none !important;
+    }
+
     footer .footer-conteudo p,
-    footer .footer-conteudo a {
+    footer .footer-conteudo a,
+    footer .footer-conteudo li {
         display: flex !important;
         align-items: center !important;
-        gap: 10px !important;
-        margin: 0 !important;
+        justify-content: center !important;
+        gap: 8px !important;
+        margin: 4px 0 !important;
+        font-size: 13px !important;
+        color: #fff !important;
+        text-decoration: none !important;
     }
 
-    footer .footer-conteudo img, 
-    footer .footer-conteudo svg {
+    footer img, 
+    footer svg {
+        width: 16px !important;
+        height: 16px !important;
         flex-shrink: 0 !important;
-        width: 18px !important;
-        height: 18px !important;
-        display: inline-block !important;
     }
 }
 /* ==========================
