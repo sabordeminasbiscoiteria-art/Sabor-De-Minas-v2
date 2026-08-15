@@ -1626,15 +1626,17 @@ section.sobre {
 }
 @media (max-width: 768px) {
     
-    /* Garante o layout em 2 colunas compacto */
+    /* Grade dos cards compacta */
     section.pagina-produtos .produtos-cards,
     .produtos-cards {
         display: grid !important;
         grid-template-columns: repeat(2, 1fr) !important;
         gap: 8px !important;
         padding: 8px !important;
+        align-items: start !important; /* Faz cada card ter a sua altura natural sem esticar à toa */
     }
 
+    /* Card individual */
     section.pagina-produtos .produtos-cards .produto,
     section.pagina-produtos .produtos-cards .item-produto {
         width: 100% !important;
@@ -1648,21 +1650,22 @@ section.sobre {
         box-shadow: 0 2px 4px rgba(0,0,0,0.05) !important;
     }
 
-    /* Imagem compacta e bonita */
+    /* Imagem compacta */
     section.pagina-produtos .produtos-cards .produto img,
     section.pagina-produtos .produtos-cards .item-produto img {
         width: 100% !important;
         height: 110px !important;
         object-fit: cover !important;
         display: block !important;
+        margin: 0 !important;
     }
 
-    /* Remove o espaço branco: aperta todos os textos e elementos para cima */
+    /* Zera margens extras dos textos para eliminar o espaço em branco */
     section.pagina-produtos .produtos-cards .produto h3,
     section.pagina-produtos .produtos-cards .produto p,
     section.pagina-produtos .produtos-cards .produto .preco-produto {
-        margin-top: 4px !important;
-        margin-bottom: 4px !important;
+        margin: 4px 6px !important;
+        text-align: center !important;
     }
 
     section.pagina-produtos .produtos-cards .produto h3 {
@@ -1674,30 +1677,35 @@ section.sobre {
         color: #666 !important;
     }
 
-    /* Preço e Peso centralizados e compactos */
+    /* Linha do Preço e Peso centralizada */
     section.pagina-produtos .produtos-cards .produto .preco-produto {
         font-size: 12px !important;
         display: flex !important;
         justify-content: center !important;
         align-items: center !important;
         gap: 4px !important;
-        margin-bottom: 6px !important;
+        margin-bottom: 8px !important;
+        width: 100% !important;
     }
 
-    /* BOTÃO MAIS FINO E COMPACTO (Ajustado aqui) */
+    /* BOTÃO DO WHATSAPP: 100% alinhado, centralizado e sem ficar torto */
     section.pagina-produtos .produtos-cards .produto .botao-produto,
     section.pagina-produtos .produtos-cards .produto a.botao,
     section.pagina-produtos .produtos-cards .produto button {
         width: 100% !important;
-        padding: 5px 2px !important; /* Altura menor para o botão não ficar gigantão */
-        font-size: 10px !important; /* Texto proporcional */
-        margin-top: auto !important; /* Joga ele sempre colado no final */
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 6px 0 !important;
+        font-size: 10px !important;
         border-radius: 0 0 10px 10px !important;
         box-sizing: border-box !important;
         display: flex !important;
         justify-content: center !important;
         align-items: center !important;
+        text-align: center !important;
+        align-self: stretch !important;
     }
+}
     /* Puxa a lista de produtos para cima, aproximando dos filtros */
       section.pagina-produtos .produtos-cards,
       .produtos-cards {
