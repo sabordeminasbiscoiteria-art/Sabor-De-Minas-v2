@@ -1624,113 +1624,79 @@ section.sobre {
     cursor: pointer !important;
     }
 }
-/* AJUSTE PROFISSIONAL: CARDS COMPACTOS EM 2 COLUNAS (MÁGICA AQUI) */
 @media (max-width: 768px) {
     
-    /* Container geral dos cards */
+    /* Garante o layout em 2 colunas compacto */
     section.pagina-produtos .produtos-cards,
     .produtos-cards {
         display: grid !important;
         grid-template-columns: repeat(2, 1fr) !important;
-        gap: 10px !important; /* Espaçamento entre os cards */
-        padding: 10px !important;
+        gap: 8px !important;
+        padding: 8px !important;
     }
 
-    /* Estrutura do card individual */
     section.pagina-produtos .produtos-cards .produto,
     section.pagina-produtos .produtos-cards .item-produto {
         width: 100% !important;
-        max-width: 100% !important;
         margin: 0 !important;
         padding: 0 !important;
         display: flex !important;
         flex-direction: column !important;
         background: #ffffff !important;
-        border-radius: 12px !important; /* Bordas arredondadas */
-        box-shadow: 0 2px 5px rgba(0,0,0,0.1) !important; /* Sombra suave */
-        overflow: hidden !important; /* Garante que nada saia do card */
+        border-radius: 10px !important;
+        overflow: hidden !important;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.05) !important;
     }
 
-    /* A IMAGEM: Quadrada e Preenchendo o Espaço */
+    /* Imagem compacta e bonita */
     section.pagina-produtos .produtos-cards .produto img,
     section.pagina-produtos .produtos-cards .item-produto img {
         width: 100% !important;
-        height: 120px !important; /* ALTURA FIXA: Define o tamanho do quadrado */
-        object-fit: cover !important; /* CORTA A IMAGEM PARA CABER SEM ESTICAR */
-        object-position: center !important; /* Centraliza o biscoito */
+        height: 110px !important;
+        object-fit: cover !important;
         display: block !important;
     }
 
-    /* Bloco de informações (Textos) */
-    section.pagina-produtos .produtos-cards .produto .info-produto,
-    section.pagina-produtos .produtos-cards .produto .detalhes-card {
-        padding: 8px !important; /* Reduz o preenchimento interno */
-        display: flex !important;
-        flex-direction: column !important;
-        justify-content: space-between !important;
-        flex-grow: 1 !important;
-    }
-
-    /* Título (Casadinho Avelã) */
+    /* Remove o espaço branco: aperta todos os textos e elementos para cima */
     section.pagina-produtos .produtos-cards .produto h3,
-    section.pagina-produtos .produtos-cards .produto .titulo-produto {
-        font-size: 14px !important;
-        margin: 0 0 2px 0 !important;
-        font-weight: bold !important;
-        text-align: center !important;
-    }
-
-    /* Descrição (Biscoito artesanal.) */
     section.pagina-produtos .produtos-cards .produto p,
-    section.pagina-produtos .produtos-cards .produto .descricao-produto {
-        font-size: 11px !important;
-        color: #666 !important;
-        margin: 0 0 6px 0 !important;
-        text-align: center !important;
-        line-height: 1.2 !important;
+    section.pagina-produtos .produtos-cards .produto .preco-produto {
+        margin-top: 4px !important;
+        margin-bottom: 4px !important;
     }
 
-    /* Bloco de Peso e Preço */
-    section.pagina-produtos .produtos-cards .produto .preco-peso,
-    section.pagina-produtos .produtos-cards .produto .container-preco {
+    section.pagina-produtos .produtos-cards .produto h3 {
+        font-size: 13px !important;
+    }
+
+    section.pagina-produtos .produtos-cards .produto p {
+        font-size: 10px !important;
+        color: #666 !important;
+    }
+
+    /* Preço e Peso centralizados e compactos */
+    section.pagina-produtos .produtos-cards .produto .preco-produto {
+        font-size: 12px !important;
         display: flex !important;
         justify-content: center !important;
         align-items: center !important;
-        gap: 6px !important;
+        gap: 4px !important;
         margin-bottom: 6px !important;
     }
 
-    /* Preço (R$ 18,00) */
-    section.pagina-produtos .produtos-cards .produto .preco,
-    section.pagina-produtos .produtos-cards .produto .valor-produto {
-        font-size: 16px !important;
-        color: #b94444 !important; /* Cor do seu preço */
-        font-weight: bold !important;
-    }
-
-    /* Peso (250g) */
-    section.pagina-produtos .produtos-cards .produto .peso,
-    section.pagina-produtos .produtos-cards .produto .peso-produto {
-        font-size: 10px !important;
-        color: #999 !important;
-        background: #f0f0f0 !important;
-        padding: 2px 4px !important;
-        border-radius: 4px !important;
-    }
-
-    /* Botão WhatsApp (Ocupando 100% da largura) */
-    section.pagina-produtos .produtos-cards .produto .botao-whatsapp,
-    section.pagina-produtos .produtos-cards .produto .btn-pedir {
+    /* BOTÃO MAIS FINO E COMPACTO (Ajustado aqui) */
+    section.pagina-produtos .produtos-cards .produto .botao-produto,
+    section.pagina-produtos .produtos-cards .produto a.botao,
+    section.pagina-produtos .produtos-cards .produto button {
         width: 100% !important;
-        margin: 0 !important;
-        padding: 8px 0 !important;
-        font-size: 12px !important;
-        border-radius: 0 0 12px 12px !important; /* Arredonda só embaixo */
+        padding: 5px 2px !important; /* Altura menor para o botão não ficar gigantão */
+        font-size: 10px !important; /* Texto proporcional */
+        margin-top: auto !important; /* Joga ele sempre colado no final */
+        border-radius: 0 0 10px 10px !important;
+        box-sizing: border-box !important;
         display: flex !important;
         justify-content: center !important;
         align-items: center !important;
-        font-weight: bold !important;
-        box-sizing: border-box !important;
     }
     /* Puxa a lista de produtos para cima, aproximando dos filtros */
       section.pagina-produtos .produtos-cards,
