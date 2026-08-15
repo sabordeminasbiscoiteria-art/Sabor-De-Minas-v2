@@ -1681,6 +1681,7 @@ section.sobre {
         text-align: center !important;
         color: #666 !important;
     }
+    
     /* Bloco de preço e peso compacto */
     section.pagina-produtos .produtos-cards .produto .preco-produto,
     section.pagina-produtos .produtos-cards .item-produto .preco-produto {
@@ -1693,31 +1694,21 @@ section.sobre {
         gap: 6px !important;
     }
 
-    /* Botão do WhatsApp proporcional */
-    section.pagina-produtos .produtos-cards .produto .botao-produto,
-    section.pagina-produtos .produtos-cards .item-produto .botao-produto {
-        padding: 6px 4px !important;
-        font-size: 10px !important;
-        width: 100% !important;
-        box-sizing: border-box !important;
-        text-align: center !important;
-        border-radius: 6px !important;
-    }
-}
-/* ==========================================
-   FORÇA O BOTÃO A OCUPAR 100% DA LARGURA DO CARD
-   ========================================== */
-@media (max-width: 768px) {
+    /* Botão do WhatsApp proporcional e ocupando 100% */
     section.pagina-produtos .produtos-cards .produto .botao-produto,
     section.pagina-produtos .produtos-cards .item-produto .botao-produto {
         display: flex !important;
         align-items: center !important;
         justify-content: center !important;
+        padding: 6px 4px !important;
+        font-size: 10px !important;
         width: 100% !important;
         max-width: 100% !important;
         margin-left: 0 !important;
         margin-right: 0 !important;
         box-sizing: border-box !important;
+        text-align: center !important;
+        border-radius: 6px !important;
     }
 }
 /* ==========================================
