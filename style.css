@@ -1324,104 +1324,6 @@ section.sobre {
     padding-top: 20px !important; /* Ajuste se quiser um respiro interno */
 }
 @media (max-width: 768px) {
-    
-    /* ==========================================
-       1. PÁGINA DE PRODUTOS (Grid de 2 colunas compacto)
-       ========================================== */
-    section.pagina-produtos .produtos-cards {
-        display: grid !important;
-        grid-template-columns: repeat(2, 1fr) !important;
-        gap: 6px !important;
-        padding: 6px !important;
-        align-items: start !important;
-        margin-top: -10px !important;
-        padding-top: 0 !important;
-    }
-
-    section.pagina-produtos .produtos-cards .produto,
-    section.pagina-produtos .produtos-cards .item-produto {
-        width: 100% !important;
-        margin: 0 !important;
-        padding: 0 !important;
-        display: flex !important;
-        flex-direction: column !important;
-        background: #ffffff !important;
-        border-radius: 8px !important;
-        overflow: hidden !important;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.05) !important;
-    }
-
-    section.pagina-produtos .produtos-cards .produto img,
-    section.pagina-produtos .produtos-cards .item-produto img {
-        width: 100% !important;
-        height: 100px !important;
-        object-fit: cover !important;
-        display: block !important;
-        margin: 0 !important;
-    }
-
-    section.pagina-produtos .produtos-cards .produto h3,
-    section.pagina-produtos .produtos-cards .produto .titulo-produto {
-        font-size: 11.5px !important;
-        white-space: nowrap !important;
-        overflow: hidden !important;
-        text-overflow: ellipsis !important;
-        text-align: center !important;
-        margin: 6px 4px 2px 4px !important;
-    }
-
-    section.pagina-produtos .produtos-cards .produto p,
-    section.pagina-produtos .produtos-cards .produto .descricao-produto {
-        font-size: 9.5px !important;
-        color: #666 !important;
-        text-align: center !important;
-        margin: 0 4px 6px 4px !important;
-        white-space: nowrap !important;
-        overflow: hidden !important;
-        text-overflow: ellipsis !important;
-    }
-
-    section.pagina-produtos .produtos-cards .produto .preco-produto,
-    section.pagina-produtos .produtos-cards .produto .container-preco {
-        font-size: 11px !important;
-        display: flex !important;
-        flex-direction: row !important;
-        flex-wrap: nowrap !important;
-        align-items: center !important;
-        justify-content: center !important;
-        gap: 5px !important;
-        width: 100% !important;
-        margin: 8px 0 !important;
-    }
-
-    section.pagina-produtos .produtos-cards .preco-produto span,
-    section.pagina-produtos .produtos-cards .preco-produto strong {
-        display: inline-block !important;
-        width: auto !important;
-        margin: 0 !important;
-        white-space: nowrap !important;
-    }
-
-    section.pagina-produtos .produtos-cards .produto .botao-produto,
-    section.pagina-produtos .produtos-cards .produto a.botao,
-    section.pagina-produtos .produtos-cards .produto button {
-        width: 100% !important;
-        max-width: 100% !important;
-        margin: 0 !important;
-        padding: 5px 0 !important;
-        font-size: 9.5px !important;
-        border-radius: 0 0 8px 8px !important;
-        box-sizing: border-box !important;
-        display: flex !important;
-        justify-content: center !important;
-        align-items: center !important;
-        text-align: center !important;
-    }
-
-    section.pagina-produtos .topo-filtros, 
-    section.pagina-produtos .topo-filtro {
-        margin-bottom: 5px !important;
-    }
 /* ==========================================
        2. PÁGINA INICIAL / INDEX (Carrossel Horizontal de Esteira)
        ========================================== */
@@ -1455,8 +1357,8 @@ section.sobre {
         width: 100% !important;
         max-width: 100% !important;
         box-sizing: border-box !important;
-        gap: 15px !important; /* Espaço entre os cards para mostrar a esteira */
-        padding: 10px 20px !important; /* Respiro nas pontas esquerda e direita */
+        gap: 12px !important;
+        padding: 10px 8% !important; /* Usa porcentagem para alinhar perfeitamente a bordinha em qualquer tela */
         margin: 0 !important;
     }
     
@@ -1466,10 +1368,10 @@ section.sobre {
 
     section.produtos .produtos-cards .produto, 
     section.produtos .produtos-cards .item-produto {
-        flex: 0 0 85% !important; /* Deixa com 85% para mostrar a bordinha do próximo */
-        min-width: 85% !important;
-        max-width: 85% !important;
-        scroll-snap-align: start !important; /* Trava no começo de cada card perfeitamente */
+        flex: 0 0 84% !important; 
+        min-width: 84% !important;
+        max-width: 84% !important;
+        scroll-snap-align: center !important; /* Centraliza o card perfeitamente na tela */
         background: #ffffff !important;
         border: 1px solid #eaeaea !important;
         border-radius: 16px !important;
