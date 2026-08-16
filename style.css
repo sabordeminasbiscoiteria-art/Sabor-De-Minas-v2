@@ -1364,19 +1364,27 @@ footer{
 }
 
 .btn-ver-produtos {
-  background-color: #e52e2e;
+  background-color: #3b2314; /* Marrom escuro combinando com a identidade */
   color: #fff;
-  padding: 10px 20px;
+  padding: 6px 14px;
   border-radius: 50px;
   text-decoration: none;
-  font-weight: bold;
-  font-size: 0.95rem;
+  font-weight: 600;
+  font-size: 0.8rem;
   white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 6px;
   transition: background 0.3s;
 }
 
-.btn-ver-produtos:hover {
-  background-color: #c42222;
+.btn-ver-produtos i {
+  font-size: 0.7rem;
+  transition: transform 0.2s;
+}
+
+.btn-ver-produtos:hover i {
+  transform: translateX(3px); /* Efeito de movimento na setinha */
 }
 
 /* --- RESPONSIVO PARA CELULAR (Compacto e Profissional) --- */
@@ -1400,10 +1408,28 @@ footer{
   }
 
   .btn-ver-produtos {
-    padding: 6px 14px; /* Botão mais compacto em altura e largura */
-    font-size: 0.8rem;   /* Fonte menor e elegante */
-    border-radius: 20px;
-  }
+  background-color: #3b2314; /* Marrom escuro combinando com a identidade */
+  color: #fff;
+  padding: 6px 14px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.8rem;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: background 0.3s;
+}
+
+.btn-ver-produtos i {
+  font-size: 0.7rem;
+  transition: transform 0.2s;
+}
+
+.btn-ver-produtos:hover i {
+  transform: translateX(3px); /* Efeito de movimento na setinha */
+}
 }
 /* =========================================
    RESPONSIVO - TELA 728px
