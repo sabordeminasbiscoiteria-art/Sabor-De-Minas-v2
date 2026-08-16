@@ -1347,14 +1347,13 @@ footer{
         }
     }
    /* ==========================================
-   Seção de Produtos - Cabeçalho Profissional
+   Seção de Produtos - Cabeçalho Profissional (Tom Vinho/Bordô)
    ========================================== */
 
 .secao-produtos-home {
     padding: 40px 20px;
 }
 
-/* Container flexível principal: joga texto pra esquerda e botão pra direita */
 .header-produtos {
     display: flex;
     align-items: center;
@@ -1364,13 +1363,11 @@ footer{
     width: 100%;
 }
 
-/* Bloco que segura o título e o subtítulo juntos */
 .header-produtos .texto-cabecalho {
     display: flex;
     flex-direction: column;
 }
 
-/* Estilo do Título */
 .titulo-home {
     font-size: 2.2rem;
     color: #3b2314;
@@ -1381,40 +1378,41 @@ footer{
     margin: 0;
 }
 
+/* Ícone do título em tom vinho elegante */
 .titulo-home i {
-    color: #c8372d;
+    color: #8B263E; 
     font-size: 1.8rem;
 }
 
-/* Estilo do Subtítulo */
 .subtitulo-home {
     font-size: 1rem;
     color: #7a6a58;
     margin: 5px 0 0 0;
 }
 
-/* Botão Delicado e Profissional (Estilo Pílula) */
+/* Botão em Vermelho Vinho / Bordô refinado */
 .botao-destaque-grande {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: 8px;
-    background-color: #c8372d;
+    background-color: #8B263E; /* Cor vinho principal */
     color: #ffffff;
     padding: 12px 26px;
     border-radius: 50px;
     font-size: 0.95rem;
     font-weight: 600;
     text-decoration: none;
-    box-shadow: 0 4px 12px rgba(200, 55, 45, 0.2);
+    box-shadow: 0 4px 12px rgba(139, 38, 62, 0.25);
     transition: all 0.3s ease;
     white-space: nowrap;
 }
 
+/* Efeito ao passar o mouse (um vinho um pouco mais escuro) */
 .botao-destaque-grande:hover {
-    background-color: #b02f26;
+    background-color: #701E31;
     transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(200, 55, 45, 0.3);
+    box-shadow: 0 6px 16px rgba(139, 38, 62, 0.35);
 }
 
 /* ==========================================
@@ -1423,7 +1421,7 @@ footer{
 @media (max-width: 768px) {
     .header-produtos {
         flex-direction: column;
-        align-items: stretch; /* Ocupa a largura para o botão alinhar bem */
+        align-items: stretch;
         gap: 15px;
     }
 
@@ -1440,7 +1438,7 @@ footer{
     }
 
     .botao-destaque-grande {
-        width: 100%; /* Botão em largura total no celular */
+        width: 100%;
         padding: 12px 20px;
     }
 }
