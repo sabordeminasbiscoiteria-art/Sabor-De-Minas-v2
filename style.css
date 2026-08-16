@@ -1346,41 +1346,62 @@ footer{
             margin: 0 auto !important;
         }
     }
-    @media (max-width: 768px) {
-    .secao-produtos-home {
-        padding: 40px 20px;
-        text-align: center;
-        background: #fdfaf8; /* Um tom bem suave de fundo */
-    }
+    /* --- ESTILO ELEGANTE PARA A VITRINE HOME --- */
+.secao-produtos-home {
+    padding: 60px 20px;
+    background-color: #faf9f6; /* Fundo creme bem suave */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-    .titulo-home {
-        font-size: 24px;
-        color: #2b1d11;
-        margin-bottom: 10px;
-    }
+.header-produtos {
+    max-width: 500px;
+    text-align: center;
+}
 
-    .subtitulo-home {
-        font-size: 14px;
-        color: #777;
-        margin-bottom: 25px;
-    }
+.titulo-home {
+    font-size: 28px;
+    color: #4a3728; /* Marrom café suave */
+    font-family: 'Segoe UI', sans-serif;
+    margin-bottom: 12px;
+}
 
-    .botao-destaque-grande {
-        display: inline-block;
-        background: #b82d2d; /* Cor forte de destaque */
-        color: #fff;
-        padding: 15px 30px;
-        border-radius: 30px;
-        text-decoration: none;
-        font-weight: bold;
-        font-size: 16px;
-        box-shadow: 0 4px 15px rgba(184, 45, 45, 0.3);
-        transition: transform 0.2s;
-    }
+.titulo-home i {
+    color: #d68f6a; /* Cor de biscoito/caramelo para o ícone */
+    margin-right: 8px;
+}
 
-    .botao-destaque-grande:active {
-        transform: scale(0.95);
-    }
+.subtitulo-home {
+    font-size: 16px;
+    color: #8c7b70; /* Um tom de areia escuro */
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+.botao-destaque-grande {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #d68f6a; /* Cor principal de destaque */
+    color: #ffffff;
+    padding: 16px 32px;
+    border-radius: 50px; /* Bem arredondado fica mais delicado */
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 15px rgba(214, 143, 106, 0.3);
+}
+
+.botao-destaque-grande:hover {
+    background-color: #c47d58;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(214, 143, 106, 0.4);
+}
+
+.botao-destaque-grande i {
+    font-size: 14px;
 }
 /* ==========================================
        RODAPÉ FINAL CORRIGIDO E FORÇADO (Celular)
