@@ -1397,11 +1397,11 @@ footer{
             transition: all 0.2s ease !important;
         }
     }
-     /* ==========================================
-       CARROSSEL HORIZONTAL CORRIGIDO (Lado a Lado)
+    /* ==========================================
+       CORREÇÃO FINAL: UM CARD POR VEZ EXATO (Celular)
        ========================================== */
     @media (max-width: 768px) {
-        /* Wrapper do carrossel com espaço para as setas nas pontas */
+        /* Wrapper do carrossel */
         section.produtos .carrossel-wrapper,
         .carrossel-wrapper {
             position: relative !important;
@@ -1410,7 +1410,7 @@ footer{
             box-sizing: border-box !important;
         }
 
-        /* Força os cards a ficarem estritamente em uma linha horizontal */
+        /* Container do carrossel limpo */
         section.produtos .produtos-cards,
         .produtos-cards {
             display: flex !important;
@@ -1419,7 +1419,7 @@ footer{
             overflow-x: auto !important;
             scroll-behavior: smooth !important;
             scroll-snap-type: x mandatory !important;
-            gap: 15px !important;
+            gap: 0 !important;
             padding: 10px 0 !important;
             width: 100% !important;
             box-sizing: border-box !important;
@@ -1430,10 +1430,11 @@ footer{
             display: none !important;
         }
 
-        /* Cada card com largura de 100% do container visível para aparecer um por vez na horizontal */
+        /* Cada card ocupa exatamente 100% da largura útil, sem vazar o próximo */
         section.produtos .produto,
         .produtos .produto {
             flex: 0 0 100% !important;
+            width: 100% !important;
             min-width: 100% !important;
             max-width: 100% !important;
             background: #ffffff !important;
@@ -1441,7 +1442,7 @@ footer{
             padding: 14px !important;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08) !important;
             box-sizing: border-box !important;
-            scroll-snap-align: center !important;
+            scroll-snap-align: start !important;
             display: flex !important;
             flex-direction: column !important;
             justify-content: space-between !important;
@@ -1458,7 +1459,7 @@ footer{
             margin-bottom: 8px !important;
         }
 
-        /* Título do produto */
+        /* Título */
         section.produtos .produto h3,
         .produto h3 {
             font-size: 15px !important;
@@ -1485,7 +1486,7 @@ footer{
             margin-bottom: 8px !important;
         }
 
-        /* Botão do WhatsApp */
+        /* Botão */
         section.produtos .produto .botao-produto,
         .produto a.botao-produto,
         .produto .botao-produto {
@@ -1502,7 +1503,7 @@ footer{
             box-sizing: border-box !important;
         }
 
-        /* Setas flutuantes nas laterais exatas do carrossel */
+        /* Setas alinhadas nas pontas */
         section.produtos .seta-carrossel,
         .seta-carrossel {
             display: flex !important;
@@ -1512,8 +1513,8 @@ footer{
             background: #ffffff !important;
             border: 1px solid rgba(0, 0, 0, 0.1) !important;
             color: #2b1d11 !important;
-            width: 32px !important;
-            height: 32px !important;
+            width: 30px !important;
+            height: 30px !important;
             border-radius: 50% !important;
             align-items: center !important;
             justify-content: center !important;
