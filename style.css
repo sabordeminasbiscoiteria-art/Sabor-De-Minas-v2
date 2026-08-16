@@ -1398,19 +1398,17 @@ footer{
         }
     }
     /* ==========================================
-       CORREÇÃO FINAL: UM CARD POR VEZ EXATO (Celular)
+       CORREÇÃO DEFINITIVA DO CARROSSEL (Celular)
        ========================================== */
     @media (max-width: 768px) {
-        /* Wrapper do carrossel */
         section.produtos .carrossel-wrapper,
         .carrossel-wrapper {
             position: relative !important;
             width: 100% !important;
-            padding: 0 35px !important;
+            padding: 0 40px !important; /* Espaço para as setas nas pontas */
             box-sizing: border-box !important;
         }
 
-        /* Container do carrossel limpo */
         section.produtos .produtos-cards,
         .produtos-cards {
             display: flex !important;
@@ -1430,7 +1428,7 @@ footer{
             display: none !important;
         }
 
-        /* Cada card ocupa exatamente 100% da largura útil, sem vazar o próximo */
+        /* Cada card ocupa exatamente 100% da área visível entre as setas */
         section.produtos .produto,
         .produtos .produto {
             flex: 0 0 100% !important;
@@ -1442,24 +1440,22 @@ footer{
             padding: 14px !important;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08) !important;
             box-sizing: border-box !important;
-            scroll-snap-align: start !important;
+            scroll-snap-align: center !important;
             display: flex !important;
             flex-direction: column !important;
             justify-content: space-between !important;
             border: 1px solid rgba(0, 0, 0, 0.05) !important;
         }
 
-        /* Imagem do produto */
         section.produtos .produto img,
         .produto img {
             width: 100% !important;
-            height: 150px !important;
+            height: 140px !important;
             object-fit: cover !important;
             border-radius: 10px !important;
             margin-bottom: 8px !important;
         }
 
-        /* Título */
         section.produtos .produto h3,
         .produto h3 {
             font-size: 15px !important;
@@ -1468,7 +1464,6 @@ footer{
             margin: 4px 0 2px 0 !important;
         }
 
-        /* Descrição */
         section.produtos .produto p,
         .produto p {
             font-size: 12px !important;
@@ -1477,16 +1472,17 @@ footer{
             line-height: 1.3 !important;
         }
 
-        /* Preço */
         section.produtos .produto .preco-produto,
         .produto .preco-produto {
             font-size: 16px !important;
             font-weight: bold !important;
             color: #b82d2d !important;
             margin-bottom: 8px !important;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
-        /* Botão */
         section.produtos .produto .botao-produto,
         .produto a.botao-produto,
         .produto .botao-produto {
@@ -1503,7 +1499,7 @@ footer{
             box-sizing: border-box !important;
         }
 
-        /* Setas alinhadas nas pontas */
+        /* Posicionamento fixo e correto das setas nas extremidades */
         section.produtos .seta-carrossel,
         .seta-carrossel {
             display: flex !important;
@@ -1513,8 +1509,8 @@ footer{
             background: #ffffff !important;
             border: 1px solid rgba(0, 0, 0, 0.1) !important;
             color: #2b1d11 !important;
-            width: 30px !important;
-            height: 30px !important;
+            width: 32px !important;
+            height: 32px !important;
             border-radius: 50% !important;
             align-items: center !important;
             justify-content: center !important;
@@ -1527,13 +1523,13 @@ footer{
         section.produtos .seta-esquerda,
         .seta-esquerda,
         button.seta-esquerda {
-            left: 0px !important;
+            left: 2px !important;
         }
 
         section.produtos .seta-direita,
         .seta-direita,
         button.seta-direita {
-            right: 0px !important;
+            right: 2px !important;
         }
     }
     /* ==========================================
