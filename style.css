@@ -1385,48 +1385,46 @@ footer{
 }
     }
 @media (max-width: 768px) {
-  /* --- SEÇÃO SOBRE: COMPACTA E ELEGANTE --- */
+  /* --- SEÇÃO SOBRE: ESTILO TRANSPARENTE E COMPACTO --- */
 .sobre {
-    padding: 20px 20px; /* Reduzi bastante o padding para diminuir a altura */
-    background-color: #ffffff;
+    padding: 20px 20px;
+    background-color: transparent; /* Remove o fundo da seção, deixando o do site */
     text-align: center;
 }
 
+.sobre .container {
+    background-color: transparent; /* Remove o fundo branco do quadro */
+    box-shadow: none;              /* Remove a sombra */
+    border-radius: 0;              /* Remove as bordas arredondadas */
+    padding: 0;                    /* Remove o espaço interno do quadro */
+    max-width: 500px;
+    margin: 0 auto;
+}
+
 .sobre h2 {
-    font-size: 18px;      /* Título menor e mais discreto */
+    font-size: 20px;
     color: #4a3728;
-    margin-bottom: 10px;  /* Menos espaço entre título e texto */
+    margin-bottom: 12px;
 }
 
 .sobre p {
-    font-size: 13px;      /* Texto um pouco menor para ocupar menos espaço */
-    color: #666;
-    line-height: 1.4;     /* Linhas mais próximas */
-    margin-bottom: 15px;  /* Pouco espaço antes do botão */
-    max-width: 500px;
-    margin-left: auto;
-    margin-right: auto;
+    font-size: 14px;
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: 15px;
 }
 
-/* --- BOTÃO ESTILO PROFISSIONAL (Borda fina) --- */
+/* Botão no estilo que você queria */
 .sobre .botao {
     display: inline-block;
-    padding: 6px 20px;    /* Botão bem menor e mais fino */
-    background-color: #ffffff;
-    color: #b82d2d;
-    border: 1px solid #b82d2d; /* Borda fininha e delicada */
-    border-radius: 15px;       /* Mais arredondado */
+    padding: 10px 25px;
+    background-color: #a32a2a;      /* Cor sólida vinho */
+    color: #ffffff;                 /* Letra branca */
+    border-radius: 25px;            /* Borda bem arredondada */
     text-decoration: none;
-    font-size: 12px;           /* Letra pequena e delicada */
+    font-size: 14px;
     font-weight: 600;
-    transition: 0.3s;
 }
-
-.sobre .botao:hover {
-    background-color: #b82d2d;
-    color: #ffffff;
-}
-
 /* Reduz o espaço final da seção de produtos */
 .secao-produtos-home, .produtos {
     padding-bottom: 10px !important; /* Aproxima de baixo */
