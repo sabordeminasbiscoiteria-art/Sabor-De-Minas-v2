@@ -1606,7 +1606,6 @@ footer{
             height: 12px !important;
             flex-shrink: 0 !important;
         }
-
         /* Copyright embaixo ocupando toda a largura */
         footer .footer-final {
             width: 100% !important;
