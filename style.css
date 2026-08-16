@@ -1618,6 +1618,23 @@ footer{
             padding-top: 8px !important;
         }
     }
+    /* ==========================================
+       REDUZIR ESPAÇAMENTO DO RODAPÉ (CELULAR)
+       ========================================== */
+    @media (max-width: 768px) {
+        footer,
+        footer .footer-conteudo, 
+        footer .container.footer-conteudo {
+            padding-top: 12px !important;
+            padding-bottom: 8px !important;
+            min-height: auto !important;
+        }
+
+        footer .footer-final {
+            margin-top: 8px !important;
+            padding-top: 5px !important;
+        }
+    }
 /* ==========================
   PAGINA DOS PRODUTOS.HTML
 ========================== */
