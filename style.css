@@ -1297,32 +1297,54 @@ footer{
     width: 10px;
     height: 10px;
  }
-/* Transforma a seção de benefícios em uma coluna organizada */
-    .beneficios {
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-        gap: 20px !important;
-        padding: 15px 20px !important;
-    }
+/* ==========================================
+       BENEFÍCIOS: APENAS ÍCONES LADO A LADO (Celular)
+       ========================================== */
+    @media (max-width: 768px) {
+        /* Transforma a seção de benefícios em uma linha horizontal */
+        section.beneficios,
+        .beneficios {
+            display: flex !important;
+            flex-direction: row !important;
+            justify-content: space-around !important;
+            align-items: center !important;
+            padding: 10px 5px !important;
+            width: 100% !important;
+            box-sizing: border-box !important;
+        }
 
-    /* Cada item de benefício alinhado com ícone e texto */
-    .beneficio {
-        display: flex !important;
-        align-items: center !important;
-        justify-content: flex-start !important;
-        width: 100% !important;
-        max-width: 300px !important;
-        gap: 15px !important;
-        text-align: left !important;
+        /* Cada item de benefício */
+        section.beneficios .beneficio,
+        .beneficios .beneficio {
+            display: flex !important;
+            justify-content: center !important;
+            align-items: center !important;
+            margin: 0 !important;
+            padding: 5px !important;
+        }
+
+        /* Esconde completamente os textos e títulos dos benefícios */
+        section.beneficios .beneficio h3,
+        section.beneficios .beneficio p,
+        .beneficios .beneficio h3,
+        .beneficios .beneficio p,
+        .beneficios .beneficio div {
+            display: none !important;
+        }
+
+        /* Destaca e centraliza apenas os ícones */
+        section.beneficios .beneficio img,
+        section.beneficios .beneficio i,
+        .beneficios .beneficio img,
+        .beneficios .beneficio i,
+        .beneficios .beneficio svg {
+            display: block !important;
+            width: 26px !important;
+            height: 26px !important;
+            font-size: 26px !important;
+            margin: 0 auto !important;
+        }
     }
-}
-    /* Ajusta o tamanho e recuo dos textos dos benefícios */
-    .beneficio h3, .beneficio p, .beneficio span {
-        text-align: left !important;
-        margin: 0 !important;
-    }
-    @media (max-width: 768px){
      /* ==========================================
        2. PÁGINA INICIAL / INDEX (Carrossel Forçado por Pixel)
        ========================================== */
