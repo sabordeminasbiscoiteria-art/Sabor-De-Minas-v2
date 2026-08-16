@@ -1465,10 +1465,12 @@ footer{
     section.sobre .texto-sobre {
         width: 100% !important;
         max-width: 100% !important;
-        background: rgba(255, 255, 255, 0.92) !important; /* O card branco translúcido igualzinho à sua foto */
+        background: transparent !important; /* Remove o fundo branco translúcido */
+        background-color: transparent !important;
         padding: 20px 16px !important;
-        border-radius: 16px !important;
-        box-shadow: 0 4px 15px rgba(0, 0,0, 0.08) !important;
+        border-radius: 0 !important;
+        box-shadow: none !important; /* Remove a sombra da caixa */
+        border: none !important;
         box-sizing: border-box !important;
         margin: 0 !important;
         text-align: left !important;
