@@ -1346,6 +1346,42 @@ footer{
             margin: 0 auto !important;
         }
     }
+    @media (max-width: 768px) {
+    .secao-produtos-home {
+        padding: 40px 20px;
+        text-align: center;
+        background: #fdfaf8; /* Um tom bem suave de fundo */
+    }
+
+    .titulo-home {
+        font-size: 24px;
+        color: #2b1d11;
+        margin-bottom: 10px;
+    }
+
+    .subtitulo-home {
+        font-size: 14px;
+        color: #777;
+        margin-bottom: 25px;
+    }
+
+    .botao-destaque-grande {
+        display: inline-block;
+        background: #b82d2d; /* Cor forte de destaque */
+        color: #fff;
+        padding: 15px 30px;
+        border-radius: 30px;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 16px;
+        box-shadow: 0 4px 15px rgba(184, 45, 45, 0.3);
+        transition: transform 0.2s;
+    }
+
+    .botao-destaque-grande:active {
+        transform: scale(0.95);
+    }
+}
 /* ==========================================
        RODAPÉ FINAL CORRIGIDO E FORÇADO (Celular)
        ========================================== */
