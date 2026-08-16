@@ -1410,9 +1410,9 @@ footer{
 
 /* Efeito ao passar o mouse (um vinho um pouco mais escuro) */
 .botao-destaque-grande:hover {
-    background-color: #701E31;
+    background-color: #8D2132;
     transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(139, 38, 62, 0.35);
+    box-shadow: 0 6px 16px rgba(170, 40, 60, 0.35);
 }
 
 /* ==========================================
