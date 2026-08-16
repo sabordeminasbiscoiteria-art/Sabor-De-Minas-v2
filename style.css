@@ -1398,170 +1398,65 @@ footer{
         }
     }
     /* ==========================================
-       CARROSSEL PROFISSIONAL - VERSÃO FINAL (Celular)
+       FIXO: UM CARD POR VEZ (Visual Profissional)
        ========================================== */
     @media (max-width: 768px) {
-        /* Garante que a seção de produtos ocupe o espaço correto */
-        section.produtos {
+        
+        /* 1. O wrapper precisa ser o limitador de largura */
+        section.produtos .carrossel-wrapper {
             width: 100% !important;
-            padding: 10px 15px !important;
-            box-sizing: border-box !important;
-            overflow: hidden !important;
-        }
-
-        /* Container que segura as setas nas extremidades exatas */
-        section.produtos .carrossel-wrapper,
-        .carrossel-wrapper {
+            max-width: 100% !important;
+            overflow: hidden !important; /* Esconde o que sobrar */
             position: relative !important;
-            width: 100% !important;
-            max-width: 320px !important; /* Trava a largura ideal para celular */
-            margin: 0 auto !important;     /* Centraliza na tela */
-            box-sizing: border-box !important;
+            padding: 0 !important;
         }
 
-        /* Container dos cards com rolagem perfeitamente travada */
-        section.produtos .produtos-cards,
-        .produtos-cards {
+        /* 2. Container dos cards: trava a rolagem em 1 card */
+        section.produtos .produtos-cards {
             display: flex !important;
             flex-direction: row !important;
             flex-wrap: nowrap !important;
             overflow-x: auto !important;
             scroll-behavior: smooth !important;
             scroll-snap-type: x mandatory !important;
-            gap: 0 !important;
-            padding: 5px 0 !important;
             width: 100% !important;
-            box-sizing: border-box !important;
-            scrollbar-width: none !important;
+            padding: 10px 0 !important;
+            scrollbar-width: none !important; /* Esconde barra Firefox */
         }
 
-        section.produtos .produtos-cards::-webkit-scrollbar {
-            display: none !important;
-        }
-
-        /* Cada card ocupa 100% do container central, sem cortes */
-        section.produtos .produto,
-        .produtos .produto {
-            flex: 0 0 100% !important;
-            width: 100% !important;
-            min-width: 100% !important;
-            max-width: 100% !important;
-            background: #ffffff !important;
-            border-radius: 16px !important;
-            padding: 16px !important;
-            box-shadow: 0 6px 20px rgba(43, 29, 17, 0.08) !important;
-            box-sizing: border-box !important;
+        /* 3. Card único: ocupando 100% da largura da tela */
+        section.produtos .produto {
+            flex: 0 0 90% !important; /* 90% para deixar um respiro nas laterais */
+            margin: 0 5% !important;  /* Centraliza o card */
             scroll-snap-align: center !important;
-            display: flex !important;
-            flex-direction: column !important;
-            justify-content: space-between !important;
-            border: 1px solid rgba(43, 29, 17, 0.06) !important;
-        }
-
-        /* Imagem charmosa e proporcional */
-        section.produtos .produto img,
-        .produto img {
-            width: 100% !important;
-            height: 160px !important;
-            object-fit: cover !important;
-            border-radius: 12px !important;
-            margin-bottom: 10px !important;
-        }
-
-        /* Título refinado */
-        section.produtos .produto h3,
-        .produto h3 {
-            font-size: 16px !important;
-            font-weight: 600 !important;
-            color: #2b1d11 !important;
-            margin: 4px 0 2px 0 !important;
-        }
-
-        /* Descrição sutil */
-        section.produtos .produto p,
-        .produto p {
-            font-size: 12px !important;
-            color: #777 !important;
-            margin: 0 0 10px 0 !important;
-            line-height: 1.4 !important;
-        }
-
-        /* Linha de preço e peso bem organizada */
-        section.produtos .produto .preco-produto,
-        .produto .preco-produto {
-            display: flex !important;
-            justify-content: space-between !important;
-            align-items: center !important;
-            font-size: 16px !important;
-            font-weight: bold !important;
-            color: #b82d2d !important;
-            margin-bottom: 12px !important;
-        }
-
-        section.produtos .produto .preco-produto .peso,
-        .produto .preco-produto .peso {
-            font-size: 12px !important;
-            font-weight: 500 !important;
-            background: #fdf3ed !important;
-            color: #b82d2d !important;
-            padding: 3px 8px !important;
-            border-radius: 6px !important;
-        }
-
-        /* Botão do WhatsApp delicado e moderno */
-        section.produtos .produto .botao-produto,
-        .produto a.botao-produto,
-        .produto .botao-produto {
-            display: flex !important;
-            align-items: center !important;
-            justify-content: center !important;
-            gap: 8px !important;
-            width: 100% !important;
-            background-color: #25d366 !important;
-            color: #fff !important;
-            text-align: center !important;
-            padding: 11px 0 !important;
-            font-size: 13px !important;
-            font-weight: 600 !important;
-            border-radius: 24px !important;
-            text-decoration: none !important;
-            box-sizing: border-box !important;
-            box-shadow: 0 4px 10px rgba(37, 211, 102, 0.25) !important;
-        }
-
-        /* Setas flutuantes elegantes nas laterais do card */
-        section.produtos .seta-carrossel,
-        .seta-carrossel {
-            display: flex !important;
-            position: absolute !important;
-            top: 50% !important;
-            transform: translateY(-50%) !important;
+            
+            /* Ajustes estéticos */
             background: #ffffff !important;
-            border: 1px solid rgba(43, 29, 17, 0.12) !important;
-            color: #2b1d11 !important;
-            width: 34px !important;
-            height: 34px !important;
+            border-radius: 20px !important;
+            padding: 20px !important;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1) !important;
+            box-sizing: border-box !important;
+            border: 1px solid rgba(0,0,0,0.05) !important;
+        }
+
+        /* 4. Ajuste das setas para não ficarem em cima dos cards */
+        section.produtos .seta-carrossel {
+            position: absolute !important;
+            top: 40% !important; /* Ajustado para ficar centralizado na foto */
+            z-index: 10 !important;
+            background: rgba(255,255,255,0.9) !important;
             border-radius: 50% !important;
+            width: 40px !important;
+            height: 40px !important;
+            display: flex !important;
             align-items: center !important;
             justify-content: center !important;
-            font-size: 14px !important;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.1) !important;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2) !important;
             cursor: pointer !important;
-            z-index: 20 !important;
-            transition: background 0.2s ease !important;
         }
 
-        section.produtos .seta-esquerda,
-        .seta-esquerda,
-        button.seta-esquerda {
-            left: -18px !important;
-        }
-
-        section.produtos .seta-direita,
-        .seta-direita,
-        button.seta-direita {
-            right: -18px !important;
-        }
+        .seta-esquerda { left: 5px !important; }
+        .seta-direita { right: 5px !important; }
     }
     /* ==========================================
        SEÇÃO SOBRE (Estilo Card Compacto para Celular)
