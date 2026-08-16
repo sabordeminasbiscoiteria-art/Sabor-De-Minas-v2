@@ -1346,28 +1346,43 @@ footer{
             margin: 0 auto !important;
         }
 
-/* --- ESTILO DE BOTÃO: CLEAN E ELEGANTE --- */
-.btn-ver-produtos {
-    background-color: #ffffff;        /* Fundo branco */
-    color: #000000;                  /* Letra preta */
-    border: 2px solid #b82d2d;       /* Borda vermelha chamativa */
-    padding: 10px 30px;
-    border-radius: 25px;             /* Formato arredondado */
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: 600;
-    transition: all 0.3s ease;
+/* --- SEÇÃO DE TÍTULO E BOTÃO PROFISSIONAL --- */
+.titulo-produtos {
     display: flex;
-    align-items: center;
-    gap: 8px;
+    justify-content: space-between; /* Mantém o título na esquerda e o botão na direita */
+    align-items: center;            /* Alinha tudo na mesma altura */
+    padding: 20px;
+    background-color: #faf9f6;
 }
 
-/* Efeito ao passar o mouse ou tocar */
-.btn-ver-produtos:hover {
-    background-color: #b82d2d;       /* Fundo vira vermelho */
-    color: #ffffff;                  /* Letra vira branca */
+.titulo-produtos h2 {
+    font-size: 22px;                /* Tamanho ideal para não ficar gigante */
+    color: #4a3728;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;                       /* Espaço entre ícone e texto */
 }
-    }
+
+/* --- BOTÃO ESTILO PROFISSIONAL E DELICADO --- */
+.btn-ver-produtos {
+    display: flex;
+    align-items: center;
+    gap: 8px;                       /* Espaço entre o texto e a seta */
+    padding: 8px 16px;              /* Espaçamento interno (proporcional) */
+    border: 1px solid #b82d2d;      /* Borda vermelha fina e elegante */
+    border-radius: 20px;            /* Arredondado estilo 'pill' */
+    color: #b82d2d;                 /* Texto vermelho */
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-ver-produtos:hover {
+    background-color: #b82d2d;
+    color: white;                   /* Inverte a cor no toque */
+}
 /* ==========================================
        RODAPÉ FINAL CORRIGIDO E FORÇADO (Celular)
        ========================================== */
