@@ -1398,102 +1398,115 @@ footer{
         }
     }
      /* ==========================================
-       CARDS DE PRODUTOS PROFISSIONAIS (Celular)
+       CARROSSEL DE PRODUTOS PROFISSIONAL (Passo a Passo por Clique)
        ========================================== */
     @media (max-width: 768px) {
-        /* Container dos cards em formato de lista deslizante ou grid limpo */
+        /* Container principal do carrossel */
         section.produtos .produtos-cards,
         .produtos-cards {
             display: flex !important;
             flex-direction: row !important;
             overflow-x: auto !important;
+            scroll-behavior: smooth !important; /* Faz a rolagem suave */
             scroll-snap-type: x mandatory !important;
             gap: 12px !important;
             padding: 10px 5px 20px 5px !important;
             width: 100% !important;
             box-sizing: border-box !important;
-            scrollbar-width: none !important; /* Remove barra no Firefox */
+            scrollbar-width: none !important;
         }
 
         section.produtos .produtos-cards::-webkit-scrollbar {
-            display: none !important; /* Remove barra no Chrome/Safari */
+            display: none !important;
         }
 
-        /* Cada Card individual refinado */
+        /* Cada card ocupa quase a largura inteira para passar um por um perfeitamente */
         section.produtos .produto,
         .produtos .produto {
-            flex: 0 0 75% !important;
-            max-width: 75% !important;
+            flex: 0 0 85% !important;
+            max-width: 85% !important;
             background: #ffffff !important;
-            border-radius: 12px !important;
-            padding: 12px !important;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06) !important;
+            border-radius: 14px !important;
+            padding: 14px !important;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08) !important;
             box-sizing: border-box !important;
             scroll-snap-align: center !important;
             display: flex !important;
             flex-direction: column !important;
             justify-content: space-between !important;
-            border: 1px solid rgba(0, 0, 0, 0.04) !important;
+            border: 1px solid rgba(0, 0, 0, 0.05) !important;
         }
 
-        /* Imagem do produto proporcional e limpa */
+        /* Imagem do produto no card */
         section.produtos .produto img,
         .produto img {
             width: 100% !important;
-            height: 140px !important;
+            height: 160px !important;
             object-fit: cover !important;
-            border-radius: 8px !important;
-            margin-bottom: 8px !important;
+            border-radius: 10px !important;
+            margin-bottom: 10px !important;
         }
 
-        /* Título do produto */
+        /* Título */
         section.produtos .produto h3,
         .produto h3 {
-            font-size: 14px !important;
+            font-size: 15px !important;
             font-weight: 600 !important;
             color: #2b1d11 !important;
             margin: 4px 0 2px 0 !important;
         }
 
-        /* Descrição curta */
+        /* Descrição */
         section.produtos .produto p,
         .produto p {
-            font-size: 11px !important;
+            font-size: 12px !important;
             color: #666 !important;
-            margin: 0 0 8px 0 !important;
+            margin: 0 0 10px 0 !important;
             line-height: 1.3 !important;
         }
 
-        /* Preço elegante */
+        /* Preço */
         section.produtos .produto .preco-produto,
         .produto .preco-produto {
-            font-size: 15px !important;
+            font-size: 16px !important;
             font-weight: bold !important;
             color: #b82d2d !important;
-            margin-bottom: 8px !important;
+            margin-bottom: 10px !important;
         }
 
-        /* Botão do WhatsApp minimalista e moderno no card */
+        /* Botão do WhatsApp */
         section.produtos .produto .botao-produto,
         .produto a.botao-produto,
         .produto .botao-produto {
             display: block !important;
             width: 100% !important;
-            background-color: #25d366 !important; /* Verde oficial WhatsApp suave */
+            background-color: #25d366 !important;
             color: #fff !important;
             text-align: center !important;
-            padding: 8px 0 !important;
-            font-size: 11px !important;
+            padding: 10px 0 !important;
+            font-size: 12px !important;
             font-weight: 600 !important;
-            border-radius: 20px !important;
+            border-radius: 22px !important;
             text-decoration: none !important;
             box-sizing: border-box !important;
         }
 
-        /* Oculta as setas gigantes antigas que atrapalham o mobile */
+        /* Exibe as setas com um design elegante e discreto nas laterais dos cards */
         section.produtos .seta-carrossel,
         .seta-carrossel {
-            display: none !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            background: rgba(255, 255, 255, 0.9) !important;
+            border: 1px solid rgba(0, 0, 0, 0.1) !important;
+            color: #2b1d11 !important;
+            width: 32px !important;
+            height: 32px !important;
+            border-radius: 50% !important;
+            font-size: 14px !important;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15) !important;
+            cursor: pointer !important;
+            z-index: 10 !important;
         }
     }
     /* ==========================================
