@@ -1346,43 +1346,44 @@ footer{
             margin: 0 auto !important;
         }
 
-/* --- SEÇÃO DE PRODUTOS DELICADA --- */
+/* --- SEÇÃO DE PRODUTOS MAIS ELEGANTE --- */
 .titulo-produtos {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 30px 20px; /* Reduzi o padding para ficar mais compacto */
+    padding: 30px 20px;
     background-color: #faf9f6;
 }
 
-/* O título agora fica menor e mais elegante */
 .titulo-produtos h2 {
-    font-size: 20px; /* Tamanho reduzido para não ficar gigante */
-    color: #4a3728;
-    margin: 0 0 15px 0; /* Espaçamento menor entre título e botão */
+    font-size: 20px;
+    color: #4a3728; /* Marrom café escuro e elegante */
+    margin: 0 0 15px 0;
     display: flex;
     align-items: center;
     gap: 8px;
     font-weight: 600;
 }
 
-/* O botão fica com estilo de 'pílula' e delicado */
+/* O botão agora com uma cor Marsala/Vinho Profundo */
 .btn-ver-produtos {
-    background-color: #e6b8a2; /* Um tom de rosa/bege mais suave */
-    color: #5e4a3d; /* Texto mais escuro para combinar */
-    padding: 8px 25px; /* Menor e mais fino */
-    border-radius: 20px;
+    background-color: #8b2635; /* Um tom de vinho/marsala muito mais profissional */
+    color: #ffffff; /* Texto branco para destacar */
+    padding: 10px 30px;
+    border-radius: 25px;
     text-decoration: none;
-    font-size: 13px; /* Fonte menor */
-    font-weight: 600;
+    font-size: 14px;
+    font-weight: 500;
     transition: all 0.3s ease;
-    border: 1px solid #d4a595; /* Borda fina para dar acabamento */
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
-/* Efeito ao passar o mouse ou tocar */
+/* Efeito ao tocar */
 .btn-ver-produtos:hover {
-    background-color: #d4a595;
-    color: white;
+    background-color: #6a1d29;
+    transform: scale(1.05);
 }
     }
 /* ==========================================
