@@ -1398,19 +1398,28 @@ footer{
         }
     }
      /* ==========================================
-       CARROSSEL DE PRODUTOS PROFISSIONAL (Passo a Passo por Clique)
+       CARDS DE PRODUTOS E SETAS POSICIONADAS (Celular)
        ========================================== */
     @media (max-width: 768px) {
-        /* Container principal do carrossel */
+        /* Wrapper relativo para as setas flutuarem nas laterais */
+        section.produtos .carrossel-wrapper,
+        .carrossel-wrapper {
+            position: relative !important;
+            width: 100% !important;
+            padding: 0 25px !important; /* Espaço nas laterais para as setas */
+            box-sizing: border-box !important;
+        }
+
+        /* Container dos cards */
         section.produtos .produtos-cards,
         .produtos-cards {
             display: flex !important;
             flex-direction: row !important;
             overflow-x: auto !important;
-            scroll-behavior: smooth !important; /* Faz a rolagem suave */
+            scroll-behavior: smooth !important;
             scroll-snap-type: x mandatory !important;
-            gap: 12px !important;
-            padding: 10px 5px 20px 5px !important;
+            gap: 10px !important;
+            padding: 10px 0 !important;
             width: 100% !important;
             box-sizing: border-box !important;
             scrollbar-width: none !important;
@@ -1420,11 +1429,11 @@ footer{
             display: none !important;
         }
 
-        /* Cada card ocupa quase a largura inteira para passar um por um perfeitamente */
+        /* Cada card com tamanho ideal para aparecer um por vez perfeitamente */
         section.produtos .produto,
         .produtos .produto {
-            flex: 0 0 85% !important;
-            max-width: 85% !important;
+            flex: 0 0 100% !important;
+            max-width: 100% !important;
             background: #ffffff !important;
             border-radius: 14px !important;
             padding: 14px !important;
@@ -1437,17 +1446,17 @@ footer{
             border: 1px solid rgba(0, 0, 0, 0.05) !important;
         }
 
-        /* Imagem do produto no card */
+        /* Imagem do produto */
         section.produtos .produto img,
         .produto img {
             width: 100% !important;
-            height: 160px !important;
+            height: 150px !important;
             object-fit: cover !important;
             border-radius: 10px !important;
-            margin-bottom: 10px !important;
+            margin-bottom: 8px !important;
         }
 
-        /* Título */
+        /* Título do produto */
         section.produtos .produto h3,
         .produto h3 {
             font-size: 15px !important;
@@ -1461,7 +1470,7 @@ footer{
         .produto p {
             font-size: 12px !important;
             color: #666 !important;
-            margin: 0 0 10px 0 !important;
+            margin: 0 0 8px 0 !important;
             line-height: 1.3 !important;
         }
 
@@ -1471,7 +1480,7 @@ footer{
             font-size: 16px !important;
             font-weight: bold !important;
             color: #b82d2d !important;
-            margin-bottom: 10px !important;
+            margin-bottom: 8px !important;
         }
 
         /* Botão do WhatsApp */
@@ -1491,22 +1500,39 @@ footer{
             box-sizing: border-box !important;
         }
 
-        /* Exibe as setas com um design elegante e discreto nas laterais dos cards */
+        /* Setas flutuantes elegantes nas laterais do card */
         section.produtos .seta-carrossel,
         .seta-carrossel {
             display: flex !important;
-            align-items: center !important;
-            justify-content: center !important;
-            background: rgba(255, 255, 255, 0.9) !important;
+            position: absolute !important;
+            top: 50% !important;
+            transform: translateY(-50%) !important;
+            background: #ffffff !important;
             border: 1px solid rgba(0, 0, 0, 0.1) !important;
             color: #2b1d11 !important;
-            width: 32px !important;
-            height: 32px !important;
+            width: 30px !important;
+            height: 30px !important;
             border-radius: 50% !important;
+            align-items: center !important;
+            justify-content: center !important;
             font-size: 14px !important;
             box-shadow: 0 2px 8px rgba(0,0,0,0.15) !important;
             cursor: pointer !important;
-            z-index: 10 !important;
+            z-index: 20 !important;
+        }
+
+        /* Posiciona a seta esquerda na bordinha esquerda */
+        section.produtos .seta-esquerda,
+        .seta-esquerda,
+        button.seta-esquerda {
+            left: -2px !important;
+        }
+
+        /* Posiciona a seta direita na bordinha direita */
+        section.produtos .seta-direita,
+        .seta-direita,
+        button.seta-direita {
+            right: -2px !important;
         }
     }
     /* ==========================================
