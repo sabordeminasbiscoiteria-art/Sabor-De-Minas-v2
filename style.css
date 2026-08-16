@@ -1385,55 +1385,41 @@ footer{
 }
     }
 @media (max-width: 768px) {
-  /* --- SEÇÃO SOBRE: ESTILO TRANSPARENTE E COMPACTO --- */
+  /* --- SEÇÃO SOBRE: ELEGANTE E CENTRALIZADA --- */
 .sobre {
-    padding: 20px 20px;
-    background-color: transparent; /* Remove o fundo da seção, deixando o do site */
+    position: relative;
+    padding: 40px 20px;
     text-align: center;
-}
-
-.sobre .container {
-    background-color: transparent; /* Remove o fundo branco do quadro */
-    box-shadow: none;              /* Remove a sombra */
-    border-radius: 0;              /* Remove as bordas arredondadas */
-    padding: 0;                    /* Remove o espaço interno do quadro */
-    max-width: 500px;
-    margin: 0 auto;
+    color: #4a3728; /* Cor do texto que combina com o tema */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .sobre h2 {
     font-size: 20px;
-    color: #4a3728;
-    margin-bottom: 12px;
+    margin-bottom: 15px;
+    font-weight: 700;
 }
 
 .sobre p {
     font-size: 14px;
-    color: #555;
     line-height: 1.5;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+    max-width: 400px; /* Limita o texto para não ficar comprido */
 }
 
-/* Botão no estilo que você queria */
+/* O botão com a cor sólida que você queria */
 .sobre .botao {
-    display: inline-block;
-    padding: 10px 25px;
-    background-color: #a32a2a;      /* Cor sólida vinho */
-    color: #ffffff;                 /* Letra branca */
-    border-radius: 25px;            /* Borda bem arredondada */
+    padding: 12px 30px;
+    background-color: #a32a2a; 
+    color: #ffffff;
+    border-radius: 25px;
     text-decoration: none;
-    font-size: 14px;
     font-weight: 600;
+    font-size: 14px;
+    display: inline-block;
 }
-/* Reduz o espaço final da seção de produtos */
-.secao-produtos-home, .produtos {
-    padding-bottom: 10px !important; /* Aproxima de baixo */
-}
-
-/* Reduz o espaço inicial da seção Sobre */
-.sobre {
-    padding-top: 10px !important;    /* Aproxima de cima */
-    }
 }
 /* ==========================================
        RODAPÉ FINAL CORRIGIDO E FORÇADO (Celular)
