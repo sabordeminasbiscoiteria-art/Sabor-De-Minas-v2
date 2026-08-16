@@ -1345,7 +1345,66 @@ footer{
             font-size: 26px !important;
             margin: 0 auto !important;
         }
-    }
+    }/* --- ESTILO BASE (Desktop / Padrão) --- */
+.titulo-produtos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 5%;
+  width: 100%;
+}
+
+.titulo-produtos h2 {
+  font-size: 2.2rem;
+  color: #3b2314;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+}
+
+.btn-ver-produtos {
+  background-color: #e52e2e;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.95rem;
+  white-space: nowrap;
+  transition: background 0.3s;
+}
+
+.btn-ver-produtos:hover {
+  background-color: #c42222;
+}
+
+/* --- RESPONSIVO PARA CELULAR (Compacto e Profissional) --- */
+@media (max-width: 768px) {
+  .titulo-produtos {
+    display: flex;
+    flex-direction: row; /* Mantém lado a lado, economizando espaço vertical */
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 16px; /* Margens laterais seguras */
+  }
+
+  .titulo-produtos h2 {
+    font-size: 1.35rem; /* Reduz o tamanho para caber perfeitamente na tela do celular */
+    gap: 8px;
+  }
+
+  /* Reduz o ícone do cookie junto com o texto se necessário */
+  .titulo-produtos h2 i {
+    font-size: 1.1rem; 
+  }
+
+  .btn-ver-produtos {
+    padding: 6px 14px; /* Botão mais compacto em altura e largura */
+    font-size: 0.8rem;   /* Fonte menor e elegante */
+    border-radius: 20px;
+  }
+}
 /* =========================================
    RESPONSIVO - TELA 728px
    ========================================= */
