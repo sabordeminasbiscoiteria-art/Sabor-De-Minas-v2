@@ -1345,64 +1345,45 @@ footer{
             font-size: 26px !important;
             margin: 0 auto !important;
         }
-    }
-    /* --- ESTILO ELEGANTE PARA A VITRINE HOME --- */
-.secao-produtos-home {
-    padding: 60px 20px;
-    background-color: #faf9f6; /* Fundo creme bem suave */
+
+    /* Container que organiza título e botão lado a lado */
+.titulo-produtos {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    padding: 30px 20px; /* Mais espaço nas laterais */
+    background-color: #faf9f6;
 }
 
-.header-produtos {
-    max-width: 500px;
-    text-align: center;
-}
-
-.titulo-home {
-    font-size: 28px;
-    color: #4a3728; /* Marrom café suave */
-    font-family: 'Segoe UI', sans-serif;
-    margin-bottom: 12px;
-}
-
-.titulo-home i {
-    color: #d68f6a; /* Cor de biscoito/caramelo para o ícone */
-    margin-right: 8px;
-}
-
-.subtitulo-home {
-    font-size: 16px;
-    color: #8c7b70; /* Um tom de areia escuro */
-    margin-bottom: 30px;
-    line-height: 1.5;
-}
-
-.botao-destaque-grande {
-    display: inline-flex;
+/* O Título */
+.titulo-produtos h2 {
+    font-size: 22px;
+    color: #4a3728;
+    margin: 0;
+    display: flex;
     align-items: center;
     gap: 10px;
-    background-color: #d68f6a; /* Cor principal de destaque */
-    color: #ffffff;
-    padding: 16px 32px;
-    border-radius: 50px; /* Bem arredondado fica mais delicado */
+}
+
+/* O Botão "Ver todos" (Delicado e Profissional) */
+.btn-ver-produtos {
+    background-color: #b82d2d;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
     text-decoration: none;
-    font-weight: 600;
-    font-size: 16px;
-    transition: all 0.3s ease;
-    box-shadow: 0 6px 15px rgba(214, 143, 106, 0.3);
-}
-
-.botao-destaque-grande:hover {
-    background-color: #c47d58;
-    transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(214, 143, 106, 0.4);
-}
-
-.botao-destaque-grande i {
     font-size: 14px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    white-space: nowrap; /* Evita que o texto quebre em duas linhas */
+    box-shadow: 0 4px 8px rgba(184, 45, 45, 0.2);
 }
+
+.btn-ver-produtos:hover {
+    background-color: #9c2525;
+    transform: translateY(-2px);
+}
+    }
 /* ==========================================
        RODAPÉ FINAL CORRIGIDO E FORÇADO (Celular)
        ========================================== */
