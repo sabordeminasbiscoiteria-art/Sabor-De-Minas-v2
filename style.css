@@ -1384,47 +1384,101 @@ footer{
     color: #ffffff !important;
 }
     }
-/* Este código só funciona em telas de celular (até 600px de largura) */
-@media (max-width: 600px) {
     
-    /* --- RESOLVENDO O PROBLEMA DA SEÇÃO COMPRIDA --- */
+/* =========================================
+   RESPONSIVO DA SEÇÃO SOBRE - CELULAR
+   ========================================= */
 
-.sobre {
-    background-image: none !important; /* Remove a imagem gigante que está esticando a seção */
-    background-color: #faf9f6 !important; /* Cor de fundo suave */
-    padding: 30px 20px !important;       /* Espaçamento interno equilibrado */
-    min-height: auto !important;         /* Remove qualquer altura mínima forçada */
-}
+@media screen and (max-width: 600px) {
 
-.sobre .container, .sobre .texto-sobre {
-    background: none !important;         /* Garante que não haja caixas brancas */
-    max-width: 400px;                    /* Limita a largura do texto */
-    margin: 0 auto;                      /* Centraliza tudo */
-}
+    .sobre {
+        width: 100%;
+        min-height: 0 !important;
+        height: auto !important;
+        padding: 50px 20px !important;
 
-/* Ajuste dos textos para serem curtos */
-.sobre h2, .sobre .texto-sobre h2 {
-    font-size: 18px;
-    margin-bottom: 10px;
-}
+        background-size: cover !important;
+        background-position: center !important;
+        background-repeat: no-repeat !important;
 
-.sobre p, .sobre .texto-sobre p {
-    font-size: 14px;
-    line-height: 1.4;
-    margin-bottom: 20px;
-}
+        box-sizing: border-box;
+    }
 
-/* O botão estilizado que você pediu anteriormente */
-.sobre .botao, .sobre a {
-    display: inline-block;
-    padding: 10px 25px;
-    background-color: #a32a2a;
-    color: #ffffff;
-    border-radius: 25px;
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: 600;
+    .sobre .container {
+        width: 100% !important;
+        max-width: none !important;
+        min-width: 0 !important;
+        min-height: 0 !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        display: block !important;
+        box-sizing: border-box;
+    }
+
+    .texto-sobre {
+        width: 78% !important;
+        max-width: none !important;
+        min-width: 0 !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        text-align: left !important;
+        box-sizing: border-box;
+    }
+
+    .texto-sobre h2 {
+        width: 100% !important;
+
+        font-size: 25px !important;
+        line-height: 1.15 !important;
+
+        margin: 0 0 18px !important;
+    }
+
+    .texto-sobre p {
+        width: 100% !important;
+
+        font-size: 15px !important;
+        line-height: 1.45 !important;
+
+        margin: 0 0 15px !important;
+    }
+
+    .texto-sobre a {
+        display: inline-block !important;
+
+        margin-top: 8px !important;
+
+        padding: 11px 18px !important;
+
+        font-size: 13px !important;
+    }
 }
+/* =========================================
+   CELULARES PEQUENOS
+   ========================================= */
+
+@media screen and (max-width: 400px) {
+
+    .sobre {
+        padding: 40px 18px !important;
+    }
+
+    .texto-sobre {
+        width: 82% !important;
+    }
+
+    .texto-sobre h2 {
+        font-size: 23px !important;
+    }
+
+    .texto-sobre p {
+        font-size: 14px !important;
+        line-height: 1.45 !important;
+    }
 }
 /* ==========================================
        RODAPÉ FINAL CORRIGIDO E FORÇADO (Celular)
