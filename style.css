@@ -1346,44 +1346,26 @@ footer{
             margin: 0 auto !important;
         }
 
-/* --- SEÇÃO DE PRODUTOS MAIS ELEGANTE --- */
-.titulo-produtos {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 30px 20px;
-    background-color: #faf9f6;
-}
-
-.titulo-produtos h2 {
-    font-size: 20px;
-    color: #4a3728; /* Marrom café escuro e elegante */
-    margin: 0 0 15px 0;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-weight: 600;
-}
-
-/* O botão agora com uma cor Marsala/Vinho Profundo */
+/* --- ESTILO DE BOTÃO: CLEAN E ELEGANTE --- */
 .btn-ver-produtos {
-    background-color: #8b2635; /* Um tom de vinho/marsala muito mais profissional */
-    color: #ffffff; /* Texto branco para destacar */
+    background-color: #ffffff;        /* Fundo branco */
+    color: #000000;                  /* Letra preta */
+    border: 2px solid #b82d2d;       /* Borda vermelha chamativa */
     padding: 10px 30px;
-    border-radius: 25px;
+    border-radius: 25px;             /* Formato arredondado */
     text-decoration: none;
     font-size: 14px;
-    font-weight: 500;
+    font-weight: 600;
     transition: all 0.3s ease;
     display: flex;
     align-items: center;
     gap: 8px;
 }
 
-/* Efeito ao tocar */
+/* Efeito ao passar o mouse ou tocar */
 .btn-ver-produtos:hover {
-    background-color: #6a1d29;
-    transform: scale(1.05);
+    background-color: #b82d2d;       /* Fundo vira vermelho */
+    color: #ffffff;                  /* Letra vira branca */
 }
     }
 /* ==========================================
