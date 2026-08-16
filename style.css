@@ -1348,24 +1348,18 @@ footer{
 
 .titulo-produtos {
     display: flex;
-    flex-direction: column; /* Isso coloca um em cima do outro */
-    align-items: center;    /* Centraliza tudo */
-    gap: 15px;              /* Espaço entre o título e o botão */
+    flex-direction: column; /* Coluna: um em cima do outro */
+    align-items: center;    /* Centraliza na horizontal */
+    justify-content: center; /* Centraliza na vertical */
+    text-align: center;      /* Garante que o texto dentro do H2 fique centralizado */
     padding: 30px 20px;
     background-color: #faf9f6;
 }
 
-/* Ajuste do botão para ele ocupar o espaço de forma elegante */
-.btn-ver-produtos {
-    background-color: #b82d2d;
-    color: white;
-    padding: 10px 40px;     /* Botão um pouco mais largo */
-    border-radius: 25px;
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: 600;
-    box-shadow: 0 4px 10px rgba(184, 45, 45, 0.2);
-    text-align: center;
+/* Opcional: Se você quiser que o título ocupe menos espaço lateral e fique todo no centro */
+.titulo-produtos h2 {
+    margin: 0 0 15px 0; /* Espaço apenas embaixo do título */
+    width: 100%;        /* Garante que o H2 saiba que deve se centralizar */
 }
     }
 /* ==========================================
