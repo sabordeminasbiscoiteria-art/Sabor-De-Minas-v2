@@ -1346,42 +1346,26 @@ footer{
             margin: 0 auto !important;
         }
 
-    /* Container que organiza título e botão lado a lado */
 .titulo-produtos {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 30px 20px; /* Mais espaço nas laterais */
+    flex-direction: column; /* Isso coloca um em cima do outro */
+    align-items: center;    /* Centraliza tudo */
+    gap: 15px;              /* Espaço entre o título e o botão */
+    padding: 30px 20px;
     background-color: #faf9f6;
 }
 
-/* O Título */
-.titulo-produtos h2 {
-    font-size: 22px;
-    color: #4a3728;
-    margin: 0;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-/* O Botão "Ver todos" (Delicado e Profissional) */
+/* Ajuste do botão para ele ocupar o espaço de forma elegante */
 .btn-ver-produtos {
     background-color: #b82d2d;
     color: white;
-    padding: 8px 16px;
-    border-radius: 20px;
+    padding: 10px 40px;     /* Botão um pouco mais largo */
+    border-radius: 25px;
     text-decoration: none;
     font-size: 14px;
     font-weight: 600;
-    transition: all 0.3s ease;
-    white-space: nowrap; /* Evita que o texto quebre em duas linhas */
-    box-shadow: 0 4px 8px rgba(184, 45, 45, 0.2);
-}
-
-.btn-ver-produtos:hover {
-    background-color: #9c2525;
-    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(184, 45, 45, 0.2);
+    text-align: center;
 }
     }
 /* ==========================================
