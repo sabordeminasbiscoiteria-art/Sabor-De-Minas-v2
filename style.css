@@ -1346,117 +1346,47 @@ footer{
         }
     }
     /* ==========================================
-       ESTILO DELICADO: NOSSOS PRODUTOS E BOTÃO (Celular)
+       AJUSTE DEFINITIVO: UM CARD POR VEZ
        ========================================== */
     @media (max-width: 768px) {
-        /* Organiza o topo dos produtos lado a lado perfeitamente */
-        section.produtos .topo-produtos,
-        .produtos .topo-produtos {
-            display: flex !important;
-            flex-direction: row !important;
-            justify-content: space-between !important;
-            align-items: center !important;
-            width: 100% !important;
-            padding: 5px 10px !important;
-            box-sizing: border-box !important;
-            gap: 8px !important;
-        }
-
-        /* Deixa o título na mesma linha, menor e delicado */
-        section.produtos .titulo-produtos,
-        .produtos .titulo-produtos,
-        .titulo-produtos {
-            font-size: 16px !important;
-            font-weight: 600 !important;
-            line-height: 1.2 !important;
-            margin: 0 !important;
-            white-space: nowrap !important;
-            color: #2b1d11 !important;
-        }
-
-        /* Remove ícones decorativos grandes ao lado se houver */
-        section.produtos .topo-produtos img,
-        section.produtos .topo-produtos i {
-            display: none !important;
-        }
-
-        /* Transforma o botão em um link delicado com seta ou minimalista */
-        section.produtos .btn-ver-produtos,
-        .produtos .btn-ver-produtos,
-        a.btn-ver-produtos {
-            background-color: transparent !important;
-            color: #b82d2d !important;
-            border: 1.5px solid #b82d2d !important;
-            padding: 5px 10px !important;
-            font-size: 11px !important;
-            font-weight: 500 !important;
-            border-radius: 15px !important;
-            text-decoration: none !important;
-            white-space: nowrap !important;
-            box-shadow: none !important;
-            transition: all 0.2s ease !important;
-        }
-    }
-    /* ==========================================
-       FIXO: UM CARD POR VEZ (Visual Profissional)
-       ========================================== */
-    @media (max-width: 768px) {
-        
-        /* 1. O wrapper precisa ser o limitador de largura */
+        /* O container pai (wrapper) garante que nada saia da tela */
         section.produtos .carrossel-wrapper {
             width: 100% !important;
-            max-width: 100% !important;
-            overflow: hidden !important; /* Esconde o que sobrar */
+            overflow: hidden !important; /* Isso corta o que não deve aparecer */
             position: relative !important;
             padding: 0 !important;
         }
 
-        /* 2. Container dos cards: trava a rolagem em 1 card */
+        /* O container dos cards força a linha única */
         section.produtos .produtos-cards {
             display: flex !important;
             flex-direction: row !important;
-            flex-wrap: nowrap !important;
+            flex-wrap: nowrap !important; /* Isso impede que os cards fiquem um embaixo do outro */
             overflow-x: auto !important;
-            scroll-behavior: smooth !important;
             scroll-snap-type: x mandatory !important;
             width: 100% !important;
             padding: 10px 0 !important;
-            scrollbar-width: none !important; /* Esconde barra Firefox */
+            gap: 10px !important; /* Espaço entre os cards */
         }
 
-        /* 3. Card único: ocupando 100% da largura da tela */
+        /* AQUI ESTÁ O SEGREDO: Cada card ocupa 95% da tela para ficar centralizado */
         section.produtos .produto {
-            flex: 0 0 90% !important; /* 90% para deixar um respiro nas laterais */
-            margin: 0 5% !important;  /* Centraliza o card */
-            scroll-snap-align: center !important;
+            flex: 0 0 95% !important; /* Ocupa quase toda a largura */
+            scroll-snap-align: center !important; /* Trava no centro */
+            box-sizing: border-box !important;
             
-            /* Ajustes estéticos */
+            /* Ajustes visuais */
             background: #ffffff !important;
             border-radius: 20px !important;
-            padding: 20px !important;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1) !important;
-            box-sizing: border-box !important;
+            padding: 15px !important;
             border: 1px solid rgba(0,0,0,0.05) !important;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05) !important;
         }
 
-        /* 4. Ajuste das setas para não ficarem em cima dos cards */
+        /* Esconde setas se estiverem incomodando ou ajusta a posição */
         section.produtos .seta-carrossel {
-            position: absolute !important;
-            top: 40% !important; /* Ajustado para ficar centralizado na foto */
-            z-index: 10 !important;
-            background: rgba(255,255,255,0.9) !important;
-            border-radius: 50% !important;
-            width: 40px !important;
-            height: 40px !important;
-            display: flex !important;
-            align-items: center !important;
-            justify-content: center !important;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2) !important;
-            cursor: pointer !important;
+            display: none !important; /* Tente primeiro sem as setas para ver se o scroll funciona bem */
         }
-
-        .seta-esquerda { left: 5px !important; }
-        .seta-direita { right: 5px !important; }
     }
     /* ==========================================
        SEÇÃO SOBRE (Estilo Card Compacto para Celular)
