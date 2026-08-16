@@ -1384,7 +1384,143 @@ footer{
     color: #ffffff !important;
 }
     }
-    
+    /* =====================================================
+   RESPONSIVO MOBILE
+   ===================================================== */
+
+@media screen and (max-width: 600px) {
+
+    /* ===== TÍTULO DOS PRODUTOS ===== */
+
+    .produtos {
+        padding-top: 35px !important;
+        padding-bottom: 0 !important;
+    }
+
+    .topo-produtos {
+        margin-bottom: 20px !important;
+    }
+
+    .topo-produtos h2 {
+        font-size: 30px;
+        line-height: 1.2;
+    }
+
+    /* ===== BANNER / SOBRE ===== */
+
+    .sobre {
+        margin-top: 0 !important;
+        padding: 0 0 45px !important;
+
+        min-height: 0 !important;
+        height: auto !important;
+
+        background-size: cover !important;
+        background-position: center !important;
+        background-repeat: no-repeat !important;
+    }
+
+    .sobre .container {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        display: block !important;
+    }
+
+    .texto-sobre {
+        width: 78% !important;
+        max-width: none !important;
+
+        padding: 70px 0 80px 34px !important;
+        margin: 0 !important;
+
+        box-sizing: border-box;
+        text-align: left !important;
+    }
+
+    /* ===== TÍTULO ===== */
+
+    .texto-sobre h2 {
+        width: 100% !important;
+
+        font-size: 29px !important;
+        line-height: 1.15 !important;
+
+        margin: 0 0 35px !important;
+    }
+
+    /* ===== TEXTOS ===== */
+
+    .texto-sobre p {
+        width: 100% !important;
+
+        font-size: 17px !important;
+        line-height: 1.5 !important;
+
+        margin: 0 0 25px !important;
+    }
+
+    /* ===== BOTÃO ===== */
+
+    .texto-sobre a,
+    .texto-sobre .btn {
+        display: inline-block !important;
+
+        margin-top: 10px !important;
+
+        padding: 15px 28px !important;
+
+        font-size: 16px !important;
+
+        border-radius: 30px;
+    }
+}
+
+
+/* =====================================================
+   CELULAR PEQUENO
+   ===================================================== */
+
+@media screen and (max-width: 400px) {
+
+    .produtos {
+        padding-top: 30px !important;
+    }
+
+    .topo-produtos {
+        margin-bottom: 15px !important;
+    }
+
+    .topo-produtos h2 {
+        font-size: 27px;
+    }
+
+    .texto-sobre {
+        width: 82% !important;
+
+        padding: 60px 0 70px 32px !important;
+    }
+
+    .texto-sobre h2 {
+        font-size: 26px !important;
+        margin-bottom: 28px !important;
+    }
+
+    .texto-sobre p {
+        font-size: 15px !important;
+        line-height: 1.5 !important;
+        margin-bottom: 20px !important;
+    }
+
+    .texto-sobre a,
+    .texto-sobre .btn {
+        font-size: 14px !important;
+        padding: 13px 22px !important;
+    }
+}
 /* =========================================
    RESPONSIVO DA SEÇÃO SOBRE - CELULAR
    ========================================= */
