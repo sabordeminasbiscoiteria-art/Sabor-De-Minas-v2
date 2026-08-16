@@ -1346,42 +1346,122 @@ footer{
             margin: 0 auto !important;
         }
 
-/* --- SEÇÃO DE TÍTULO E BOTÃO PROFISSIONAL --- */
+/* --- TÍTULO DOS PRODUTOS --- */
+
 .titulo-produtos {
     display: flex;
-    justify-content: space-between; /* Mantém o título na esquerda e o botão na direita */
-    align-items: center;            /* Alinha tudo na mesma altura */
-    padding: 20px;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+    box-sizing: border-box;
+
+    padding: 18px 25px;
+
     background-color: #faf9f6;
 }
 
+/* TÍTULO */
+
 .titulo-produtos h2 {
-    font-size: 22px;                /* Tamanho ideal para não ficar gigante */
+    font-size: 22px;
     color: #4a3728;
+
     margin: 0;
+
     display: flex;
     align-items: center;
-    gap: 8px;                       /* Espaço entre ícone e texto */
+    gap: 8px;
 }
 
+/* BOTÃO VER TODOS */
+
 .btn-ver-produtos {
-    background-color: #ffffff !important; /* Fundo branco fixo */
-    color: #b82d2d !important;             /* Letra vermelha para dar contraste */
-    border: 2px solid #b82d2d !important; /* Borda vermelha visível */
-    padding: 8px 16px;
-    border-radius: 20px;
+    background-color: #b82d2d !important;
+    color: #ffffff !important;
+
+    border: 2px solid #b82d2d !important;
+
+    padding: 10px 18px;
+
+    border-radius: 30px;
+
     text-decoration: none;
-    font-size: 13px;
-    font-weight: 700;                     /* Letra mais grossa para destacar */
+
+    font-size: 14px;
+    font-weight: 700;
+
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: 0.3s;
+
+    gap: 8px;
+
+    white-space: nowrap;
+
+    transition: 0.3s ease;
 }
 
+/* HOVER */
+
 .btn-ver-produtos:hover {
-    background-color: #b82d2d !important; /* Inverte ao tocar */
+    background-color: #982424 !important;
+    border-color: #982424 !important;
     color: #ffffff !important;
+
+    transform: translateX(2px);
+}
+
+
+/* =========================================
+   RESPONSIVO - CELULAR
+   ========================================= */
+
+@media screen and (max-width: 600px) {
+
+    .titulo-produtos {
+        padding: 18px 28px;
+
+        justify-content: space-between;
+        align-items: center;
+
+        gap: 15px;
+    }
+
+    .titulo-produtos h2 {
+        font-size: 22px;
+        line-height: 1.2;
+    }
+
+    .btn-ver-produtos {
+        padding: 10px 17px;
+
+        font-size: 13px;
+
+        border-radius: 30px;
+    }
+}
+
+
+/* =========================================
+   CELULAR PEQUENO
+   ========================================= */
+
+@media screen and (max-width: 400px) {
+
+    .titulo-produtos {
+        padding: 16px 25px;
+        gap: 10px;
+    }
+
+    .titulo-produtos h2 {
+        font-size: 20px;
+    }
+
+    .btn-ver-produtos {
+        padding: 9px 14px;
+        font-size: 12px;
+    }
 }
     }
     /* =====================================================
@@ -1478,8 +1558,6 @@ footer{
         border-radius: 30px;
     }
 }
-
-
 /* =====================================================
    CELULAR PEQUENO
    ===================================================== */
