@@ -1345,217 +1345,118 @@ footer{
             font-size: 26px !important;
             margin: 0 auto !important;
         }
-
-/* --- TÍTULO DOS PRODUTOS --- */
-
-.titulo-produtos {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    width: 100%;
-    box-sizing: border-box;
-
-    padding: 18px 25px;
-
-    background-color: #faf9f6;
-}
-
-/* TÍTULO */
-
-.titulo-produtos h2 {
-    font-size: 22px;
-    color: #4a3728;
-
-    margin: 0;
-
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-/* BOTÃO VER TODOS */
-
-.btn-ver-produtos {
-    background-color: #b82d2d !important;
-    color: #ffffff !important;
-
-    border: 2px solid #b82d2d !important;
-
-    padding: 10px 18px;
-
-    border-radius: 30px;
-
-    text-decoration: none;
-
-    font-size: 14px;
-    font-weight: 700;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    gap: 8px;
-
-    white-space: nowrap;
-
-    transition: 0.3s ease;
-}
-
-/* HOVER */
-
-.btn-ver-produtos:hover {
-    background-color: #982424 !important;
-    border-color: #982424 !important;
-    color: #ffffff !important;
-
-    transform: translateX(2px);
-}
-
-
+    }
 /* =========================================
-   RESPONSIVO - CELULAR
+   RESPONSIVO - TELA 728px
    ========================================= */
 
-@media screen and (max-width: 600px) {
+@media screen and (min-width: 601px) and (max-width: 728px) {
 
-    .titulo-produtos {
-        padding: 18px 28px;
+    /* SEÇÃO DE PRODUTOS */
 
-        justify-content: space-between;
+    .secao-produtos-home {
+        width: 100%;
+        padding: 35px 30px;
+        box-sizing: border-box;
+    }
+
+    .header-produtos {
+        width: 100%;
+        display: flex;
         align-items: center;
-
-        gap: 15px;
+        justify-content: space-between;
+        gap: 25px;
     }
 
-    .titulo-produtos h2 {
-        font-size: 22px;
+    /* TÍTULO */
+
+    .titulo-home {
+        font-size: 30px;
         line-height: 1.2;
+        margin: 0;
     }
 
-    .btn-ver-produtos {
-        padding: 10px 17px;
+    .titulo-home i {
+        font-size: 25px;
+    }
 
-        font-size: 13px;
+    /* SUBTÍTULO */
+
+    .subtitulo-home {
+        font-size: 16px;
+        margin: 8px 0 0;
+    }
+
+    /* BOTÃO */
+
+    .botao-destaque-grande {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+
+        padding: 13px 22px;
+
+        font-size: 15px;
+        white-space: nowrap;
 
         border-radius: 30px;
     }
-}
 
-
-/* =========================================
-   CELULAR PEQUENO
-   ========================================= */
-
-@media screen and (max-width: 400px) {
-
-    .titulo-produtos {
-        padding: 16px 25px;
-        gap: 10px;
+    .botao-destaque-grande i {
+        font-size: 16px;
     }
 
-    .titulo-produtos h2 {
-        font-size: 20px;
-    }
 
-    .btn-ver-produtos {
-        padding: 9px 14px;
-        font-size: 12px;
-    }
-}
-    }
-    /* =====================================================
-   RESPONSIVO MOBILE
-   ===================================================== */
-
-@media screen and (max-width: 600px) {
-
-    /* ===== TÍTULO DOS PRODUTOS ===== */
-
-    .produtos {
-        padding-top: 35px !important;
-        padding-bottom: 0 !important;
-    }
-
-    .topo-produtos {
-        margin-bottom: 20px !important;
-    }
-
-    .topo-produtos h2 {
-        font-size: 30px;
-        line-height: 1.2;
-    }
-
-    /* ===== BANNER / SOBRE ===== */
+    /* =====================================
+       SEÇÃO SOBRE
+       ===================================== */
 
     .sobre {
-        margin-top: 0 !important;
-        padding: 0 0 45px !important;
+        width: 100%;
+        min-height: 420px;
 
-        min-height: 0 !important;
-        height: auto !important;
+        box-sizing: border-box;
 
-        background-size: cover !important;
-        background-position: center !important;
-        background-repeat: no-repeat !important;
+        background-size: cover;
+        background-position: center;
     }
 
     .sobre .container {
-        width: 100% !important;
-        max-width: 100% !important;
+        width: 100%;
+        max-width: 100%;
 
-        margin: 0 !important;
-        padding: 0 !important;
-
-        display: block !important;
+        padding: 0 35px;
+        box-sizing: border-box;
     }
 
     .texto-sobre {
-        width: 78% !important;
-        max-width: none !important;
+        width: 55%;
+        max-width: 450px;
 
-        padding: 70px 0 80px 34px !important;
-        margin: 0 !important;
-
-        box-sizing: border-box;
-        text-align: left !important;
+        padding: 50px 0;
     }
-
-    /* ===== TÍTULO ===== */
 
     .texto-sobre h2 {
-        width: 100% !important;
+        font-size: 30px;
+        line-height: 1.15;
 
-        font-size: 29px !important;
-        line-height: 1.15 !important;
-
-        margin: 0 0 35px !important;
+        margin-bottom: 20px;
     }
-
-    /* ===== TEXTOS ===== */
 
     .texto-sobre p {
-        width: 100% !important;
+        font-size: 16px;
+        line-height: 1.5;
 
-        font-size: 17px !important;
-        line-height: 1.5 !important;
-
-        margin: 0 0 25px !important;
+        margin-bottom: 15px;
     }
 
-    /* ===== BOTÃO ===== */
+    .texto-sobre a {
+        display: inline-block;
 
-    .texto-sobre a,
-    .texto-sobre .btn {
-        display: inline-block !important;
+        padding: 12px 22px;
 
-        margin-top: 10px !important;
-
-        padding: 15px 28px !important;
-
-        font-size: 16px !important;
-
-        border-radius: 30px;
+        font-size: 14px;
     }
 }
 /* =====================================================
