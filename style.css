@@ -1346,57 +1346,33 @@ footer{
             margin: 0 auto !important;
         }
     }
-    
-   /* =========================================
-   TÍTULO + BOTÃO — RESPONSIVO 728px
-   ========================================= */
-
-@media screen and (min-width: 601px) and (max-width: 728px) {
-
+   /* ==========================================
+   Responsivo para Celulares (Telas menores)
+   ========================================== */
+@media (max-width: 768px) {
     .header-produtos {
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+        flex-direction: column; /* Empilha os elementos no celular */
+        align-items: flex-start; /* Alinha tudo à esquerda */
         gap: 15px;
-        box-sizing: border-box;
     }
 
     .titulo-home {
-        margin: 0 !important;
-        font-size: 28px !important;
-        line-height: 1.2 !important;
-        white-space: nowrap;
+        font-size: 1.7rem; /* Reduz levemente o título para caber bem na tela */
     }
 
     .titulo-home i {
-        font-size: 22px;
-        margin-right: 5px;
+        font-size: 1.4rem;
     }
 
     .subtitulo-home {
-        display: none;
+        font-size: 0.9rem;
     }
 
     .botao-destaque-grande {
-        flex-shrink: 0;
-
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        gap: 7px;
-
-        padding: 10px 18px;
-
-        font-size: 14px;
-
-        border-radius: 25px;
-
-        white-space: nowrap;
-    }
-
-    .botao-destaque-grande i {
-        font-size: 14px;
+        width: 100%; /* Faz o botão ocupar toda a largura no celular, facilitando o toque */
+        justify-content: center; /* Centraliza o texto dentro do botão */
+        padding: 12px 20px;
+        font-size: 0.9rem;
     }
 }
 /* =========================================
