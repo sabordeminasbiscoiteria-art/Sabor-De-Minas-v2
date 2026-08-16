@@ -1345,91 +1345,114 @@ footer{
             font-size: 26px !important;
             margin: 0 auto !important;
         }
-    }/* --- ESTILO BASE (Desktop / Padrão) --- */
-.titulo-produtos {
+    }
+    /* --- ESTILO DA SEÇÃO DE PRODUTOS (Desktop e Padrão) --- */
+.secao-produtos-home {
+  padding: 40px 5%;
+  background-color: #fff;
+}
+
+.header-produtos {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 5%;
-  width: 100%;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 30px;
 }
 
-.titulo-produtos h2 {
+.titulo-home {
   font-size: 2.2rem;
   color: #3b2314;
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   margin: 0;
 }
 
-.btn-ver-produtos {
-  background-color: #3b2314; /* Marrom escuro combinando com a identidade */
-  color: #fff;
-  padding: 6px 14px;
-  border-radius: 50px;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 0.8rem;
-  white-space: nowrap;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  transition: background 0.3s;
+.titulo-home i {
+  color: #e52e2e;
 }
 
-.btn-ver-produtos i {
-  font-size: 0.7rem;
+.subtitulo-home {
+  font-size: 1rem;
+  color: #666;
+  margin-top: 5px;
+  width: 100%; /* Joga o subtítulo para a linha de baixo do título se necessário */
+}
+
+/* --- ESTILO DO BOTÃO DESTAQUE (Com as cores que você pediu) --- */
+.botao-destaque-grande {
+  background-color: #f3ede2;
+  color: #3b2314;
+  border: 1px solid #e52e2e;
+  padding: 10px 22px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  white-space: nowrap;
+}
+
+.botao-destaque-grande i {
+  font-size: 0.8rem;
+  color: #e52e2e;
   transition: transform 0.2s;
 }
 
-.btn-ver-produtos:hover i {
-  transform: translateX(3px); /* Efeito de movimento na setinha */
+.botao-destaque-grande:hover {
+  background-color: #e52e2e;
+  color: #ffffff;
+  box-shadow: 0 4px 8px rgba(229, 46, 46, 0.2);
+  transform: translateY(-2px);
 }
+
+.botao-destaque-grande:hover i {
+  color: #ffffff;
+  transform: translateX(3px);
+}
+
 
 /* --- RESPONSIVO PARA CELULAR (Compacto e Profissional) --- */
 @media (max-width: 768px) {
-  .titulo-produtos {
-    display: flex;
-    flex-direction: row; /* Mantém lado a lado, economizando espaço vertical */
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 16px; /* Margens laterais seguras */
+  .secao-produtos-home {
+    padding: 25px 16px;
   }
 
-  .titulo-produtos h2 {
-    font-size: 1.35rem; /* Reduz o tamanho para caber perfeitamente na tela do celular */
+  .header-produtos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  .titulo-home {
+    font-size: 1.35rem; /* Reduz para caber perfeitamente no celular */
     gap: 8px;
   }
 
-  /* Reduz o ícone do cookie junto com o texto se necessário */
-  .titulo-produtos h2 i {
-    font-size: 1.1rem; 
+  .titulo-home i {
+    font-size: 1.1rem;
   }
 
-  .btn-ver-produtos {
-  background-color: #3b2314; /* Marrom escuro combinando com a identidade */
-  color: #fff;
-  padding: 6px 14px;
-  border-radius: 50px;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 0.8rem;
-  white-space: nowrap;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  transition: background 0.3s;
-}
+  /* Oculta o subtítulo grande no celular se quiser economizar espaço vertical, ou ajuste o tamanho */
+  .subtitulo-home {
+    font-size: 0.85rem;
+    margin-top: 2px;
+  }
 
-.btn-ver-produtos i {
-  font-size: 0.7rem;
-  transition: transform 0.2s;
-}
-
-.btn-ver-produtos:hover i {
-  transform: translateX(3px); /* Efeito de movimento na setinha */
-}
+  .botao-destaque-grande {
+    padding: 6px 14px;
+    font-size: 0.75rem; /* Botão compacto e elegante no mobile */
+    border-radius: 10px;
+  }
 }
 /* =========================================
    RESPONSIVO - TELA 728px
