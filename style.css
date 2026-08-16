@@ -1346,20 +1346,43 @@ footer{
             margin: 0 auto !important;
         }
 
+/* --- SEÇÃO DE PRODUTOS DELICADA --- */
 .titulo-produtos {
     display: flex;
-    flex-direction: column; /* Coluna: um em cima do outro */
-    align-items: center;    /* Centraliza na horizontal */
-    justify-content: center; /* Centraliza na vertical */
-    text-align: center;      /* Garante que o texto dentro do H2 fique centralizado */
-    padding: 30px 20px;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 20px; /* Reduzi o padding para ficar mais compacto */
     background-color: #faf9f6;
 }
 
-/* Opcional: Se você quiser que o título ocupe menos espaço lateral e fique todo no centro */
+/* O título agora fica menor e mais elegante */
 .titulo-produtos h2 {
-    margin: 0 0 15px 0; /* Espaço apenas embaixo do título */
-    width: 100%;        /* Garante que o H2 saiba que deve se centralizar */
+    font-size: 20px; /* Tamanho reduzido para não ficar gigante */
+    color: #4a3728;
+    margin: 0 0 15px 0; /* Espaçamento menor entre título e botão */
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+}
+
+/* O botão fica com estilo de 'pílula' e delicado */
+.btn-ver-produtos {
+    background-color: #e6b8a2; /* Um tom de rosa/bege mais suave */
+    color: #5e4a3d; /* Texto mais escuro para combinar */
+    padding: 8px 25px; /* Menor e mais fino */
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 13px; /* Fonte menor */
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 1px solid #d4a595; /* Borda fina para dar acabamento */
+}
+
+/* Efeito ao passar o mouse ou tocar */
+.btn-ver-produtos:hover {
+    background-color: #d4a595;
+    color: white;
 }
     }
 /* ==========================================
