@@ -1387,42 +1387,44 @@ footer{
 /* Este código só funciona em telas de celular (até 600px de largura) */
 @media (max-width: 600px) {
     
-    .sobre {
-        padding: 20px 15px !important;
-        background-color: #faf9f6;
-    }
+    /* --- RESOLVENDO O PROBLEMA DA SEÇÃO COMPRIDA --- */
 
-    .sobre .container {
-        max-width: 100% !important; /* Ocupa a largura disponível */
-        text-align: center;
-    }
+.sobre {
+    background-image: none !important; /* Remove a imagem gigante que está esticando a seção */
+    background-color: #faf9f6 !important; /* Cor de fundo suave */
+    padding: 30px 20px !important;       /* Espaçamento interno equilibrado */
+    min-height: auto !important;         /* Remove qualquer altura mínima forçada */
+}
 
-    .sobre .texto-sobre {
-        display: flex;
-        flex-direction: column;
-        align-items: center; /* Centraliza tudo perfeitamente */
-    }
+.sobre .container, .sobre .texto-sobre {
+    background: none !important;         /* Garante que não haja caixas brancas */
+    max-width: 400px;                    /* Limita a largura do texto */
+    margin: 0 auto;                      /* Centraliza tudo */
+}
 
-    .sobre .texto-sobre h2 {
-        font-size: 18px;
-        margin-bottom: 10px;
-    }
+/* Ajuste dos textos para serem curtos */
+.sobre h2, .sobre .texto-sobre h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
 
-    .sobre .texto-sobre p {
-        font-size: 13px;
-        line-height: 1.4;
-        margin-bottom: 15px;
-        padding: 0 10px; /* Dá uma margem para o texto não colar nas bordas */
-    }
+.sobre p, .sobre .texto-sobre p {
+    font-size: 14px;
+    line-height: 1.4;
+    margin-bottom: 20px;
+}
 
-    .sobre .texto-sobre a {
-        padding: 10px 25px;
-        font-size: 13px;
-        background-color: #a32a2a;
-        color: #ffffff;
-        border-radius: 20px;
-        text-decoration: none;
-    }
+/* O botão estilizado que você pediu anteriormente */
+.sobre .botao, .sobre a {
+    display: inline-block;
+    padding: 10px 25px;
+    background-color: #a32a2a;
+    color: #ffffff;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+}
 }
 /* ==========================================
        RODAPÉ FINAL CORRIGIDO E FORÇADO (Celular)
