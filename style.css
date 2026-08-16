@@ -1385,40 +1385,46 @@ footer{
 }
     }
 @media (max-width: 768px) {
-  /* --- SEÇÃO SOBRE: ELEGANTE E CENTRALIZADA --- */
+ /* --- LIMPEZA E AJUSTE DA SEÇÃO SOBRE --- */
+
 .sobre {
-    position: relative;
-    padding: 40px 20px;
-    text-align: center;
-    color: #4a3728; /* Cor do texto que combina com o tema */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    background-image: none !important; /* Se houver uma imagem de fundo, removemos para testar */
+    background-color: #faf9f6;         /* Cor neutra de fundo */
+    padding: 30px 20px;
+    display: block;
 }
 
-.sobre h2 {
+.sobre .container {
+    max-width: 400px;                  /* Isso evita que o texto fique comprido */
+    margin: 0 auto;                    /* Centraliza o bloco na tela */
+    text-align: center;                /* Centraliza o texto */
+    padding: 0;
+}
+
+.sobre .texto-sobre h2 {
     font-size: 20px;
+    color: #4a3728;
+    margin-bottom: 10px;
+}
+
+.sobre .texto-sobre p {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.4;
     margin-bottom: 15px;
-    font-weight: 700;
 }
 
-.sobre p {
-    font-size: 14px;
-    line-height: 1.5;
-    margin-bottom: 20px;
-    max-width: 400px; /* Limita o texto para não ficar comprido */
-}
-
-/* O botão com a cor sólida que você queria */
-.sobre .botao {
-    padding: 12px 30px;
-    background-color: #a32a2a; 
-    color: #ffffff;
-    border-radius: 25px;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 14px;
+/* O botão compacto e elegante */
+.sobre .texto-sobre a {
     display: inline-block;
+    padding: 8px 20px;
+    background-color: #a32a2a;
+    color: #ffffff;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    transition: 0.3s;
 }
 }
 /* ==========================================
