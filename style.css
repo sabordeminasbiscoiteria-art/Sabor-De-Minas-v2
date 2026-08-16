@@ -1364,24 +1364,24 @@ footer{
     gap: 8px;                       /* Espaço entre ícone e texto */
 }
 
-/* --- BOTÃO ESTILO PROFISSIONAL E DELICADO --- */
 .btn-ver-produtos {
-    display: flex;
-    align-items: center;
-    gap: 8px;                       /* Espaço entre o texto e a seta */
-    padding: 8px 16px;              /* Espaçamento interno (proporcional) */
-    border: 1px solid #b82d2d;      /* Borda vermelha fina e elegante */
-    border-radius: 20px;            /* Arredondado estilo 'pill' */
-    color: #b82d2d;                 /* Texto vermelho */
+    background-color: #ffffff !important; /* Fundo branco fixo */
+    color: #b82d2d !important;             /* Letra vermelha para dar contraste */
+    border: 2px solid #b82d2d !important; /* Borda vermelha visível */
+    padding: 8px 16px;
+    border-radius: 20px;
     text-decoration: none;
     font-size: 13px;
-    font-weight: 600;
-    transition: all 0.3s ease;
+    font-weight: 700;                     /* Letra mais grossa para destacar */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
 }
 
 .btn-ver-produtos:hover {
-    background-color: #b82d2d;
-    color: white;                   /* Inverte a cor no toque */
+    background-color: #b82d2d !important; /* Inverte ao tocar */
+    color: #ffffff !important;
 }
 /* ==========================================
        RODAPÉ FINAL CORRIGIDO E FORÇADO (Celular)
