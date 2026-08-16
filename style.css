@@ -1398,27 +1398,28 @@ footer{
         }
     }
      /* ==========================================
-       CARDS DE PRODUTOS E SETAS POSICIONADAS (Celular)
+       CARROSSEL HORIZONTAL CORRIGIDO (Lado a Lado)
        ========================================== */
     @media (max-width: 768px) {
-        /* Wrapper relativo para as setas flutuarem nas laterais */
+        /* Wrapper do carrossel com espaço para as setas nas pontas */
         section.produtos .carrossel-wrapper,
         .carrossel-wrapper {
             position: relative !important;
             width: 100% !important;
-            padding: 0 25px !important; /* Espaço nas laterais para as setas */
+            padding: 0 35px !important;
             box-sizing: border-box !important;
         }
 
-        /* Container dos cards */
+        /* Força os cards a ficarem estritamente em uma linha horizontal */
         section.produtos .produtos-cards,
         .produtos-cards {
             display: flex !important;
             flex-direction: row !important;
+            flex-wrap: nowrap !important;
             overflow-x: auto !important;
             scroll-behavior: smooth !important;
             scroll-snap-type: x mandatory !important;
-            gap: 10px !important;
+            gap: 15px !important;
             padding: 10px 0 !important;
             width: 100% !important;
             box-sizing: border-box !important;
@@ -1429,10 +1430,11 @@ footer{
             display: none !important;
         }
 
-        /* Cada card com tamanho ideal para aparecer um por vez perfeitamente */
+        /* Cada card com largura de 100% do container visível para aparecer um por vez na horizontal */
         section.produtos .produto,
         .produtos .produto {
             flex: 0 0 100% !important;
+            min-width: 100% !important;
             max-width: 100% !important;
             background: #ffffff !important;
             border-radius: 14px !important;
@@ -1500,7 +1502,7 @@ footer{
             box-sizing: border-box !important;
         }
 
-        /* Setas flutuantes elegantes nas laterais do card */
+        /* Setas flutuantes nas laterais exatas do carrossel */
         section.produtos .seta-carrossel,
         .seta-carrossel {
             display: flex !important;
@@ -1510,8 +1512,8 @@ footer{
             background: #ffffff !important;
             border: 1px solid rgba(0, 0, 0, 0.1) !important;
             color: #2b1d11 !important;
-            width: 30px !important;
-            height: 30px !important;
+            width: 32px !important;
+            height: 32px !important;
             border-radius: 50% !important;
             align-items: center !important;
             justify-content: center !important;
@@ -1521,18 +1523,16 @@ footer{
             z-index: 20 !important;
         }
 
-        /* Posiciona a seta esquerda na bordinha esquerda */
         section.produtos .seta-esquerda,
         .seta-esquerda,
         button.seta-esquerda {
-            left: -2px !important;
+            left: 0px !important;
         }
 
-        /* Posiciona a seta direita na bordinha direita */
         section.produtos .seta-direita,
         .seta-direita,
         button.seta-direita {
-            right: -2px !important;
+            right: 0px !important;
         }
     }
     /* ==========================================
