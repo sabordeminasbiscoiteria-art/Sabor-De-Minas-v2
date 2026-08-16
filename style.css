@@ -1346,6 +1346,58 @@ footer{
         }
     }
     /* ==========================================
+       ESTILO DELICADO: NOSSOS PRODUTOS E BOTÃO (Celular)
+       ========================================== */
+    @media (max-width: 768px) {
+        /* Organiza o topo dos produtos lado a lado perfeitamente */
+        section.produtos .topo-produtos,
+        .produtos .topo-produtos {
+            display: flex !important;
+            flex-direction: row !important;
+            justify-content: space-between !important;
+            align-items: center !important;
+            width: 100% !important;
+            padding: 5px 10px !important;
+            box-sizing: border-box !important;
+            gap: 8px !important;
+        }
+
+        /* Deixa o título na mesma linha, menor e delicado */
+        section.produtos .titulo-produtos,
+        .produtos .titulo-produtos,
+        .titulo-produtos {
+            font-size: 16px !important;
+            font-weight: 600 !important;
+            line-height: 1.2 !important;
+            margin: 0 !important;
+            white-space: nowrap !important;
+            color: #2b1d11 !important;
+        }
+
+        /* Remove ícones decorativos grandes ao lado se houver */
+        section.produtos .topo-produtos img,
+        section.produtos .topo-produtos i {
+            display: none !important;
+        }
+
+        /* Transforma o botão em um link delicado com seta ou minimalista */
+        section.produtos .btn-ver-produtos,
+        .produtos .btn-ver-produtos,
+        a.btn-ver-produtos {
+            background-color: transparent !important;
+            color: #b82d2d !important;
+            border: 1.5px solid #b82d2d !important;
+            padding: 5px 10px !important;
+            font-size: 11px !important;
+            font-weight: 500 !important;
+            border-radius: 15px !important;
+            text-decoration: none !important;
+            white-space: nowrap !important;
+            box-shadow: none !important;
+            transition: all 0.2s ease !important;
+        }
+    }
+    /* ==========================================
        AJUSTE DEFINITIVO: UM CARD POR VEZ
        ========================================== */
     @media (max-width: 768px) {
