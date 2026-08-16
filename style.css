@@ -1506,10 +1506,10 @@ footer{
     }
 }
 /* ==========================================
-       RODAPÉ FINAL (Sem Links Rápidos e Bem Organizado no Celular)
+       RODAPÉ FINAL CORRIGIDO E FORÇADO (Celular)
        ========================================== */
     @media (max-width: 768px) {
-        /* Oculta completamente a coluna de Links Rápidos no celular */
+        /* 1. Esconde os links rápidos */
         footer .links-rapidos, 
         footer .footer-links,
         footer .footer-conteudo > div:nth-child(3),
@@ -1517,7 +1517,7 @@ footer{
             display: none !important;
         }
 
-        /* Container do rodapé com 2 colunas largas e confortáveis */
+        /* 2. Container principal com 2 colunas */
         footer,
         footer .footer-conteudo, 
         footer .container.footer-conteudo {
@@ -1526,13 +1526,14 @@ footer{
             flex-wrap: wrap !important;
             justify-content: space-around !important;
             align-items: flex-start !important;
-            padding: 20px 10px !important;
+            padding: 10px 5px !important;
             box-sizing: border-box !important;
             width: 100% !important;
-            gap: 15px !important;
+            gap: 5px !important;
+            min-height: auto !important;
         }
 
-        /* 1. Coluna da Logo (Esquerda) */
+        /* Coluna da Logo */
         footer .logo-footer,
         footer .footer-info,
         footer .footer-conteudo > div:nth-child(1) {
@@ -1547,27 +1548,27 @@ footer{
         footer .logo-footer img,
         footer .footer-info img,
         footer .footer-conteudo > div:nth-child(1) img {
-            width: 42px !important;
-            height: 42px !important;
+            width: 36px !important;
+            height: 36px !important;
             object-fit: contain !important;
-            margin-bottom: 4px !important;
+            margin-bottom: 2px !important;
         }
 
         footer .logo-footer h3,
         footer .footer-info h3,
         footer .footer-conteudo > div:nth-child(1) h3 {
-            font-size: 11px !important;
-            line-height: 1.2 !important;
+            font-size: 10px !important;
+            line-height: 1.1 !important;
             margin: 0 !important;
         }
 
         footer .logo-footer p,
         footer .footer-info p {
-            font-size: 9px !important;
-            margin: 2px 0 0 0 !important;
+            font-size: 8px !important;
+            margin: 1px 0 0 0 !important;
         }
 
-        /* 2. Coluna de Contato (Direita) */
+        /* Coluna de Contato */
         footer .contato-footer,
         footer .footer-contatos,
         footer .footer-conteudo > div:nth-child(2) {
@@ -1581,57 +1582,54 @@ footer{
 
         footer .contato-footer h3,
         footer .footer-contatos h3 {
-            font-size: 12px !important;
-            margin-bottom: 6px !important;
+            font-size: 10px !important;
+            margin-bottom: 3px !important;
         }
 
         footer .contato-footer p,
         footer .contato-footer a,
         footer .footer-contatos p,
         footer .footer-contatos a {
-            font-size: 10px !important;
+            font-size: 9px !important;
             display: flex !important;
             align-items: center !important;
-            gap: 5px !important;
-            margin: 3px 0 !important;
+            gap: 3px !important;
+            margin: 2px 0 !important;
             white-space: nowrap !important;
             color: #fff !important;
             text-decoration: none !important;
         }
 
-        /* Ícones de contato bem proporcionados */
         footer img:not(.logo-footer img), 
         footer svg {
-            width: 12px !important;
-            height: 12px !important;
+            width: 10px !important;
+            height: 10px !important;
             flex-shrink: 0 !important;
         }
-        /* Copyright embaixo ocupando toda a largura */
+
+        /* 3. Força a Onda Decorativa a aparecer (seja qual for a classe dela) */
+        footer .onda-footer,
+        footer div[class*="onda"],
+        footer img[src*="onda"],
+        footer svg[class*="onda"] {
+            display: block !important;
+            width: 100% !important;
+            flex-basis: 100% !important;
+            height: auto !important;
+            max-height: 30px !important;
+            object-fit: cover !important;
+            margin: 4px 0 !important;
+        }
+
+        /* 4. Copyright coladinho embaixo */
         footer .footer-final {
             width: 100% !important;
             flex-basis: 100% !important;
             text-align: center !important;
-            font-size: 9px !important;
-            margin-top: 15px !important;
+            font-size: 8px !important;
+            margin-top: 2px !important;
             border-top: 1px solid rgba(255, 255, 255, 0.2) !important;
-            padding-top: 8px !important;
-        }
-    }
-    /* ==========================================
-       REDUZIR ESPAÇAMENTO DO RODAPÉ (CELULAR)
-       ========================================== */
-    @media (max-width: 768px) {
-        footer,
-        footer .footer-conteudo, 
-        footer .container.footer-conteudo {
-            padding-top: 12px !important;
-            padding-bottom: 8px !important;
-            min-height: auto !important;
-        }
-
-        footer .footer-final {
-            margin-top: 8px !important;
-            padding-top: 5px !important;
+            padding-top: 4px !important;
         }
     }
 /* ==========================
