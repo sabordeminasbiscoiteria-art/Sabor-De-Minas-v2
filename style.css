@@ -1346,22 +1346,93 @@ footer{
             margin: 0 auto !important;
         }
     }
-   /* ==========================================
-   Responsivo para Celulares (Telas menores)
+   //* ==========================================
+   Seção de Produtos - Cabeçalho Profissional
+   ========================================== */
+
+.secao-produtos-home {
+    padding: 40px 20px;
+}
+
+/* Container flexível principal: joga texto pra esquerda e botão pra direita */
+.header-produtos {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
+}
+
+/* Bloco que segura o título e o subtítulo juntos */
+.header-produtos .texto-cabecalho {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilo do Título */
+.titulo-home {
+    font-size: 2.2rem;
+    color: #3b2314;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0;
+}
+
+.titulo-home i {
+    color: #c8372d;
+    font-size: 1.8rem;
+}
+
+/* Estilo do Subtítulo */
+.subtitulo-home {
+    font-size: 1rem;
+    color: #7a6a58;
+    margin: 5px 0 0 0;
+}
+
+/* Botão Delicado e Profissional (Estilo Pílula) */
+.botao-destaque-grande {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background-color: #c8372d;
+    color: #ffffff;
+    padding: 12px 26px;
+    border-radius: 50px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: 0 4px 12px rgba(200, 55, 45, 0.2);
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.botao-destaque-grande:hover {
+    background-color: #b02f26;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(200, 55, 45, 0.3);
+}
+
+/* ==========================================
+   Responsivo para Celulares
    ========================================== */
 @media (max-width: 768px) {
     .header-produtos {
-        flex-direction: column; /* Empilha os elementos no celular */
-        align-items: flex-start; /* Alinha tudo à esquerda */
+        flex-direction: column;
+        align-items: stretch; /* Ocupa a largura para o botão alinhar bem */
         gap: 15px;
     }
 
     .titulo-home {
-        font-size: 1.7rem; /* Reduz levemente o título para caber bem na tela */
+        font-size: 1.6rem;
     }
 
     .titulo-home i {
-        font-size: 1.4rem;
+        font-size: 1.3rem;
     }
 
     .subtitulo-home {
@@ -1369,74 +1440,10 @@ footer{
     }
 
     .botao-destaque-grande {
-        width: 100%; /* Faz o botão ocupar toda a largura no celular, facilitando o toque */
-        justify-content: center; /* Centraliza o texto dentro do botão */
+        width: 100%; /* Botão em largura total no celular */
         padding: 12px 20px;
-        font-size: 0.9rem;
     }
 }
-/* =========================================
-   RESPONSIVO - TELA 728px
-   ========================================= */
-
-@media screen and (min-width: 601px) and (max-width: 728px) {
-
-    /* SEÇÃO DE PRODUTOS */
-
-    .secao-produtos-home {
-        width: 100%;
-        padding: 35px 30px;
-        box-sizing: border-box;
-    }
-
-    .header-produtos {
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 25px;
-    }
-
-    /* TÍTULO */
-
-    .titulo-home {
-        font-size: 30px;
-        line-height: 1.2;
-        margin: 0;
-    }
-
-    .titulo-home i {
-        font-size: 25px;
-    }
-
-    /* SUBTÍTULO */
-
-    .subtitulo-home {
-        font-size: 16px;
-        margin: 8px 0 0;
-    }
-
-    /* BOTÃO */
-
-    .botao-destaque-grande {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        gap: 10px;
-
-        padding: 13px 22px;
-
-        font-size: 15px;
-        white-space: nowrap;
-
-        border-radius: 30px;
-    }
-
-    .botao-destaque-grande i {
-        font-size: 16px;
-    }
-
-
     /* =====================================
        SEÇÃO SOBRE
        ===================================== */
