@@ -1397,103 +1397,45 @@ footer{
             transition: all 0.2s ease !important;
         }
     }
-    /* --- CORREÇÃO DE LAYOUT PARA MOBILE --- */
-@media (max-width: 768px) {
-    
-    /* 1. O wrapper precisa ser a caixa de contenção */
-    .carrossel-wrapper {
+    @media (max-width: 768px) {
+    /* Força o carrossel da home a ser único */
+    .carrossel-home {
         width: 100% !important;
+        overflow: hidden !important;
         position: relative !important;
-        overflow: hidden !important; /* Isso é o que esconde o segundo card */
-        margin: 0 auto !important;
     }
 
-    /* 2. A lista de produtos precisa ser uma linha única */
-    .produtos-cards {
+    .carrossel-home .produtos-cards {
         display: flex !important;
-        flex-wrap: nowrap !important; /* Garante que não vá para baixo */
+        flex-wrap: nowrap !important;
         overflow-x: auto !important;
-        scroll-snap-type: x mandatory !important; /* Efeito de deslizar */
+        scroll-snap-type: x mandatory !important;
         width: 100% !important;
-        padding: 0 !important;
         gap: 0 !important;
+        padding: 0 !important;
     }
 
-    /* 3. O card DEVE ter a largura da tela para aparecer sozinho */
-    .produto {
-        flex: 0 0 100% !important; /* Ocupa exatamente 100% da largura do wrapper */
+    .carrossel-home .produto {
+        flex: 0 0 100% !important; /* Cada card ocupa a tela toda */
         scroll-snap-align: center !important;
         box-sizing: border-box !important;
-        padding: 10px !important;
-        /* Adicione uma margem interna se quiser o card com espaço nas laterais */
-        margin: 0 !important;
+        padding: 15px !important;
     }
 
-    /* 4. Esconda as setas se elas estiverem quebrando o layout no celular */
-    .seta-carrossel {
-        display: none !important; 
+    /* Ajuste fino das setas para o mobile */
+    .carrossel-home .seta-carrossel {
+        position: absolute !important;
+        top: 50% !important;
+        z-index: 10 !important;
+        background: white !important;
+        border: 1px solid #ccc !important;
+        border-radius: 50% !important;
+        width: 40px !important;
+        height: 40px !important;
+        cursor: pointer !important;
     }
-}
-    /* ==========================================
-       SEÇÃO SOBRE (Estilo Card Compacto para Celular)
-       ========================================== */
-    section.sobre {
-        width: 100% !important;
-        max-width: 100% !important;
-        padding: 20px 15px !important;
-        box-sizing: border-box !important;
-        background-color: #fcf8f2 !important; /* Cor de fundo suave caso a imagem não carregue */
-        background-size: cover !important;
-        background-position: center !important;
-        display: flex !important;
-        justify-content: center !important;
-        align-items: center !important;
-    }
-
-    section.sobre .container,
-    section.sobre .texto-sobre {
-        width: 100% !important;
-        max-width: 100% !important;
-        background: transparent !important; /* Remove o fundo branco translúcido */
-        background-color: transparent !important;
-        padding: 20px 16px !important;
-        border-radius: 0 !important;
-        box-shadow: none !important; /* Remove a sombra da caixa */
-        border: none !important;
-        box-sizing: border-box !important;
-        margin: 0 !important;
-        text-align: left !important;
-    }
-
-    section.sobre h2, 
-    section.sobre .titulo-sobre {
-        font-size: 20px !important;
-        line-height: 1.2 !important;
-        color: #2b1d11 !important;
-        margin-bottom: 12px !important;
-    }
-
-    section.sobre p, 
-    section.sobre .texto-sobre p {
-        font-size: 13px !important;
-        line-height: 1.5 !important;
-        color: #555 !important;
-        margin-bottom: 10px !important;
-    }
-
-    section.sobre .botao-sobre,
-    section.sobre a.btn {
-        display: inline-block !important;
-        width: auto !important;
-        padding: 10px 22px !important;
-        background-color: #b82d2d !important;
-        color: #fff !important;
-        font-size: 13px !important;
-        font-weight: bold !important;
-        border-radius: 25px !important;
-        text-align: center !important;
-        margin-top: 12px !important;
-        text-decoration: none !important;
+    .carrossel-home .seta-esquerda { left: 5px !important; }
+    .carrossel-home .seta-direita { right: 5px !important; }
     }
 }
 /* ==========================================
