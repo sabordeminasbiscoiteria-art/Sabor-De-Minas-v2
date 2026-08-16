@@ -1385,51 +1385,57 @@ footer{
 }
     }
 @media (max-width: 768px) {
-    /* --- SEÇÃO SOBRE: COMPACTA E ELEGANTE --- */
+  /* --- SEÇÃO SOBRE: COMPACTA E ELEGANTE --- */
 .sobre {
-    padding: 30px 20px;
-    background-color: #ffffff; /* Fundo branco limpo */
-}
-
-.sobre .container {
-    text-align: center;      /* Centraliza tudo */
-    max-width: 600px;        /* Limita a largura para não ficar muito espalhado */
-    margin: 0 auto;
+    padding: 20px 20px; /* Reduzi bastante o padding para diminuir a altura */
+    background-color: #ffffff;
+    text-align: center;
 }
 
 .sobre h2 {
-    font-size: 20px;         /* Título um pouco menor e mais delicado */
+    font-size: 18px;      /* Título menor e mais discreto */
     color: #4a3728;
-    margin-bottom: 15px;
-    line-height: 1.3;
+    margin-bottom: 10px;  /* Menos espaço entre título e texto */
 }
 
 .sobre p {
-    font-size: 14px;         /* Texto legível, porém mais compacto */
-    color: #555;
-    line-height: 1.6;
-    margin-bottom: 10px;
+    font-size: 13px;      /* Texto um pouco menor para ocupar menos espaço */
+    color: #666;
+    line-height: 1.4;     /* Linhas mais próximas */
+    margin-bottom: 15px;  /* Pouco espaço antes do botão */
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-/* O botão "Conheça nossa história" */
+/* --- BOTÃO ESTILO PROFISSIONAL (Borda fina) --- */
 .sobre .botao {
     display: inline-block;
-    margin-top: 15px;
-    padding: 10px 25px;      /* Botão compacto */
+    padding: 6px 20px;    /* Botão bem menor e mais fino */
     background-color: #ffffff;
     color: #b82d2d;
-    border: 2px solid #b82d2d;
-    border-radius: 20px;
+    border: 1px solid #b82d2d; /* Borda fininha e delicada */
+    border-radius: 15px;       /* Mais arredondado */
     text-decoration: none;
+    font-size: 12px;           /* Letra pequena e delicada */
     font-weight: 600;
-    font-size: 13px;
     transition: 0.3s;
 }
 
 .sobre .botao:hover {
     background-color: #b82d2d;
     color: #ffffff;
-   }
+}
+
+/* Reduz o espaço final da seção de produtos */
+.secao-produtos-home, .produtos {
+    padding-bottom: 10px !important; /* Aproxima de baixo */
+}
+
+/* Reduz o espaço inicial da seção Sobre */
+.sobre {
+    padding-top: 10px !important;    /* Aproxima de cima */
+    }
 }
 /* ==========================================
        RODAPÉ FINAL CORRIGIDO E FORÇADO (Celular)
