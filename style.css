@@ -2239,40 +2239,40 @@ footer {
     border-radius: 20px !important;
     cursor: pointer !important;
 }
-
+/* ========================================= */
+/* CSS ESPECÍFICO PARA IPAD (Retrato e Paisagem) */
+/* ========================================= */
 @media only screen 
   and (min-device-width: 768px) 
-  and (max-device-width: 1024px) {
+  and (max-device-width: 1366px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
 
-    /* Ajuste geral para o corpo não estourar no iPad */
+    /* Ajuste geral exclusivo para o iPad */
     body {
         width: 100% !important;
         overflow-x: hidden !important;
     }
 
-    /* Container principal adaptado para a tela do iPad */
+    /* Container principal no iPad */
     .container {
         width: 100% !important;
-        max-width: 960px !important;
-        margin: 0 auto !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
         padding: 0 15px !important;
     }
 
-    /* Organização das seções que aparecem no seu HTML */
-    header {
-        width: 100% !important;
-    }
-
+    /* Seções principais do seu HTML adaptadas para iPad */
+    header, 
     .banner, 
     .beneficios, 
     .secao-produtos-home, 
-    .sobre {
+    .sobre, 
+    footer {
         width: 100% !important;
         box-sizing: border-box !important;
-        padding: 30px 15px !important;
     }
 
-    /* Garante que imagens não ultrapassem o limite da tela do iPad */
+    /* Imagens fluidas para não estourar no iPad */
     img {
         max-width: 100% !important;
         height: auto !important;
