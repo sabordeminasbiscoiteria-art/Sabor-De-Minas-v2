@@ -2240,41 +2240,42 @@ footer {
     cursor: pointer !important;
 }
 /* ========================================= */
-/* CSS ESPECÍFICO PARA IPAD (Retrato e Paisagem) */
+/* CORREÇÃO DO HEADER/MENU NO IPAD          */
 /* ========================================= */
-@media only screen 
-  and (min-device-width: 768px) 
-  and (max-device-width: 1366px) 
-  and (-webkit-min-device-pixel-ratio: 1) {
+@media only screen and (min-device-width: 768px) and (max-device-width: 1366px) {
 
-    /* Ajuste geral exclusivo para o iPad */
-    body {
+    /* Força o container do topo a ficar em linha (horizontal) */
+    header .container, 
+    header {
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        justify-content: space-between !important;
+        align-items: center !important;
         width: 100% !important;
-        overflow-x: hidden !important;
     }
 
-    /* Container principal no iPad */
-    .container {
-        width: 100% !important;
-        max-width: 100% !important;
-        box-sizing: border-box !important;
-        padding: 0 15px !important;
+    /* Organiza os itens do menu para ficarem lado a lado */
+    nav, 
+    .menu, 
+    header ul {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        gap: 15px !important;
     }
 
-    /* Seções principais do seu HTML adaptadas para iPad */
-    header, 
-    .banner, 
-    .beneficios, 
-    .secao-produtos-home, 
-    .sobre, 
-    footer {
-        width: 100% !important;
-        box-sizing: border-box !important;
+    /* Reduz levemente o espaço e o tamanho dos textos do menu se precisar */
+    header a, 
+    .menu a {
+        white-space: nowrap !important;
+        font-size: 14px !important;
     }
 
-    /* Imagens fluidas para não estourar no iPad */
-    img {
-        max-width: 100% !important;
-        height: auto !important;
+    /* Mantém o botão do WhatsApp ajustado e sem quebrar o número */
+    .whatsapp, 
+    .btn-whatsapp {
+        white-space: nowrap !important;
+        font-size: 13px !important;
     }
 }
