@@ -1302,16 +1302,18 @@ footer{
        BENEFÍCIOS: APENAS ÍCONES LADO A LADO (Celular)
        ========================================== */
     @media (max-width: 768px) {
-       /* FORÇA OS BENEFÍCIOS A FICAREM LADO A LADO NO CELULAR E NO PC */
+/* CAIXA DOS BENEFÍCIOS COM CONTORNO DOURADO E CANTOS SUAVES */
 .beneficios {
     display: flex !important;
     flex-direction: row !important;
     justify-content: space-between !important;
     align-items: center !important;
     background: #ffffff !important;
-    padding: 12px 5px !important;
-    border-radius: 12px !important;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04) !important;
+    padding: 15px 10px !important;
+    border-radius: 16px !important;
+    /* Aqui está a bordinha dourada/amarelada suave */
+    border: 2px solid #e6d2a9 !important; 
+    box-shadow: 0 4px 15px rgba(230, 210, 169, 0.2) !important;
     margin: 25px auto !important;
     max-width: 500px !important;
     gap: 5px !important;
@@ -1324,7 +1326,7 @@ footer{
     text-align: center !important;
     flex: 1 !important;
     padding: 5px !important;
-    border-right: 1px solid #eee !important;
+    border-right: 1px solid #f2e8d9 !important; /* Divisor combinando com o dourado */
 }
 
 .beneficio:last-child {
