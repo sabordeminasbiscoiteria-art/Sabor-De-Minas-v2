@@ -1496,8 +1496,8 @@ footer{
     justify-content: center;
     gap: 8px;
     background: transparent;
-    border: 2px solid #b52b2b;
-    color: #b52b2b;
+    border: 2px solid #8f2828;
+    color: #8f2828;
     padding: 12px 30px;
     border-radius: 30px;
     text-decoration: none;
@@ -1702,7 +1702,7 @@ footer{
    RODAPÉ LADO A LADO COM DIVISÓRIA (AJUSTADO)
    ========================================= */
 footer {
-    background-color: #b52b2b !important;
+    background-color: #8f2828 !important;
     color: #ffffff !important;
     padding: 25px 10px 10px 10px !important;
     margin-top: 40px !important;
