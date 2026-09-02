@@ -1301,59 +1301,91 @@ footer{
 /* ==========================================
        BENEFÍCIOS: APENAS ÍCONES LADO A LADO (Celular)
        ========================================== */
-    @media (max-width: 768px) {
-/* CAIXA DOS BENEFÍCIOS COM CONTORNO DOURADO E CANTOS SUAVES */
-.beneficios {
-    display: flex !important;
-    flex-direction: row !important;
-    justify-content: space-between !important;
-    align-items: center !important;
-    background: #ffffff !important;
-    padding: 15px 10px !important;
-    border-radius: 16px !important;
-    /* Aqui está a bordinha dourada/amarelada suave */
-    border: 2px solid #e6d2a9 !important; 
-    box-shadow: 0 4px 15px rgba(230, 210, 169, 0.2) !important;
-    margin: 25px auto !important;
-    max-width: 500px !important;
-    gap: 5px !important;
-}
+   @media (max-width: 768px) {
 
-.beneficio {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    text-align: center !important;
-    flex: 1 !important;
-    padding: 5px !important;
-    border-right: 1px solid #f2e8d9 !important; /* Divisor combinando com o dourado */
-}
+    /* CAIXA DOS BENEFÍCIOS */
+    .beneficios {
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: space-between !important;
+        align-items: stretch !important;
 
-.beneficio:last-child {
-    border-right: none !important;
-}
+        background: #ffffff !important;
 
-.beneficio i {
-    color: #801a24 !important;
-    font-size: 18px !important;
-    margin-bottom: 5px !important;
-}
+        padding: 13px 7px !important;
 
-.beneficio h3 {
-    font-size: 10px !important;
-    color: #333 !important;
-    margin: 0 0 2px 0 !important;
-    font-weight: bold !important;
-    line-height: 1.1 !important;
-}
+        border-radius: 16px !important;
+        border: 2px solid #e6d2a9 !important;
 
-.beneficio p {
-    font-size: 9px !important;
-    color: #666 !important;
-    margin: 0 !important;
-    display: block !important;
-}
+        box-shadow: 0 4px 15px rgba(230, 210, 169, 0.2) !important;
+
+        margin: 20px auto !important;
+        max-width: 500px !important;
+
+        gap: 2px !important;
     }
+
+
+    /* CADA BENEFÍCIO */
+    .beneficio {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: flex-start !important;
+
+        text-align: center !important;
+
+        flex: 1 !important;
+
+        padding: 5px 4px !important;
+
+        border-right: 1px solid #f2e8d9 !important;
+    }
+
+
+    .beneficio:last-child {
+        border-right: none !important;
+    }
+
+
+    /* ÍCONES */
+    .beneficio i {
+        color: #801a24 !important;
+
+        font-size: 21px !important;
+
+        margin-bottom: 8px !important;
+    }
+
+
+    /* TÍTULOS */
+    .beneficio h3 {
+        font-size: 10px !important;
+
+        color: #333 !important;
+
+        margin: 0 0 5px 0 !important;
+
+        font-weight: bold !important;
+
+        line-height: 1.25 !important;
+    }
+
+
+    /* DESCRIÇÃO */
+    .beneficio p {
+        font-size: 8.5px !important;
+
+        color: #666 !important;
+
+        margin: 0 !important;
+
+        line-height: 1.3 !important;
+
+        display: block !important;
+    }
+
+}
 
 /* Responsivo para celular: empilha de forma organizada se necessário */
 @media (max-width: 768px) {
