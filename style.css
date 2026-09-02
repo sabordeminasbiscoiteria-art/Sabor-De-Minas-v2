@@ -1622,77 +1622,31 @@ footer{
         line-height: 1.45 !important;
     }
 }
-/* ==========================================
-       RODAPÉ FINAL CORRIGIDO E FORÇADO (Celular)
-       ========================================== */
-       @media (max-width: 768px) {
-
-    footer {
-        padding: 25px 12px 12px;
-        margin-top: 30px;
-    }
-
+/* Responsivo SOMENTE para celular (telas menores que 768px) */
+@media (max-width: 768px) {
     .footer-conteudo {
-        grid-template-columns: 1fr 1fr;
-        gap: 8px;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        gap: 25px !important;
     }
-
-
-    /* MARCA */
-
+    
     .footer-marca {
-        flex-direction: column;
-        text-align: center;
-        gap: 7px;
+        justify-content: center !important;
     }
-
-    .footer-marca img {
-        width: 58px;
-        height: 58px;
-    }
-
-    .footer-marca h3 {
-        font-size: 14px;
-        line-height: 1.15;
-    }
-
-    .footer-marca p {
-        font-size: 11px;
-    }
-
-
-    /* CONTATO */
-
+    
     .footer-contato {
-        padding-left: 18px;
+        text-align: center !important;
     }
-
-    .footer-contato h3 {
-        font-size: 16px;
-        margin-bottom: 12px;
-    }
-
+    
     .footer-contato p {
-        font-size: 11px;
-        gap: 6px;
-        margin: 7px 0;
-        line-height: 1.3;
+        justify-content: center !important;
     }
-
-    .footer-contato i {
-        width: 16px;
-        font-size: 14px;
+    
+    .footer-menu {
+        text-align: center !important;
     }
-
-
-    /* FINAL */
-
-    .footer-final {
-        margin-top: 18px;
-        padding-top: 12px;
-        font-size: 9px;
-    }
-        }
+}
 /* ==========================
   PAGINA DOS PRODUTOS.HTML
 ========================== */
