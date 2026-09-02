@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casadinho Avelã - Biscoiteria Sabor de Minas</title>
+    <!-- Se você tiver um arquivo CSS separado, mantenha a linha abaixo -->
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome para os ícones e setas -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body style="background-color: #f9f9f9; font-family: Arial, sans-serif; margin: 0; padding: 0;">
+
+    <!-- TOPO / CABEÇALHO COM LOGO E NOME LADO A LADO -->
+    <header style="background: #fff; border-bottom: 1px solid #eee; padding: 12px 20px; display: flex; align-items: center; justify-content: center; gap: 15px;">
+        <!-- Troque 'logo.png' pelo nome exato do arquivo da sua logo -->
+        <img src="logo.png" alt="Logo Sabor de Minas" style="height: 50px; width: 50px; object-fit: cover; border-radius: 50%;">
+        <div style="text-align: left;">
+            <h2 style="color: #b22222; margin: 0; font-size: 18px;">Biscoiteria Sabor de Minas</h2>
+            <p style="color: #666; margin: 2px 0 0 0; font-size: 11px;">o sabor que alegra</p>
+        </div>
+    </header>
+    
+    <!-- NAVEGAÇÃO / VOLTAR -->
+    <div style="max-width: 500px; margin: 15px auto; padding: 0 15px;">
+        <a href="produtos.html" style="text-decoration: none; color: #8b4513; font-weight: bold; font-size: 14px;">
+            <i class="fa-solid fa-arrow-left"></i> Voltar para todos produtos
+        </a>
+    </div>
+
+    <!-- CONTEÚDO PRINCIPAL DA PÁGINA DO PRODUTO -->
+    <main style="max-width: 500px; margin: 0 auto; background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+        
+        <!-- FOTO GRANDE E MINIFOTOS CLICÁVEIS -->
+        <div class="galeria-produto">
+            <div id="foto-principal-container" style="margin-bottom: 12px;">
+                <img id="img-principal" src="Pelletbacon.jpeg" alt="Pellet bacon" style="width: 100%; border-radius: 12px; height: 350px; object-fit: cover;">
+            </div>
+            <!-- Miniaturas abaixo da foto -->
+            <div style="display: flex; gap: 8px; justify-content: space-between; margin-bottom: 20px;">
+                <img src="pimentinha.jpeg" class="miniatura" onclick="mudarFoto(this, 'pimentinha.jpeg')" style="width: 18%; height: 60px; object-fit: cover; border-radius: 6px; cursor: pointer; border: 2px solid #b22222; opacity: 1;">
+                <img src="pimentinha.jpeg" class="miniatura" onclick="mudarFoto(this, 'pimentinha.jpeg')" style="width: 18%; height: 60px; object-fit: cover; border-radius: 6px; cursor: pointer; border: 2px solid transparent; opacity: 0.7;">
+                <img src="pimentinha.jpeg" class="miniatura" onclick="mudarFoto(this, 'pimentinha.jpeg')" style="width: 18%; height: 60px; object-fit: cover; border-radius: 6px; cursor: pointer; border: 2px solid transparent; opacity: 0.7;">
+                <img src="banbole.jpeg" class="miniatura" onclick="mudarFoto(this, 'pimentinha.jpeg')" style="width: 18%; height: 60px; object-fit: cover; border-radius: 6px; cursor: pointer; border: 2px solid transparent; opacity: 0.7;">
+                <img src="beijinho.jpeg" class="miniatura" onclick="mudarFoto(this, 'pimentinha.jpeg')" style="width: 18%; height: 60px; object-fit: cover; border-radius: 6px; cursor: pointer; border: 2px solid transparent; opacity: 0.7;">
+            </div>
+        </div>
+
+        <!-- TÍTULO E PREÇO -->
+        <h1 style="font-size: 24px; color: #222; margin: 0 0 5px 0;">Pellet Bacon</h1>
+        <p style="color: #666; font-size: 14px; margin: 0 0 15px 0;">Categoria: <strong>Salgadinho</strong></p>
+
+        <div style="display: flex; align-items: baseline; gap: 10px; margin-bottom: 15px;">
+            <span style="background: #f7e6d4; color: #8b4513; padding: 4px 10px; border-radius: 6px; font-size: 13px; font-weight: bold;">250g</span>
+            <span style="font-size: 26px; color: #b22222; font-weight: bold;">R$ 18,00</span>
+        </div>
+
+        <p style="color: #555; font-size: 14px; line-height: 1.5; margin-bottom: 20px;">
+            Biscoito artesanal delicado com recheio caprichado de avelã, derretendo na boca. Perfeito para acompanhar seu café!
+        </p>
+
+        <!-- ÍCONES DE DIFERENCIAIS -->
+        <div style="display: flex; justify-content: space-around; background: #fafafa; padding: 15px 10px; border-radius: 10px; margin-bottom: 20px; text-align: center;">
+            <div>
+                <i class="fa-solid fa-wheat-awn" style="color: #b22222; font-size: 18px; margin-bottom: 5px; display: block;"></i>
+                <span style="font-size: 11px; color: #444; display: block; line-height: 1.2;">Produto<br>Artesanal</span>
+            </div>
+            <div>
+                <i class="fa-solid fa-seedling" style="color: #b22222; font-size: 18px; margin-bottom: 5px; display: block;"></i>
+                <span style="font-size: 11px; color: #444; display: block; line-height: 1.2;">Ingredientes<br>de Qualidade</span>
+            </div>
+            <div>
+                <i class="fa-solid fa-heart" style="color: #b22222; font-size: 18px; margin-bottom: 5px; display: block;"></i>
+                <span style="font-size: 11px; color: #444; display: block; line-height: 1.2;">Feito com<br>Carinho</span>
+            </div>
+        </div>
+
+        <!-- QUANTIDADE -->
+        <div style="margin-bottom: 20px;">
+            <label style="font-size: 13px; font-weight: bold; color: #333; display: block; margin-bottom: 8px;">Quantidade</label>
+            <div style="display: inline-flex; align-items: center; border: 1px solid #ddd; border-radius: 8px; overflow: hidden;">
+                <button onclick="alterarQtd(-1)" style="background: #f4f4f4; border: none; padding: 10px 15px; cursor: pointer; font-size: 16px;">-</button>
+                <span id="quantidade-produto" style="padding: 0 20px; font-weight: bold; font-size: 15px;">1</span>
+                <button onclick="alterarQtd(1)" style="background: #f4f4f4; border: none; padding: 10px 15px; cursor: pointer; font-size: 16px;">+</button>
+            </div>
+        </div>
+
+        <!-- BOTÃO WHATSAPP -->
+        <a id="botao-wpp" href="https://wa.me/5531992767228?text=Olá!%20Gostaria%20de%20pedir%201%20unidade(s)%20do%20Casadinho%20Avelã." target="_blank" style="display: flex; align-items: center; justify-content: center; gap: 8px; background-color: #25d366; color: white; padding: 14px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 15px; width: 100%; box-sizing: border-box; margin-bottom: 25px;">
+            <i class="fa-brands fa-whatsapp" style="font-size: 20px;"></i> Pedir no WhatsApp
+        </a>
+
+        <!-- SEÇÕES RETRÁTEIS (ACORDEÃO) -->
+        <div style="border-top: 1px solid #eee; padding-top: 15px;">
+            
+            <!-- Descrição -->
+            <div style="margin-bottom: 12px; border-bottom: 1px solid #f0f0f0; padding-bottom: 12px;">
+                <div onclick="toggleSecao('desc')" style="display: flex; justify-content: space-between; cursor: pointer; font-weight: bold; font-size: 14px; color: #333;">
+                    <span>Descrição</span>
+                    <i id="icone-desc" class="fa-solid fa-chevron-down" style="font-size: 12px; color: #666;"></i>
+                </div>
+                <p id="conteudo-desc" style="display: none; font-size: 13px; color: #666; margin-top: 8px; line-height: 1.4;">
+                    Nossos biscoitos são feitos de forma artesanal, com ingredientes selecionados e todo o cuidado que você merece.
+                </p>
+            </div>
+
+            <!-- Ingredientes -->
+            <div style="margin-bottom: 12px; border-bottom: 1px solid #f0f0f0; padding-bottom: 12px;">
+                <div onclick="toggleSecao('ing')" style="display: flex; justify-content: space-between; cursor: pointer; font-weight: bold; font-size: 14px; color: #333;">
+                    <span>Ingredientes</span>
+                    <i id="icone-ing" class="fa-solid fa-chevron-down" style="font-size: 12px; color: #666;"></i>
+                </div>
+                <p id="conteudo-ing" style="display: none; font-size: 13px; color: #666; margin-top: 8px; line-height: 1.4;">
+                    Farinha de trigo, açúcar, manteiga, recheio sabor avelã e essência natural.
+                </p>
+            </div>
+
+            <!-- Informações -->
+            <div style="margin-bottom: 12px; border-bottom: 1px solid #f0f0f0; padding-bottom: 12px;">
+                <div onclick="toggleSecao('info')" style="display: flex; justify-content: space-between; cursor: pointer; font-weight: bold; font-size: 14px; color: #333;">
+                    <span>Informações</span>
+                    <i id="icone-info" class="fa-solid fa-chevron-down" style="font-size: 12px; color: #666;"></i>
+                </div>
+                <div id="conteudo-info" style="display: none; font-size: 13px; color: #666; margin-top: 8px; line-height: 1.5;">
+                    <div>✓ Validade: 30 dias</div>
+                    <div>✓ Peso líquido: 250g</div>
+                    <div>✓ Conservar em local seco e arejado</div>
+                </div>
+            </div>
+
+            <!-- Tabela Nutricional -->
+            <div style="margin-bottom: 12px; padding-bottom: 5px;">
+                <div onclick="toggleSecao('nutri')" style="display: flex; justify-content: space-between; cursor: pointer; font-weight: bold; font-size: 14px; color: #333;">
+                    <span>Tabela Nutricional</span>
+                    <i id="icone-nutri" class="fa-solid fa-chevron-down" style="font-size: 12px; color: #666;"></i>
+                </div>
+                <div id="conteudo-nutri" style="display: none; font-size: 13px; color: #666; margin-top: 10px;">
+                    <p style="margin-bottom: 8px;"><strong>Porção:</strong> 25g (aprox. 5 unidades)</p>
+                    <table style="width: 100%; border-collapse: collapse;">
+                        <tr style="border-bottom: 1px solid #eee;"><td style="padding: 4px 0;">Valor Energético</td><td style="text-align: right;">110 kcal</td></tr>
+                        <tr style="border-bottom: 1px solid #eee;"><td style="padding: 4px 0;">Carboidratos</td><td style="text-align: right;">15g</td></tr>
+                        <tr style="border-bottom: 1px solid #eee;"><td style="padding: 4px 0;">Proteínas</td><td style="text-align: right;">1,2g</td></tr>
+                        <tr style="border-bottom: 1px solid #eee;"><td style="padding: 4px 0;">Gorduras Totais</td><td style="text-align: right;">5,0g</td></tr>
+                        <tr><td style="padding: 4px 0;">Sódio</td><td style="text-align: right;">20mg</td></tr>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- VOCÊ TAMBÉM PODE GOSTAR -->
+    <section style="max-width: 500px; margin: 30px auto; padding: 0 20px;">
+        <h3 style="color: #333; font-size: 18px; margin-bottom: 15px;">Você também pode gostar</h3>
+        <div style="display: flex; gap: 15px; overflow-x: auto; padding-bottom: 10px;">
+            
+            <!-- Item Relacionado 1 (Exemplo: Beijinho) -->
+            <div onclick="window.location.href='Pelletbacon-produtos.html'" style="background: #fff; border-radius: 10px; padding: 10px; min-width: 140px; box-shadow: 0 2px 6px rgba(0,0,0,0.05); text-align: left; cursor: pointer;">
+                <img src="Pelletbacon.jpeg" alt="Beijinho" style="width: 100%; height: 110px; object-fit: cover; border-radius: 6px;">
+                <h4 style="font-size: 13px; margin: 8px 0 4px 0; color: #333;">Biscoito Beijinho</h4>
+                <p style="font-size: 11px; color: #666; margin: 0 0 8px 0;">250g</p>
+                <strong style="color: #b22222; font-size: 13px;">R$ 10,99</strong>
+            </div>
+
+            <!-- Item Relacionado 2 (Exemplo: Banbole) -->
+            <div onclick="window.location.href='banbole-produtos.html'" style="background: #fff; border-radius: 10px; padding: 10px; min-width: 140px; box-shadow: 0 2px 6px rgba(0,0,0,0.05); text-align: left; cursor: pointer;">
+                <img src="banbole.jpeg" alt="Banbole" style="width: 100%; height: 110px; object-fit: cover; border-radius: 6px;">
+                <h4 style="font-size: 13px; margin: 8px 0 4px 0; color: #333;">Biscoito Banbole</h4>
+                <p style="font-size: 11px; color: #666; margin: 0 0 8px 0;">250g</p>
+                <strong style="color: #b22222; font-size: 13px;">R$ 10,99</strong>
+            </div>
+
+            <!-- Item Relacionado 3 (Exemplo: Canela) -->
+            <div onclick="window.location.href='canela-produtos.html'" style="background: #fff; border-radius: 10px; padding: 10px; min-width: 140px; box-shadow: 0 2px 6px rgba(0,0,0,0.05); text-align: left; cursor: pointer;">
+                <img src="canela.jpeg" alt="Canela" style="width: 100%; height: 110px; object-fit: cover; border-radius: 6px;">
+                <h4 style="font-size: 13px; margin: 8px 0 4px 0; color: #333;">Biscoito Canela</h4>
+                <p style="font-size: 11px; color: #666; margin: 0 0 8px 0;">250g</p>
+                <strong style="color: #b22222; font-size: 13px;">R$ 10,99</strong>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- SCRIPTS DE INTERATIVIDADE -->
+    <script>
+        let quantidade = 1;
+
+        function alterarQtd(valor) {
+            quantidade += valor;
+            if (quantidade < 1) quantidade = 1;
+            
+            // Atualiza o número na tela
+            document.getElementById('quantidade-produto').innerText = quantidade;
+            
+            // Atualiza o link do WhatsApp com a quantidade dinâmica
+            let linkWpp = `https://wa.me/5531992767228?text=Olá!%20Gostaria%20de%20pedir%20${quantidade}%20unidade(s)%20do%20Casadinho%20Avelã.`;
+            document.getElementById('botao-wpp').setAttribute('href', linkWpp);
+        }
+
+        function mudarFoto(elementoThumbnail, caminhoImagem) {
+            // Muda a foto principal
+            document.getElementById('img-principal').src = caminhoImagem;
+            
+            // Remove o destaque de todas as miniaturas
+            let todasAsMinis = document.querySelectorAll('.miniatura');
+            todasAsMinis.forEach(function(minia) {
+                minia.style.border = '2px solid transparent';
+                minia.style.opacity = '0.7';
+            });
+            
+            // Adiciona o destaque vermelho e remove a opacidade da miniatura clicada
+            elementoThumbnail.style.border = '2px solid #b22222';
+            elementoThumbnail.style.opacity = '1';
+        }
+
+        function toggleSecao(id) {
+            let elemento = document.getElementById('conteudo-' + id);
+            let icone = document.getElementById('icone-' + id);
+            
+            if (elemento.style.display === 'none') {
+                elemento.style.display = 'block';
+                icone.className = 'fa-solid fa-chevron-up';
+            } else {
+                elemento.style.display = 'none';
+                icone.className = 'fa-solid fa-chevron-down';
+            }
+        }
+    </script>
+
+</body>
+</html>
