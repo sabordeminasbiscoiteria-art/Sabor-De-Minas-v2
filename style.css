@@ -1622,18 +1622,17 @@ footer{
         line-height: 1.45 !important;
     }
 }
-/* Garante que o rodapé fica em colunas lado a lado por padrão */
-.footer-conteudo {
+@media (max-width: 600px) {
+     /* Responsivo SOMENTE para telas pequenas de verdade (abaixo de 600px) */
+     /* Garante que o rodapé fica em colunas lado a lado por padrão */
+     .footer-conteudo {
     display: flex !important;
     flex-direction: row !important;
     justify-content: space-between !important;
     align-items: flex-start !important;
     max-width: 900px !important;
     margin: 0 auto !important;
-}
-
-/* Responsivo SOMENTE para telas pequenas de verdade (abaixo de 600px) */
-@media (max-width: 600px) {
+    }
     .footer-conteudo {
         flex-direction: column !important;
         align-items: center !important;
