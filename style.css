@@ -1470,8 +1470,8 @@ footer{
     justify-content: center;
     gap: 8px;
     background: transparent;
-    border: 2px solid #801a24;
-    color: #801a24;
+    border: 2px solid #b52b2b;
+    color: #b52b2b;
     padding: 12px 30px;
     border-radius: 30px;
     text-decoration: none;
@@ -1496,8 +1496,8 @@ footer{
     justify-content: center;
     gap: 8px;
     background: transparent;
-    border: 2px solid #801a24;
-    color: #801a24;
+    border: 2px solid #b52b2b;
+    color: #b52b2b;
     padding: 12px 30px;
     border-radius: 30px;
     text-decoration: none;
@@ -1702,7 +1702,7 @@ footer{
    RODAPÉ LADO A LADO COM DIVISÓRIA (AJUSTADO)
    ========================================= */
 footer {
-    background-color: #8f2828 !important;
+    background-color: #b52b2b !important;
     color: #ffffff !important;
     padding: 25px 10px 10px 10px !important;
     margin-top: 40px !important;
