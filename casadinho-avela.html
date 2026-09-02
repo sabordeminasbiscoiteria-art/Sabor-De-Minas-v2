@@ -23,7 +23,7 @@
     
     <!-- NAVEGAÇÃO / VOLTAR -->
     <div style="max-width: 500px; margin: 15px auto; padding: 0 15px;">
-        <a href="index.html" style="text-decoration: none; color: #8b4513; font-weight: bold; font-size: 14px;">
+        <a href="produtos.html" style="text-decoration: none; color: #8b4513; font-weight: bold; font-size: 14px;">
             <i class="fa-solid fa-arrow-left"></i> Voltar para a vitrine
         </a>
     </div>
@@ -39,10 +39,10 @@
             <!-- Miniaturas abaixo da foto -->
             <div style="display: flex; gap: 8px; justify-content: space-between; margin-bottom: 20px;">
                 <img src="casadinho.jpeg" class="miniatura" onclick="mudarFoto(this, 'casadinho.jpeg')" style="width: 18%; height: 60px; object-fit: cover; border-radius: 6px; cursor: pointer; border: 2px solid #b22222; opacity: 1;">
-                <img src="8 de queijo.jpeg" class="miniatura" onclick="mudarFoto(this, '8 de queijo.jpeg')" style="width: 18%; height: 60px; object-fit: cover; border-radius: 6px; cursor: pointer; border: 2px solid transparent; opacity: 0.7;">
-                <img src="acai.jpeg" class="miniatura" onclick="mudarFoto(this, 'acai.jpeg')" style="width: 18%; height: 60px; object-fit: cover; border-radius: 6px; cursor: pointer; border: 2px solid transparent; opacity: 0.7;">
-                <img src="banbole.jpeg" class="miniatura" onclick="mudarFoto(this, 'banbole.jpeg')" style="width: 18%; height: 60px; object-fit: cover; border-radius: 6px; cursor: pointer; border: 2px solid transparent; opacity: 0.7;">
-                <img src="beijinho.jpeg" class="miniatura" onclick="mudarFoto(this, 'beijinho.jpeg')" style="width: 18%; height: 60px; object-fit: cover; border-radius: 6px; cursor: pointer; border: 2px solid transparent; opacity: 0.7;">
+                <img src="8 de queijo.jpeg" class="miniatura" onclick="mudarFoto(this, 'casadinho.jpeg')" style="width: 18%; height: 60px; object-fit: cover; border-radius: 6px; cursor: pointer; border: 2px solid transparent; opacity: 0.7;">
+                <img src="acai.jpeg" class="miniatura" onclick="mudarFoto(this, 'casadinho.jpeg')" style="width: 18%; height: 60px; object-fit: cover; border-radius: 6px; cursor: pointer; border: 2px solid transparent; opacity: 0.7;">
+                <img src="banbole.jpeg" class="miniatura" onclick="mudarFoto(this, 'casadinho.jpeg')" style="width: 18%; height: 60px; object-fit: cover; border-radius: 6px; cursor: pointer; border: 2px solid transparent; opacity: 0.7;">
+                <img src="beijinho.jpeg" class="miniatura" onclick="mudarFoto(this, 'casadinho.jpeg')" style="width: 18%; height: 60px; object-fit: cover; border-radius: 6px; cursor: pointer; border: 2px solid transparent; opacity: 0.7;">
             </div>
         </div>
 
@@ -155,25 +155,25 @@
         <h3 style="color: #333; font-size: 18px; margin-bottom: 15px;">Você também pode gostar</h3>
         <div style="display: flex; gap: 15px; overflow-x: auto; padding-bottom: 10px;">
             
-            <!-- Item Relacionado 1 -->
-            <div style="background: #fff; border-radius: 10px; padding: 10px; min-width: 140px; box-shadow: 0 2px 6px rgba(0,0,0,0.05); text-align: left;">
+            <!-- Item Relacionado 1 (Exemplo: Beijinho) -->
+            <div onclick="window.location.href='beijinho.html'" style="background: #fff; border-radius: 10px; padding: 10px; min-width: 140px; box-shadow: 0 2px 6px rgba(0,0,0,0.05); text-align: left; cursor: pointer;">
                 <img src="beijinho.jpeg" alt="Beijinho" style="width: 100%; height: 110px; object-fit: cover; border-radius: 6px;">
                 <h4 style="font-size: 13px; margin: 8px 0 4px 0; color: #333;">Biscoito Beijinho</h4>
                 <p style="font-size: 11px; color: #666; margin: 0 0 8px 0;">250g</p>
                 <strong style="color: #b22222; font-size: 13px;">R$ 10,99</strong>
             </div>
 
-            <!-- Item Relacionado 2 -->
-            <div style="background: #fff; border-radius: 10px; padding: 10px; min-width: 140px; box-shadow: 0 2px 6px rgba(0,0,0,0.05); text-align: left;">
+            <!-- Item Relacionado 2 (Exemplo: Banbole) -->
+            <div onclick="window.location.href='banbole.html'" style="background: #fff; border-radius: 10px; padding: 10px; min-width: 140px; box-shadow: 0 2px 6px rgba(0,0,0,0.05); text-align: left; cursor: pointer;">
                 <img src="banbole.jpeg" alt="Banbole" style="width: 100%; height: 110px; object-fit: cover; border-radius: 6px;">
                 <h4 style="font-size: 13px; margin: 8px 0 4px 0; color: #333;">Biscoito Banbole</h4>
                 <p style="font-size: 11px; color: #666; margin: 0 0 8px 0;">250g</p>
                 <strong style="color: #b22222; font-size: 13px;">R$ 10,99</strong>
             </div>
 
-            <!-- Item Relacionado 3 -->
-            <div style="background: #fff; border-radius: 10px; padding: 10px; min-width: 140px; box-shadow: 0 2px 6px rgba(0,0,0,0.05); text-align: left;">
-                <img src="casadinho.jpeg" alt="Canela" style="width: 100%; height: 110px; object-fit: cover; border-radius: 6px;">
+            <!-- Item Relacionado 3 (Exemplo: Canela) -->
+            <div onclick="window.location.href='canela.html'" style="background: #fff; border-radius: 10px; padding: 10px; min-width: 140px; box-shadow: 0 2px 6px rgba(0,0,0,0.05); text-align: left; cursor: pointer;">
+                <img src="canela.jpeg" alt="Canela" style="width: 100%; height: 110px; object-fit: cover; border-radius: 6px;">
                 <h4 style="font-size: 13px; margin: 8px 0 4px 0; color: #333;">Biscoito Canela</h4>
                 <p style="font-size: 11px; color: #666; margin: 0 0 8px 0;">250g</p>
                 <strong style="color: #b22222; font-size: 13px;">R$ 10,99</strong>
