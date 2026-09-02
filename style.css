@@ -1371,101 +1371,54 @@ footer{
         padding-bottom: 0;
     }
 }
-   /* ==========================================
-   Seção de Produtos - Cabeçalho Profissional
-   ========================================== */
-
-.secao-produtos-home {
-    padding: 40px 20px;
-}
-
-.header-produtos {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 20px;
-    width: 100%;
-}
-
-.header-produtos .texto-cabecalho {
-    display: flex;
-    flex-direction: column;
-}
-
-.titulo-home {
-    font-size: 2.2rem;
-    color: #3b2314;
-    font-weight: 700;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin: 0;
-}
-
-/* Ícone do título - Alterado para o tom do logo */
-.titulo-home i {
-    color: #AA283C; 
-    font-size: 1.8rem;
-}
-
-.subtitulo-home {
-    font-size: 1rem;
-    color: #7a6a58;
-    margin: 5px 0 0 0;
-}
-
-/* Botão - Alterado para o tom exato do logo */
+   /* ESTILO DO BOTÃO DE DESTAQUE DOS PRODUTOS */
 .botao-destaque-grande {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: 8px;
-    background-color: #AA283C; /* Cor principal do logo */
-    color: #ffffff;
-    padding: 12px 26px;
-    border-radius: 50px;
-    font-size: 0.95rem;
-    font-weight: 600;
+    background: transparent;
+    border: 2px solid #801a24;
+    color: #801a24;
+    padding: 12px 30px;
+    border-radius: 30px;
     text-decoration: none;
-    box-shadow: 0 4px 12px rgba(170, 40, 60, 0.25);
+    font-weight: bold;
+    font-size: 14px;
     transition: all 0.3s ease;
-    white-space: nowrap;
+    box-shadow: 0 4px 10px rgba(128, 26, 36, 0.05);
 }
 
-/* Efeito ao passar o mouse (um tom levemente mais escuro) */
 .botao-destaque-grande:hover {
-    background-color: #8D2132;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(170, 40, 60, 0.35);
+    background: #801a24;
+    color: #ffffff;
 }
-
 /* ==========================================
    Responsivo para Celulares
    ========================================== */
 @media (max-width: 768px) {
-    .header-produtos {
-        flex-direction: column;
-        align-items: stretch;
-        gap: 15px;
-    }
+    /* ESTILO DO BOTÃO DE DESTAQUE DOS PRODUTOS */
+.botao-destaque-grande {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: transparent;
+    border: 2px solid #801a24;
+    color: #801a24;
+    padding: 12px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(128, 26, 36, 0.05);
+}
 
-    .titulo-home {
-        font-size: 1.6rem;
-    }
-
-    .titulo-home i {
-        font-size: 1.3rem;
-    }
-
-    .subtitulo-home {
-        font-size: 0.9rem;
-    }
-
-    .botao-destaque-grande {
-        width: 100%;
-        padding: 12px 20px;
-    }
+.botao-destaque-grande:hover {
+    background: #801a24;
+    color: #ffffff;
+}
 }
     /* =====================================
        SEÇÃO SOBRE
