@@ -1302,50 +1302,70 @@ footer{
        BENEFÍCIOS: APENAS ÍCONES LADO A LADO (Celular)
        ========================================== */
     @media (max-width: 768px) {
-        /* Transforma a seção de benefícios em uma linha horizontal */
-        section.beneficios,
-        .beneficios {
-            display: flex !important;
-            flex-direction: row !important;
-            justify-content: space-around !important;
-            align-items: center !important;
-            padding: 10px 5px !important;
-            width: 100% !important;
-            box-sizing: border-box !important;
-        }
+        /* ESTILO DOS BENEFÍCIOS / ÍCONES LADO A LADO */
+.beneficios {
+    display: flex;
+    justify-content: space-around;
+    background: #ffffff;
+    padding: 15px 10px;
+    border-radius: 14px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+    margin: 30px auto;
+    max-width: 900px;
+    gap: 10px;
+}
 
-        /* Cada item de benefício */
-        section.beneficios .beneficio,
-        .beneficios .beneficio {
-            display: flex !important;
-            justify-content: center !important;
-            align-items: center !important;
-            margin: 0 !important;
-            padding: 5px !important;
-        }
+.beneficio {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex: 1;
+    padding: 10px;
+    border-right: 1px solid #f0f0f0;
+    text-align: left;
+}
 
-        /* Esconde completamente os textos e títulos dos benefícios */
-        section.beneficios .beneficio h3,
-        section.beneficios .beneficio p,
-        .beneficios .beneficio h3,
-        .beneficios .beneficio p,
-        .beneficios .beneficio div {
-            display: none !important;
-        }
+.beneficio:last-child {
+    border-right: none;
+}
 
-        /* Destaca e centraliza apenas os ícones */
-        section.beneficios .beneficio img,
-        section.beneficios .beneficio i,
-        .beneficios .beneficio img,
-        .beneficios .beneficio i,
-        .beneficios .beneficio svg {
-            display: block !important;
-            width: 26px !important;
-            height: 26px !important;
-            font-size: 26px !important;
-            margin: 0 auto !important;
-        }
+.beneficio i {
+    color: #801a24;
+    font-size: 22px;
+    min-width: 24px;
+    text-align: center;
+}
+
+.beneficio h3 {
+    font-size: 12px;
+    color: #333;
+    margin: 0 0 2px 0;
+    font-weight: bold;
+}
+
+.beneficio p {
+    font-size: 10px;
+    color: #666;
+    margin: 0;
+}
     }
+
+/* Responsivo para celular: empilha de forma organizada se necessário */
+@media (max-width: 768px) {
+    .beneficios {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .beneficio {
+        border-right: none;
+        border-bottom: 1px solid #f0f0f0;
+        padding-bottom: 12px;
+    }
+    .beneficio:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+}
    /* ==========================================
    Seção de Produtos - Cabeçalho Profissional
    ========================================== */
