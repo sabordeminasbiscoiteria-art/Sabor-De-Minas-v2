@@ -1263,6 +1263,46 @@ footer{
 .detalhe-banner .espelhado {
     transform: scaleX(-1);
 }
+/* ===== BANNER ===== */
+
+.banner {
+    position: relative;
+    overflow: hidden;
+    background: #fffaf4;
+    text-align: center;
+    padding: 45px 20px;
+}
+
+/* detalhe do lado esquerdo */
+.banner::before {
+    content: "❧";
+    position: absolute;
+    left: 15px;
+    top: 35px;
+
+    font-size: 75px;
+    color: #ead7c3;
+    opacity: 0.55;
+
+    transform: rotate(-25deg);
+}
+
+/* detalhe do lado direito */
+.banner::after {
+    content: "";
+    position: absolute;
+    right: -25px;
+    top: 35px;
+
+    width: 80px;
+    height: 170px;
+
+    border: 2px dashed #ead7c3;
+    border-left: none;
+    border-radius: 0 60% 60% 0;
+
+    opacity: 0.7;
+}
     }
 
     /* ==========================
