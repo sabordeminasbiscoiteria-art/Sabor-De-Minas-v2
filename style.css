@@ -1182,6 +1182,83 @@ footer{
         display: none !important;
     }
 }
+/* =========================================
+   ESTILO DO RODAPÉ APENAS PARA COMPUTADOR (PC)
+   ========================================= */
+@media (min-width: 769px) {
+    footer {
+        padding: 35px 20px 15px 20px !important;
+        margin-top: 50px !important;
+    }
+
+    .footer-conteudo {
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: center !important;
+        align-items: center !important;
+        max-width: 700px !important;
+        margin: 0 auto !important;
+        gap: 30px !important;
+    }
+
+    .footer-marca {
+        display: flex !important;
+        align-items: center !important;
+        gap: 12px !important;
+        text-align: right !important;
+    }
+
+    .footer-marca img {
+        width: 50px !important;
+        height: 50px !important;
+        border-radius: 50% !important;
+        object-fit: cover !important;
+        border: 2px solid rgba(255, 255, 255, 0.4) !important;
+    }
+
+    .footer-marca h3 {
+        font-size: 15px !important;
+        margin: 0 !important;
+        line-height: 1.1 !important;
+    }
+
+    .footer-marca p {
+        font-size: 11px !important;
+        margin: 3px 0 0 0 !important;
+    }
+
+    .footer-divisor-vertical {
+        display: block !important;
+        width: 1px !important;
+        height: 55px !important;
+        background-color: rgba(255, 255, 255, 0.35) !important;
+    }
+
+    .footer-contato h3 {
+        font-size: 14px !important;
+        margin: 0 0 6px 0 !important;
+    }
+
+    .footer-contato p {
+        font-size: 12px !important;
+        margin: 4px 0 !important;
+        gap: 8px !important;
+    }
+
+    .footer-contato i {
+        font-size: 12px !important;
+    }
+
+    .onda-footer svg {
+        height: 30px !important;
+    }
+
+    .footer-final {
+        font-size: 11px !important;
+        margin-top: 10px !important;
+        padding-top: 12px !important;
+    }
+}
 /* ==========================================
        CORREÇÃO DEFINITIVA DO BANNER (Celular)
        ========================================== */
