@@ -1625,130 +1625,74 @@ footer{
 /* ==========================================
        RODAPÉ FINAL CORRIGIDO E FORÇADO (Celular)
        ========================================== */
-    @media (max-width: 768px) {
-        /* 1. Esconde os links rápidos */
-        footer .links-rapidos, 
-        footer .footer-links,
-        footer .footer-conteudo > div:nth-child(3),
-        footer ul {
-            display: none !important;
-        }
+       @media (max-width: 768px) {
 
-        /* 2. Container principal com 2 colunas */
-        footer,
-        footer .footer-conteudo, 
-        footer .container.footer-conteudo {
-            display: flex !important;
-            flex-direction: row !important;
-            flex-wrap: wrap !important;
-            justify-content: space-around !important;
-            align-items: flex-start !important;
-            padding: 10px 5px !important;
-            box-sizing: border-box !important;
-            width: 100% !important;
-            gap: 5px !important;
-            min-height: auto !important;
-        }
-
-        /* Coluna da Logo */
-        footer .logo-footer,
-        footer .footer-info,
-        footer .footer-conteudo > div:nth-child(1) {
-            flex: 0 0 42% !important;
-            max-width: 42% !important;
-            display: flex !important;
-            flex-direction: column !important;
-            align-items: center !important;
-            text-align: center !important;
-        }
-
-        footer .logo-footer img,
-        footer .footer-info img,
-        footer .footer-conteudo > div:nth-child(1) img {
-            width: 36px !important;
-            height: 36px !important;
-            object-fit: contain !important;
-            margin-bottom: 2px !important;
-        }
-
-        footer .logo-footer h3,
-        footer .footer-info h3,
-        footer .footer-conteudo > div:nth-child(1) h3 {
-            font-size: 10px !important;
-            line-height: 1.1 !important;
-            margin: 0 !important;
-        }
-
-        footer .logo-footer p,
-        footer .footer-info p {
-            font-size: 8px !important;
-            margin: 1px 0 0 0 !important;
-        }
-
-        /* Coluna de Contato */
-        footer .contato-footer,
-        footer .footer-contatos,
-        footer .footer-conteudo > div:nth-child(2) {
-            flex: 0 0 52% !important;
-            max-width: 52% !important;
-            display: flex !important;
-            flex-direction: column !important;
-            align-items: flex-start !important;
-            text-align: left !important;
-        }
-
-        footer .contato-footer h3,
-        footer .footer-contatos h3 {
-            font-size: 10px !important;
-            margin-bottom: 3px !important;
-        }
-
-        footer .contato-footer p,
-        footer .contato-footer a,
-        footer .footer-contatos p,
-        footer .footer-contatos a {
-            font-size: 9px !important;
-            display: flex !important;
-            align-items: center !important;
-            gap: 3px !important;
-            margin: 2px 0 !important;
-            white-space: nowrap !important;
-            color: #fff !important;
-            text-decoration: none !important;
-        }
-
-        footer img:not(.logo-footer img), 
-        footer svg {
-            width: 10px !important;
-            height: 10px !important;
-            flex-shrink: 0 !important;
-        }
-
-        /* 3. Força a Onda Decorativa a aparecer (seja qual for a classe dela) */
-        footer .onda-footer,
-        footer div[class*="onda"],
-        footer img[src*="onda"],
-        footer svg[class*="onda"] {
-            display: block !important;
-            width: 100% !important;
-            flex-basis: 100% !important;
-            height: auto !important;
-            max-height: 30px !important;
-            object-fit: cover !important;
-            margin: 4px 0 !important;
-        }
-
-        /* 4. Copyright coladinho embaixo */
-        footer .footer-final {
-            width: 100% !important;
-            flex-basis: 100% !important;
-            text-align: center !important;
-            font-size: 8px !important;
-            margin-top: 2px !important;
-            border-top: 1px solid rgba(255, 255, 255, 0.2) !important;
-            padding-top: 4px !important;
-        }
+    footer {
+        padding: 25px 12px 12px;
+        margin-top: 30px;
     }
+
+    .footer-conteudo {
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+    }
+
+
+    /* MARCA */
+
+    .footer-marca {
+        flex-direction: column;
+        text-align: center;
+        gap: 7px;
+    }
+
+    .footer-marca img {
+        width: 58px;
+        height: 58px;
+    }
+
+    .footer-marca h3 {
+        font-size: 14px;
+        line-height: 1.15;
+    }
+
+    .footer-marca p {
+        font-size: 11px;
+    }
+
+
+    /* CONTATO */
+
+    .footer-contato {
+        padding-left: 18px;
+    }
+
+    .footer-contato h3 {
+        font-size: 16px;
+        margin-bottom: 12px;
+    }
+
+    .footer-contato p {
+        font-size: 11px;
+        gap: 6px;
+        margin: 7px 0;
+        line-height: 1.3;
+    }
+
+    .footer-contato i {
+        width: 16px;
+        font-size: 14px;
+    }
+
+
+    /* FINAL */
+
+    .footer-final {
+        margin-top: 18px;
+        padding-top: 12px;
+        font-size: 9px;
+    }
+        }
 /* ==========================
   PAGINA DOS PRODUTOS.HTML
 ========================== */
