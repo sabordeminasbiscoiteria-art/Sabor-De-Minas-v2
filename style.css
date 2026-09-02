@@ -1241,63 +1241,7 @@ footer{
             justify-content: center !important;
             margin-top: 8px !important;
         }
-/* ===== DETALHE DO BANNER ===== */
-
-.detalhe-banner {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 12px;
-    margin-bottom: 10px;
-    color: #70452d;
-}
-
-.detalhe-banner i {
-    font-size: 20px;
-}
-
-.detalhe-banner .cookie-centro {
-    font-size: 24px;
-}
-
-.detalhe-banner .espelhado {
-    transform: scaleX(-1);
-}
-/* ===== BANNER ===== */
-
-.banner {
-    position: relative;
-    overflow: hidden;
-    background: #fffaf4;
-    text-align: center;
-    padding: 45px 20px;
-}
-
-.banner::before {
-    content: "❧";
-    position: absolute;
-    left: 10px;
-    top: 30px;
-    font-size: 80px;
-    color: #e8d3bd;
-    opacity: 0.35;
-    transform: rotate(-25deg);
-}
-
-.banner::after {
-    content: "";
-    position: absolute;
-    right: -35px;
-    top: 25px;
-    width: 90px;
-    height: 180px;
-    border: 2px dashed #e8d3bd;
-    border-left: 0;
-    border-radius: 50%;
-    opacity: 0.45;
-}
-    }
-
+             }
     /* ==========================
    SLIDER DO BANNER - AJUSTE CELULAR
 ========================== */
