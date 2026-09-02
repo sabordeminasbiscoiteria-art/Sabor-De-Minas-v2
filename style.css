@@ -1241,17 +1241,25 @@ footer{
             justify-content: center !important;
             margin-top: 8px !important;
         }
-        /* Detalhes de flores/ramos decorativos nos cantos */
-         .ramo-esq, .ramo-dir {
-         position: absolute;
-         top: 75px;
-         color: #d4af37;
-         font-size: 24px;
-         opacity: 0.6;
-         z-index: 10;
-       }
-         .ramo-esq { left: 15px; transform: rotate(-20deg); }
-         .ramo-dir { right: 15px; transform: scaleX(-1) rotate(-20deg); }
+        /* Raminhos decorativos delicados nas laterais do banner */
+.texto-banner {
+    position: relative;
+}
+.ramo-esq, .ramo-dir {
+    position: absolute;
+    top: 20px;
+    color: #d4af37;
+    font-size: 20px;
+    opacity: 0.5;
+}
+.ramo-esq { 
+    left: -10px; 
+    transform: rotate(-15deg); 
+}
+.ramo-dir { 
+    right: -10px; 
+    transform: scaleX(-1) rotate(-15deg); 
+}
     }
 
     /* ==========================
