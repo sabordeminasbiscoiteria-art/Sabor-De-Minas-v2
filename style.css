@@ -1241,25 +1241,7 @@ footer{
             justify-content: center !important;
             margin-top: 8px !important;
         }
-        /* Raminhos decorativos delicados nas laterais do banner */
-.texto-banner {
-    position: relative;
-}
-.ramo-esq, .ramo-dir {
-    position: absolute;
-    top: 20px;
-    color: #d4af37;
-    font-size: 20px;
-    opacity: 0.5;
-}
-.ramo-esq { 
-    left: -10px; 
-    transform: rotate(-15deg); 
-}
-.ramo-dir { 
-    right: -10px; 
-    transform: scaleX(-1) rotate(-15deg); 
-}
+
     }
 
     /* ==========================
