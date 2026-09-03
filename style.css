@@ -2023,17 +2023,18 @@ footer {
 }
 
 @media (max-width: 768px) {
-    /* Afeta os cards em QUALQUER página da loja */
+    /* Força a grade de produtos a ter 2 colunas compactas em qualquer página */
     .produtos-cards {
         display: grid !important;
         grid-template-columns: repeat(2, 1fr) !important;
-        gap: 6px !important;
-        padding: 6px !important;
-        align-items: start !important;
-        margin-top: -10px !important;
-        padding-top: 0 !important;
+        gap: 8px !important;
+        padding: 8px !important;
+        box-sizing: border-box !important;
+        width: 100% !important;
+        margin: 0 auto !important;
     }
 
+    /* Estilo de cada card individual */
     .produtos-cards .produto,
     .produtos-cards .item-produto {
         width: 100% !important;
@@ -2044,33 +2045,36 @@ footer {
         background: #ffffff !important;
         border-radius: 8px !important;
         overflow: hidden !important;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.05) !important;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.06) !important;
+        border: 1px solid #ebdcd0 !important;
+        box-sizing: border-box !important;
     }
 
-    /* Imagem menorzinha para economizar espaço */
+    /* Imagem compacta */
     .produtos-cards .produto img,
     .produtos-cards .item-produto img {
         width: 100% !important;
-        height: 100px !important;
+        height: 110px !important;
         object-fit: cover !important;
         display: block !important;
         margin: 0 !important;
     }
 
-    /* TÍTULO: Força a ficar em uma linha só */
+    /* Título do produto */
     .produtos-cards .produto h3,
-    .produtos-cards .produto .titulo-produto {
+    .produtos-cards .item-produto h3 {
         font-size: 11.5px !important;
         white-space: nowrap !important;
         overflow: hidden !important;
         text-overflow: ellipsis !important;
         text-align: center !important;
         margin: 6px 4px 2px 4px !important;
+        color: #333 !important;
     }
 
-    /* Descrição enxuta */
+    /* Descrição */
     .produtos-cards .produto p,
-    .produtos-cards .produto .descricao-produto {
+    .produtos-cards .item-produto p {
         font-size: 9.5px !important;
         color: #666 !important;
         text-align: center !important;
@@ -2080,49 +2084,35 @@ footer {
         text-overflow: ellipsis !important;
     }
 
-    /* PESO E PREÇO: Centralizados lado a lado bem compactos */
+    /* Preço e peso */
     .produtos-cards .produto .preco-produto,
-    .produtos-cards .produto .container-preco {
+    .produtos-cards .item-produto .preco-produto {
         font-size: 11px !important;
         display: flex !important;
         flex-direction: row !important;
-        flex-wrap: nowrap !important;
         align-items: center !important;
         justify-content: center !important;
         gap: 5px !important;
         width: 100% !important;
-        margin: 8px 0 !important;
+        margin: 6px 0 !important;
     }
 
-    .produtos-cards .preco-produto span,
-    .produtos-cards .preco-produto strong {
-        display: inline-block !important;
-        width: auto !important;
-        margin: 0 !important;
-        white-space: nowrap !important;
-    }
-
-    /* BOTÃO DO WHATSAPP */
+    /* Botão do WhatsApp */
     .produtos-cards .produto .botao-produto,
-    .produtos-cards .produto a.botao,
-    .produtos-cards .produto button {
+    .produtos-cards .item-produto .botao-produto {
         width: 100% !important;
-        max-width: 100% !important;
         margin: 0 !important;
-        padding: 5px 0 !important;
+        padding: 6px 0 !important;
         font-size: 9.5px !important;
-        border-radius: 0 0 8px 8px !important;
+        border-radius: 0 !important;
         box-sizing: border-box !important;
         display: flex !important;
         justify-content: center !important;
         align-items: center !important;
         text-align: center !important;
-    }
-
-    /* Filtros gerais */
-    .topo-filtros, 
-    .topo-filtro {
-        margin-bottom: 5px !important;
+        background-color: #25d366 !important;
+        color: #ffffff !important;
+        text-decoration: none !important;
     }
 }
 @media (max-width: 768px) {
