@@ -1902,78 +1902,124 @@ footer {
         margin-right: -50vw !important;
         border-radius: 0 !important; /* Remove bordas arredondadas se quiser que encoste seco nas bordas */
     }
-/* --- BARRA DE PESQUISA CLEAN E PROFISSIONAL --- */
-
-.search-container {
-    width: 100%;
-    max-width: 600px; /* Limita o tamanho no computador para não ficar gigante */
-    margin: 25px auto; /* Centraliza na tela e dá espaçamento em cima e embaixo */
-    padding: 0 16px;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+/* ========================================== */
+/* ESTILOS DA BARRA DE PESQUISA E DO MINI MENU */
+/* ========================================== */
+/* Container geral que centraliza e organiza tudo */
+.loja-search-wrapper {
+  width: 100%;
+  max-width: 650px;
+  margin: 20px auto;
+  padding: 0 15px;
+  font-family: inherit;
 }
 
-.search-box {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    height: 46px; /* Altura ideal: nem muito grossa, nem muito fina */
-    background-color: #ffffff;
-    border: 1px solid #e1dcd6; /* Borda cinza clara e discreta */
-    border-radius: 10px; /* Cantos arredondados modernos */
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02); /* Sombra bem sutil */
-    transition: all 0.25s ease;
-    box-sizing: border-box;
+/* Estilização da Barra de Pesquisa */
+.search-container form {
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  border: 2px solid #e0d5cb; /* Tom terroso claro */
+  border-radius: 50px; /* Formato pílula */
+  padding: 5px 10px 5px 18px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
 }
 
-/* Efeito elegante quando o usuário clica para digitar */
-.search-box:focus-within {
-    border-color: #7c736e;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+/* Efeito de foco quando clica na barra */
+.search-container form:focus-within {
+  border-color: #5c3a21; /* Marrom da marca */
+  box-shadow: 0 4px 16px rgba(92, 58, 33, 0.15);
 }
 
-.search-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-left: 16px;
-    color: #8c827d; /* Cor suave para a lupa */
+.search-container .search-icon {
+  font-size: 16px;
+  margin-right: 10px;
 }
 
-.search-box input {
-    flex: 1;
-    height: 100%;
-    border: none;
-    outline: none;
-    padding: 0 12px;
-    font-size: 15px;
-    color: #4a423e;
-    background: transparent;
-    min-width: 0; /* Garante que o input encolha direito no celular se precisar */
+.search-container input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  color: #333;
+  background: transparent;
 }
 
-.search-box input::placeholder {
-    color: #a89f98;
+.search-container input::placeholder {
+  color: #999;
 }
 
-.search-btn {
-    height: 100%;
-    padding: 0 24px;
-    background-color: #3b3532; /* Tom chumbo escuro corporativo e limpo */
-    color: #ffffff;
-    font-size: 14px;
-    font-weight: 600;
-    border: none;
-    border-top-right-radius: 9px;
-    border-bottom-right-radius: 9px;
-    cursor: pointer;
-    white-space: nowrap;
-    transition: background-color 0.2s ease;
+.search-container button {
+  background-color: #5c3a21; /* Botão marrom escuro */
+  color: #ffffff;
+  border: none;
+  border-radius: 40px;
+  padding: 10px 24px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
 }
 
-.search-btn:hover {
-    background-color: #24201e; /* Fica um tom mais escuro ao passar o mouse */
+.search-container button:hover {
+  background-color: #432a18;
 }
+
+/* Estilização do Mini Menu */
+.mini-menu-container {
+  width: 100%;
+  margin-top: 15px;
+  overflow-x: auto; /* Rolagem lateral automática no celular */
+}
+
+.mini-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  gap: 8px;
+  padding: 5px 0;
+  margin: 0;
+  white-space: nowrap; /* Mantém os itens em linha reta */
+}
+
+.mini-menu li a {
+  display: inline-block;
+  padding: 8px 18px;
+  background-color: #f7f3ef;
+  color: #5c3a21;
+  border: 1px solid #e0d5cb;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+/* Item ativo ou ao passar o mouse */
+.mini-menu li a:hover,
+.mini-menu li a.active {
+  background-color: #5c3a21;
+  color: #ffffff;
+  border-color: #5c3a21;
+}
+
+/* Esconde a barra de rolagem nos navegadores mantendo o funcionamento */
+.mini-menu-container::-webkit-scrollbar {
+  display: none;
+}
+.mini-menu-container {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Ajuste automático para celulares ficarem alinhados à esquerda se passarem da tela */
+@media (max-width: 600px) {
+  .mini-menu {
+    justify-content: flex-start;
+  }
 }
 @media (max-width: 768px) {
 
