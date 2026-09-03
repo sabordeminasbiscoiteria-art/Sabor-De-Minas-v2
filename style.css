@@ -1902,12 +1902,13 @@ footer {
         margin-right: -50vw !important;
         border-radius: 0 !important; /* Remove bordas arredondadas se quiser que encoste seco nas bordas */
     }
-/* Container que centraliza e limita o tamanho no PC, mas ocupa tudo no celular */
+/* --- BARRA DE PESQUISA CLEAN E PROFISSIONAL --- */
+
 .search-container {
     width: 100%;
-    max-width: 500px; /* Tamanho compacto ideal que fica bom tanto no PC quanto no celular */
-    margin: 15px auto; /* Centraliza na tela e dá espaço em cima/baixo */
-    padding: 0 12px;
+    max-width: 600px; /* Limita o tamanho no computador para não ficar gigante */
+    margin: 25px auto; /* Centraliza na tela e dá espaçamento em cima e embaixo */
+    padding: 0 16px;
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -1916,23 +1917,27 @@ footer {
     display: flex;
     align-items: center;
     width: 100%;
-    height: 42px; /* Altura compacta e elegante */
+    height: 46px; /* Altura ideal: nem muito grossa, nem muito fina */
     background-color: #ffffff;
-    border: 1px solid #d9d0c7;
-    border-radius: 8px;
+    border: 1px solid #e1dcd6; /* Borda cinza clara e discreta */
+    border-radius: 10px; /* Cantos arredondados modernos */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02); /* Sombra bem sutil */
+    transition: all 0.25s ease;
     box-sizing: border-box;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
 }
 
+/* Efeito elegante quando o usuário clica para digitar */
 .search-box:focus-within {
-    border-color: #b86b5e; /* Realce suave ao clicar */
+    border-color: #7c736e;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
 }
 
 .search-icon {
-    padding-left: 14px;
-    color: #8c827d;
     display: flex;
     align-items: center;
+    justify-content: center;
+    padding-left: 16px;
+    color: #8c827d; /* Cor suave para a lupa */
 }
 
 .search-box input {
@@ -1941,33 +1946,33 @@ footer {
     border: none;
     outline: none;
     padding: 0 12px;
-    font-size: 14px;
+    font-size: 15px;
     color: #4a423e;
     background: transparent;
-    min-width: 0;
+    min-width: 0; /* Garante que o input encolha direito no celular se precisar */
 }
 
 .search-box input::placeholder {
-    color: #9c928b;
+    color: #a89f98;
 }
 
 .search-btn {
     height: 100%;
-    padding: 0 20px;
-    background-color: #b86b5e; /* Cor da sua identidade visual */
+    padding: 0 24px;
+    background-color: #3b3532; /* Tom chumbo escuro corporativo e limpo */
     color: #ffffff;
     font-size: 14px;
-    font-weight: 500;
+    font-weight: 600;
     border: none;
-    border-top-right-radius: 7px;
-    border-bottom-right-radius: 7px;
+    border-top-right-radius: 9px;
+    border-bottom-right-radius: 9px;
     cursor: pointer;
     white-space: nowrap;
-    transition: background-color 0.2s;
+    transition: background-color 0.2s ease;
 }
 
 .search-btn:hover {
-    background-color: #a35b4f;
+    background-color: #24201e; /* Fica um tom mais escuro ao passar o mouse */
 }
 }
 @media (max-width: 768px) {
