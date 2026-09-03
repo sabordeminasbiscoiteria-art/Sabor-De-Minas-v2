@@ -1842,128 +1842,99 @@ footer {
         justify-content: center !important;
     }
 }
-/* ==========================
-  PAGINA DOS PRODUTOS.HTML
-========================== */
-@media (max-width: 768px){
-    .banner-produtos {
-        height: 120px !important;        /* Altura menor de faixa */
-        min-height: 120px !important;
-        max-height: 120px !important;
-        display: flex !important;
-        align-items: center !important;
-        justify-content: center !important;
-        padding: 10px 15px !important;
-        width: 100% !important;
-        box-sizing: border-box !important;
-        overflow: hidden !important;
-    }
 
-    /* Organiza o conteúdo de texto dentro da faixa */
-    .banner-conteudo {
-        text-align: center !important;
-        width: 100% !important;
-    }
 
-    /* Ajusta o título para caber perfeitamente na faixa */
-    .banner-conteudo h1 {
-        font-size: 22px !important;
-        margin: 0 0 4px 0 !important;
-    }
-
-    /* Ajusta o subtítulo */
-    .banner-conteudo p {
-        font-size: 13px !important;
-        margin: 0 !important;
-    }
-    /* Diminui a margem inferior do banner para colar o conteúdo de baixo */
-    .banner-produtos {
-        margin-bottom: 5px !important;
-    }
-    /* Força a seção pai a perder o limite se necessário */
-    .pagina-produtos {
-        padding: 0 !important;
-    }
-
-    /* Faz o container ignorar as margens laterais apenas para o banner */
-    .container {
-        padding-left: 0 !important;
-        padding-right: 0 !important;
-        max-width: 100% !important;
-    }
-
-    /* Estica o banner de ponta a ponta da tela */
-    .banner-produtos {
-        width: 100vw !important;
-        position: relative !important;
-        left: 50% !important;
-        right: 50% !important;
-        margin-left: -50vw !important;
-        margin-right: -50vw !important;
-        border-radius: 0 !important; /* Remove bordas arredondadas se quiser que encoste seco nas bordas */
-    }
-}
 @media (max-width: 728px) {
+/* --- CONTAINER PRINCIPAL --- */
 .topo-filtros {
-    width: 100% !important;
-    padding: 12px 10px !important;
-    box-sizing: border-box !important;
+    background-color: #fcf9f6; /* Tom neutro de fundo leve */
+    padding: 20px;
+    font-family: sans-serif;
 }
 
+/* --- BARRA DE PESQUISA --- */
 .barra-pesquisa {
-    display: flex !important;
-    align-items: center !important;
-    gap: 8px !important;
-    width: 100% !important;
-    margin: 0 auto 22px !important;
-    padding: 0 !important;
-    box-sizing: border-box !important;
+    display: flex;
+    gap: 12px;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.input-wrapper {
+    position: relative;
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.icone-pesquisa {
+    position: absolute;
+    left: 16px;
+    font-size: 16px;
+    color: #888;
 }
 
 .barra-pesquisa input {
-    flex: 1 !important;
-    min-width: 0 !important;
-    height: 42px !important;
-    padding: 0 14px 0 38px !important;
-    font-size: 13px !important;
-    color: #333 !important;
-    background: #fff !important;
-    border: 1px solid #d7d2cf !important;
-    border-radius: 12px !important;
-    outline: none !important;
-    box-sizing: border-box !important;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23333333' stroke-width='2.3' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='8'%3E%3C/circle%3E%3Cline x1='21' y1='21' x2='16.65' y2='16.65'%3E%3C/line%3E%3C/svg%3E") !important;
-    background-repeat: no-repeat !important;
-    background-position: 13px center !important;
-    background-size: 16px !important;
+    width: 100%;
+    padding: 14px 16px 14px 45px; /* Espaço para o ícone à esquerda */
+    font-size: 16px;
+    border: 1px solid #dcd6d0;
+    border-radius: 8px;
+    outline: none;
+    background-color: #ffffff;
+    color: #333;
+    transition: border-color 0.2s;
 }
 
 .barra-pesquisa input:focus {
-    border-color: #C95F5F !important;
+    border-color: #c07a6e; /* Realce suave ao focar */
 }
 
 .barra-pesquisa button {
-    height: 42px !important;
-    padding: 0 18px !important;
-    font-size: 13px !important;
-    font-weight: 600 !important;
-    background: #C95F5F !important;
-    color: #fff !important;
-    border: none !important;
-    border-radius: 12px !important;
-    box-sizing: border-box !important;
+    padding: 14px 24px;
+    background-color: #c07a6e; /* Cor de destaque (玫瑰/terracota) */
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s;
 }
 
+.barra-pesquisa button:hover {
+    background-color: #a8675d;
+}
+
+/* --- FILTROS DE CATEGORIAS --- */
 .filtros-categorias {
-    display: flex !important;
-    flex-wrap: nowrap !important;
-    align-items: center !important;
-    gap: 9px !important;
-    width: 100% !important;
-    overflow-x: auto !important;
-    padding: 0 0 6px !important;
-    margin: 0 !important;
-    scrollbar-width: none !important;
+    display: flex;
+    gap: 12px;
+    overflow-x: auto; /* Permite rolar no celular se faltar espaço */
+    padding-bottom: 5px;
+}
+
+.filtros-categorias a {
+    text-decoration: none;
+    padding: 10px 22px;
+    font-size: 15px;
+    color: #4a4a4a;
+    background-color: #ffffff;
+    border: 1px solid #dcd6d0;
+    border-radius: 20px; /* Bordas bem arredondadas estilo pílula */
+    white-space: nowrap;
+    transition: all 0.2s ease;
+}
+
+.filtros-categorias a:hover {
+    border-color: #c07a6e;
+}
+
+/* Filtro ativo (estado selecionado) */
+.filtros-categorias a.ativo {
+    background-color: #c07a6e;
+    color: #ffffff;
+    border-color: #c07a6e;
 }
 }
 
