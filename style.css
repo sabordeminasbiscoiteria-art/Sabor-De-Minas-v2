@@ -1964,7 +1964,7 @@ footer {
 }
 
 .search-container button:hover {
-  background-color: #801a24;
+  background-color: #333;
 }
 
 .search-icon {
@@ -1973,7 +1973,7 @@ footer {
     align-items: center;
     justify-content: center;
     padding-left: 10px;
-    color: #000000;
+    color: #333;
 }
 /* Estilização do Mini Menu */
 .mini-menu-container {
