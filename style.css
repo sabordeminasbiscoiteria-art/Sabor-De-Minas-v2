@@ -1933,7 +1933,7 @@ footer {
 
 .search-container .search-icon {
   font-size: 14px;
-  color: #b59b87; /* Ícone mais clarinho */
+  color: #801a24; /* Ícone mais clarinho */
   margin-right: 8px;
 }
 
@@ -1989,7 +1989,7 @@ footer {
   display: inline-block;
   padding: 8px 18px;
   background-color: #f7f3ef;
-  color: #5c3a21;
+  color: #801a24;
   border: 1px solid #e0d5cb;
   border-radius: 20px;
   font-size: 14px;
@@ -2001,9 +2001,9 @@ footer {
 /* Item ativo ou ao passar o mouse */
 .mini-menu li a:hover,
 .mini-menu li a.active {
-  background-color: #5c3a21;
+  background-color: #801a24;
   color: #ffffff;
-  border-color: #5c3a21;
+  border-color: #801a24;
 }
 
 /* Esconde a barra de rolagem nos navegadores mantendo o funcionamento */
