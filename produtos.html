@@ -76,20 +76,16 @@
 
 </section>
 
- <div class="topo-filtros">
-    <!-- BARRA DE PESQUISA -->
-    <div class="barra-pesquisa">
-        <div class="input-wrapper">
-            <span class="icone-pesquisa">🔍</span>
-            <input 
-                type="text" 
-                id="pesquisa" 
-                placeholder="Pesquisar produtos..."
-            >
-        </div>
-        <button onclick="buscarNoCelular()">Buscar</button>
+ <div class="barra-pesquisa">
+    <div class="input-wrapper">
+        <svg class="icone-pesquisa" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+        <input type="text" id="pesquisa" placeholder="Pesquisar produtos...">
     </div>
-
+    <button onclick="buscarNoCelular()">Buscar</button>
+</div>
     <!-- FILTROS DE CATEGORIAS -->
     <div class="filtros-categorias">
         <a href="index.html" class="ativo">Todos</a>
