@@ -2426,7 +2426,7 @@ footer {
 }
 
 /* ========================================== */
-/* PADRÃO RIGOROSO PARA CELULAR (Até 768px)   */
+/* PADRÃO 100% IGUAL E TRAVADO PARA CELULAR   */
 /* ========================================== */
 @media (max-width: 768px) {
     .produtos-cards {
@@ -2439,56 +2439,68 @@ footer {
     .produtos-cards .produto,
     .produtos-cards .item-produto {
         width: 100% !important;
-        height: auto !important; /* Libera a altura automática para não esticar à toa */
-        min-height: unset !important;
+        height: 285px !important; /* Trava a altura exata de TODOS os cards igualzinha */
         border-radius: 10px !important;
         background: #ffffff !important;
         display: flex !important;
         flex-direction: column !important;
         box-sizing: border-box !important;
+        overflow: hidden !important;
     }
 
-    /* Altura da foto proporcional e bonita no celular */
+    /* Foto padronizada */
     .produtos-cards .produto img,
     .produtos-cards .item-produto img {
         width: 100% !important;
-        height: 125px !important; 
+        height: 110px !important;
         object-fit: cover !important;
     }
 
+    /* Título travado em 1 linha com reticências (...) se for grande */
     .produtos-cards .produto h3,
     .produtos-cards .item-produto h3 {
-        font-size: 12px !important;
-        margin: 8px 6px 2px 6px !important;
+        font-size: 11.5px !important;
+        margin: 6px 6px 2px 6px !important;
+        white-space: nowrap !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
     }
 
+    /* Descrição travada em 1 linha */
     .produtos-cards .produto p,
     .produtos-cards .item-produto p {
-        font-size: 10px !important;
-        margin: 0 6px 6px 6px !important;
+        font-size: 9.5px !important;
+        margin: 0 6px 4px 6px !important;
+        white-space: nowrap !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
     }
 
+    /* Preço alinhado milimetricamente */
     .produtos-cards .produto .preco-produto,
     .produtos-cards .item-produto .preco-produto {
-        gap: 6px !important;
-        margin: 2px 0 8px 0 !important;
+        gap: 4px !important;
+        margin: 2px 0 6px 0 !important;
+        justify-content: center !important;
+        align-items: center !important;
     }
 
     .produtos-cards .preco-produto .peso {
-        font-size: 9.5px !important;
-        padding: 2px 5px;
+        font-size: 9px !important;
+        padding: 2px 4px;
     }
 
     .produtos-cards .preco-produto strong {
-        font-size: 12px !important;
+        font-size: 11.5px !important;
     }
 
+    /* Botão do WhatsApp perfeitamente alinhado na base */
     .produtos-cards .produto .botao-produto,
     .produtos-cards .item-produto .botao-produto {
         width: 100% !important;
         margin-top: auto !important;
-        padding: 7px 0 !important;
-        font-size: 10px !important;
+        padding: 6px 0 !important;
+        font-size: 9.5px !important;
         border-radius: 0 0 10px 10px !important;
     }
 }
