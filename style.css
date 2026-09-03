@@ -1876,6 +1876,7 @@ footer {
         font-size: 13px !important;
         margin: 0 !important;
     }
+
     /* Aproxima a barra de pesquisa logo abaixo do banner */
     .topo-filtros {
         margin-top: -10px !important; /* Puxa o bloco de filtros para cima */
@@ -1912,75 +1913,36 @@ footer {
         border-radius: 0 !important; /* Remove bordas arredondadas se quiser que encoste seco nas bordas */
     }
 /* Força os botões de categoria a ficarem juntos em uma linha compacta */
-    .filtros-categorias {
-        display: flex !important;
-        flex-direction: row !important;
-        flex-wrap: nowrap !important;
-        overflow-x: auto !important;
-        width: 100% !important;
-        gap: 6px !important;
-        padding: 4px 10px !important;
-        box-sizing: border-box !important;
-        justify-content: flex-start !important;
-    }
+.filtros-categorias {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    width: 100% !important;
+    gap: 6px !important;
+    padding: 4px 10px !important;
+    box-sizing: border-box !important;
+    justify-content: flex-start !important;
+}
 
-    /* Diminui o tamanho dos botões para caberem mais itens na tela */
-    .filtros-categorias a, 
-    .filtros-categorias button {
-        flex: 0 0 auto !important;
-        white-space: nowrap !important;
-        font-size: 13px !important;
-        padding: 6px 12px !important;
-        min-height: auto !important;
-    }
-    /* Puxa o bloco de filtros para perto da barra de pesquisa */
-.topo-filtros, .topo-filtro {
+/* Diminui o tamanho dos botões */
+.filtros-categorias a,
+.filtros-categorias button {
+    flex: 0 0 auto !important;
+    white-space: nowrap !important;
+    font-size: 13px !important;
+    padding: 6px 12px !important;
+    min-height: auto !important;
+}
+
+/* Puxa os filtros para perto da pesquisa */
+.topo-filtros,
+.topo-filtro {
     margin-top: -10px !important;
     margin-bottom: 15px !important;
 }
 
-/* Garante que a barra de pesquisa e os botões fiquem compactos e alinhados */
-.barra-pesquisa {
-    margin-bottom: 12px !important;
-}
-
-.filtros-categorias {
-    margin-top: 0 !important;
-}
-/* ===== COR ROSA QUEIMADO ===== */
-
-:root {
-    --rosa-profissional: #B86F6B;
-}
-
-/* Botão Buscar */
-.barra-pesquisa button {
-    background-color: var(--rosa-profissional) !important;
-    color: #fff !important;
-    border: none !important;
-}
-
-/* Efeito ao passar o mouse */
-.barra-pesquisa button:hover {
-    background-color: #A85F5B !important;
-}
-
-/* Categorias */
-.filtros-categorias a,
-.filtros-categorias button {
-    color: #5A3936 !important;
-    border: 1px solid #D9A19D !important;
-    background-color: #fff !important;
-}
-
-/* Categoria selecionada */
-.filtros-categorias a.active,
-.filtros-categorias button.active {
-    background-color: var(--rosa-profissional) !important;
-    color: #fff !important;
-    border-color: var(--rosa-profissional) !important;
-}
-/* Posiciona e formata a barra de pesquisa perfeitamente */
+/* Barra de pesquisa */
 .barra-pesquisa {
     display: flex !important;
     align-items: center !important;
@@ -1990,16 +1952,16 @@ footer {
     max-width: 400px !important;
     margin: 20px auto 15px auto !important;
     padding: 0 10px !important;
-    background-color: transparent !important; /* Remove o fundo branco */
-    border: none !important; /* Remove qualquer borda */
-    box-shadow: none !important; /* Remove sombras indesejadas */
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
     position: relative !important;
     z-index: 9999 !important;
     pointer-events: auto !important;
     box-sizing: border-box !important;
 }
 
-/* Caixa de texto com a lupa preta profissional nativa */
+/* Caixa de pesquisa */
 .barra-pesquisa input {
     flex: 1 !important;
     width: 100% !important;
@@ -2011,31 +1973,63 @@ footer {
     background-color: #ffffff !important;
     outline: none !important;
     min-width: 0 !important;
-    
-    /* Lupa preta profissional vetorizada e otimizada */
+
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23333333' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='8'%3E%3C/circle%3E%3Cline x1='21' y1='21' x2='16.65' y2='16.65'%3E%3C/line%3E%3C/svg%3E") !important;
+
     background-repeat: no-repeat !important;
     background-position: 12px center !important;
     background-size: 14px 14px !important;
 }
 
+/* Ao clicar na pesquisa */
 .barra-pesquisa input:focus {
-    border-color: #d4a373 !important;
+    border-color: #B86F6B !important;
 }
 
-/* Botão Buscar delicado e proporcional */
+/* ===== BOTÃO BUSCAR ===== */
 .barra-pesquisa button {
     height: 38px !important;
     padding: 0 16px !important;
     font-size: 13px !important;
     font-weight: 500 !important;
-    background-color: #d4a373 !important;
+    background-color: #B86F6B !important;
     color: #ffffff !important;
     border: none !important;
     border-radius: 20px !important;
     cursor: pointer !important;
-    }
 }
+
+/* Hover do botão Buscar */
+.barra-pesquisa button:hover {
+    background-color: #A85F5B !important;
+}
+}
+/* ===== CATEGORIAS ===== */
+
+.filtros-categorias a,
+.filtros-categorias button {
+    color: #5A3936 !important;
+    border: 1px solid #D9A19D !important;
+    background-color: #ffffff !important;
+}
+
+/* Categoria selecionada */
+.filtros-categorias a.active,
+.filtros-categorias button.active {
+    background-color: #B86F6B !important;
+    color: #ffffff !important;
+    border-color: #B86F6B !important;
+}
+
+/* Espaçamento da barra */
+.barra-pesquisa {
+    margin-bottom: 12px !important;
+}
+
+.filtros-categorias {
+    margin-top: 0 !important;
+}
+
 @media (max-width: 768px) {
     
     /* Afeta APENAS a página de produtos */
