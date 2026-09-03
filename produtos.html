@@ -84,11 +84,11 @@
   
   <!-- Barra de Pesquisa -->
   <div class="search-container">
-    <form action="/busca" method="GET">
-      <span class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></span>
-      <input type="text" name="q" placeholder="Pesquisar produtos..." required>
-      <button type="submit">Buscar</button>
-    </form>
+    <form onsubmit="return false;">
+    <span class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></span>
+    <input type="text" id="input-busca" name="q" placeholder="Pesquisar produtos...">
+    <button type="button" id="btn-buscar">Buscar</button>
+</form>
   </div>
 
   <!-- Mini Menu de Categorias (Apenas Texto) -->
