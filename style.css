@@ -1902,23 +1902,13 @@ footer {
         margin-right: -50vw !important;
         border-radius: 0 !important; /* Remove bordas arredondadas se quiser que encoste seco nas bordas */
     }
-/* Container Geral */
-.topo-filtros-container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-/* --- BARRA DE PESQUISA --- */
+/* --- BARRA DE PESQUISA AJUSTADA (Mais achatada e moderna) --- */
 .barra-pesquisa-wrapper {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 8px; /* Espaço menor e mais elegante entre input e botão */
     width: 100%;
-    margin-bottom: 18px;
+    margin-bottom: 16px;
 }
 
 .input-container {
@@ -1930,20 +1920,22 @@ footer {
 
 .icone-lupa {
     position: absolute;
-    left: 16px;
+    left: 14px;
     stroke: #8c827d;
     pointer-events: none;
+    width: 16px; /* Ícone levemente menor */
+    height: 16px;
 }
 
 .input-container input {
     width: 100%;
-    height: 50px;
-    padding: 0 16px 0 46px; /* Espaço exato para a lupa não colar no texto */
-    font-size: 15px;
+    height: 40px; /* Altura menor (mais achatada) */
+    padding: 0 14px 0 40px; /* Espaço ajustado para a lupa */
+    font-size: 14px;
     color: #4a423e;
     background-color: #ffffff;
     border: 1px solid #d9d0c7;
-    border-radius: 10px;
+    border-radius: 8px; /* Bordas um pouco mais suaves */
     outline: none;
     box-sizing: border-box;
     transition: border-color 0.2s ease;
@@ -1957,15 +1949,16 @@ footer {
     border-color: #b86b5e;
 }
 
+/* --- BOTÃO BUSCAR MENOR E PROFISSIONAL --- */
 .botao-buscar {
-    height: 50px;
-    padding: 0 26px;
+    height: 40px; /* Mesma altura do input para ficarem alinhados */
+    padding: 0 18px; /* Botão mais compacto */
     background-color: #b86b5e;
     color: #ffffff;
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 500;
     border: none;
-    border-radius: 10px;
+    border-radius: 8px;
     cursor: pointer;
     white-space: nowrap;
     transition: background-color 0.2s ease;
@@ -1974,7 +1967,6 @@ footer {
 .botao-buscar:hover {
     background-color: #a35b4f;
 }
-
 /* --- FILTROS DE CATEGORIAS --- */
 .filtros-categorias-wrapper {
     display: flex;
