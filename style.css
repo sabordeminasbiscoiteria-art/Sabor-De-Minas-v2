@@ -1918,122 +1918,88 @@ footer {
    ===================================================== */
 @media (max-width: 728px) {
 .topo-filtros {
-    width: 100%;
-    margin: 0 auto;
-    padding: 0 10px;
-    box-sizing: border-box;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 20px 12px 15px !important;
+    box-sizing: border-box !important;
 }
-/* ===== BARRA DE PESQUISA ===== */
+
 .barra-pesquisa {
     display: flex !important;
     align-items: center !important;
-    gap: 8px !important;
+    gap: 10px !important;
     width: 100% !important;
-    max-width: 400px !important;
-    margin: 20px auto 15px !important;
+    margin: 0 auto 28px !important;
     padding: 0 !important;
     background: transparent !important;
     border: none !important;
     box-shadow: none !important;
-    box-sizing: border-box !important;
 }
-/* Campo de pesquisa */
+
 .barra-pesquisa input {
     flex: 1 !important;
-    width: 100% !important;
     min-width: 0 !important;
-    height: 38px !important;
-    padding: 0 15px 0 38px !important;
-    font-size: 13px !important;
+    height: 48px !important;
+    padding: 0 18px 0 45px !important;
+    font-size: 15px !important;
     color: #333 !important;
-    background-color: #fff !important;
-    border: 1px solid #dcdcdc !important;
-    border-radius: 20px !important;
+    background: #fff !important;
+    border: 1.5px solid #D8D2CE !important;
+    border-radius: 25px !important;
     outline: none !important;
     box-sizing: border-box !important;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23333333' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='8'%3E%3C/circle%3E%3Cline x1='21' y1='21' x2='16.65' y2='16.65'%3E%3C/line%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23333333' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='8'%3E%3C/circle%3E%3Cline x1='21' y1='21' x2='16.65' y2='16.65'%3E%3C/line%3E%3C/svg%3E");
     background-repeat: no-repeat !important;
-    background-position: 12px center !important;
-    background-size: 14px 14px !important;
+    background-position: 15px center !important;
+    background-size: 20px 20px !important;
 }
-/* Campo selecionado */
+
 .barra-pesquisa input:focus {
     border-color: #C95F5F !important;
 }
-/* ===== BOTÃO BUSCAR ===== */
+
 .barra-pesquisa button {
     flex: 0 0 auto !important;
-    height: 38px !important;
-    padding: 0 16px !important;
-    font-size: 13px !important;
-    font-weight: 500 !important;
-    background-color: #C95F5F !important;
+    height: 48px !important;
+    padding: 0 24px !important;
+    font-size: 15px !important;
+    font-weight: 600 !important;
+    background: #C95F5F !important;
     color: #fff !important;
     border: none !important;
-    border-radius: 20px !important;
+    border-radius: 25px !important;
     cursor: pointer !important;
     box-sizing: border-box !important;
-    transition: 0.2s ease !important;
 }
-/* Ao passar o mouse */
+
 .barra-pesquisa button:hover {
-    background-color: #B85252 !important;
+    background: #B85252 !important;
 }
-/* ===== FILTROS ===== */
+
 .filtros-categorias {
     display: flex !important;
-    flex-direction: row !important;
     flex-wrap: nowrap !important;
-    gap: 8px !important;
+    gap: 10px !important;
     width: 100% !important;
     overflow-x: auto !important;
-    overflow-y: hidden !important;
-    padding: 4px 0 8px !important;
+    padding: 0 0 5px !important;
+    margin: 0 !important;
     box-sizing: border-box !important;
-    justify-content: flex-start !important;
-    /* Esconde a barra de rolagem */
     scrollbar-width: none !important;
 }
-/* Chrome / Android */
+
 .filtros-categorias::-webkit-scrollbar {
     display: none !important;
 }
-/* Botões dos filtros */
+
 .filtros-categorias a {
     flex: 0 0 auto !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
-    height: 36px !important;
-    padding: 0 16px !important;
-    white-space: nowrap !important;
-    font-size: 13px !important;
-    font-weight: 500 !important;
-    color: #5A3936 !important;
-    background-color: #fff !important;
-    border: 1px solid #D9A19D !important;
-    border-radius: 20px !important;
-    text-decoration: none !important;
-    box-sizing: border-box !important;
-    transition: 0.2s ease !important;
-}
-/* ===== TODOS SELECIONADO ===== */
-.filtros-categorias a.ativo {
-    background-color: #C95F5F !important;
-    color: #fff !important;
-    border-color: #C95F5F !important;
-}
-/* ===== AO PASSAR O MOUSE ===== */
-.filtros-categorias a:hover {
-    background-color: #C95F5F !important;
-    color: #fff !important;
-    border-color: #C95F5F !important;
-}
-/* ===== AO CLICAR ===== */
-.filtros-categorias a:active {
-    background-color: #C95F5F !important;
-    color: #fff !important;
-    border-color: #C95F5F !important;
+    height: 40px !important;
+    padding: 0 20px !important;
+    white-space: nowrap !
 }
 }
 @media (max-width: 768px) {
