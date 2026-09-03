@@ -2425,81 +2425,103 @@ footer {
     border-radius: 0 0 12px 12px !important;
 }
 
+/* ========================================== */
+/* LAYOUT IDEAL PARA CELULAR (Fotos Maiores)  */
+/* ========================================== */
 @media (max-width: 768px) {
-    /* Força 2 colunas e reduz as margens ao máximo para caber em qualquer celular */
     .produtos-cards {
         display: grid !important;
         grid-template-columns: repeat(2, 1fr) !important;
-        gap: 6px !important;
-        padding: 4px !important;
+        gap: 10px !important;
+        padding: 10px !important;
         width: 100% !important;
         box-sizing: border-box !important;
     }
 
-    /* Reduz levemente a largura mínima interna para garantir que entram dois */
+    /* Card flexível e uniforme, sem travar altura excessiva */
     .produtos-cards .produto,
     .produtos-cards .item-produto {
         width: 100% !important;
-        height: 260px !important;
-        min-height: 260px !important;
-        max-height: 260px !important;
-        margin: 0 !important;
-        padding: 0 !important;
+        height: auto !important; /* Altura flexível para caber tudo perfeitamente */
         display: flex !important;
         flex-direction: column !important;
         background: #ffffff !important;
-        border-radius: 8px !important;
+        border-radius: 10px !important;
         overflow: hidden !important;
         border: 1px solid #ebdcd0 !important;
         box-sizing: border-box !important;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.04) !important;
     }
 
+    /* AUMENTAMOS A FOTO PARA BAIXO (Mais alta e destacada) */
     .produtos-cards .produto img,
     .produtos-cards .item-produto img {
         width: 100% !important;
-        height: 95px !important;
+        height: 150px !important; /* Altura maior para a foto dos biscoitos aparecer bem */
         object-fit: cover !important;
+        display: block !important;
     }
 
+    /* Título com tamanho normal e legível */
     .produtos-cards .produto h3,
     .produtos-cards .item-produto h3 {
-        font-size: 10.5px !important;
-        margin: 4px 4px 2px 4px !important;
-        white-space: nowrap !important;
-        overflow: hidden !important;
-        text-overflow: ellipsis !important;
+        font-size: 13px !important;
+        font-weight: 600 !important;
+        text-align: center !important;
+        margin: 8px 6px 3px 6px !important;
+        color: #5c3a21 !important;
+        white-space: normal !important; /* Permite quebra natural se o nome for grande */
     }
 
+    /* Descrição com tamanho normal para as pessoas lerem */
     .produtos-cards .produto p,
     .produtos-cards .item-produto p {
-        font-size: 9px !important;
-        margin: 0 4px 2px 4px !important;
-        white-space: nowrap !important;
-        overflow: hidden !important;
-        text-overflow: ellipsis !important;
+        font-size: 11px !important;
+        color: #666 !important;
+        text-align: center !important;
+        margin: 0 6px 8px 6px !important;
+        white-space: normal !important; /* Mostra a descrição inteira */
     }
 
+    /* Preço e peso padronizados */
     .produtos-cards .produto .preco-produto,
     .produtos-cards .item-produto .preco-produto {
-        gap: 3px !important;
-        margin: 2px 0 4px 0 !important;
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 6px !important;
+        margin: 0 0 10px 0 !important;
     }
 
     .produtos-cards .preco-produto .peso {
-        font-size: 8px !important;
-        padding: 1px 3px;
+        font-size: 10px !important;
+        background: #f7f3ef;
+        padding: 2px 5px;
+        border-radius: 4px;
+        color: #8c6248;
     }
 
     .produtos-cards .preco-produto strong {
-        font-size: 10.5px !important;
+        color: #a33b20 !important;
+        font-size: 13px !important;
     }
 
+    /* Botão do WhatsApp fixo e alinhado na base */
     .produtos-cards .produto .botao-produto,
     .produtos-cards .item-produto .botao-produto {
         width: 100% !important;
         margin-top: auto !important;
-        padding: 5px 0 !important;
-        font-size: 8.5px !important;
-        border-radius: 0 0 8px 8px !important;
+        padding: 8px 0 !important;
+        font-size: 10.5px !important;
+        font-weight: 600 !important;
+        background-color: #25d366 !important;
+        color: #ffffff !important;
+        text-decoration: none !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        gap: 5px !important;
+        border-radius: 0 0 10px 10px !important;
     }
 }
