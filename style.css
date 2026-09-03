@@ -1912,103 +1912,132 @@ footer {
         margin-right: -50vw !important;
         border-radius: 0 !important; /* Remove bordas arredondadas se quiser que encoste seco nas bordas */
     }
-  /* Container geral do topo centralizado e com espaço adequado */
-.topo-filtros {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    width: 100% !important;
-    max-width: 650px !important;
-    margin: 20px auto !important;
-    padding: 0 10px !important;
-    box-sizing: border-box !important;
 }
-
-/* Barra de Pesquisa */
+  /* =====================================================
+   PESQUISA + FILTROS — CELULAR
+   ===================================================== */
+@media (max-width: 728px) {
+.topo-filtros {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+/* ===== BARRA DE PESQUISA ===== */
 .barra-pesquisa {
     display: flex !important;
     align-items: center !important;
-    justify-content: center !important;
-    gap: 10px !important;
-    width: 100% !important;
-    max-width: 500px !important;
-    margin-bottom: 20px !important;
-    box-sizing: border-box !important;
-}
-
-.barra-pesquisa input[type="text"] {
-    flex: 1 !important;
-    height: 45px !important;
-    padding: 0 15px !important;
-    border: 1.5px solid #d4c3b3 !important;
-    border-radius: 12px !important;
-    background-color: #fcf8f2 !important;
-    font-size: 14px !important;
-    color: #555 !important;
-    outline: none !important;
-    box-sizing: border-box !important;
-}
-
-.barra-pesquisa button {
-    flex-shrink: 0 !important;
-    height: 45px !important;
-    padding: 0 24px !important;
-    background-color: #b86f62 !important;
-    color: #ffffff !important;
-    border: none !important;
-    border-radius: 12px !important;
-    font-size: 14px !important;
-    font-weight: 500 !important;
-    cursor: pointer !important;
-    white-space: nowrap !important;
-    box-sizing: border-box !important;
-}
-
-/* Filtros de Categorias lado a lado sem quebrar */
-.filtros-categorias {
-    display: flex !important;
-    flex-wrap: nowrap !important; /* Mantém todos na mesma linha */
-    overflow-x: auto !important;   /* Permite rolar para o lado no celular se faltar espaço */
-    align-items: center !important;
-    justify-content: flex-start !important;
     gap: 8px !important;
     width: 100% !important;
-    max-width: 100% !important;
-    padding-bottom: 8px !important;
+    max-width: 400px !important;
+    margin: 20px auto 15px !important;
+    padding: 0 !important;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
     box-sizing: border-box !important;
-    scrollbar-width: none !important; /* Esconde a barra de rolagem no Firefox */
 }
-
-/* Esconde a barra de rolagem no Chrome/Safari */
+/* Campo de pesquisa */
+.barra-pesquisa input {
+    flex: 1 !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    height: 38px !important;
+    padding: 0 15px 0 38px !important;
+    font-size: 13px !important;
+    color: #333 !important;
+    background-color: #fff !important;
+    border: 1px solid #dcdcdc !important;
+    border-radius: 20px !important;
+    outline: none !important;
+    box-sizing: border-box !important;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23333333' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='8'%3E%3C/circle%3E%3Cline x1='21' y1='21' x2='16.65' y2='16.65'%3E%3C/line%3E%3C/svg%3E");
+    background-repeat: no-repeat !important;
+    background-position: 12px center !important;
+    background-size: 14px 14px !important;
+}
+/* Campo selecionado */
+.barra-pesquisa input:focus {
+    border-color: #C95F5F !important;
+}
+/* ===== BOTÃO BUSCAR ===== */
+.barra-pesquisa button {
+    flex: 0 0 auto !important;
+    height: 38px !important;
+    padding: 0 16px !important;
+    font-size: 13px !important;
+    font-weight: 500 !important;
+    background-color: #C95F5F !important;
+    color: #fff !important;
+    border: none !important;
+    border-radius: 20px !important;
+    cursor: pointer !important;
+    box-sizing: border-box !important;
+    transition: 0.2s ease !important;
+}
+/* Ao passar o mouse */
+.barra-pesquisa button:hover {
+    background-color: #B85252 !important;
+}
+/* ===== FILTROS ===== */
+.filtros-categorias {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    gap: 8px !important;
+    width: 100% !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    padding: 4px 0 8px !important;
+    box-sizing: border-box !important;
+    justify-content: flex-start !important;
+    /* Esconde a barra de rolagem */
+    scrollbar-width: none !important;
+}
+/* Chrome / Android */
 .filtros-categorias::-webkit-scrollbar {
     display: none !important;
 }
-
-.filtros-categorias .filtro-btn {
-    flex: 0 0 auto !important; /* Impede que os botões fiquem espremidos */
-    padding: 8px 16px !important;
-    border: 1.5px solid #d4c3b3 !important;
-    border-radius: 20px !important;
-    background-color: #fcf8f2 !important;
-    color: #555 !important;
+/* Botões dos filtros */
+.filtros-categorias a {
+    flex: 0 0 auto !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    height: 36px !important;
+    padding: 0 16px !important;
+    white-space: nowrap !important;
     font-size: 13px !important;
     font-weight: 500 !important;
+    color: #5A3936 !important;
+    background-color: #fff !important;
+    border: 1px solid #D9A19D !important;
+    border-radius: 20px !important;
     text-decoration: none !important;
-    text-align: center !important;
-    white-space: nowrap !important;
     box-sizing: border-box !important;
+    transition: 0.2s ease !important;
 }
-
-/* Botão ativo ou com mouse em cima */
-.filtros-categorias .filtro-btn.ativo,
-.filtros-categorias .filtro-btn:hover {
-    background-color: #b86f62 !important;
-    color: #ffffff !important;
-    border-color: #b86f62 !important;
+/* ===== TODOS SELECIONADO ===== */
+.filtros-categorias a.ativo {
+    background-color: #C95F5F !important;
+    color: #fff !important;
+    border-color: #C95F5F !important;
+}
+/* ===== AO PASSAR O MOUSE ===== */
+.filtros-categorias a:hover {
+    background-color: #C95F5F !important;
+    color: #fff !important;
+    border-color: #C95F5F !important;
+}
+/* ===== AO CLICAR ===== */
+.filtros-categorias a:active {
+    background-color: #C95F5F !important;
+    color: #fff !important;
+    border-color: #C95F5F !important;
 }
 }
 @media (max-width: 768px) {
-    
+
     /* Afeta APENAS a página de produtos */
     section.pagina-produtos .produtos-cards {
         display: grid !important;
