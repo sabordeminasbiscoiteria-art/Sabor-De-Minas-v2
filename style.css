@@ -2423,8 +2423,10 @@ footer {
     align-items: center !important;
     gap: 6px !important;
     border-radius: 0 0 12px 12px !important;
+    box-sizing: border-box !important; /* <--- Adicionado para o padding não estourar a largura */
+    margin-left: 0 !important;        /* <--- Garante que não desloque para os lados */
+    margin-right: 0 !important;       /* <--- Garante que não desloque para os lados */
 }
-
 /* ========================================== */
 /* LAYOUT IDEAL PARA CELULAR (Fotos Maiores)  */
 /* ========================================== */
