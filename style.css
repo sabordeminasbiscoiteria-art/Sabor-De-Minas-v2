@@ -2426,27 +2426,110 @@ footer {
 }
 
 /* ========================================== */
-/* ESTILO ESPECÍFICO APENAS PARA A PÁGINA DOCES */
+/* CORREÇÃO DEFINITIVA: 2 COLUNAS LADO A LADO */
 /* ========================================== */
 @media (max-width: 768px) {
-    .pagina-doces .produtos-cards {
+    /* Força obrigatoriamente a grade a ter 2 colunas */
+    .produtos-cards {
+        display: grid !important;
         grid-template-columns: repeat(2, 1fr) !important;
-        gap: 10px !important;
-        padding: 10px !important;
+        gap: 8px !important;
+        padding: 8px !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
     }
 
-    .pagina-doces .produtos-cards .produto,
-    .pagina-doces .produtos-cards .item-produto {
-        height: 285px !important; /* Altura exata só para os doces, se quiser diferente das outras */
-        border-radius: 10px !important;
-        background: #ffffff !important;
+    /* Trava a mesma altura e largura para todos os cards */
+    .produtos-cards .produto,
+    .produtos-cards .item-produto {
+        width: 100% !important;
+        height: 275px !important;
+        min-height: 275px !important;
+        max-height: 275px !important;
+        margin: 0 !important;
+        padding: 0 !important;
         display: flex !important;
         flex-direction: column !important;
+        background: #ffffff !important;
+        border-radius: 8px !important;
+        overflow: hidden !important;
+        border: 1px solid #ebdcd0 !important;
+        box-sizing: border-box !important;
     }
 
-    .pagina-doces .produtos-cards .produto img,
-    .pagina-doces .produtos-cards .item-produto img {
-        height: 110px !important;
+    /* Foto padronizada */
+    .produtos-cards .produto img,
+    .produtos-cards .item-produto img {
+        width: 100% !important;
+        height: 100px !important;
         object-fit: cover !important;
+        display: block !important;
+        margin: 0 !important;
+    }
+
+    /* Título travado para não esticar o card */
+    .produtos-cards .produto h3,
+    .produtos-cards .item-produto h3 {
+        font-size: 11px !important;
+        font-weight: 600 !important;
+        text-align: center !important;
+        margin: 5px 4px 2px 4px !important;
+        color: #5c3a21 !important;
+        white-space: nowrap !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+    }
+
+    /* Descrição travada */
+    .produtos-cards .produto p,
+    .produtos-cards .item-produto p {
+        font-size: 9.5px !important;
+        color: #777 !important;
+        text-align: center !important;
+        margin: 0 4px 4px 4px !important;
+        white-space: nowrap !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+    }
+
+    /* Preço alinhado */
+    .produtos-cards .produto .preco-produto,
+    .produtos-cards .item-produto .preco-produto {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 4px !important;
+        margin: 2px 0 4px 0 !important;
+    }
+
+    .produtos-cards .preco-produto .peso {
+        font-size: 8.5px !important;
+        background: #f7f3ef;
+        padding: 1px 4px;
+        border-radius: 3px;
+        color: #8c6248;
+    }
+
+    .produtos-cards .preco-produto strong {
+        color: #a33b20 !important;
+        font-size: 11px !important;
+    }
+
+    /* Botão do WhatsApp fixo na parte inferior */
+    .produtos-cards .produto .botao-produto,
+    .produtos-cards .item-produto .botao-produto {
+        width: 100% !important;
+        margin-top: auto !important;
+        padding: 6px 0 !important;
+        font-size: 9px !important;
+        font-weight: 600 !important;
+        background-color: #25d366 !important;
+        color: #ffffff !important;
+        text-decoration: none !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        border-radius: 0 0 8px 8px !important;
     }
 }
