@@ -2114,6 +2114,58 @@ footer {
         color: #ffffff !important;
         text-decoration: none !important;
     }
+    /* PREÇO E PESO: Forçados estritamente na mesma linha */
+    .produtos-cards .produto .preco-produto,
+    .produtos-cards .item-produto .preco-produto {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 6px !important;
+        width: 100% !important;
+        margin: 5px 0 8px 0 !important;
+        white-space: nowrap !important;
+    }
+
+    .produtos-cards .produto .preco-produto *,
+    .produtos-cards .item-produto .preco-produto * {
+        white-space: nowrap !important;
+    }
+
+    .produtos-cards .preco-produto .peso,
+    .produtos-cards .preco-produto span:first-child {
+        font-size: 10px !important;
+        background: #f7f3ef;
+        padding: 2px 5px;
+        border-radius: 4px;
+        color: #8c6248;
+    }
+
+    .produtos-cards .preco-produto strong,
+    .produtos-cards .preco-produto span:last-child {
+        color: #a33b20 !important;
+        font-size: 12.5px !important;
+        font-weight: bold !important;
+    }
+
+    /* BOTÃO DO WHATSAPP FIXO NA BASE DO CARD */
+    .produtos-cards .produto .botao-produto,
+    .produtos-cards .item-produto .botao-produto {
+        width: 100% !important;
+        margin-top: auto !important; /* Joga sempre para o rodapé do card */
+        padding: 7px 0 !important;
+        font-size: 10px !important;
+        font-weight: 600 !important;
+        border-radius: 0 0 12px 12px !important; /* Arredonda só os cantos inferiores */
+        box-sizing: border-box !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        gap: 4px !important;
+        background-color: #25d366 !important;
+        color: #ffffff !important;
+        text-decoration: none !important;
+    }
 }
 @media (max-width: 768px) {
     /* Ajustes da seção de História (mantidos seguros) */
