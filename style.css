@@ -1799,10 +1799,11 @@ footer {
     margin-top: 15px !important;
 }
 
+/* Corrigido para o SVG acompanhar a proporção sem gerar riscos */
 .onda-footer svg {
     display: block !important;
     width: 100% !important;
-    height: 22px !important;
+    height: auto !important; 
 }
 
 .footer-final {
