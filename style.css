@@ -1912,6 +1912,47 @@ footer {
         margin-right: -50vw !important;
         border-radius: 0 !important; /* Remove bordas arredondadas se quiser que encoste seco nas bordas */
     }
+    /* Container flexível que ocupa a largura ideal da tela */
+.barra-pesquisa {
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+    width: 100% !important;
+    max-width: 500px !important;
+    margin: 15px auto !important;
+    padding: 0 15px !important;
+    box-sizing: border-box !important;
+}
+
+/* O campo de texto expande preenchendo o espaço */
+.barra-pesquisa input[type="text"] {
+    flex: 1 !important;
+    width: 100% !important;
+    height: 44px !important;
+    padding: 0 15px 0 38px !important;
+    border: 1.5px solid #d4c3b3 !important;
+    border-radius: 12px !important;
+    background-color: #fcf8f2 !important;
+    font-size: 14px !important;
+    color: #555 !important;
+    outline: none !important;
+    box-sizing: border-box !important;
+}
+
+/* O botão Buscar proporcional e sem sobras */
+.barra-pesquisa button {
+    height: 44px !important;
+    padding: 0 20px !important;
+    background-color: #b86f62 !important;
+    color: #ffffff !important;
+    border: none !important;
+    border-radius: 12px !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    cursor: pointer !important;
+    white-space: nowrap !important;
+    box-sizing: border-box !important;
+}
 /* =========================================================
    CATEGORIAS
    ========================================================= */
@@ -2267,47 +2308,6 @@ footer {
 
 footer {
     margin-top: 20px !important;
-}
-/* Container flexível que ocupa a largura ideal da tela */
-.barra-pesquisa {
-    display: flex !important;
-    align-items: center !important;
-    gap: 10px !important;
-    width: 100% !important;
-    max-width: 500px !important;
-    margin: 15px auto !important;
-    padding: 0 15px !important;
-    box-sizing: border-box !important;
-}
-
-/* O campo de texto expande preenchendo o espaço */
-.barra-pesquisa input[type="text"] {
-    flex: 1 !important;
-    width: 100% !important;
-    height: 44px !important;
-    padding: 0 15px 0 38px !important;
-    border: 1.5px solid #d4c3b3 !important;
-    border-radius: 12px !important;
-    background-color: #fcf8f2 !important;
-    font-size: 14px !important;
-    color: #555 !important;
-    outline: none !important;
-    box-sizing: border-box !important;
-}
-
-/* O botão Buscar proporcional e sem sobras */
-.barra-pesquisa button {
-    height: 44px !important;
-    padding: 0 20px !important;
-    background-color: #b86f62 !important;
-    color: #ffffff !important;
-    border: none !important;
-    border-radius: 12px !important;
-    font-size: 14px !important;
-    font-weight: 500 !important;
-    cursor: pointer !important;
-    white-space: nowrap !important;
-    box-sizing: border-box !important;
 }
 /* ========================================= */
 /* CORREÇÃO DO HEADER/MENU NO IPAD          */
