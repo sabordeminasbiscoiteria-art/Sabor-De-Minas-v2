@@ -1912,7 +1912,10 @@ footer {
         margin-right: -50vw !important;
         border-radius: 0 !important; /* Remove bordas arredondadas se quiser que encoste seco nas bordas */
     }
-/* Força os botões de categoria a ficarem juntos em uma linha compacta */
+/* =========================================================
+   CATEGORIAS
+   ========================================================= */
+
 .filtros-categorias {
     display: flex !important;
     flex-direction: row !important;
@@ -1925,46 +1928,77 @@ footer {
     justify-content: flex-start !important;
 }
 
-/* Diminui o tamanho dos botões */
+
+/* Botões das categorias */
 .filtros-categorias a,
 .filtros-categorias button {
     flex: 0 0 auto !important;
     white-space: nowrap !important;
+
     font-size: 13px !important;
     padding: 6px 12px !important;
     min-height: auto !important;
+
+    color: #5A3936 !important;
+    background-color: #FFFFFF !important;
+
+    border: 1px solid #D9A19D !important;
+    border-radius: 20px !important;
+
+    cursor: pointer !important;
+
+    transition: all 0.2s ease !important;
 }
 
-/* Puxa os filtros para perto da pesquisa */
+
+/* =========================================================
+   QUANDO PASSAR O MOUSE
+   ========================================================= */
+
+.filtros-categorias a:hover,
+.filtros-categorias button:hover {
+    background-color: #C95F5F !important;
+    color: #FFFFFF !important;
+    border-color: #C95F5F !important;
+}
+
+
+/* =========================================================
+   QUANDO CLICAR / FOCAR
+   ========================================================= */
+
+.filtros-categorias a:focus,
+.filtros-categorias button:focus,
+.filtros-categorias a:active,
+.filtros-categorias button:active {
+    background-color: #C95F5F !important;
+    color: #FFFFFF !important;
+    border-color: #C95F5F !important;
+    outline: none !important;
+}
+
+
+/* =========================================================
+   CATEGORIA SELECIONADA
+   ========================================================= */
+
+.filtros-categorias a.active,
+.filtros-categorias button.active,
+.filtros-categorias a[aria-current="page"] {
+    background-color: #C95F5F !important;
+    color: #FFFFFF !important;
+    border-color: #C95F5F !important;
+}
+
+
+/* =========================================================
+   POSIÇÃO DOS FILTROS
+   ========================================================= */
+
 .topo-filtros,
 .topo-filtro {
     margin-top: -10px !important;
     margin-bottom: 15px !important;
-}
-/* ===== CATEGORIAS ===== */
-
-.filtros-categorias a,
-.filtros-categorias button {
-    color: #5A3936 !important;
-    border: 1px solid #D9A19D !important;
-    background-color: #ffffff !important;
-}
-
-/* Categoria selecionada */
-.filtros-categorias a.active,
-.filtros-categorias button.active {
-    background-color: #B86F6B !important;
-    color: #ffffff !important;
-    border-color: #B86F6B !important;
-}
-
-/* Espaçamento da barra */
-.barra-pesquisa {
-    margin-bottom: 12px !important;
-}
-
-.filtros-categorias {
-    margin-top: 0 !important;
 }
 }
 @media (max-width: 768px) {
