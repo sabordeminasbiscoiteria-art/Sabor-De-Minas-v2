@@ -1912,24 +1912,33 @@ footer {
         margin-right: -50vw !important;
         border-radius: 0 !important; /* Remove bordas arredondadas se quiser que encoste seco nas bordas */
     }
-    /* Container flexível que ocupa a largura ideal da tela */
-.barra-pesquisa {
+   /* Container geral do topo centralizado na tela */
+.topo-filtros {
     display: flex !important;
+    flex-direction: column !important;
     align-items: center !important;
-    gap: 10px !important;
     width: 100% !important;
-    max-width: 500px !important;
-    margin: 15px auto !important;
+    max-width: 600px !important;
+    margin: 20px auto !important;
     padding: 0 15px !important;
     box-sizing: border-box !important;
 }
 
-/* O campo de texto expande preenchendo o espaço */
+/* Barra de Pesquisa */
+.barra-pesquisa {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 10px !important;
+    width: 100% !important;
+    margin-bottom: 20px !important;
+    box-sizing: border-box !important;
+}
+
 .barra-pesquisa input[type="text"] {
     flex: 1 !important;
-    width: 100% !important;
-    height: 44px !important;
-    padding: 0 15px 0 38px !important;
+    height: 45px !important;
+    padding: 0 15px !important;
     border: 1.5px solid #d4c3b3 !important;
     border-radius: 12px !important;
     background-color: #fcf8f2 !important;
@@ -1939,10 +1948,10 @@ footer {
     box-sizing: border-box !important;
 }
 
-/* O botão Buscar proporcional e sem sobras */
 .barra-pesquisa button {
-    height: 44px !important;
-    padding: 0 20px !important;
+    flex-shrink: 0 !important;
+    height: 45px !important;
+    padding: 0 24px !important;
     background-color: #b86f62 !important;
     color: #ffffff !important;
     border: none !important;
@@ -1953,93 +1962,43 @@ footer {
     white-space: nowrap !important;
     box-sizing: border-box !important;
 }
-/* =========================================================
-   CATEGORIAS
-   ========================================================= */
 
+.barra-pesquisa button:hover {
+    background-color: #a45e52 !important;
+}
+
+/* Filtros de Categorias em linha com rolagem suave se necessário */
 .filtros-categorias {
     display: flex !important;
-    flex-direction: row !important;
-    flex-wrap: nowrap !important;
-    overflow-x: auto !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-wrap: wrap !important;
+    gap: 10px !important;
     width: 100% !important;
-    gap: 6px !important;
-    padding: 4px 10px !important;
     box-sizing: border-box !important;
-    justify-content: flex-start !important;
 }
 
-
-/* Botões das categorias */
-.filtros-categorias a,
-.filtros-categorias button {
-    flex: 0 0 auto !important;
-    white-space: nowrap !important;
-
-    font-size: 13px !important;
-    padding: 6px 12px !important;
-    min-height: auto !important;
-
-    color: #5A3936 !important;
-    background-color: #FFFFFF !important;
-
-    border: 1px solid #D9A19D !important;
+.filtros-categorias .filtro-btn {
+    display: inline-block !important;
+    padding: 10px 20px !important;
+    border: 1.5px solid #d4c3b3 !important;
     border-radius: 20px !important;
-
-    cursor: pointer !important;
-
+    background-color: #fcf8f2 !important;
+    color: #555 !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    text-decoration: none !important;
+    text-align: center !important;
     transition: all 0.2s ease !important;
+    box-sizing: border-box !important;
 }
 
-
-/* =========================================================
-   QUANDO PASSAR O MOUSE
-   ========================================================= */
-
-.filtros-categorias a:hover,
-.filtros-categorias button:hover {
-    background-color: #C95F5F !important;
-    color: #FFFFFF !important;
-    border-color: #C95F5F !important;
-}
-
-
-/* =========================================================
-   QUANDO CLICAR / FOCAR
-   ========================================================= */
-
-.filtros-categorias a:focus,
-.filtros-categorias button:focus,
-.filtros-categorias a:active,
-.filtros-categorias button:active {
-    background-color: #C95F5F !important;
-    color: #FFFFFF !important;
-    border-color: #C95F5F !important;
-    outline: none !important;
-}
-
-
-/* =========================================================
-   CATEGORIA SELECIONADA
-   ========================================================= */
-
-.filtros-categorias a.active,
-.filtros-categorias button.active,
-.filtros-categorias a[aria-current="page"] {
-    background-color: #C95F5F !important;
-    color: #FFFFFF !important;
-    border-color: #C95F5F !important;
-}
-
-
-/* =========================================================
-   POSIÇÃO DOS FILTROS
-   ========================================================= */
-
-.topo-filtros,
-.topo-filtro {
-    margin-top: -10px !important;
-    margin-bottom: 15px !important;
+/* Estilo do botão ativo (igual ao modelo da foto) */
+.filtros-categorias .filtro-btn.ativo,
+.filtros-categorias .filtro-btn:hover {
+    background-color: #b86f62 !important;
+    color: #ffffff !important;
+    border-color: #b86f62 !important;
 }
 }
 @media (max-width: 768px) {
