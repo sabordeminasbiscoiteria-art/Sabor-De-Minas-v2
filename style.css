@@ -1842,9 +1842,67 @@ footer {
         justify-content: center !important;
     }
 }
+/* ==========================
+  PAGINA DOS PRODUTOS.HTML
+========================== */
+@media (max-width: 768px){
+    .banner-produtos {
+        height: 120px !important;        /* Altura menor de faixa */
+        min-height: 120px !important;
+        max-height: 120px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        padding: 10px 15px !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+        overflow: hidden !important;
+    }
 
+    /* Organiza o conteúdo de texto dentro da faixa */
+    .banner-conteudo {
+        text-align: center !important;
+        width: 100% !important;
+    }
 
-@media (max-width: 728px) {
+    /* Ajusta o título para caber perfeitamente na faixa */
+    .banner-conteudo h1 {
+        font-size: 22px !important;
+        margin: 0 0 4px 0 !important;
+    }
+
+    /* Ajusta o subtítulo */
+    .banner-conteudo p {
+        font-size: 13px !important;
+        margin: 0 !important;
+    }
+    /* Diminui a margem inferior do banner para colar o conteúdo de baixo */
+    .banner-produtos {
+        margin-bottom: 5px !important;
+    }
+    /* Força a seção pai a perder o limite se necessário */
+    .pagina-produtos {
+        padding: 0 !important;
+    }
+
+    /* Faz o container ignorar as margens laterais apenas para o banner */
+    .container {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        max-width: 100% !important;
+    }
+
+    /* Estica o banner de ponta a ponta da tela */
+    .banner-produtos {
+        width: 100vw !important;
+        position: relative !important;
+        left: 50% !important;
+        right: 50% !important;
+        margin-left: -50vw !important;
+        margin-right: -50vw !important;
+        border-radius: 0 !important; /* Remove bordas arredondadas se quiser que encoste seco nas bordas */
+    }
+}
 /* --- CONTAINER PRINCIPAL --- */
 .topo-filtros {
     background-color: #fcf9f6; /* Tom neutro de fundo leve */
@@ -1936,8 +1994,6 @@ footer {
     color: #ffffff;
     border-color: #c07a6e;
 }
-}
-
 @media (max-width: 768px) {
 
     /* Afeta APENAS a página de produtos */
