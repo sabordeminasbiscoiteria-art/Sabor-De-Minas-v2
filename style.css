@@ -1699,12 +1699,12 @@ footer{
         line-height: 1.45 !important;
     }
 /* =========================================
-   RODAPÉ RESPONSIVO (CORRIGIDO)
+   RODAPÉ LADO A LADO COM DIVISÓRIA (AJUSTADO)
    ========================================= */
 footer {
     background-color: #8f2828 !important;
     color: #ffffff !important;
-    padding: 20px 10px 5px 10px !important;
+    padding: 25px 10px 10px 10px !important;
     margin-top: 40px !important;
     width: 100% !important;
     box-sizing: border-box !important;
@@ -1796,52 +1796,24 @@ footer {
     width: 100% !important;
     overflow: hidden !important;
     line-height: 0 !important;
-    margin-top: 10px !important;
+    margin-top: 15px !important;
 }
 
 .onda-footer svg {
     display: block !important;
     width: 100% !important;
-    height: auto !important; 
+    height: 22px !important;
 }
 
 .footer-final {
     max-width: 600px !important;
-    margin: 0 auto !important;
-    padding: 5px 0 !important;
+    margin: 5px auto 0 auto !important;
+    padding-top: 8px !important;
     border-top: 1px solid rgba(255, 255, 255, 0.15) !important;
     text-align: center !important;
     font-size: 8px !important;
     color: #e6cbcd !important;
 }
-}
-/* =========================================
-   AJUSTE AUTOMÁTICO PARA TELA MENOR / ZOOM
-   ========================================= */
-@media screen and (max-width: 480px) {
-    .footer-conteudo {
-        flex-direction: column !important;
-        text-align: center !important;
-        gap: 15px !important;
-    }
-
-    .footer-marca {
-        justify-content: center !important;
-        text-align: center !important;
-        flex-direction: column !important;
-    }
-
-    .footer-divisor-vertical {
-        display: none !important; /* Esconde a risca no meio quando empilhar */
-    }
-
-    .footer-contato {
-        text-align: center !important;
-    }
-
-    .footer-contato p {
-        justify-content: center !important;
-    }
 }
 /* ==========================
   PAGINA DOS PRODUTOS.HTML
