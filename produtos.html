@@ -349,6 +349,10 @@
 <script>
 document.addEventListener("DOMContentLoaded", function () {
     const inputBusca = document.getElementById("pesquisa");
+    
+    // Se não houver campo de pesquisa na página, o script para aqui para não dar erro
+    if (!inputBusca) return; 
+
     const cards = document.querySelectorAll(".produto, .item-produto");
 
     function puxarProduto() {
@@ -366,7 +370,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             // Se o card contém o que você digitou
             if (texto.includes(termo)) {
-                // Rrola a tela suavemente até o produto exato
+                // Rola a tela suavemente até o produto exato
                 card.scrollIntoView({ behavior: "smooth", block: "center" });
                 
                 // Dá um destaque visual profissional (borda e brilho) no produto encontrado
@@ -377,13 +381,11 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    if (inputBusca) {
-        inputBusca.addEventListener("keyup", function(event) {
-            if (event.key === "Enter") {
-                puxarProduto();
-            }
-        });
-    }
+    inputBusca.addEventListener("keyup", function(event) {
+        if (event.key === "Enter") {
+            puxarProduto();
+        }
+    });
 
     // Se tiver o botão "Buscar", vincula ele também
     const botaoBuscar = document.querySelector("button");
