@@ -2124,33 +2124,6 @@ footer {
     section.pagina-produtos .topo-filtro {
         margin-bottom: 5px !important;
     }
-
-/* Container que segura todos os cards */
-.produtos-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  gap: 20px;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 15px;
-}
-
-/* Estilo individual de cada card de biscoito */
-.produto-card, /* ajuste para o nome da classe que você usa no HTML */
-.produtos-cards > div {
-  background: #ffffff;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  border: 1px solid #ebdcd0;
-  display: flex;
-  flex-direction: column;
-  transition: transform 0.2s ease;
-}
-
-.produtos-cards > div:hover {
-  transform: translateY(-3px);
-}
 }
 @media (max-width: 768px) {
     /* Ajustes da seção de História (mantidos seguros) */
