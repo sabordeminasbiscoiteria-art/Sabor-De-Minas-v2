@@ -1699,7 +1699,7 @@ footer{
         line-height: 1.45 !important;
     }
 /* =========================================
-   RODAPÉ LADO A LADO COM DIVISÓRIA (AJUSTADO)
+   RODAPÉ RESPONSIVO CORRIGIDO
    ========================================= */
 footer {
     background-color: #8f2828 !important;
@@ -1802,7 +1802,7 @@ footer {
 .onda-footer svg {
     display: block !important;
     width: 100% !important;
-    height: 22px !important;
+    height: auto !important; 
 }
 
 .footer-final {
@@ -1814,6 +1814,33 @@ footer {
     font-size: 8px !important;
     color: #e6cbcd !important;
 }
+   }
+
+/* SÓ MUDA PARA EMPILHADO SE A TELA FOR MENOR QUE 350px (ex: zoom muito alto) */
+@media screen and (max-width: 350px) {
+    .footer-conteudo {
+        flex-direction: column !important;
+        text-align: center !important;
+        gap: 15px !important;
+    }
+
+    .footer-marca {
+        justify-content: center !important;
+        text-align: center !important;
+        flex-direction: column !important;
+    }
+
+    .footer-divisor-vertical {
+        display: none !important;
+    }
+
+    .footer-contato {
+        text-align: center !important;
+    }
+
+    .footer-contato p {
+        justify-content: center !important;
+    }
 }
 /* ==========================
   PAGINA DOS PRODUTOS.HTML
