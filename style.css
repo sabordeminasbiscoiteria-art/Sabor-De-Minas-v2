@@ -1947,6 +1947,39 @@ footer {
 .filtros-categorias {
     margin-top: 0 !important;
 }
+/* ===== COR ROSA QUEIMADO ===== */
+
+:root {
+    --rosa-profissional: #B86F6B;
+}
+
+/* Botão Buscar */
+.barra-pesquisa button {
+    background-color: var(--rosa-profissional) !important;
+    color: #fff !important;
+    border: none !important;
+}
+
+/* Efeito ao passar o mouse */
+.barra-pesquisa button:hover {
+    background-color: #A85F5B !important;
+}
+
+/* Categorias */
+.filtros-categorias a,
+.filtros-categorias button {
+    color: #5A3936 !important;
+    border: 1px solid #D9A19D !important;
+    background-color: #fff !important;
+}
+
+/* Categoria selecionada */
+.filtros-categorias a.active,
+.filtros-categorias button.active {
+    background-color: var(--rosa-profissional) !important;
+    color: #fff !important;
+    border-color: var(--rosa-profissional) !important;
+}
 /* Posiciona e formata a barra de pesquisa perfeitamente */
 .barra-pesquisa {
     display: flex !important;
