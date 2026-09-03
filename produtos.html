@@ -351,16 +351,17 @@ document.addEventListener("DOMContentLoaded", function() {
 
     function realizarBusca() {
         const termo = inputBusca.value.toLowerCase().trim();
-        const cards = document.querySelectorAll(".produtos-cards .produto, .produtos-cards .item-produto");
+        // Pega todos os cards que possuem a classe .produto
+        const cards = document.querySelectorAll(".produto");
 
         cards.forEach(card => {
             const titulo = card.querySelector("h3") ? card.querySelector("h3").innerText.toLowerCase() : "";
             const descricao = card.querySelector("p") ? card.querySelector("p").innerText.toLowerCase() : "";
 
             if (titulo.includes(termo) || descricao.includes(termo)) {
-                card.style.display = "flex";
+                card.style.display = ""; // Restaura o layout original do CSS
             } else {
-                card.style.display = "none";
+                card.style.display = "none"; // Esconde o card que não corresponde
             }
         });
     }
