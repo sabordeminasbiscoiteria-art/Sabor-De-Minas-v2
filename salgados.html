@@ -76,26 +76,31 @@
 
 </section>
 
-  <div class="topo-filtros">
+  <!-- ========================================== -->
+<!-- BLOCO DE PESQUISA E MINI MENU PROFISSIONAL -->
+<!-- ========================================== -->
 
-    <div class="barra-pesquisa">
-    <input id="pesquisa" type="text" placeholder="Pesquisar produtos...">
-    <button onclick="buscarNoCelular()" style="padding: 10px 15px; margin-left: 5px; cursor: pointer;">Buscar</button>
-</div>
+<div class="loja-search-wrapper">
+  
+  <!-- Barra de Pesquisa -->
+  <div class="search-container">
+    <form action="/busca" method="GET">
+      <span class="search-icon">🔍</span>
+      <input type="text" name="q" placeholder="Pesquisar produtos..." required>
+      <button type="submit">Buscar</button>
+    </form>
+  </div>
 
-  <div class="filtros-categorias">
-
-    <a href="produtos.html">Todos</a>
-
-    <a href="doces.html">Doces</a>
-
-    <a href="salgados.html">Salgados</a>
-
-    <a href="Suspiros.html">Suspiros</a>
-
-    <a href="casadinho.html">casadinho</a>
-
-</div>
+  <!-- Mini Menu de Categorias (Apenas Texto) -->
+  <div class="mini-menu-container">
+    <ul class="mini-menu">
+      <li><a href="casadinho-avela.html" class="active">Todos</a></li>
+      <li><a href="doces.html">Doce</a></li>
+      <li><a href="salgados.html">Salgados</a></li>
+      <li><a href="Suspiros.html">Suspiros</a></li>
+      <li><a href="/casadinho">Casadinho</a></li>
+    </ul>
+  </div>
 
 </div>
       <div class="produtos-cards">
