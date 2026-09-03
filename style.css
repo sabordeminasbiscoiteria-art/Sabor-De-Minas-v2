@@ -2268,115 +2268,46 @@ footer {
 footer {
     margin-top: 20px !important;
 }
-/* =========================================================
-   BARRA DE PESQUISA - CELULAR
-   ========================================================= */
-
+/* Container da barra de pesquisa */
 .barra-pesquisa {
     display: flex !important;
     align-items: center !important;
-    justify-content: center !important;
-    gap: 8px !important;
-
-    width: 100% !important;
-    max-width: 400px !important;
-
-    margin: 20px auto 15px auto !important;
-    padding: 0 10px !important;
-
-    background-color: transparent !important;
-    border: none !important;
-    box-shadow: none !important;
-
-    position: relative !important;
-    z-index: 9999 !important;
-    pointer-events: auto !important;
-
+    gap: 10px !important;
+    max-width: 700px !important;
+    margin: 20px auto !important;
+    padding: 0 15px !important;
     box-sizing: border-box !important;
 }
 
-
-/* =========================================================
-   CAMPO DE PESQUISA
-   ========================================================= */
-
-.barra-pesquisa input {
+/* O campo de texto onde a pessoa digita */
+.barra-pesquisa input[type="text"] {
     flex: 1 !important;
-
-    width: 100% !important;
-    min-width: 0 !important;
-    height: 38px !important;
-
-    padding: 0 15px 0 38px !important;
-
-    font-size: 13px !important;
-
-    color: #333333 !important;
-
+    height: 48px !important;
+    padding: 0 20px !important;
+    border: 1px solid #d4c3b3 !important;
+    border-radius: 12px !important;
     background-color: #ffffff !important;
-
-    border: 1px solid #dcdcdc !important;
-    border-radius: 20px !important;
-
+    font-size: 15px !important;
+    color: #555 !important;
     outline: none !important;
-
-    box-sizing: border-box !important;
-
-
-    /* Lupa */
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23333333' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='8'%3E%3C/circle%3E%3Cline x1='21' y1='21' x2='16.65' y2='16.65'%3E%3C/line%3E%3C/svg%3E");
-
-    background-repeat: no-repeat !important;
-    background-position: 12px center !important;
-    background-size: 14px 14px !important;
 }
 
-
-/* Quando clicar na caixa de pesquisa */
-.barra-pesquisa input:focus {
-    border-color: #B86F6B !important;
-}
-
-
-/* =========================================================
-   BOTÃO BUSCAR
-   ========================================================= */
-
+/* O botão Buscar idêntico ao modelo */
 .barra-pesquisa button {
-    flex: 0 0 auto !important;
-
-    height: 38px !important;
-
-    padding: 0 16px !important;
-
-    font-size: 13px !important;
-    font-weight: 500 !important;
-
-    background-color: #B86F6B !important;
-
+    height: 48px !important;
+    padding: 0 24px !important;
+    background-color: #b86f62 !important; /* Tom terroso da referência */
     color: #ffffff !important;
-
     border: none !important;
-    border-radius: 20px !important;
-
+    border-radius: 12px !important;
+    font-size: 15px !important;
+    font-weight: 500 !important;
     cursor: pointer !important;
-
-    box-sizing: border-box !important;
-
-    transition: background-color 0.2s ease,
-                transform 0.2s ease !important;
+    white-space: nowrap !important;
 }
 
-
-/* Quando passar o mouse */
 .barra-pesquisa button:hover {
-    background-color: #A85F5B !important;
-}
-
-
-/* Quando apertar o botão */
-.barra-pesquisa button:active {
-    transform: scale(0.97) !important;
+    background-color: #a45e52 !important;
 }
 /* ========================================= */
 /* CORREÇÃO DO HEADER/MENU NO IPAD          */
