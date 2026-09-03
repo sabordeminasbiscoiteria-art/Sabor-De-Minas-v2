@@ -2023,8 +2023,8 @@ footer {
 }
 
 @media (max-width: 768px) {
-    /* Afeta APENAS a página de produtos */
-    section.pagina-produtos .produtos-cards {
+    /* Afeta os cards em QUALQUER página da loja */
+    .produtos-cards {
         display: grid !important;
         grid-template-columns: repeat(2, 1fr) !important;
         gap: 6px !important;
@@ -2034,8 +2034,8 @@ footer {
         padding-top: 0 !important;
     }
 
-    section.pagina-produtos .produtos-cards .produto,
-    section.pagina-produtos .produtos-cards .item-produto {
+    .produtos-cards .produto,
+    .produtos-cards .item-produto {
         width: 100% !important;
         margin: 0 !important;
         padding: 0 !important;
@@ -2048,8 +2048,8 @@ footer {
     }
 
     /* Imagem menorzinha para economizar espaço */
-    section.pagina-produtos .produtos-cards .produto img,
-    section.pagina-produtos .produtos-cards .item-produto img {
+    .produtos-cards .produto img,
+    .produtos-cards .item-produto img {
         width: 100% !important;
         height: 100px !important;
         object-fit: cover !important;
@@ -2058,8 +2058,8 @@ footer {
     }
 
     /* TÍTULO: Força a ficar em uma linha só */
-    section.pagina-produtos .produtos-cards .produto h3,
-    section.pagina-produtos .produtos-cards .produto .titulo-produto {
+    .produtos-cards .produto h3,
+    .produtos-cards .produto .titulo-produto {
         font-size: 11.5px !important;
         white-space: nowrap !important;
         overflow: hidden !important;
@@ -2069,8 +2069,8 @@ footer {
     }
 
     /* Descrição enxuta */
-    section.pagina-produtos .produtos-cards .produto p,
-    section.pagina-produtos .produtos-cards .produto .descricao-produto {
+    .produtos-cards .produto p,
+    .produtos-cards .produto .descricao-produto {
         font-size: 9.5px !important;
         color: #666 !important;
         text-align: center !important;
@@ -2081,8 +2081,8 @@ footer {
     }
 
     /* PESO E PREÇO: Centralizados lado a lado bem compactos */
-    section.pagina-produtos .produtos-cards .produto .preco-produto,
-    section.pagina-produtos .produtos-cards .produto .container-preco {
+    .produtos-cards .produto .preco-produto,
+    .produtos-cards .produto .container-preco {
         font-size: 11px !important;
         display: flex !important;
         flex-direction: row !important;
@@ -2094,8 +2094,8 @@ footer {
         margin: 8px 0 !important;
     }
 
-    section.pagina-produtos .produtos-cards .preco-produto span,
-    section.pagina-produtos .produtos-cards .preco-produto strong {
+    .produtos-cards .preco-produto span,
+    .produtos-cards .preco-produto strong {
         display: inline-block !important;
         width: auto !important;
         margin: 0 !important;
@@ -2103,9 +2103,9 @@ footer {
     }
 
     /* BOTÃO DO WHATSAPP */
-    section.pagina-produtos .produtos-cards .produto .botao-produto,
-    section.pagina-produtos .produtos-cards .produto a.botao,
-    section.pagina-produtos .produtos-cards .produto button {
+    .produtos-cards .produto .botao-produto,
+    .produtos-cards .produto a.botao,
+    .produtos-cards .produto button {
         width: 100% !important;
         max-width: 100% !important;
         margin: 0 !important;
@@ -2119,9 +2119,9 @@ footer {
         text-align: center !important;
     }
 
-    /* Filtros da página de produtos */
-    section.pagina-produtos .topo-filtros, 
-    section.pagina-produtos .topo-filtro {
+    /* Filtros gerais */
+    .topo-filtros, 
+    .topo-filtro {
         margin-bottom: 5px !important;
     }
 }
