@@ -1903,7 +1903,71 @@ footer {
         border-radius: 0 !important; /* Remove bordas arredondadas se quiser que encoste seco nas bordas */
     }
 }
+/* Container que segura o input e o botão na mesma linha */
+.barra-pesquisa {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    margin-bottom: 20px;
+}
 
+/* Embrulho para posicionar a lupa dentro do input */
+.input-wrapper {
+    position: relative;
+    flex: 1; /* Ocupa o espaço disponível */
+    display: flex;
+    align-items: center;
+}
+
+/* Estilo do ícone da lupa */
+.icone-pesquisa {
+    position: absolute;
+    left: 16px;
+    stroke: #8c827d; /* Cor discreta */
+    pointer-events: none; /* Evita cliques no ícone */
+}
+
+/* O campo de texto */
+.barra-pesquisa input {
+    width: 100%;
+    height: 52px;
+    padding: 0 16px 0 48px; /* Espaço à esquerda para a lupa não encostar no texto */
+    font-size: 16px;
+    color: #4a423e;
+    background-color: #ffffff;
+    border: 1px solid #d9d0c7;
+    border-radius: 10px;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.barra-pesquisa input::placeholder {
+    color: #9c928b;
+}
+
+.barra-pesquisa input:focus {
+    border-color: #b86b5e; /* Destaca levemente ao clicar */
+}
+
+/* O botão Buscar */
+.barra-pesquisa button {
+    height: 52px;
+    padding: 0 28px;
+    background-color: #b86b5e; /* Tom rosado/terracota da imagem */
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background-color 0.2s;
+}
+
+.barra-pesquisa button:hover {
+    background-color: #a35b4f;
+}
 @media (max-width: 768px) {
 
     /* Afeta APENAS a página de produtos */
