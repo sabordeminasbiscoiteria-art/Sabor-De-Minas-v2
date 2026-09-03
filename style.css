@@ -1876,16 +1876,6 @@ footer {
         font-size: 13px !important;
         margin: 0 !important;
     }
-
-    /* Aproxima a barra de pesquisa logo abaixo do banner */
-    .topo-filtros {
-        margin-top: -10px !important; /* Puxa o bloco de filtros para cima */
-        padding-top: 0 !important;
-        display: flex !important;
-        flex-direction: column !important;
-        gap: 8px !important; /* Reduz o espaço entre a barra de pesquisa e as categorias */
-    }
-
     /* Diminui a margem inferior do banner para colar o conteúdo de baixo */
     .banner-produtos {
         margin-bottom: 5px !important;
@@ -1913,45 +1903,39 @@ footer {
         border-radius: 0 !important; /* Remove bordas arredondadas se quiser que encoste seco nas bordas */
     }
 }
-  /* =====================================================
-   PESQUISA + FILTROS — CELULAR
-   ===================================================== */
 @media (max-width: 728px) {
 .topo-filtros {
     width: 100% !important;
-    margin: 0 !important;
-    padding: 20px 12px 15px !important;
+    padding: 12px 10px !important;
     box-sizing: border-box !important;
 }
 
 .barra-pesquisa {
     display: flex !important;
     align-items: center !important;
-    gap: 10px !important;
+    gap: 8px !important;
     width: 100% !important;
-    margin: 0 auto 28px !important;
+    margin: 0 auto 22px !important;
     padding: 0 !important;
-    background: transparent !important;
-    border: none !important;
-    box-shadow: none !important;
+    box-sizing: border-box !important;
 }
 
 .barra-pesquisa input {
     flex: 1 !important;
     min-width: 0 !important;
-    height: 48px !important;
-    padding: 0 18px 0 45px !important;
-    font-size: 15px !important;
+    height: 42px !important;
+    padding: 0 14px 0 38px !important;
+    font-size: 13px !important;
     color: #333 !important;
     background: #fff !important;
-    border: 1.5px solid #D8D2CE !important;
-    border-radius: 25px !important;
+    border: 1px solid #d7d2cf !important;
+    border-radius: 12px !important;
     outline: none !important;
     box-sizing: border-box !important;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23333333' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='8'%3E%3C/circle%3E%3Cline x1='21' y1='21' x2='16.65' y2='16.65'%3E%3C/line%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23333333' stroke-width='2.3' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='8'%3E%3C/circle%3E%3Cline x1='21' y1='21' x2='16.65' y2='16.65'%3E%3C/line%3E%3C/svg%3E") !important;
     background-repeat: no-repeat !important;
-    background-position: 15px center !important;
-    background-size: 20px 20px !important;
+    background-position: 13px center !important;
+    background-size: 16px !important;
 }
 
 .barra-pesquisa input:focus {
@@ -1959,49 +1943,30 @@ footer {
 }
 
 .barra-pesquisa button {
-    flex: 0 0 auto !important;
-    height: 48px !important;
-    padding: 0 24px !important;
-    font-size: 15px !important;
+    height: 42px !important;
+    padding: 0 18px !important;
+    font-size: 13px !important;
     font-weight: 600 !important;
     background: #C95F5F !important;
     color: #fff !important;
     border: none !important;
-    border-radius: 25px !important;
-    cursor: pointer !important;
+    border-radius: 12px !important;
     box-sizing: border-box !important;
-}
-
-.barra-pesquisa button:hover {
-    background: #B85252 !important;
 }
 
 .filtros-categorias {
     display: flex !important;
     flex-wrap: nowrap !important;
-    gap: 10px !important;
+    align-items: center !important;
+    gap: 9px !important;
     width: 100% !important;
     overflow-x: auto !important;
-    padding: 0 0 5px !important;
+    padding: 0 0 6px !important;
     margin: 0 !important;
-    box-sizing: border-box !important;
     scrollbar-width: none !important;
 }
-
-.filtros-categorias::-webkit-scrollbar {
-    display: none !important;
 }
 
-.filtros-categorias a {
-    flex: 0 0 auto !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    height: 40px !important;
-    padding: 0 20px !important;
-    white-space: nowrap !
-}
-}
 @media (max-width: 768px) {
 
     /* Afeta APENAS a página de produtos */
