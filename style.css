@@ -2003,7 +2003,6 @@ footer {
 .barra-pesquisa button:hover {
     background-color: #A85F5B !important;
 }
-}
 /* ===== CATEGORIAS ===== */
 
 .filtros-categorias a,
@@ -2029,7 +2028,7 @@ footer {
 .filtros-categorias {
     margin-top: 0 !important;
 }
-
+}
 @media (max-width: 768px) {
     
     /* Afeta APENAS a página de produtos */
