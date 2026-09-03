@@ -2007,6 +2007,16 @@ footer {
     border-color: #b86b5e;
     box-shadow: 0 2px 4px rgba(184, 107, 94, 0.25);
 }
+.filtros-categorias-wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 4px;
+    box-sizing: border-box;
+    padding: 4px 0 16px 0; /* Aumente o último número (padding-bottom) para afastar mais */
+}
 }
 @media (max-width: 768px) {
 
