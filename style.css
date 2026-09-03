@@ -1952,7 +1952,7 @@ footer {
 }
 
 .search-container button {
-  background-color: #8c6248; /* Marrom mais leve e aconchegante */
+  background-color: #801a24; /* Marrom mais leve e aconchegante */
   color: #ffffff;
   border: none;
   border-radius: 25px;
@@ -1964,7 +1964,7 @@ footer {
 }
 
 .search-container button:hover {
-  background-color: #724e37;
+  background-color: #801a24;
 }
 
 /* Estilização do Mini Menu */
