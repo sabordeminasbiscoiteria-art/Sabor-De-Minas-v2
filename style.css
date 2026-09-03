@@ -2268,46 +2268,45 @@ footer {
 footer {
     margin-top: 20px !important;
 }
-/* Container da barra de pesquisa */
+/* Container que segura a barra e o botão com largura ajustada */
 .barra-pesquisa {
     display: flex !important;
     align-items: center !important;
-    gap: 10px !important;
-    max-width: 700px !important;
-    margin: 20px auto !important;
+    gap: 8px !important;
+    width: 100% !important;
+    max-width: 520px !important; /* Deixa o conjunto mais proporcional */
+    margin: 15px auto !important;
     padding: 0 15px !important;
     box-sizing: border-box !important;
 }
 
-/* O campo de texto onde a pessoa digita */
+/* O campo de digitar mais leve e comprido */
 .barra-pesquisa input[type="text"] {
     flex: 1 !important;
-    height: 48px !important;
-    padding: 0 20px !important;
-    border: 1px solid #d4c3b3 !important;
+    height: 42px !important; /* Altura mais delicada */
+    padding: 0 15px 0 38px !important;
+    border: 1.5px solid #d4c3b3 !important;
     border-radius: 12px !important;
-    background-color: #ffffff !important;
-    font-size: 15px !important;
+    background-color: #fcf8f2 !important;
+    font-size: 14px !important;
     color: #555 !important;
     outline: none !important;
+    box-sizing: border-box !important;
 }
 
-/* O botão Buscar idêntico ao modelo */
+/* O botão de buscar proporcional ao campo */
 .barra-pesquisa button {
-    height: 48px !important;
-    padding: 0 24px !important;
-    background-color: #b86f62 !important; /* Tom terroso da referência */
+    height: 42px !important;
+    padding: 0 22px !important;
+    background-color: #b86f62 !important;
     color: #ffffff !important;
     border: none !important;
     border-radius: 12px !important;
-    font-size: 15px !important;
+    font-size: 14px !important;
     font-weight: 500 !important;
     cursor: pointer !important;
     white-space: nowrap !important;
-}
-
-.barra-pesquisa button:hover {
-    background-color: #a45e52 !important;
+    box-sizing: border-box !important;
 }
 /* ========================================= */
 /* CORREÇÃO DO HEADER/MENU NO IPAD          */
