@@ -2268,22 +2268,22 @@ footer {
 footer {
     margin-top: 20px !important;
 }
-/* Container que segura a barra e o botão com largura ajustada */
+/* Container que faz a barra ocupar o espaço certinho */
 .barra-pesquisa {
     display: flex !important;
     align-items: center !important;
-    gap: 8px !important;
+    gap: 10px !important;
     width: 100% !important;
-    max-width: 520px !important; /* Deixa o conjunto mais proporcional */
-    margin: 15px auto !important;
+    max-width: 100% !important; /* Faz o container aproveitar toda a largura disponível */
+    margin: 15px 0 !important;
     padding: 0 15px !important;
     box-sizing: border-box !important;
 }
 
-/* O campo de digitar mais leve e comprido */
+/* O campo de digitar preenchendo o espaço livre */
 .barra-pesquisa input[type="text"] {
     flex: 1 !important;
-    height: 42px !important; /* Altura mais delicada */
+    height: 44px !important;
     padding: 0 15px 0 38px !important;
     border: 1.5px solid #d4c3b3 !important;
     border-radius: 12px !important;
@@ -2294,10 +2294,10 @@ footer {
     box-sizing: border-box !important;
 }
 
-/* O botão de buscar proporcional ao campo */
+/* O botão de buscar coladinho e proporcional */
 .barra-pesquisa button {
-    height: 42px !important;
-    padding: 0 22px !important;
+    height: 44px !important;
+    padding: 0 24px !important;
     background-color: #b86f62 !important;
     color: #ffffff !important;
     border: none !important;
