@@ -1991,6 +1991,10 @@ footer {
     display: none;
     padding: 5px 0;
 }
+.search-container {
+    position: relative; /* Essencial para a caixinha saber exatamente onde ficar */
+    width: 100%;
+}
 
 /* Cada item/opção na lista */
 .sugestao-item {
