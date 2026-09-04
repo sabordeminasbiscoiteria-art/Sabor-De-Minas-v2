@@ -288,10 +288,11 @@ document.addEventListener("DOMContentLoaded", function() {
             const titulo = h3 ? h3.innerText.toLowerCase() : "";
             const descricao = p ? p.innerText.toLowerCase() : "";
 
-            if (titulo.includes(termo) || descricao.includes(termo)) {
-                card.style.display = ""; 
+            // Se o termo de busca estiver vazio ou corresponder ao produto
+            if (termo === "" || titulo.includes(termo) || descricao.includes(termo)) {
+                card.classList.remove("escondido"); // Mantém/mostra o produto filtrado
             } else {
-                card.style.display = "none"; 
+                card.classList.add("escondido");    // Oculta os demais para focar na busca
             }
         });
     }
