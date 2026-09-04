@@ -2543,7 +2543,7 @@ footer {
         background: #f7f3ef !important;
         padding: 4px 8px !important; /* Deixamos a caixinha um pouco mais proporcional */
         border-radius: 4px !important;
-        color: #8c6248 !important;
+        color:  #000000!important;
         font-weight: 500 !important; /* Deixa o texto um pouquinho mais encorpado */
     }
 
