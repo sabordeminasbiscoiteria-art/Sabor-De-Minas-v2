@@ -287,21 +287,27 @@ document.addEventListener("DOMContentLoaded", function() {
         const termo = normalizarTexto(inputBusca.value);
         if (termo === "") return;
 
-        const termoLimpo = termo.replace("biscoito", "").trim();
+        const termoLimpo = termo.replace("biscoito", "").replace("salgadinho", "").trim();
 
-        // Verificações específicas para cada tipo de Casadinho primeiro
+        // 1. Casadinhos (Avelã, Goiabada, Leite Ninho)
         if (termoLimpo.includes("avela") || (termoLimpo.includes("casadinho") && termoLimpo.includes("avela"))) {
             window.location.href = "casadinho-avela.html";
         } else if (termoLimpo.includes("goiabada") || (termoLimpo.includes("casadinho") && termoLimpo.includes("goiabada"))) {
             window.location.href = "casadinhoo-produtos.html";
         } else if (termoLimpo.includes("ninho") || termoLimpo.includes("leite") || (termoLimpo.includes("casadinho") && termoLimpo.includes("ninho"))) {
             window.location.href = "casadinholeite-produtos.html";
-        } 
-        // Se digitar apenas "casadinho", podemos mandar para o de avelã ou para a página geral de doces
-        else if (termoLimpo.includes("casadinho")) {
+        } else if (termoLimpo.includes("casadinho")) {
             window.location.href = "casadinho-avela.html"; 
         } 
-        // Demais produtos
+        
+        // 2. Novos Produtos (Pellet Bacon / Pelinha e Pimentinha)
+        else if (termoLimpo.includes("pellet") || termoLimpo.includes("bacon") || termoLimpo.includes("pelinha")) {
+            window.location.href = "pelletbacon-produtos.html"; // Ajuste o nome do arquivo se necessário
+        } else if (termoLimpo.includes("pimentinha") || termoLimpo.includes("pimenta")) {
+            window.location.href = "pimentinha-produtos.html"; // Ajuste o nome do arquivo se necessário
+        }
+
+        // 3. Demais Biscoitos
         else if (termoLimpo.includes("beijinho")) {
             window.location.href = "beijinho-produtos.html";
         } else if (termoLimpo.includes("banbole") || termoLimpo.includes("bambole")) {
@@ -313,7 +319,7 @@ document.addEventListener("DOMContentLoaded", function() {
         } else if (termoLimpo.includes("limao")) {
             window.location.href = "limao1-produtos.html";
         } else {
-            alert("Produto não encontrado! Tente pesquisar por: Casadinho Avelã, Casadinho Goiabada, Casadinho Ninho, Beijinho, Canela, Limão, etc.");
+            alert("Produto não encontrado! Tente pesquisar por: Avelã, Goiabada, Ninho, Pellet Bacon, Pimentinha, Beijinho, Limão, etc.");
         }
     }
 
