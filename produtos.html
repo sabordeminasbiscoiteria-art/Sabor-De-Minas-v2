@@ -345,36 +345,25 @@
 </footer>
 
 <script>
-document.addEventListener("DOMContentLoaded", function() {
-    const inputBusca = document.getElementById("input-busca");
-    const btnBuscar = document.getElementById("btn-buscar");
+window.addEventListener("DOMContentLoaded", () => {
+    const input = document.getElementById("input-busca");
+    if (!input) return;
 
-    function executarBusca() {
-        if (!inputBusca) return;
-        const termo = inputBusca.value.toLowerCase().trim();
+    input.addEventListener("input", (e) => {
+        const termo = e.target.value.toLowerCase().trim();
         const cards = document.querySelectorAll(".produto");
 
         cards.forEach(card => {
-            const h3 = card.querySelector("h3");
-            const p = card.querySelector("p");
-            
-            const textoTitulo = h3 ? h3.innerText.toLowerCase() : "";
-            const textoDescricao = p ? p.innerText.toLowerCase() : "";
+            const titulo = card.querySelector("h3")?.innerText.toLowerCase() || "";
+            const desc = card.querySelector("p")?.innerText.toLowerCase() || "";
 
-            if (textoTitulo.includes(termo) || textoDescricao.includes(termo)) {
-                card.style.display = "flex"; // Mantém o card visível com o layout correto
+            if (titulo.includes(termo) || desc.includes(termo)) {
+                card.style.display = ""; // Mostra o card
             } else {
                 card.style.display = "none"; // Esconde o card
             }
         });
-    }
-
-    if (inputBusca) {
-        inputBusca.addEventListener("input", executarBusca);
-    }
-    if (btnBuscar) {
-        btnBuscar.addEventListener("click", executarBusca);
-    }
+    });
 });
 </script>
 
