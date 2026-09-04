@@ -2535,7 +2535,7 @@ footer {
         align-items: center !important;
         justify-content: center !important;
         gap: 8px !important;
-        margin: 0 10px 0 !important;
+        margin: 0 0 10px 0 !important;
     }
 
     .produtos-cards .preco-produto .peso {
