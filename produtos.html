@@ -279,12 +279,12 @@ document.addEventListener("DOMContentLoaded", function() {
     const formBusca = document.getElementById("form-busca");
     const caixaSugestoes = document.getElementById("sugestoes-busca");
 
-    // Banco de dados completo com todos os seus produtos e apelidos
+    // Banco de dados completo com todos os produtos e apelidos
     const produtos = [
         // Casadinhos
         { nome: "Casadinho de Avelã", url: "casadinho-avela.html", palavras: ["casadinho", "avela"] },
         { nome: "Casadinho de Goiabada", url: "casadinhoo-produtos.html", palavras: ["casadinho", "goiabada"] },
-        { nome: "Casadinho de Leite Ninho", url: "casadinholeite-produtos.html", palavras: ["casadinho", "ninho", "leite"] },
+        { nome: "Casadinho de Leite Ninho", url: "casadinholeite-produtos.html", palavras: ["casadinho", "ninho", "leite", "leite ninho"] },
         
         // Salgados
         { nome: "Pellet Bacon (Pelinha)", url: "pelletbacon-produtos.html", palavras: ["pellet", "bacon", "pelinha", "salgadinho"] },
@@ -310,7 +310,6 @@ document.addEventListener("DOMContentLoaded", function() {
         return texto.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().trim();
     }
 
-    // 1. Mostra as sugestões conforme o usuário digita
     if (inputBusca) {
         inputBusca.addEventListener("input", function() {
             const termo = normalizarTexto(inputBusca.value);
@@ -343,7 +342,6 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         });
 
-        // Fecha a caixinha se clicar fora dela
         document.addEventListener("click", function(e) {
             if (!inputBusca.contains(e.target) && !caixaSugestoes.contains(e.target)) {
                 caixaSugestoes.style.display = "none";
@@ -351,10 +349,9 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
-    // 2. Controla o envio do formulário (quando aperta Enter ou clica no botão Buscar)
     if (formBusca) {
         formBusca.addEventListener("submit", function(e) {
-            e.preventDefault(); // Impede a página de recarregar
+            e.preventDefault();
             if (!inputBusca) return;
             
             const termo = normalizarTexto(inputBusca.value);
@@ -365,7 +362,6 @@ document.addEventListener("DOMContentLoaded", function() {
             );
 
             if (encontrados.length > 0) {
-                // Vai direto para o primeiro resultado correspondente
                 window.location.href = encontrados[0].url;
             } else {
                 alert("Produto não encontrado!");
