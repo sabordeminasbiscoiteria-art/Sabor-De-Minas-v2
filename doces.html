@@ -277,53 +277,88 @@
 </footer>
 
 <script>
-document.addEventListener("DOMContentLoaded", function () {
-    const inputBusca = document.getElementById("pesquisa");
-    const cards = document.querySelectorAll(".produto, .item-produto");
+document.addEventListener("DOMContentLoaded", function() {
+    const inputBusca = document.getElementById("input-busca");
+    const btnBuscar = document.getElementById("btn-buscar");
 
-    function puxarProduto() {
-        const termo = inputBusca.value.toLowerCase().trim();
+    function normalizarTexto(texto) {
+        return texto.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().trim();
+    }
+
+    function executarBusca() {
+        if (!inputBusca) return;
         
-        if (termo === "") return; // Se apagar a busca, não faz nada
+        const termo = normalizarTexto(inputBusca.value);
+        if (termo === "") return;
 
-        cards.forEach(card => {
-            const texto = card.innerText.toLowerCase();
-            
-            // Remove destaque anterior de todos
-            card.style.border = "";
-            card.style.boxShadow = "";
-            card.style.transform = "";
+        const termoLimpo = termo.replace("biscoito", "").replace("salgadinho", "").replace("suspiro", "").trim();
 
-            // Se o card contém o que você digitou
-            if (texto.includes(termo)) {
-                // Rrola a tela suavemente até o produto exato
-                card.scrollIntoView({ behavior: "smooth", block: "center" });
-                
-                // Dá um destaque visual profissional (borda e brilho) no produto encontrado
-                card.style.border = "2px solid #d4a373";
-                card.style.boxShadow = "0 0 15px rgba(212, 163, 115, 0.8)";
-                card.style.transition = "all 0.3s ease";
+        // 1. Suspiros (Verificação prioritária para evitar conflitos)
+        if (termoLimpo.includes("bluice")) {
+            window.location.href = "bluice-produtos.html";
+        } else if (termoLimpo.includes("morango")) {
+            window.location.href = "morando-produtos.html";
+        } else if (termoLimpo.includes("acai")) {
+            window.location.href = "acai-produtos.html";
+        } else if (termoLimpo.includes("leite condensado") || termoLimpo.includes("condensado")) {
+            window.location.href = "leitecondensado-produtos.html";
+        } else if (termoLimpo.includes("maca") || termoLimpo.includes("verde")) {
+            window.location.href = "macaverde-produtos.html";
+        } 
+        
+        // 2. Casadinhos (Avelã, Goiabada, Leite Ninho)
+        else if (termoLimpo.includes("avela") || (termoLimpo.includes("casadinho") && termoLimpo.includes("avela"))) {
+            window.location.href = "casadinho-avela.html";
+        } else if (termoLimpo.includes("goiabada") || (termoLimpo.includes("casadinho") && termoLimpo.includes("goiabada"))) {
+            window.location.href = "casadinhoo-produtos.html";
+        } else if (termoLimpo.includes("ninho") || (termoLimpo.includes("leite") && !termoLimpo.includes("condensado"))) {
+            window.location.href = "casadinholeite-produtos.html";
+        } else if (termoLimpo.includes("casadinho")) {
+            window.location.href = "casadinho-avela.html"; 
+        } 
+        
+        // 3. Salgados (Pellet Bacon / Pelinha e Pimentinha)
+        else if (termoLimpo.includes("pellet") || termoLimpo.includes("bacon") || termoLimpo.includes("pelinha")) {
+            window.location.href = "pelletbacon-produtos.html";
+        } else if (termoLimpo.includes("pimentinha") || termoLimpo.includes("pimenta")) {
+            window.location.href = "pimentinha-produtos.html";
+        }
+
+        // 4. Demais Biscoitos (Beijinho, Banbolê, Canela, Sasha, Limão Biscoito)
+        else if (termoLimpo.includes("beijinho")) {
+            window.location.href = "beijinho-produtos.html";
+        } else if (termoLimpo.includes("banbole") || termoLimpo.includes("bambole")) {
+            window.location.href = "banbole-produtos.html";
+        } else if (termoLimpo.includes("canela")) {
+            window.location.href = "canela-produtos.html";
+        } else if (termoLimpo.includes("sasha")) {
+            window.location.href = "sasha-produtos.html";
+        } else if (termoLimpo.includes("limao")) {
+            // Se escrever "suspiro limao", vai para o suspiro de limao; senão, vai para o biscoito de limao
+            if (termo.includes("suspiro")) {
+                window.location.href = "limao-produtos.html"; // ou o arquivo de suspiro de limão correspondente
+            } else {
+                window.location.href = "limao1-produtos.html";
             }
-        });
+        } else {
+            alert("Produto não encontrado! Tente pesquisar por: Avelã, Pellet Bacon, Suspiro Morango, Bluice, Maçã Verde, etc.");
+        }
+    }
+
+    if (btnBuscar) {
+        btnBuscar.addEventListener("click", executarBusca);
     }
 
     if (inputBusca) {
-        inputBusca.addEventListener("keyup", function(event) {
-            if (event.key === "Enter") {
-                puxarProduto();
+        inputBusca.addEventListener("keypress", function(e) {
+            if (e.key === "Enter") {
+                e.preventDefault();
+                executarBusca();
             }
-        });
-    }
-
-    // Se tiver o botão "Buscar", vincula ele também
-    const botaoBuscar = document.querySelector("button");
-    if (botaoBuscar) {
-        botaoBuscar.addEventListener("click", function(e) {
-            e.preventDefault();
-            puxarProduto();
         });
     }
 });
 </script>
+
 </body>
 </html>
