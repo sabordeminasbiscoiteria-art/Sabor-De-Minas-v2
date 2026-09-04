@@ -276,7 +276,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const inputBusca = document.getElementById("input-busca");
     const btnBuscar = document.getElementById("btn-buscar");
 
-    // Função para remover acentos e deixar tudo em minúsculo (ex: "Avelã" vira "avela")
+    // Função para remover acentos e deixar tudo em minúsculo
     function normalizarTexto(texto) {
         return texto.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().trim();
     }
@@ -284,18 +284,25 @@ document.addEventListener("DOMContentLoaded", function() {
     function executarBusca() {
         if (!inputBusca) return;
         
-        // Pega o que o usuário digitou e limpa os acentos
         const termo = normalizarTexto(inputBusca.value);
-
         if (termo === "") return;
 
-        // Remove a palavra "biscoito" caso o usuário tenha digitado junto
         const termoLimpo = termo.replace("biscoito", "").trim();
 
-        // Mapeamento flexível (aceita com ou sem acento, primeiro ou segundo nome)
-        if (termoLimpo.includes("avela") || termoLimpo.includes("casadinho")) {
+        // Verificações específicas para cada tipo de Casadinho primeiro
+        if (termoLimpo.includes("avela") || (termoLimpo.includes("casadinho") && termoLimpo.includes("avela"))) {
             window.location.href = "casadinho-avela.html";
-        } else if (termoLimpo.includes("beijinho")) {
+        } else if (termoLimpo.includes("goiabada") || (termoLimpo.includes("casadinho") && termoLimpo.includes("goiabada"))) {
+            window.location.href = "casadinhoo-produtos.html";
+        } else if (termoLimpo.includes("ninho") || termoLimpo.includes("leite") || (termoLimpo.includes("casadinho") && termoLimpo.includes("ninho"))) {
+            window.location.href = "casadinholeite-produtos.html";
+        } 
+        // Se digitar apenas "casadinho", podemos mandar para o de avelã ou para a página geral de doces
+        else if (termoLimpo.includes("casadinho")) {
+            window.location.href = "casadinho-avela.html"; 
+        } 
+        // Demais produtos
+        else if (termoLimpo.includes("beijinho")) {
             window.location.href = "beijinho-produtos.html";
         } else if (termoLimpo.includes("banbole") || termoLimpo.includes("bambole")) {
             window.location.href = "banbole-produtos.html";
@@ -303,14 +310,10 @@ document.addEventListener("DOMContentLoaded", function() {
             window.location.href = "canela-produtos.html";
         } else if (termoLimpo.includes("sasha")) {
             window.location.href = "sasha-produtos.html";
-        } else if (termoLimpo.includes("goiabada")) {
-            window.location.href = "casadinhoo-produtos.html";
-        } else if (termoLimpo.includes("ninho") || termoLimpo.includes("leite")) {
-            window.location.href = "casadinholeite-produtos.html";
         } else if (termoLimpo.includes("limao")) {
             window.location.href = "limao1-produtos.html";
         } else {
-            alert("Produto não encontrado! Tente pesquisar por: Avelã, Beijinho, Canela, Limão, Ninho, etc.");
+            alert("Produto não encontrado! Tente pesquisar por: Casadinho Avelã, Casadinho Goiabada, Casadinho Ninho, Beijinho, Canela, Limão, etc.");
         }
     }
 
