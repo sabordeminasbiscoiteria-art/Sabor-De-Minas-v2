@@ -2534,21 +2534,21 @@ footer {
         flex-direction: row !important;
         align-items: center !important;
         justify-content: center !important;
-        gap: 6px !important;
+        gap: 8px !important;
         margin: 0 0 10px 0 !important;
     }
 
     .produtos-cards .preco-produto .peso {
         font-size: 10px !important;
         background: #f7f3ef;
-        padding: 2px 5px;
+        padding: 2px 10px;
         border-radius: 4px;
         color: #8c6248;
     }
 
     .produtos-cards .preco-produto strong {
         color: #a33b20 !important;
-        font-size: 13px !important;
+        font-size: 16px !important;
     }
 
     /* Botão do WhatsApp fixo e alinhado na base */
@@ -2568,29 +2568,5 @@ footer {
         gap: 5px !important;
         border-radius: 0 0 10px 10px !important;
     }
-    /* Caixa padrão para gramas e preço em todos os produtos */
-.preco-container, .produto-info-preco {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px; /* Espaço elegante entre os gramas e o valor */
-    margin: 12px 0;
-}
-
-/* Estilo padronizado para as gramas */
-.tag-gramas {
-    background-color: #f7efe9; /* Tom nude bem suave */
-    color: #801a24;
-    padding: 4px 10px;
-    border-radius: 6px;
-    font-size: 12px;
-    font-weight: 500;
-}
-
-/* Estilo padronizado para o preço */
-.valor-preco {
-    color: #801a24;
-    font-size: 16px;
-    font-weight: bold;
-}
+  
 }
