@@ -2513,7 +2513,7 @@ footer {
         font-weight: 600 !important;
         text-align: center !important;
         margin: 8px 6px 3px 6px !important;
-        color: #5c3a21 !important;
+        color: #000000 !important;
         white-space: normal !important; /* Permite quebra natural se o nome for grande */
     }
 
