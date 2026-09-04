@@ -1975,6 +1975,37 @@ footer {
     padding-left: 10px;
     color: #801a24;
 }
+/* Caixinha suspensa de sugestões combinando com o seu design */
+#sugestoes-busca {
+    position: absolute;
+    top: calc(100% + 5px);
+    left: 0;
+    right: 0;
+    background: #ffffff;
+    border: 1px solid #ebdcd0; /* Mesma borda suave do seu form */
+    border-radius: 18px; /* Cantos arredondados combinando */
+    box-shadow: 0 4px 12px rgba(168, 125, 96, 0.08); /* Sombra elegante */
+    z-index: 1000;
+    max-height: 250px;
+    overflow-y: auto;
+    display: none; /* Fica oculta até começar a digitar */
+    padding: 5px 0;
+}
+
+/* Cada item/opção na lista */
+.sugestao-item {
+    padding: 10px 18px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #801a24; /* Mantendo a cor padrão do seu texto */
+    text-align: left;
+    transition: background 0.2s;
+}
+
+.sugestao-item:hover {
+    background: #fdfaf7; /* Um tom nude bem clarinho para o hover */
+    color: #a87d60; /* Cor de destaque ao passar o mouse */
+}
 /* Estilização do Mini Menu */
 .mini-menu-container {
   width: 100%;
