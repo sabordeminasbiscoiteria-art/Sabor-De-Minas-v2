@@ -276,31 +276,41 @@ document.addEventListener("DOMContentLoaded", function() {
     const inputBusca = document.getElementById("input-busca");
     const btnBuscar = document.getElementById("btn-buscar");
 
+    // Função para remover acentos e deixar tudo em minúsculo (ex: "Avelã" vira "avela")
+    function normalizarTexto(texto) {
+        return texto.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().trim();
+    }
+
     function executarBusca() {
         if (!inputBusca) return;
-        const termo = inputBusca.value.toLowerCase().trim();
+        
+        // Pega o que o usuário digitou e limpa os acentos
+        const termo = normalizarTexto(inputBusca.value);
 
         if (termo === "") return;
 
-        // Mapeamento dos produtos para suas respectivas páginas
-        if (termo.includes("avelã") || termo.includes("casadinho avelã")) {
+        // Remove a palavra "biscoito" caso o usuário tenha digitado junto
+        const termoLimpo = termo.replace("biscoito", "").trim();
+
+        // Mapeamento flexível (aceita com ou sem acento, primeiro ou segundo nome)
+        if (termoLimpo.includes("avela") || termoLimpo.includes("casadinho")) {
             window.location.href = "casadinho-avela.html";
-        } else if (termo.includes("beijinho")) {
+        } else if (termoLimpo.includes("beijinho")) {
             window.location.href = "beijinho-produtos.html";
-        } else if (termo.includes("banbole") || termo.includes("bambole")) {
+        } else if (termoLimpo.includes("banbole") || termoLimpo.includes("bambole")) {
             window.location.href = "banbole-produtos.html";
-        } else if (termo.includes("canela")) {
+        } else if (termoLimpo.includes("canela")) {
             window.location.href = "canela-produtos.html";
-        } else if (termo.includes("sasha")) {
+        } else if (termoLimpo.includes("sasha")) {
             window.location.href = "sasha-produtos.html";
-        } else if (termo.includes("goiabada")) {
+        } else if (termoLimpo.includes("goiabada")) {
             window.location.href = "casadinhoo-produtos.html";
-        } else if (termo.includes("leite ninho") || termo.includes("ninho")) {
+        } else if (termoLimpo.includes("ninho") || termoLimpo.includes("leite")) {
             window.location.href = "casadinholeite-produtos.html";
-        } else if (termo.includes("limão") || termo.includes("limao")) {
+        } else if (termoLimpo.includes("limao")) {
             window.location.href = "limao1-produtos.html";
         } else {
-            alert("Produto não encontrado! Tente pesquisar por: Avelã, Beijinho, Canela, Limão, etc.");
+            alert("Produto não encontrado! Tente pesquisar por: Avelã, Beijinho, Canela, Limão, Ninho, etc.");
         }
     }
 
