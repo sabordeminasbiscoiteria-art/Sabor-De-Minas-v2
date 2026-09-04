@@ -2469,24 +2469,30 @@ footer {
     margin-left: 0 !important;        /* <--- Garante que não desloque para os lados */
     margin-right: 0 !important;       /* <--- Garante que não desloque para os lados */
 }
-/* ========================================== */
-/* LAYOUT IDEAL PARA CELULAR (Fotos Maiores)  */
-/* ========================================== */
-@media (max-width: 768px) {
-    .produtos-cards {
+/* ========================================================== */
+/* FORÇANDO LAYOUT DE 2 COLUNAS E PADRONIZAÇÃO NO CELULAR     */
+/* ========================================================== */
+@media screen and (max-width: 768px) {
+    
+    /* Grade de 2 colunas */
+    .produtos-cards, 
+    .produtos-grid, 
+    .container-produtos {
         display: grid !important;
         grid-template-columns: repeat(2, 1fr) !important;
-        gap: 10px !important;
-        padding: 10px !important;
+        gap: 8px !important;
+        padding: 8px !important;
         width: 100% !important;
         box-sizing: border-box !important;
     }
 
-    /* Card flexível e uniforme, sem travar altura excessiva */
+    /* Cards individuais */
+    .produtos-cards > div,
     .produtos-cards .produto,
-    .produtos-cards .item-produto {
+    .produtos-cards .item-produto,
+    .produtos-cards .card {
         width: 100% !important;
-        height: auto !important; /* Altura flexível para caber tudo perfeitamente */
+        height: auto !important;
         display: flex !important;
         flex-direction: column !important;
         background: #ffffff !important;
@@ -2497,67 +2503,68 @@ footer {
         box-shadow: 0 2px 6px rgba(0,0,0,0.04) !important;
     }
 
-    /* AUMENTAMOS A FOTO PARA BAIXO (Mais alta e destacada) */
-    .produtos-cards .produto img,
-    .produtos-cards .item-produto img {
+    /* Imagem padrão e destacada */
+    .produtos-cards img {
         width: 100% !important;
-        height: 150px !important; /* Altura maior para a foto dos biscoitos aparecer bem */
+        height: 140px !important;
         object-fit: cover !important;
         display: block !important;
     }
 
-    /* Título com tamanho normal e legível */
-    .produtos-cards .produto h3,
-    .produtos-cards .item-produto h3 {
+    /* Títulos e textos uniformes */
+    .produtos-cards h3 {
         font-size: 13px !important;
         font-weight: 600 !important;
         text-align: center !important;
-        margin: 8px 6px 3px 6px !important;
+        margin: 8px 6px 4px 6px !important;
         color: #5c3a21 !important;
-        white-space: normal !important; /* Permite quebra natural se o nome for grande */
     }
 
-    /* Descrição com tamanho normal para as pessoas lerem */
-    .produtos-cards .produto p,
-    .produtos-cards .item-produto p {
+    .produtos-cards p {
         font-size: 11px !important;
         color: #666 !important;
         text-align: center !important;
         margin: 0 6px 8px 6px !important;
-        white-space: normal !important; /* Mostra a descrição inteira */
     }
 
-    /* Preço e peso padronizados */
-    .produtos-cards .produto .preco-produto,
-    .produtos-cards .item-produto .preco-produto {
+    /* Padronização exata da área de Preço e Gramas */
+    .produtos-cards .preco-produto,
+    .produtos-cards div[class*="preco"] {
         display: flex !important;
         flex-direction: row !important;
         align-items: center !important;
         justify-content: center !important;
-        gap: 8px !important;
-        margin: 0 0 10px 0 !important;
+        gap: 6px !important;
+        margin: auto 0 10px 0 !important;
     }
 
-    .produtos-cards .preco-produto .peso {
-        font-size: 10px !important;
-        background: #f7f3ef;
-        padding: 2px 10px;
-        border-radius: 4px;
-        color: #8c6248;
+    /* Tamanho e cor iguais para os gramas/peso */
+    .produtos-cards .peso,
+    .produtos-cards span[class*="peso"],
+    .produtos-cards span[style*="background"] {
+        font-size: 11px !important;
+        background: #f7f3ef !important;
+        padding: 3px 6px !important;
+        border-radius: 4px !important;
+        color: #8c6248 !important;
     }
 
-    .produtos-cards .preco-produto strong {
+    /* Tamanho e cor iguais para o preço */
+    .produtos-cards strong,
+    .produtos-cards .valor,
+    .produtos-cards span[style*="color"] {
         color: #a33b20 !important;
-        font-size: 16px !important;
+        font-size: 13px !important;
+        font-weight: bold !important;
     }
 
-    /* Botão do WhatsApp fixo e alinhado na base */
-    .produtos-cards .produto .botao-produto,
-    .produtos-cards .item-produto .botao-produto {
+    /* Botão do WhatsApp fixo embaixo */
+    .produtos-cards a.botao-produto,
+    .produtos-cards .botao-produto {
         width: 100% !important;
         margin-top: auto !important;
         padding: 8px 0 !important;
-        font-size: 10.5px !important;
+        font-size: 11px !important;
         font-weight: 600 !important;
         background-color: #25d366 !important;
         color: #ffffff !important;
@@ -2568,5 +2575,4 @@ footer {
         gap: 5px !important;
         border-radius: 0 0 10px 10px !important;
     }
-  
 }
