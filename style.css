@@ -2568,4 +2568,29 @@ footer {
         gap: 5px !important;
         border-radius: 0 0 10px 10px !important;
     }
+    /* Caixa padrão para gramas e preço em todos os produtos */
+.preco-container, .produto-info-preco {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px; /* Espaço elegante entre os gramas e o valor */
+    margin: 12px 0;
+}
+
+/* Estilo padronizado para as gramas */
+.tag-gramas {
+    background-color: #f7efe9; /* Tom nude bem suave */
+    color: #801a24;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+/* Estilo padronizado para o preço */
+.valor-preco {
+    color: #801a24;
+    font-size: 16px;
+    font-weight: bold;
+}
 }
