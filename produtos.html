@@ -276,32 +276,45 @@ document.addEventListener("DOMContentLoaded", function() {
     const inputBusca = document.getElementById("input-busca");
     const btnBuscar = document.getElementById("btn-buscar");
 
-    function filtrarProdutos() {
+    function executarBusca() {
         if (!inputBusca) return;
         const termo = inputBusca.value.toLowerCase().trim();
-        const cards = document.querySelectorAll(".produto");
 
-        cards.forEach(card => {
-            const h3 = card.querySelector("h3");
-            const p = card.querySelector("p");
-            
-            const titulo = h3 ? h3.innerText.toLowerCase() : "";
-            const descricao = p ? p.innerText.toLowerCase() : "";
+        if (termo === "") return;
 
-            // Se o termo de busca estiver vazio ou corresponder ao produto
-            if (termo === "" || titulo.includes(termo) || descricao.includes(termo)) {
-                card.classList.remove("escondido"); // Mantém/mostra o produto filtrado
-            } else {
-                card.classList.add("escondido");    // Oculta os demais para focar na busca
-            }
-        });
+        // Mapeamento dos produtos para suas respectivas páginas
+        if (termo.includes("avelã") || termo.includes("casadinho avelã")) {
+            window.location.href = "casadinho-avela.html";
+        } else if (termo.includes("beijinho")) {
+            window.location.href = "beijinho-produtos.html";
+        } else if (termo.includes("banbole") || termo.includes("bambole")) {
+            window.location.href = "banbole-produtos.html";
+        } else if (termo.includes("canela")) {
+            window.location.href = "canela-produtos.html";
+        } else if (termo.includes("sasha")) {
+            window.location.href = "sasha-produtos.html";
+        } else if (termo.includes("goiabada")) {
+            window.location.href = "casadinhoo-produtos.html";
+        } else if (termo.includes("leite ninho") || termo.includes("ninho")) {
+            window.location.href = "casadinholeite-produtos.html";
+        } else if (termo.includes("limão") || termo.includes("limao")) {
+            window.location.href = "limao1-produtos.html";
+        } else {
+            alert("Produto não encontrado! Tente pesquisar por: Avelã, Beijinho, Canela, Limão, etc.");
+        }
+    }
+
+    if (btnBuscar) {
+        btnBuscar.addEventListener("click", executarBusca);
     }
 
     if (inputBusca) {
-        inputBusca.addEventListener("input", filtrarProdutos);
-    }
-    if (btnBuscar) {
-        btnBuscar.addEventListener("click", filtrarProdutos);
+        inputBusca.addEventListener("keypress", function(e) {
+            if (e.key === "Enter") {
+                e.preventDefault();
+                executarBusca();
+            }
+        });
     }
 });
 </script>
