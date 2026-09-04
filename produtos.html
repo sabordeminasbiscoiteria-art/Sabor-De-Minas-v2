@@ -276,81 +276,99 @@
 <script>
 document.addEventListener("DOMContentLoaded", function() {
     const inputBusca = document.getElementById("input-busca");
-    const btnBuscar = document.getElementById("btn-buscar");
+    const formBusca = document.getElementById("form-busca");
+    const caixaSugestoes = document.getElementById("sugestoes-busca");
+
+    // Banco de dados completo com todos os seus produtos e apelidos
+    const produtos = [
+        // Casadinhos
+        { nome: "Casadinho de Avelã", url: "casadinho-avela.html", palavras: ["casadinho", "avela"] },
+        { nome: "Casadinho de Goiabada", url: "casadinhoo-produtos.html", palavras: ["casadinho", "goiabada"] },
+        { nome: "Casadinho de Leite Ninho", url: "casadinholeite-produtos.html", palavras: ["casadinho", "ninho", "leite"] },
+        
+        // Salgados
+        { nome: "Pellet Bacon (Pelinha)", url: "pelletbacon-produtos.html", palavras: ["pellet", "bacon", "pelinha", "salgadinho"] },
+        { nome: "Pimentinha", url: "pimentinha-produtos.html", palavras: ["pimentinha", "pimenta", "salgadinho"] },
+        
+        // Suspiros
+        { nome: "Suspiro de Limão", url: "limao-produtos.html", palavras: ["suspiro", "limao"] },
+        { nome: "Suspiro Bluice", url: "bluice-produtos.html", palavras: ["suspiro", "bluice"] },
+        { nome: "Suspiro de Morango", url: "morando-produtos.html", palavras: ["suspiro", "morango"] },
+        { nome: "Suspiro de Açaí", url: "acai-produtos.html", palavras: ["suspiro", "acai"] },
+        { nome: "Suspiro de Leite Condensado", url: "leitecondensado-produtos.html", palavras: ["suspiro", "leite", "condensado"] },
+        { nome: "Suspiro de Maçã Verde", url: "macaverde-produtos.html", palavras: ["suspiro", "maca", "verde"] },
+        
+        // Outros Biscoitos
+        { nome: "Biscoito Beijinho", url: "beijinho-produtos.html", palavras: ["beijinho", "biscoito"] },
+        { nome: "Biscoito Banbolê", url: "banbole-produtos.html", palavras: ["banbole", "bambole", "biscoito"] },
+        { nome: "Biscoito Canela", url: "canela-produtos.html", palavras: ["canela", "biscoito"] },
+        { nome: "Biscoito Sasha", url: "sasha-produtos.html", palavras: ["sasha", "biscoito"] },
+        { nome: "Biscoito Limão", url: "limao1-produtos.html", palavras: ["limao", "biscoito"] }
+    ];
 
     function normalizarTexto(texto) {
         return texto.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().trim();
     }
 
-    function executarBusca() {
-        if (!inputBusca) return;
-        
-        const termo = normalizarTexto(inputBusca.value);
-        if (termo === "") return;
-
-        const termoLimpo = termo.replace("biscoito", "").replace("salgadinho", "").replace("suspiro", "").trim();
-
-        // 1. Suspiros (Verificação prioritária para evitar conflitos)
-        if (termoLimpo.includes("bluice")) {
-            window.location.href = "bluice-produtos.html";
-        } else if (termoLimpo.includes("morango")) {
-            window.location.href = "morando-produtos.html";
-        } else if (termoLimpo.includes("acai")) {
-            window.location.href = "acai-produtos.html";
-        } else if (termoLimpo.includes("leite condensado") || termoLimpo.includes("condensado")) {
-            window.location.href = "leitecondensado-produtos.html";
-        } else if (termoLimpo.includes("maca") || termoLimpo.includes("verde")) {
-            window.location.href = "macaverde-produtos.html";
-        } 
-        
-        // 2. Casadinhos (Avelã, Goiabada, Leite Ninho)
-        else if (termoLimpo.includes("avela") || (termoLimpo.includes("casadinho") && termoLimpo.includes("avela"))) {
-            window.location.href = "casadinho-avela.html";
-        } else if (termoLimpo.includes("goiabada") || (termoLimpo.includes("casadinho") && termoLimpo.includes("goiabada"))) {
-            window.location.href = "casadinhoo-produtos.html";
-        } else if (termoLimpo.includes("ninho") || (termoLimpo.includes("leite") && !termoLimpo.includes("condensado"))) {
-            window.location.href = "casadinholeite-produtos.html";
-        } else if (termoLimpo.includes("casadinho")) {
-            window.location.href = "casadinho-avela.html"; 
-        } 
-        
-        // 3. Salgados (Pellet Bacon / Pelinha e Pimentinha)
-        else if (termoLimpo.includes("pellet") || termoLimpo.includes("bacon") || termoLimpo.includes("pelinha")) {
-            window.location.href = "pelletbacon-produtos.html";
-        } else if (termoLimpo.includes("pimentinha") || termoLimpo.includes("pimenta")) {
-            window.location.href = "pimentinha-produtos.html";
-        }
-
-        // 4. Demais Biscoitos (Beijinho, Banbolê, Canela, Sasha, Limão Biscoito)
-        else if (termoLimpo.includes("beijinho")) {
-            window.location.href = "beijinho-produtos.html";
-        } else if (termoLimpo.includes("banbole") || termoLimpo.includes("bambole")) {
-            window.location.href = "banbole-produtos.html";
-        } else if (termoLimpo.includes("canela")) {
-            window.location.href = "canela-produtos.html";
-        } else if (termoLimpo.includes("sasha")) {
-            window.location.href = "sasha-produtos.html";
-        } else if (termoLimpo.includes("limao")) {
-            // Se escrever "suspiro limao", vai para o suspiro de limao; senão, vai para o biscoito de limao
-            if (termo.includes("suspiro")) {
-                window.location.href = "limao-produtos.html"; // ou o arquivo de suspiro de limão correspondente
-            } else {
-                window.location.href = "limao1-produtos.html";
-            }
-        } else {
-            alert("Produto não encontrado! Tente pesquisar por: Avelã, Pellet Bacon, Suspiro Morango, Bluice, Maçã Verde, etc.");
-        }
-    }
-
-    if (btnBuscar) {
-        btnBuscar.addEventListener("click", executarBusca);
-    }
-
+    // 1. Mostra as sugestões conforme o usuário digita
     if (inputBusca) {
-        inputBusca.addEventListener("keypress", function(e) {
-            if (e.key === "Enter") {
-                e.preventDefault();
-                executarBusca();
+        inputBusca.addEventListener("input", function() {
+            const termo = normalizarTexto(inputBusca.value);
+            caixaSugestoes.innerHTML = "";
+            
+            if (termo.length === 0) {
+                caixaSugestoes.style.display = "none";
+                return;
+            }
+
+            const resultados = produtos.filter(prod => {
+                return prod.palavras.some(palavra => palavra.includes(termo)) || normalizarTexto(prod.nome).includes(termo);
+            });
+
+            if (resultados.length > 0) {
+                caixaSugestoes.style.display = "block";
+                resultados.forEach(prod => {
+                    const itemDiv = document.createElement("div");
+                    itemDiv.classList.add("sugestao-item");
+                    itemDiv.innerHTML = `🔍 ${prod.nome}`;
+                    
+                    itemDiv.addEventListener("click", function() {
+                        window.location.href = prod.url;
+                    });
+                    
+                    caixaSugestoes.appendChild(itemDiv);
+                });
+            } else {
+                caixaSugestoes.style.display = "none";
+            }
+        });
+
+        // Fecha a caixinha se clicar fora dela
+        document.addEventListener("click", function(e) {
+            if (!inputBusca.contains(e.target) && !caixaSugestoes.contains(e.target)) {
+                caixaSugestoes.style.display = "none";
+            }
+        });
+    }
+
+    // 2. Controla o envio do formulário (quando aperta Enter ou clica no botão Buscar)
+    if (formBusca) {
+        formBusca.addEventListener("submit", function(e) {
+            e.preventDefault(); // Impede a página de recarregar
+            if (!inputBusca) return;
+            
+            const termo = normalizarTexto(inputBusca.value);
+            if (termo === "") return;
+
+            const encontrados = produtos.filter(prod => 
+                prod.palavras.some(palavra => palavra.includes(termo)) || normalizarTexto(prod.nome).includes(termo)
+            );
+
+            if (encontrados.length > 0) {
+                // Vai direto para o primeiro resultado correspondente
+                window.location.href = encontrados[0].url;
+            } else {
+                alert("Produto não encontrado!");
             }
         });
     }
