@@ -279,26 +279,18 @@ document.addEventListener("DOMContentLoaded", function() {
     const formBusca = document.getElementById("form-busca");
     const caixaSugestoes = document.getElementById("sugestoes-busca");
 
-    // Banco de dados completo com todos os produtos e apelidos
     const produtos = [
-        // Casadinhos
         { nome: "Casadinho de Avelã", url: "casadinho-avela.html", palavras: ["casadinho", "avela"] },
         { nome: "Casadinho de Goiabada", url: "casadinhoo-produtos.html", palavras: ["casadinho", "goiabada"] },
         { nome: "Casadinho de Leite Ninho", url: "casadinholeite-produtos.html", palavras: ["casadinho", "ninho", "leite", "leite ninho"] },
-        
-        // Salgados
         { nome: "Pellet Bacon (Pelinha)", url: "pelletbacon-produtos.html", palavras: ["pellet", "bacon", "pelinha", "salgadinho"] },
         { nome: "Pimentinha", url: "pimentinha-produtos.html", palavras: ["pimentinha", "pimenta", "salgadinho"] },
-        
-        // Suspiros
         { nome: "Suspiro de Limão", url: "limao-produtos.html", palavras: ["suspiro", "limao"] },
         { nome: "Suspiro Bluice", url: "bluice-produtos.html", palavras: ["suspiro", "bluice"] },
         { nome: "Suspiro de Morango", url: "morando-produtos.html", palavras: ["suspiro", "morango"] },
         { nome: "Suspiro de Açaí", url: "acai-produtos.html", palavras: ["suspiro", "acai"] },
         { nome: "Suspiro de Leite Condensado", url: "leitecondensado-produtos.html", palavras: ["suspiro", "leite", "condensado"] },
         { nome: "Suspiro de Maçã Verde", url: "macaverde-produtos.html", palavras: ["suspiro", "maca", "verde"] },
-        
-        // Outros Biscoitos
         { nome: "Biscoito Beijinho", url: "beijinho-produtos.html", palavras: ["beijinho", "biscoito"] },
         { nome: "Biscoito Banbolê", url: "banbole-produtos.html", palavras: ["banbole", "bambole", "biscoito"] },
         { nome: "Biscoito Canela", url: "canela-produtos.html", palavras: ["canela", "biscoito"] },
@@ -310,37 +302,43 @@ document.addEventListener("DOMContentLoaded", function() {
         return texto.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().trim();
     }
 
-    if (inputBusca) {
-        inputBusca.addEventListener("input", function() {
-            const termo = normalizarTexto(inputBusca.value);
-            caixaSugestoes.innerHTML = "";
-            
-            if (termo.length === 0) {
-                caixaSugestoes.style.display = "none";
-                return;
-            }
+    function processarBusca() {
+        const termo = normalizarTexto(inputBusca.value);
+        caixaSugestoes.innerHTML = "";
+        
+        if (termo.length === 0) {
+            caixaSugestoes.style.display = "none";
+            return;
+        }
 
-            const resultados = produtos.filter(prod => {
-                return prod.palavras.some(palavra => palavra.includes(termo)) || normalizarTexto(prod.nome).includes(termo);
-            });
-
-            if (resultados.length > 0) {
-                caixaSugestoes.style.display = "block";
-                resultados.forEach(prod => {
-                    const itemDiv = document.createElement("div");
-                    itemDiv.classList.add("sugestao-item");
-                    itemDiv.innerHTML = `🔍 ${prod.nome}`;
-                    
-                    itemDiv.addEventListener("click", function() {
-                        window.location.href = prod.url;
-                    });
-                    
-                    caixaSugestoes.appendChild(itemDiv);
-                });
-            } else {
-                caixaSugestoes.style.display = "none";
-            }
+        const resultados = produtos.filter(prod => {
+            return prod.palavras.some(palavra => palavra.includes(termo)) || normalizarTexto(prod.nome).includes(termo);
         });
+
+        if (resultados.length > 0) {
+            caixaSugestoes.style.display = "block";
+            resultados.forEach(prod => {
+                const itemDiv = document.createElement("div");
+                itemDiv.classList.add("sugestao-item");
+                itemDiv.innerHTML = `🔍 ${prod.nome}`;
+                
+                // Usando mousedown/click para garantir funcionamento no touch do celular
+                itemDiv.addEventListener("mousedown", function(e) {
+                    e.preventDefault();
+                    window.location.href = prod.url;
+                });
+                
+                caixaSugestoes.appendChild(itemDiv);
+            });
+        } else {
+            caixaSugestoes.style.display = "none";
+        }
+    }
+
+    if (inputBusca) {
+        // Ouve tanto a digitação normal quanto soltar a tecla (ótimo para celulares)
+        inputBusca.addEventListener("input", processarBusca);
+        inputBusca.addEventListener("keyup", processarBusca);
 
         document.addEventListener("click", function(e) {
             if (!inputBusca.contains(e.target) && !caixaSugestoes.contains(e.target)) {
