@@ -287,27 +287,41 @@ document.addEventListener("DOMContentLoaded", function() {
         const termo = normalizarTexto(inputBusca.value);
         if (termo === "") return;
 
-        const termoLimpo = termo.replace("biscoito", "").replace("salgadinho", "").trim();
+        const termoLimpo = termo.replace("biscoito", "").replace("salgadinho", "").replace("suspiro", "").trim();
 
         // 1. Casadinhos (Avelã, Goiabada, Leite Ninho)
         if (termoLimpo.includes("avela") || (termoLimpo.includes("casadinho") && termoLimpo.includes("avela"))) {
             window.location.href = "casadinho-avela.html";
         } else if (termoLimpo.includes("goiabada") || (termoLimpo.includes("casadinho") && termoLimpo.includes("goiabada"))) {
             window.location.href = "casadinhoo-produtos.html";
-        } else if (termoLimpo.includes("ninho") || termoLimpo.includes("leite") || (termoLimpo.includes("casadinho") && termoLimpo.includes("ninho"))) {
+        } else if (termoLimpo.includes("ninho") || termoLimpo.includes("leite") && !termoLimpo.includes("condensado") || (termoLimpo.includes("casadinho") && termoLimpo.includes("ninho"))) {
             window.location.href = "casadinholeite-produtos.html";
         } else if (termoLimpo.includes("casadinho")) {
             window.location.href = "casadinho-avela.html"; 
         } 
         
-        // 2. Novos Produtos (Pellet Bacon / Pelinha e Pimentinha)
+        // 2. Salgados (Pellet Bacon / Pelinha e Pimentinha)
         else if (termoLimpo.includes("pellet") || termoLimpo.includes("bacon") || termoLimpo.includes("pelinha")) {
-            window.location.href = "pelletbacon-produtos.html"; // Ajuste o nome do arquivo se necessário
+            window.location.href = "pelletbacon-produtos.html";
         } else if (termoLimpo.includes("pimentinha") || termoLimpo.includes("pimenta")) {
-            window.location.href = "pimentinha-produtos.html"; // Ajuste o nome do arquivo se necessário
+            window.location.href = "pimentinha-produtos.html";
         }
 
-        // 3. Demais Biscoitos
+        // 3. Suspiros (Limão, Bluice, Morango, Açaí, Leite Condensado)
+        else if (termoLimpo.includes("bluice")) {
+            window.location.href = "suspiro-bluice.html"; // Ajuste o nome do arquivo HTML se necessário
+        } else if (termoLimpo.includes("morango")) {
+            window.location.href = "suspiro-morango.html"; // Ajuste o nome do arquivo HTML se necessário
+        } else if (termoLimpo.includes("acai")) {
+            window.location.href = "suspiro-acai.html"; // Ajuste o nome do arquivo HTML se necessário
+        } else if (termoLimpo.includes("leite condensado") || termoLimpo.includes("condensado") || (termoLimpo.includes("leite") && termoLimpo.includes("condensado"))) {
+            window.location.href = "suspiro-leitecondensado.html"; // Ajuste o nome do arquivo HTML se necessário
+        } else if (termoLimpo.includes("limao") && !termoLimpo.includes("biscoito")) {
+            // Nota: se digitar só limao, avalia se é o suspiro ou biscoito de limão pelo contexto geral ou direciona para o suspiro/biscoito de limão
+            window.location.href = "suspiro-limao.html"; // ou limao1-produtos.html dependendo da sua preferência
+        }
+
+        // 4. Demais Biscoitos
         else if (termoLimpo.includes("beijinho")) {
             window.location.href = "beijinho-produtos.html";
         } else if (termoLimpo.includes("banbole") || termoLimpo.includes("bambole")) {
@@ -319,7 +333,7 @@ document.addEventListener("DOMContentLoaded", function() {
         } else if (termoLimpo.includes("limao")) {
             window.location.href = "limao1-produtos.html";
         } else {
-            alert("Produto não encontrado! Tente pesquisar por: Avelã, Goiabada, Ninho, Pellet Bacon, Pimentinha, Beijinho, Limão, etc.");
+            alert("Produto não encontrado! Tente pesquisar por: Avelã, Pellet Bacon, Pimentinha, Suspiro Morango, Bluice, etc.");
         }
     }
 
