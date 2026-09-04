@@ -1975,20 +1975,20 @@ footer {
     padding-left: 10px;
     color: #801a24;
 }
-/* Caixinha suspensa de sugestões combinando com o seu design */
 #sugestoes-busca {
     position: absolute;
     top: calc(100% + 5px);
     left: 0;
     right: 0;
+    width: 100%; /* Garante que ocupa toda a largura da barra */
     background: #ffffff;
-    border: 1px solid #ebdcd0; /* Mesma borda suave do seu form */
-    border-radius: 18px; /* Cantos arredondados combinando */
-    box-shadow: 0 4px 12px rgba(168, 125, 96, 0.08); /* Sombra elegante */
-    z-index: 1000;
+    border: 1px solid #ebdcd0;
+    border-radius: 18px;
+    box-shadow: 0 4px 12px rgba(168, 125, 96, 0.15);
+    z-index: 9999; /* Deixamos bem alto para ficar acima de tudo no celular */
     max-height: 250px;
     overflow-y: auto;
-    display: none; /* Fica oculta até começar a digitar */
+    display: none;
     padding: 5px 0;
 }
 
