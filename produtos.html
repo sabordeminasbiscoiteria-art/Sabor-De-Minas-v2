@@ -345,25 +345,39 @@
 </footer>
 
 <script>
-window.addEventListener("DOMContentLoaded", () => {
-    const input = document.getElementById("input-busca");
-    if (!input) return;
+document.addEventListener("DOMContentLoaded", function() {
+    const inputBusca = document.getElementById("input-busca");
+    const btnBuscar = document.getElementById("btn-buscar");
 
-    input.addEventListener("input", (e) => {
-        const termo = e.target.value.toLowerCase().trim();
+    function filtrarProdutos() {
+        if (!inputBusca) return;
+        const termo = inputBusca.value.toLowerCase().trim();
         const cards = document.querySelectorAll(".produto");
 
         cards.forEach(card => {
-            const titulo = card.querySelector("h3")?.innerText.toLowerCase() || "";
-            const desc = card.querySelector("p")?.innerText.toLowerCase() || "";
+            const h3 = card.querySelector("h3");
+            const p = card.querySelector("p");
+            
+            const titulo = h3 ? h3.innerText.toLowerCase() : "";
+            const descricao = p ? p.innerText.toLowerCase() : "";
 
-            if (titulo.includes(termo) || desc.includes(termo)) {
-                card.style.display = ""; // Mostra o card
+            if (titulo.includes(termo) || descricao.includes(termo)) {
+                card.style.display = ""; // Mostra o produto
             } else {
-                card.style.display = "none"; // Esconde o card
+                card.style.display = "none"; // Esconde o produto
             }
         });
-    });
+    }
+
+    // Filtra enquanto digita
+    if (inputBusca) {
+        inputBusca.addEventListener("input", filtrarProdutos);
+    }
+
+    // Filtra também se clicar no botão "Buscar"
+    if (btnBuscar) {
+        btnBuscar.addEventListener("click", filtrarProdutos);
+    }
 });
 </script>
 
