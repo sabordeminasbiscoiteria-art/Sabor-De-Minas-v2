@@ -76,33 +76,36 @@
 
 </section>
 
-  <!-- ========================================== -->
-<!-- BLOCO DE PESQUISA E MINI MENU PROFISSIONAL -->
-<!-- ========================================== -->
+ <!-- ========================================== -->
+      <!-- BLOCO DE PESQUISA E MINI MENU PROFISSIONAL -->
+      <!-- ========================================== -->
 
-<div class="loja-search-wrapper">
-  
-  <!-- Barra de Pesquisa -->
-  <div class="search-container">
-    <form action="/busca" method="GET">
-      <span class="search-icon">🔍</span>
-      <input type="text" name="q" placeholder="Pesquisar produtos..." required>
-      <button type="submit">Buscar</button>
-    </form>
-  </div>
-
-  <!-- Mini Menu de Categorias (Apenas Texto) -->
-  <div class="mini-menu-container">
-    <ul class="mini-menu">
-      <li><a href="produtos.html">Todos</a></li>
-      <li><a href="doces.html">Doce</a></li>
-      <li><a href="salgados.html">Salgados</a></li>
-      <li><a href="Suspiros.html">Suspiros</a></li>
-      <li><a href="/casadinho">Casadinho</a></li>
-    </ul>
-  </div>
-
+      <div class="loja-search-wrapper">
+    <div class="search-container">
+        <form id="form-busca">
+            <span class="search-icon">🔍</span>
+            <input type="text" id="input-busca" placeholder="Pesquisar produto...">
+            <button type="submit" id="btn-buscar">Buscar</button>
+        </form>
+        
+        <!-- Caixinha flutuante de sugestões que vai aparecer ao digitar -->
+        <div id="sugestoes-busca"></div>
+    </div>
 </div>
+
+        <!-- Mini Menu de Categorias (Apenas Texto) -->
+        <div class="mini-menu-container">
+          <ul class="mini-menu">
+            <li><a href="produtos.html">Todos</a></li>
+            <li><a href="doces.html">Doce</a></li>
+            <li><a href="salgados.html">Salgados</a></li>
+            <li><a href="Suspiros.html">Suspiros</a></li>
+            <li><a href="/casadinho">Casadinho</a></li>
+          </ul>
+        </div>
+
+      </div>
+
       <div class="produtos-cards">
 
     <!-- Produto 1 -->
@@ -282,53 +285,100 @@
 </footer>
 
 <script>
-document.addEventListener("DOMContentLoaded", function () {
-    const inputBusca = document.getElementById("pesquisa");
-    const cards = document.querySelectorAll(".produto, .item-produto");
+document.addEventListener("DOMContentLoaded", function() {
+    const inputBusca = document.getElementById("input-busca");
+    const formBusca = document.getElementById("form-busca");
+    const caixaSugestoes = document.getElementById("sugestoes-busca");
 
-    function puxarProduto() {
-        const termo = inputBusca.value.toLowerCase().trim();
+    const produtos = [
+        { nome: "Casadinho de Avelã", url: "casadinho-avela.html", palavras: ["casadinho", "avela"] },
+        { nome: "Casadinho de Goiabada", url: "casadinhoo-produtos.html", palavras: ["casadinho", "goiabada"] },
+        { nome: "Casadinho de Leite Ninho", url: "casadinholeite-produtos.html", palavras: ["casadinho", "ninho", "leite", "leite ninho"] },
+        { nome: "Pellet Bacon (Pelinha)", url: "Pelletbacon-produtos.html", palavras: ["pellet", "bacon", "pelinha", "salgadinho"] },
+        { nome: "Pimentinha", url: "pimentinha-produtos.html", palavras: ["pimentinha", "pimenta", "salgadinho"] },
+        { nome: "Suspiro de Limão", url: "limao-produtos.html", palavras: ["suspiro", "limao"] },
+        { nome: "Suspiro Bluice", url: "bluice-produtos.html", palavras: ["suspiro", "bluice"] },
+        { nome: "Suspiro de Morango", url: "morando-produtos.html", palavras: ["suspiro", "morango"] },
+        { nome: "Suspiro de Açaí", url: "acai-produtos.html", palavras: ["suspiro", "acai"] },
+        { nome: "Suspiro de Leite Condensado", url: "leitecondensado-produtos.html", palavras: ["suspiro", "leite", "condensado"] },
+        { nome: "Suspiro de Maçã Verde", url: "macaverde-produtos.html", palavras: ["suspiro", "maca", "verde"] },
+        { nome: "Biscoito Beijinho", url: "beijinho-produtos.html", palavras: ["beijinho", "biscoito"] },
+        { nome: "Biscoito Banbolê", url: "banbole-produtos.html", palavras: ["banbole", "bambole", "biscoito"] },
+        { nome: "Biscoito Canela", url: "canela-produtos.html", palavras: ["canela", "biscoito"] },
+        { nome: "Biscoito Sasha", url: "sasha-produtos.html", palavras: ["sasha", "biscoito"] },
+        { nome: "Biscoito Limão", url: "limao1-produtos.html", palavras: ["limao", "biscoito"] }
+    ];
+
+    function normalizarTexto(texto) {
+        return texto.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().trim();
+    }
+
+    function processarBusca() {
+        const termo = normalizarTexto(inputBusca.value);
+        caixaSugestoes.innerHTML = "";
         
-        if (termo === "") return; // Se apagar a busca, não faz nada
+        if (termo.length === 0) {
+            caixaSugestoes.style.display = "none";
+            return;
+        }
 
-        cards.forEach(card => {
-            const texto = card.innerText.toLowerCase();
-            
-            // Remove destaque anterior de todos
-            card.style.border = "";
-            card.style.boxShadow = "";
-            card.style.transform = "";
-
-            // Se o card contém o que você digitou
-            if (texto.includes(termo)) {
-                // Rrola a tela suavemente até o produto exato
-                card.scrollIntoView({ behavior: "smooth", block: "center" });
-                
-                // Dá um destaque visual profissional (borda e brilho) no produto encontrado
-                card.style.border = "2px solid #d4a373";
-                card.style.boxShadow = "0 0 15px rgba(212, 163, 115, 0.8)";
-                card.style.transition = "all 0.3s ease";
-            }
+        const resultados = produtos.filter(prod => {
+            return prod.palavras.some(palavra => palavra.includes(termo)) || normalizarTexto(prod.nome).includes(termo);
         });
+
+        if (resultados.length > 0) {
+            caixaSugestoes.style.display = "block";
+            resultados.forEach(prod => {
+                const itemDiv = document.createElement("div");
+                itemDiv.classList.add("sugestao-item");
+                itemDiv.innerHTML = `🔍 ${prod.nome}`;
+                
+                // Usando mousedown/click para garantir funcionamento no touch do celular
+                itemDiv.addEventListener("mousedown", function(e) {
+                    e.preventDefault();
+                    window.location.href = prod.url;
+                });
+                
+                caixaSugestoes.appendChild(itemDiv);
+            });
+        } else {
+            caixaSugestoes.style.display = "none";
+        }
     }
 
     if (inputBusca) {
-        inputBusca.addEventListener("keyup", function(event) {
-            if (event.key === "Enter") {
-                puxarProduto();
+        // Ouve tanto a digitação normal quanto soltar a tecla (ótimo para celulares)
+        inputBusca.addEventListener("input", processarBusca);
+        inputBusca.addEventListener("keyup", processarBusca);
+
+        document.addEventListener("click", function(e) {
+            if (!inputBusca.contains(e.target) && !caixaSugestoes.contains(e.target)) {
+                caixaSugestoes.style.display = "none";
             }
         });
     }
 
-    // Se tiver o botão "Buscar", vincula ele também
-    const botaoBuscar = document.querySelector("button");
-    if (botaoBuscar) {
-        botaoBuscar.addEventListener("click", function(e) {
+    if (formBusca) {
+        formBusca.addEventListener("submit", function(e) {
             e.preventDefault();
-            puxarProduto();
+            if (!inputBusca) return;
+            
+            const termo = normalizarTexto(inputBusca.value);
+            if (termo === "") return;
+
+            const encontrados = produtos.filter(prod => 
+                prod.palavras.some(palavra => palavra.includes(termo)) || normalizarTexto(prod.nome).includes(termo)
+            );
+
+            if (encontrados.length > 0) {
+                window.location.href = encontrados[0].url;
+            } else {
+                alert("Produto não encontrado!");
+            }
         });
     }
 });
 </script>
+
 </body>
 </html>
