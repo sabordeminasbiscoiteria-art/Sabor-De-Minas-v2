@@ -75,15 +75,17 @@
       <!-- ========================================== -->
 
       <div class="loja-search-wrapper">
+    <div class="search-container">
+        <form id="form-busca">
+            <span class="search-icon">🔍</span>
+            <input type="text" id="input-busca" placeholder="Pesquisar produto...">
+            <button type="submit" id="btn-buscar">Buscar</button>
+        </form>
         
-        <!-- Barra de Pesquisa -->
-        <div class="search-container">
-          <form onsubmit="return false;">
-              <span class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></span>
-              <input type="text" id="input-busca" name="q" placeholder="Pesquisar produtos...">
-              <button type="button" id="btn-buscar">Buscar</button>
-          </form>
-        </div>
+        <!-- Caixinha flutuante de sugestões que vai aparecer ao digitar -->
+        <div id="sugestoes-busca"></div>
+    </div>
+</div>
 
         <!-- Mini Menu de Categorias (Apenas Texto) -->
         <div class="mini-menu-container">
